@@ -21,3 +21,16 @@ def est_vide(valeur):
 
 def est_valide(morceaux):
     return len(morceaux) == 2 and morceaux[0].strip() != "" and morceaux[1].strip().isdigit()
+
+print(categorie(16))
+print(categorie(12))
+print(categorie(10))
+print(categorie(9))
+print(signe(-2))
+print(signe(0))
+print(est_vide([]))
+print(est_vide([0]))
+print(est_valide(["alice", " 14"]))
+print(est_valide(["a", "b", "c"]))
+print(est_valide(["   ", "12"]))
+print(est_valide(["bob", "-3"]))
