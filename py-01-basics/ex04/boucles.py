@@ -4,22 +4,28 @@ def somme_jusqu_a(n):
         total += i
     return total
 
+
 def compter_valides(lignes):
     compteur = 0
     for ligne in lignes:
         morceaux = ligne.split(":")
         if len(morceaux) == 2 and morceaux[0].strip() != "" and morceaux[1].strip().isdigit():
             compteur += 1
-        return compteur
+    return compteur
+
 
 def plus_grande(valeurs):
     if len(valeurs) == 0:
         return -1
+
     indice_max = 0
+
     for i, valeur in enumerate(valeurs):
         if valeur > valeurs[indice_max]:
             indice_max = i
-        return indice_max
+
+    return indice_max
+
 
 def premiere_vide(lignes):
     for i, ligne in enumerate(lignes):
