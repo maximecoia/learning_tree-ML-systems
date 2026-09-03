@@ -8,7 +8,7 @@ def texte(valeur):
     return str(valeur)
 
 def est_entier(valeur): 
-    return isinstance(valeur) == int
+    return isinstance(valeur, int)
 
 print(entier("14"))
 print(entier("007"))
