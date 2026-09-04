@@ -92,6 +92,7 @@ class Ligne:
     def __init__(self, article, quantite, prix):
         if not isinstance(quantite, int) or quantite < 1:
             raise ValueError("quantite invalide")
+
         if not isinstance(prix, Montant):
             raise ValueError("prix invalide")
 
@@ -108,14 +109,15 @@ class Ligne:
     def __eq__(self, autre):
         if not isinstance(autre, Ligne):
             return NotImplemented
+
         return (
             self.article,
             self.quantite,
-            self.prix
+            self.prix,
         ) == (
             autre.article,
             autre.quantite,
-            autre.prix
+            autre.prix,
         )
 
     def __lt__(self, autre):
@@ -131,12 +133,21 @@ class Ligne:
             raise ValueError("ligne invalide")
 
         article = morceaux[0].strip().lower()
-        droite = morceaux[1].split("x")
 
-        if len(droite) != 2 or not droite[0].strip().isdigit():
+        if article == "":
             raise ValueError("ligne invalide")
 
-        quantite = int(droite[0].strip())
+        droite = morceaux[1].split("x")
+
+        if len(droite) != 2:
+            raise ValueError("ligne invalide")
+
+        quantite_texte = droite[0].strip()
+
+        if not quantite_texte.isdigit():
+            raise ValueError("ligne invalide")
+
+        quantite = int(quantite_texte)
         prix = Montant.depuis_texte(droite[1])
 
         return cls(article, quantite, prix)
