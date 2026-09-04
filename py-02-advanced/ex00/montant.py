@@ -12,13 +12,3 @@ class Montant:
 
     def fois(self, n):
         return Montant(self.centimes * n)
-
-
-print(Montant(1250).centimes)
-print(Montant(0).centimes)
-print(Montant(1250).en_euros())
-print(Montant(1250).ajouter(Montant(300)).centimes)
-print(Montant(120).fois(3).centimes)
-print(Montant(-1))
-print(Montant(12.5))
-print(Montant("12"))
