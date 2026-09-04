@@ -36,7 +36,7 @@ def tries(montants):
     return sorted(montants)
 
 
-def le_plus_granid(montants):
+def le_plus_grand(montants):
     if not montants:
         return None
     return max(montants)
