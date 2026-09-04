@@ -31,12 +31,10 @@ class Montant:
             return NotImplemented
         return self.centimes < autre.centimes
 
+    def tries(montants):
+        return sorted(montants)
 
-def tries(montants):
-    return sorted(montants)
-
-
-def le_plus_grand(montants):
-    if not montants:
-        return None
-    return max(montants)
+    def le_plus_grand(montants):
+        if not montants:
+            return None
+        return max(montants)
