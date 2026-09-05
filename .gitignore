@@ -1,1 +1,6 @@
 .DS_Store
+
+# Python bytecode. Chaque exercice se lance directement, donc __pycache__
+# apparait des la premiere execution.
+__pycache__/
+*.py[cod]
