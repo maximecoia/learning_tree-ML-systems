@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "releve"
+description = "Résumer un relevé de mesures."
+requires-python = ">=3.11"
+dependencies = []
+dynamic = ["version"]
+
+
+[project.scripts]
+releve = "releve.cli:main"
+
+
+[tool.setuptools.dynamic]
+version = {attr = "releve.__version__"}
