@@ -1,0 +1,2 @@
+# Les dépendances d'EXÉCUTION de releve.
+# Il n'y en a aucune : l'outil ne tient qu'à la bibliothèque standard.

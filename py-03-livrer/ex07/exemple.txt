@@ -1,0 +1,4 @@
+debit: 880 req/s
+latence: 12.4 ms
+latence: 31.0 ms
+latence: 9.6 ms
