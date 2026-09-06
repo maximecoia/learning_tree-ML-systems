@@ -1,10 +1,13 @@
 import argparse
 import sys
 
+# Import relatif :
+# "mesures" désigne le module voisin dans le package releve.
 from .mesures import depouiller, resumer
 
 
 def analyser(argv):
+    # Ce module est responsable de l'interface en ligne de commande.
     p = argparse.ArgumentParser(
         prog="releve",
         description="Résumer un relevé.",
@@ -37,6 +40,7 @@ def analyser(argv):
 
 
 def traiter(args, flux):
+    # La CLI délègue le parsing réel des données à mesures.py.
     mesures, numeros_illisibles = depouiller(flux)
 
     if args.strict and len(numeros_illisibles) > 0:
@@ -72,11 +76,14 @@ def traiter(args, flux):
 
 
 def main(argv=None):
+    # main orchestre uniquement la CLI :
+    # analyse des arguments, choix du flux, puis traitement.
     if argv is None:
         argv = sys.argv[1:]
 
     args = analyser(argv)
 
+    # "-" représente l'entrée standard.
     if args.fichier == "-":
         return traiter(args, sys.stdin)
 
