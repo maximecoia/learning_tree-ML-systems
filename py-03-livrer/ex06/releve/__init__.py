@@ -1,3 +1,4 @@
+from .version import __version__
 from .mesures import centile95, depouiller, illisibles, lire, resumer
 from .cli import analyser, main, traiter
 
