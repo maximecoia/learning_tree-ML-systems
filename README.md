@@ -6,7 +6,7 @@
 
 `py-01-basics` → `py-02-advanced` → `py-03-livrer`
 
-19 of 26 exercises complete
+26 of 26 exercises complete
 
 </div>
 
@@ -38,7 +38,7 @@ without the previous eight. `py-03-livrer` turns the result into a command.
 
 ```bash
 python3 py-01-basics/ex08/bilan.py
-python3 py-03-livrer/ex00/releve.py < mesures.txt
+cd py-03-livrer/ex07 && python3 -m releve resume mesures.txt
 ```
 
 ## Progress
@@ -73,20 +73,20 @@ One value type, `Montant`, growing one capability per exercise.
 | [`ex07/heritage.py`](py-02-advanced/ex07/heritage.py) | `LigneRemisee(Ligne)`, and exceptions of its own | **Complete** |
 | [`ex08/facture.py`](py-02-advanced/ex08/facture.py) | integration: parse, reject, total, report | **Complete** |
 
-### py-03-livrer — in progress, 1 of 8
+### py-03-livrer — complete, 8 of 8
 
 Turning the tree into something installable. One exercise per delivery concern.
 
 | Exercise | Focus | Status |
 |---|---|---|
-| [`ex00/releve.py`](py-03-livrer/ex00/releve.py) | the executable module: importable and runnable, `__main__` guard | **Complete** |
-| `ex01` | the command line, `argparse` | To do |
-| `ex02` | streams and exit codes | To do |
-| `ex03` | the package | To do |
-| `ex04` | tests on the rendered output | To do |
-| `ex05` | dependencies | To do |
-| `ex06` | the manifest | To do |
-| `ex07` | the tool, delivered | To do |
+| [`ex00/executable.py`](py-03-livrer/ex00/executable.py) | the executable module: importable and runnable, `__main__` guard | **Complete** |
+| [`ex01/releve.py`](py-03-livrer/ex01/releve.py) | the command line, `argparse` and its subcommands | **Complete** |
+| [`ex02/releve.py`](py-03-livrer/ex02/releve.py) | `-` for standard input, exit codes, `--strict` | **Complete** |
+| [`ex03/releve/`](py-03-livrer/ex03/releve) | the package: `cli` and `mesures` split apart, `__main__` | **Complete** |
+| [`ex04/test_releve.py`](py-03-livrer/ex04/test_releve.py) | tests on the rendered output | **Complete** |
+| [`ex05/requirements.txt`](py-03-livrer/ex05/requirements.txt) | dependencies, runtime and development kept apart | **Complete** |
+| [`ex06/pyproject.toml`](py-03-livrer/ex06/pyproject.toml) | the manifest, and one place that holds the version | **Complete** |
+| [`ex07/`](py-03-livrer/ex07) | the tool, delivered: `pip install .`, then `releve` on the PATH | **Complete** |
 
 ## Progression
 
@@ -240,12 +240,24 @@ one `except ValueError` around the parse counts every kind of bad row into
 
 ## What comes next
 
-`py-03-livrer` finishes the line: a command with a real argument parser, streams
-and exit codes a shell can branch on, a package another machine installs, and
-tests that catch a regression in the rendered output rather than in the
-internals.
+The tree is finished. `py-03` ended in `releve`, installed with `pip install .`
+and run from the PATH:
 
-The point is not packaging for its own sake. Everything downstream in this plan
-— a measurement bench, a training script, a grader — is handed to someone else
-who installs it and runs it without asking how. `py-03` is where that becomes a
-skill instead of an intention.
+```console
+$ releve resume mesures.txt
+debit n=1 moy=880.00 p95=880.00 req/s
+latence n=3 moy=17.67 p95=31.00 ms
+```
+
+A malformed line is skipped and reported on stderr with its line number. Under
+`--strict` the same line ends the run with exit code 1, so a shell can branch on
+it. Eleven tests hold the rendered output rather than the internals.
+
+The point was never packaging for its own sake. Everything downstream in this
+plan — a measurement bench, a training script, a grader — is handed to someone
+else who installs it and runs it without asking how. `py-03` is where that
+became a skill instead of an intention.
+
+What follows is micrograd, the same discipline one layer up: the object that
+carries an invariant becomes a node in an expression graph, and the thing that
+has to be rebuildable from a blank file becomes backpropagation.
