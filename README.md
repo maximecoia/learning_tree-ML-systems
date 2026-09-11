@@ -1,12 +1,13 @@
 <div align="center">
 
-# learning_tree-ML-systems
+# ML Systems
 
-**A progressive Python tree toward ML systems, one decision at a time.**
+**A three-year roadmap from a blank file to a contribution in an inference engine,
+and the public trace of the work as it happens.**
 
-`py-01-basics` → `py-02-advanced` → `py-03-livrer`
+`prep` → `inference` → `C++ & concurrency` → `parallelism` → `CUDA` → `contribution`
 
-26 of 26 exercises complete
+Phase 1 of 8 · September 2026
 
 </div>
 
@@ -14,234 +15,61 @@
 
 ## About
 
-`learning_tree-ML-systems` is the Python line of a longer plan. The destination
-is ML systems, so the work starts where ML systems actually break: how data is
-represented, what happens to the rows that do not conform, and whether the
-numbers coming out still mean anything.
+This repository is the public trace of a roadmap toward ML systems: the layer of
+the field where the question is no longer whether a model is correct, but what
+it costs to run, and where the time actually goes.
 
-Each exercise stays small enough to be rebuilt from a blank file. Running is not
-the bar. Being able to write it again from nothing is.
+The plan is eight phases and 106 sub-modules, spread across the 42 curriculum
+and the years after it. Two layers run in parallel the whole way. The imposed
+layer is the 42 common core, which buys the title and the time. The added layer
+is what produces anything rare. A phase counts as done when both are.
 
-The three modules ask three different questions:
+What lands here is the added layer, in the form that survives being read by
+someone else: code that runs, checks that can fail, and a write-up of what each
+decision cost.
 
-| Module | Question |
-|---|---|
-| `py-01-basics` | Can you get a correct answer out of input you do not control? |
-| `py-02-advanced` | Can you build a type that makes the wrong answer unrepresentable? |
-| `py-03-livrer` | Can someone else install it and run it without asking you how? |
+**One rule holds across every track.** Running is not the bar. Being able to
+write it again from a blank file is.
 
-Each `py-01-basics` file is executable on its own and ends with the calls that
-exercise it, including the inputs that are supposed to fail. The
-`py-02-advanced` files define types only, with no driver: each one restates the
-class in full and adds exactly one capability, so any exercise can be read
-without the previous eight. `py-03-livrer` turns the result into a command.
+## The roadmap
 
-```bash
-python3 py-01-basics/ex08/bilan.py
-cd py-03-livrer/ex07 && python3 -m releve resume mesures.txt
-```
+| Phase | Window | What it buys | Sub-modules |
+|---|---|---|---|
+| **`ms-00-prepa`** — the prep, C and Python | Sept–Oct 2026 | enter the school with the libft done, a GPT trained by hand, and a C inference engine whose throughput is measured and placed on a roofline | 15 |
+| `ms-01-inference` — graded C, measured inference | weeks 1–8 | produce the saturation curve of an unknown inference server in half a day | 18 |
+| `ms-02-cpp-concurrence` — C++ and concurrency | weeks 9–20 | concurrent code whose freedom from starvation is shown by measurement, and an unknown execution timeline read in ten minutes | 20 |
+| `ms-03-parallelisme` — parallelism, first kernel | weeks 21–34 | say before writing a kernel whether it will be compute- or memory-bound, and justify it to an order of magnitude | 12 |
+| `ms-04-cuda` — CUDA properly | weeks 35–46 | a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation, and where it loses too | 17 |
+| `ms-05-contribution` — contribution to an engine | weeks 47–57 | a PR in vLLM or SGLang on the scheduler or the cache, gain measured and published, review taken up by a maintainer | 12 |
+| `ms-06-specialisation` — specialisation, first internship | 2028 onward | numerical precision, multi-GPU, operations and evaluation, then a page of deliverables that reads without explanation | 11 |
+| `ms-07-stage-2` — second internship | after the first | the European arm of an American company in the field | 1 |
 
-## Progress
+Each phase closes on a binary test, not on a feeling. Phase 1 closes on this
+one: **draw from memory the path of an input token through to the logits, with
+the shapes annotated at every step.**
 
-### py-01-basics — complete, 9 of 9
+## Where the work stands
 
-| Exercise | Focus | Status |
+Phase 1, `ms-00-prepa`, is the one in progress.
+
+| Track | State | |
 |---|---|---|
-| [`ex00/types.py`](py-01-basics/ex00/types.py) | conversion, `isinstance`, why `14.0` is not an `int` | **Complete** |
-| [`ex01/operateurs.py`](py-01-basics/ex01/operateurs.py) | `//` and `%` on negatives, rounding, fractional exponents | **Complete** |
-| [`ex02/chaines.py`](py-01-basics/ex02/chaines.py) | `strip`, `lower`, `split`, the limits of `isdigit` | **Complete** |
-| [`ex03/conditions.py`](py-01-basics/ex03/conditions.py) | threshold ladders, truthiness, one reusable validity guard | **Complete** |
-| [`ex04/boucles.py`](py-01-basics/ex04/boucles.py) | accumulation, `enumerate`, argmax and its tie rule, sentinel returns | **Complete** |
-| [`ex05/listes.py`](py-01-basics/ex05/listes.py) | comprehensions, sorting, the empty list as a real case | **Complete** |
-| [`ex06/dictionnaires.py`](py-01-basics/ex06/dictionnaires.py) | grouping, `dict.get` defaults, skipping empty groups | **Complete** |
-| [`ex07/fonctions.py`](py-01-basics/ex07/fonctions.py) | default and keyword arguments, bounded filtering | **Complete** |
-| [`ex08/bilan.py`](py-01-basics/ex08/bilan.py) | integration: parse, reject, group, aggregate, report | **Complete** |
+| **The Python socle** | 26 of 26 exercises, complete | [`PYTHON.md`](PYTHON.md) |
+| **Neural Networks: Zero to Hero** | 8 of 8 units written, 3 shipped with runnable code | [`z2h-karpathy/`](z2h-karpathy) |
+| The C engine, the libft | not started here | |
 
-### py-02-advanced — complete, 9 of 9
+### The Python socle — complete
 
-One value type, `Montant`, growing one capability per exercise.
+Three modules, three questions, 26 exercises each small enough to be rebuilt
+from a blank file.
 
-| Exercise | Adds | Status |
+| Module | Question | |
 |---|---|---|
-| [`ex00/montant.py`](py-02-advanced/ex00/montant.py) | a class that refuses invalid state at construction | **Complete** |
-| [`ex01/representation.py`](py-02-advanced/ex01/representation.py) | `__repr__` for debugging, `texte()` for humans | **Complete** |
-| [`ex02/ordre.py`](py-02-advanced/ex02/ordre.py) | `__eq__` and `__lt__`, so `sorted` and `max` work | **Complete** |
-| [`ex03/operateurs.py`](py-02-advanced/ex03/operateurs.py) | `__add__`, `__sub__`, `__mul__`, `__rmul__`, and `Ligne` | **Complete** |
-| [`ex04/constructeurs.py`](py-02-advanced/ex04/constructeurs.py) | `depuis_euros`, `depuis_texte`: alternative constructors | **Complete** |
-| [`ex05/proprietes.py`](py-02-advanced/ex05/proprietes.py) | `euros` and `est_nul` as properties, not methods | **Complete** |
-| [`ex06/conteneurs.py`](py-02-advanced/ex06/conteneurs.py) | `Facture` implements `__len__`, `__iter__`, `__getitem__`, `__contains__` | **Complete** |
-| [`ex07/heritage.py`](py-02-advanced/ex07/heritage.py) | `LigneRemisee(Ligne)`, and exceptions of its own | **Complete** |
-| [`ex08/facture.py`](py-02-advanced/ex08/facture.py) | integration: parse, reject, total, report | **Complete** |
+| [`py-01-basics`](py-01-basics) | Can you get a correct answer out of input you do not control? | 9 of 9 |
+| [`py-02-advanced`](py-02-advanced) | Can you build a type that makes the wrong answer unrepresentable? | 9 of 9 |
+| [`py-03-livrer`](py-03-livrer) | Can someone else install it and run it without asking you how? | 8 of 8 |
 
-### py-03-livrer — complete, 8 of 8
-
-Turning the tree into something installable. One exercise per delivery concern.
-
-| Exercise | Focus | Status |
-|---|---|---|
-| [`ex00/executable.py`](py-03-livrer/ex00/executable.py) | the executable module: importable and runnable, `__main__` guard | **Complete** |
-| [`ex01/releve.py`](py-03-livrer/ex01/releve.py) | the command line, `argparse` and its subcommands | **Complete** |
-| [`ex02/releve.py`](py-03-livrer/ex02/releve.py) | `-` for standard input, exit codes, `--strict` | **Complete** |
-| [`ex03/releve/`](py-03-livrer/ex03/releve) | the package: `cli` and `mesures` split apart, `__main__` | **Complete** |
-| [`ex04/test_releve.py`](py-03-livrer/ex04/test_releve.py) | tests on the rendered output | **Complete** |
-| [`ex05/requirements.txt`](py-03-livrer/ex05/requirements.txt) | dependencies, runtime and development kept apart | **Complete** |
-| [`ex06/pyproject.toml`](py-03-livrer/ex06/pyproject.toml) | the manifest, and one place that holds the version | **Complete** |
-| [`ex07/`](py-03-livrer/ex07) | the tool, delivered: `pip install .`, then `releve` on the PATH | **Complete** |
-
-## Progression
-
-```mermaid
-flowchart LR
-    subgraph B["py-01 · correct answers"]
-        T["ex00-ex02<br/>values, operators, strings"]
-        C["ex03-ex04<br/>branching, loops, sentinels"]
-        D["ex05-ex07<br/>lists, dicts, contracts"]
-        E["ex08<br/>bilan"]
-        T --> C --> D --> E
-    end
-    subgraph A["py-02 · types that cannot be wrong"]
-        M["ex00-ex02<br/>invariants, repr, order"]
-        O["ex03-ex05<br/>operators, constructors, properties"]
-        K["ex06-ex07<br/>container, inheritance, exceptions"]
-        F["ex08<br/>facture"]
-        M --> O --> K --> F
-    end
-    subgraph L["py-03 · deliverable"]
-        R["ex00<br/>executable module"]
-        S["ex01-ex07<br/>CLI, package, tests, manifest"]
-        R --> S
-    end
-    E --> M
-    F --> R
-```
-
-Each module converges on an integration exercise, and that exercise is the
-handoff to the next module. `bilan` proves the functions compose; `facture`
-proves the type holds under a pipeline; `releve` is the first form the result
-takes when it has to leave the machine it was written on.
-
-## Decisions worth naming
-
-### Malformed input is counted, not raised
-
-`bilan` reads lines of the form `nom: note`. Real input contains neither only
-that form nor only valid notes.
-
-```text
-["alice: 14", "", "carol: abc", " Bob : 12 "]
-```
-
-Two rejection paths, kept deliberately separate:
-
-* **Malformed.** Wrong field count, empty name, non-numeric note. Counted into
-  `ignorees` and returned to the caller. The caller gets to know how much of its
-  input was unusable.
-* **Filtered.** A well-formed note below `minimum`. Dropped silently, because
-  the caller asked for that.
-
-```python
-bilan([" Bob : 12 ", "", "carol: abc", "bob: 8"], minimum=10)
-# ({'bob': 12.0}, ('bob', 12), 2)
-```
-
-Two lines were unusable, so `ignorees` is `2`. `bob: 8` was well formed and
-simply below `minimum`, so it left no trace. `" Bob : 12 "` survived whitespace
-on both sides of the separator and was folded to the same key as `bob`.
-
-Collapsing these two into one number would hide the difference between bad data
-and a narrow query. Aggregates that cannot tell them apart are how a pipeline
-reports a clean average over garbage.
-
-### The convention survives the rewrite
-
-`py-02` rebuilds the same idea on top of a type instead of a dict, and keeps the
-contract identical:
-
-| | py-01 | py-02 |
-|---|---|---|
-| Entry point | `bilan(lignes, minimum=0)` | `bilan(lignes, remise=0)` |
-| Returns | `(notes, meilleure, ignorees)` | `(total, la_plus_chere, ecartees)` |
-| Bad rows | counted into `ignorees` | counted into `ecartees` |
-
-Three values, always, whatever the input. The rejected rows are a number the
-caller reads, never an exception it has to guess at. That the convention held
-through a full change of representation is the point of the exercise.
-
-### Empty input returns, it does not explode
-
-The same convention across the tree, so callers do not need a special case per
-function:
-
-| Function | On empty input |
-|---|---|
-| `moyenne([])` | `None`, because there is no average to report |
-| `min_et_max([])` | `None`, same reason |
-| `plus_grande([])` | `-1`, no valid index exists |
-| `premiere_vide([...])` | `-1`, nothing matched |
-| `bilan([])` | `({}, None, 0)`, shape preserved |
-
-### Amounts are integers, and stay integers
-
-`Montant` holds centimes as an `int`, never euros as a `float`.
-
-```python
-Montant(1499) + Montant(1)      # Montant(1500)
-Montant(1500).texte()           # '15,00 €'
-```
-
-Floats cannot represent `0.10` exactly, so repeated addition drifts. The
-representation is chosen once, at the boundary, and every operation stays in
-integers. Conversion to euros happens only on the way out, through the `euros`
-property added in `ex05`.
-
-The discount in `ex07` is where this is tested for real:
-
-```python
-centimes = super().total.centimes * (100 - self.remise) // 100
-```
-
-Multiply first, divide last, floor once. Taking a percentage the obvious way,
-through a float, would reintroduce at the last step exactly the drift the type
-exists to prevent.
-
-The constructor rejects anything that is not a non-negative `int`, so no method
-downstream re-checks. An object that exists is an object that is valid.
-
-### Operators return `NotImplemented`, they do not raise
-
-Every comparison and arithmetic dunder checks its operand and returns
-`NotImplemented` rather than raising:
-
-```python
-def __add__(self, autre):
-    if not isinstance(autre, Montant):
-        return NotImplemented
-    return Montant(self.centimes + autre.centimes)
-```
-
-`NotImplemented` tells Python to try the reflected operation on the other
-operand before giving up, which is what makes `2 * montant` work through
-`__rmul__`. Raising instead would end the dispatch early and break the very
-mechanism the exercise is about.
-
-### Exceptions subclass `ValueError`
-
-`ex07` gives the module its own exception types, and derives both from a builtin:
-
-```python
-class MontantInvalide(ValueError): pass
-class LigneInvalide(ValueError): pass
-```
-
-A caller who knows the module catches the precise one. A caller who does not
-catches `ValueError` and still works. `ex08` takes the second route on purpose:
-one `except ValueError` around the parse counts every kind of bad row into
-`ecartees`, without enumerating the failure modes it does not care about.
-
-## What comes next
-
-The tree is finished. `py-03` ended in `releve`, installed with `pip install .`
-and run from the PATH:
+It ends in a command, installed and on the PATH:
 
 ```console
 $ releve resume mesures.txt
@@ -249,15 +77,75 @@ debit n=1 moy=880.00 p95=880.00 req/s
 latence n=3 moy=17.67 p95=31.00 ms
 ```
 
-A malformed line is skipped and reported on stderr with its line number. Under
-`--strict` the same line ends the run with exit code 1, so a shell can branch on
-it. Eleven tests hold the rendered output rather than the internals.
+The full write-up, exercise by exercise, with the decisions that were worth
+naming, is in [`PYTHON.md`](PYTHON.md).
 
-The point was never packaging for its own sake. Everything downstream in this
-plan — a measurement bench, a training script, a grader — is handed to someone
-else who installs it and runs it without asking how. `py-03` is where that
-became a skill instead of an intention.
+### Zero to Hero — three units shipped
 
-What follows is micrograd, the same discipline one layer up: the object that
-carries an invariant becomes a node in an expression graph, and the thing that
-has to be rebuildable from a blank file becomes backpropagation.
+Karpathy's eight lectures, rebuilt by hand: a scalar autograd engine, a bigram
+model built twice by two unrelated routes, then the Bengio MLP.
+
+| | Unit | Builds | Code |
+|---|---|---|---|
+| 1 | [`z2h-01-micrograd`](z2h-karpathy/z2h-01-micrograd) | reverse-mode autograd, by hand | **Shipped**, no dependencies |
+| 2 | [`z2h-02-bigrammes`](z2h-karpathy/z2h-02-bigrammes) | the same model by counting and by gradient descent | **Shipped** |
+| 3 | [`z2h-03-mlp`](z2h-karpathy/z2h-03-mlp) | the Bengio et al. 2003 MLP | **Shipped** |
+| 4–8 | activations, backprop, WaveNet, GPT, BPE | | written up, code to come |
+
+```bash
+cd z2h-karpathy/z2h-01-micrograd && python3 verifier.py
+```
+
+```
+1. reference neuron, bit for bit     OK     all five exact
+2. a + a gives a.grad == 2           OK     expected 2.0                   got 2
+3. loss < 0.01 and 4 signs right     OK     expected < 0.01                got 0.005104
+ALL OK
+```
+
+The module page is [`z2h-karpathy/README.md`](z2h-karpathy).
+
+## How this is verified
+
+Every track ships checks that can fail, and each one was broken on purpose
+before being trusted. A check that cannot fail is worse than no check.
+
+Where a result is deterministic, the check is exact to the digit. Where it is
+not, the check compares against a **range** set by the measured noise floor:
+three runs of the unit 3 MLP differing only in the minibatch draw give 2.1595,
+2.1870 and 2.1899, so the floor is 0.03, and demanding an exact value would fail
+a correct model one time in two.
+
+The advice the sources give is measured rather than repeated. Of the three
+improvements Bengio et al. 2003 names, one pays (−0.048), one is ten times below
+the noise floor, and the one the lecture calls most promising costs (+0.165).
+
+## What comes next
+
+Unit 4, activations and BatchNorm: why a network's initial loss is 27 instead of
+3.3, and the diagnostics that say it is sick before the curve does.
+
+After Zero to Hero, phase 1 closes on the C inference engine and the token path
+drawn from memory.
+
+## Layout
+
+```
+README.md              this page: the roadmap, and where it stands
+PYTHON.md              the Python socle, exercise by exercise
+py-01-basics/          correct answers out of input you do not control
+py-02-advanced/        types that make the wrong answer unrepresentable
+py-03-livrer/          the result, installable and on the PATH
+z2h-karpathy/          Neural Networks: Zero to Hero
+    z2h-01-micrograd/  reverse-mode autograd
+    z2h-02-bigrammes/  the bigram model, both roads
+    z2h-03-mlp/        the Bengio MLP
+```
+
+## Source and licence
+
+The Zero to Hero lectures, notebooks and datasets are Andrej Karpathy's, MIT
+licensed: [karpathy/nn-zero-to-hero](https://github.com/karpathy/nn-zero-to-hero),
+[karpathy/micrograd](https://github.com/karpathy/micrograd),
+[karpathy/makemore](https://github.com/karpathy/makemore). The code here was
+typed, not copied. Everything else is original work.
