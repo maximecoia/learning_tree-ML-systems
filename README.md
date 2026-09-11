@@ -2,8 +2,8 @@
 
 # ML Systems
 
-**A three-year roadmap from a blank file to a contribution in an inference engine,
-and the public trace of the work as it happens.**
+**From a blank file to a contribution in an inference engine, and the public
+trace of the work as it happens.**
 
 `prep` → `inference` → `C++ & concurrency` → `parallelism` → `CUDA` → `contribution`
 
@@ -44,9 +44,13 @@ write it again from a blank file is.
 | `ms-06-specialisation` — specialisation, first internship | 2028 onward | numerical precision, multi-GPU, operations and evaluation, then a page of deliverables that reads without explanation | 11 |
 | `ms-07-stage-2` — second internship | after the first | the European arm of an American company in the field | 1 |
 
-Each phase closes on a binary test, not on a feeling. Phase 1 closes on this
-one: **draw from memory the path of an input token through to the logits, with
-the shapes annotated at every step.**
+The windows are the plan's own, not a commitment. A phase opens on its
+prerequisites rather than on a date, so the order is fixed and the pace is not.
+The aim is to close them earlier than written.
+
+What does not move is how a phase ends: on a binary test, not on a feeling.
+Phase 1 closes on this one: **draw from memory the path of an input token
+through to the logits, with the shapes annotated at every step.**
 
 ## Where the work stands
 

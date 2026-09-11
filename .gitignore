@@ -4,3 +4,16 @@
 # apparait des la premiere execution.
 __pycache__/
 *.py[cod]
+
+# Virtualenvs. Several exercises create one next to themselves while working.
+.venv/
+venv/
+
+# Jupyter scratch, written beside any notebook that has been opened.
+.ipynb_checkpoints/
+
+# Packaging artefacts of py-03-livrer/ex07. `pip install .` writes them, and
+# they are rebuilt from pyproject.toml on demand.
+build/
+dist/
+*.egg-info/
