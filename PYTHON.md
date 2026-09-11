@@ -47,7 +47,7 @@ cd py-03-livrer/ex07 && python3 -m releve resume mesures.txt
 
 | Exercise | Focus | Status |
 |---|---|---|
-| [`ex00/types.py`](py-01-basics/ex00/types.py) | conversion, `isinstance`, why `14.0` is not an `int` | **Complete** |
+| [`ex00/mes_types.py`](py-01-basics/ex00/mes_types.py) | conversion, `isinstance`, why `14.0` is not an `int` | **Complete** |
 | [`ex01/operateurs.py`](py-01-basics/ex01/operateurs.py) | `//` and `%` on negatives, rounding, fractional exponents | **Complete** |
 | [`ex02/chaines.py`](py-01-basics/ex02/chaines.py) | `strip`, `lower`, `split`, the limits of `isdigit` | **Complete** |
 | [`ex03/conditions.py`](py-01-basics/ex03/conditions.py) | threshold ladders, truthiness, one reusable validity guard | **Complete** |
