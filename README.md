@@ -54,30 +54,73 @@ through to the logits, with the shapes annotated at every step.**
 
 ## Where the work stands
 
-Phase 1, `ms-00-prepa`, is the one in progress.
+Phase 1, `ms-00-prepa`, is the one in progress. **32 of 40 graded exercises** on
+the path, with 43 days before it closes.
 
 | Track | State | |
 |---|---|---|
 | **The Python socle** | 26 of 26 exercises, complete | [`PYTHON.md`](PYTHON.md) |
-| **Neural Networks: Zero to Hero** | 8 units written, 3 shipped — now off the path, see below | [`z2h-karpathy/`](z2h-karpathy) |
-| **The route to the trained GPT** | tensors, attention, the model, training — graded by the sources themselves | in progress |
-| The C tracks | kept out of this repository — see below | |
+| **The route to the trained GPT** | 0 of 6 steps — the live track | [below](#the-route-to-the-trained-gpt) |
+| **Linear algebra** | 0 of 8 exercises, half an hour a day | |
+| The C tracks | kept out of this repository | [below](#why-the-c-tracks-are-not-here) |
+| Zero to Hero | 3 units shipped, then taken off the path | [`z2h-karpathy/`](z2h-karpathy) |
 
-Counted on what is still on the path: **32 of 40 graded exercises**. The
-denominator excludes the eight Zero to Hero units, taken off the path, and the C
-engine, which cannot start before the trained model exists. Counting an
+The denominator excludes the eight Zero to Hero units, taken off the path, and
+the C engine, which cannot begin before the trained model exists. Counting an
 abandoned track in a ratio makes a decision look like a delay.
 
-What is left before the phase closes, on **43 days**:
+## The route to the trained GPT
 
-| | Left | Graded by |
+The phase is graded on one object: a causal GPT written from a blank file, in
+`torch`, with the attention written by hand rather than called.
+
+**Nothing in this repository teaches it, and that is deliberate.** The plan used
+to carry its own course, and the count that ended it is short: over eleven days
+it produced 141,783 lines of written lessons and 2,038 lines of machine
+learning code, while zero of the thirty-four exercises that already existed had
+been handed in. A lesson written by hand and then marked by its own author has
+no external referent. So every step is now handed to an assignment that already
+ships its own grader.
+
+| | Step | What grades it |
 |---|---|---|
-| Linear algebra | 8 exercises | the curriculum's own grader, half an hour a day |
-| The route to the GPT | 6 steps | the sources: a puzzle checker, a book's solutions, a public `pytest` suite |
-| The acceptance test | 6 gates | `verifier.py`, black-box, on a file written from blank |
-| The deliverable | corpus, run, repository, write-up | a third party replaying it without asking a question |
+| 1 | Tensor Puzzles — 21 puzzles, one line each | the checker inside the notebook |
+| 2 | Text data: tokenizer, sliding window, embeddings | the book's exercise solutions and chapter quiz |
+| 3 | Causal attention: scores, mask, multiple heads | same, plus gate 3 below |
+| 4 | The GPT: blocks, normalisation, residuals, logits | gates 1, 2, 4 and 6 below |
+| 5 | Pretraining: the loop, train and validation loss, sampling | gate 5 below |
+| 6 | CS336 assignment 1 — the 15 architecture-agnostic adapters | its public `pytest` suite |
 
-### Why the C tracks are not here
+Step 6 is the one that makes the rest checkable by something other than a
+reading. Of that assignment's 21 adapters, 15 do not depend on its architecture
+— softmax, cross entropy, AdamW, batching, checkpoints, attention without
+positions — and those 15 cover exactly the material of steps 1 to 5. The
+remaining 6 are the 2026 variants, and they come after the deliverable.
+
+### The acceptance test
+
+It is already written, it is black-box, and it states what breaking each check
+costs, measured against a reference implementation rather than asserted.
+
+| Gate | What has to land |
+|---|---|
+| 1 | `(B,T) → (B,T,V)`, and no loss when no target is given |
+| 2 | loss at initialisation inside `[4.12, 4.92]`, where `ln(65) = 4.1744` |
+| 3 | drift **exactly 0.0** when tokens after position `t` change — dropping the mask gives 1.42e-01 |
+| 4 | 0.0010 on a task only position can solve — without position embeddings it sits at 3.4658 |
+| 5 | 0.0108 after 400 steps overfitting 32 fixed sequences |
+| 6 | `generate` survives a context longer than the block size |
+
+It reads tensors in and tensors out, never the architecture, so any number of
+layers, heads or norms passes as long as the model is a causal language model.
+That is what let the teaching layer be replaced without touching the exam.
+
+**What lands here is not the route.** The assignments live in their own
+repositories. What lands here is the output: the trained model, the corpus with
+its provenance and its deduplication, the full curves, unsorted samples, and the
+write-up that has to hold up without the code on screen.
+
+## Why the C tracks are not here
 
 The libft and the projects that follow it are 42 subjects. Publishing a solution
 to one is against the school's charter, and this repository is also the tree the
@@ -86,7 +129,7 @@ grader reads, so finishing one here would publish it by accident. The
 own `source` field rather than by eye. What stays publishable is what is built
 *on top* of those subjects, which is the part worth showing.
 
-### The Python socle — complete
+## The Python socle — complete
 
 Three modules, three questions, 26 exercises each small enough to be rebuilt
 from a blank file.
@@ -108,28 +151,17 @@ latence n=3 moy=17.67 p95=31.00 ms
 The full write-up, exercise by exercise, with the decisions that were worth
 naming, is in [`PYTHON.md`](PYTHON.md).
 
-### Zero to Hero — three units shipped, then taken off the path
+## Zero to Hero — three units, kept as an archive
 
-Karpathy's eight lectures, rebuilt by hand: a scalar autograd engine, a bigram
-model built twice by two unrelated routes, then the Bengio MLP. They stay here,
-and they still run. What changed is their place in the plan.
-
-The prep is graded on one thing: a causal GPT written from a blank file, in
-`torch`, with the attention by hand. The count that decided it is short — across
-the fifteen sub-modules of the prep, the word `torch` appears twice and `numpy`
-never. The eight units build on a scalar engine the exam never imports, so the
-layer that was meant to prepare for it was not teaching the object it is graded
-on. They were replaced by assignments that arrive with their own graders — a
-book with its exercise solutions, a public `pytest` suite, and a set of puzzles
-that check themselves — so that nothing here is a lesson written by hand and
-then marked by its own author.
+Karpathy's first three lectures, rebuilt by hand: a scalar autograd engine, a
+bigram model built twice by two unrelated routes, then the Bengio MLP. They
+still run, and they stay here. What changed is their place in the plan.
 
 | | Unit | Builds | Code |
 |---|---|---|---|
 | 1 | [`z2h-01-micrograd`](z2h-karpathy/z2h-01-micrograd) | reverse-mode autograd, by hand | **Shipped**, no dependencies |
 | 2 | [`z2h-02-bigrammes`](z2h-karpathy/z2h-02-bigrammes) | the same model by counting and by gradient descent | **Shipped** |
 | 3 | [`z2h-03-mlp`](z2h-karpathy/z2h-03-mlp) | the Bengio et al. 2003 MLP | **Shipped** |
-| 4–8 | activations, backprop, WaveNet, GPT, BPE | | written up, code to come |
 
 ```bash
 cd z2h-karpathy/z2h-01-micrograd && python3 verifier.py
@@ -142,7 +174,12 @@ cd z2h-karpathy/z2h-01-micrograd && python3 verifier.py
 ALL OK
 ```
 
-The module page is [`z2h-karpathy/README.md`](z2h-karpathy).
+Why they stopped being the road to the deliverable, in one measurement: across
+the fifteen sub-modules of the prep, the word `torch` appears twice and `numpy`
+never, while the acceptance test imports `torch` on its first line. The units
+build on a scalar engine the exam never loads, so the layer meant to prepare for
+it was not teaching the object it is graded on. The module page is
+[`z2h-karpathy/README.md`](z2h-karpathy).
 
 ## How this is verified
 
@@ -155,24 +192,14 @@ three runs of the unit 3 MLP differing only in the minibatch draw give 2.1595,
 2.1870 and 2.1899, so the floor is 0.03, and demanding an exact value would fail
 a correct model one time in two.
 
+The same rule decides which sources are used at all. A source is taken when it
+arrives with a grader that is not its own reader — a checker in the notebook, a
+public test suite, a black-box acceptance test with published failure values. It
+is the reason the six steps above are borrowed rather than written.
+
 The advice the sources give is measured rather than repeated. Of the three
 improvements Bengio et al. 2003 names, one pays (−0.048), one is ten times below
 the noise floor, and the one the lecture calls most promising costs (+0.165).
-
-## What comes next
-
-The trained GPT. Tensors and shapes first, then causal attention, the block, and
-the training loop — each step handed to a grader that already exists rather than
-to one written for the occasion.
-
-The acceptance test is already on disk and already says what it costs to break
-it: six black-box checks on the model, each with the number a correct
-implementation produces and the number a specific bug produces. Dropping the
-causal mask moves a value that should be exactly 0.0 to 1.42e-01; removing the
-position embeddings leaves a loss stuck at 3.4658 where it should reach 0.0010.
-
-Then phase 1 closes on the C inference engine and on the token path drawn from
-memory.
 
 ## Layout
 
@@ -182,16 +209,29 @@ PYTHON.md              the Python socle, exercise by exercise
 py-01-basics/          correct answers out of input you do not control
 py-02-advanced/        types that make the wrong answer unrepresentable
 py-03-livrer/          the result, installable and on the PATH
-z2h-karpathy/          Neural Networks: Zero to Hero
+z2h-karpathy/          Zero to Hero, the three units that were built
     z2h-01-micrograd/  reverse-mode autograd
     z2h-02-bigrammes/  the bigram model, both roads
     z2h-03-mlp/        the Bengio MLP
 ```
 
-## Source and licence
+The 42 subjects are absent by policy, not by accident, and the route's
+assignments are the work of other people and stay in their own repositories.
+Phase 1 lands here when the trained model does.
 
-The Zero to Hero lectures, notebooks and datasets are Andrej Karpathy's, MIT
-licensed: [karpathy/nn-zero-to-hero](https://github.com/karpathy/nn-zero-to-hero),
+## Sources and licence
+
+The route: Sebastian Raschka, *Build a Large Language Model (From Scratch)*
+([`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch)) ·
+Stanford CS336, *Language Modeling from Scratch*
+([`stanford-cs336`](https://github.com/stanford-cs336)) · Sasha Rush,
+[Tensor Puzzles](https://github.com/srush/Tensor-Puzzles).
+
+The archive: the Zero to Hero lectures, notebooks and datasets are Andrej
+Karpathy's, MIT licensed —
+[karpathy/nn-zero-to-hero](https://github.com/karpathy/nn-zero-to-hero),
 [karpathy/micrograd](https://github.com/karpathy/micrograd),
 [karpathy/makemore](https://github.com/karpathy/makemore). The code here was
-typed, not copied. Everything else is original work.
+typed, not copied.
+
+Everything else is original work.
