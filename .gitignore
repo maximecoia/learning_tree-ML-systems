@@ -17,3 +17,44 @@ venv/
 build/
 dist/
 *.egg-info/
+
+# ---------------------------------------------------------------------------
+# Solutions to 42 subjects. This repository is public, and it is also the tree
+# `./exo` grades, so completing one of these here would publish it. Two reasons
+# not to: the school's charter forbids publishing subject solutions, and the
+# commit dates of work done before enrolment are visible in the history.
+#
+# Only modules whose curriculum `source` names a 42 subject are listed. The
+# additions built on top of them stay publishable, because they are the point
+# of the showcase: c-02-moteur, c-07, c-08, c-10, c-11, c-12, cpp-05-vector-asm,
+# cpp-11-moderne, and everything under cu-, tri-, inf-, par-, mes-, mth-, py-,
+# l1- to l5-.
+#
+# To publish one of these after all, add its own `!` line below.
+c-01-libft/
+c-03-libft-norme/
+c-04-printf/
+c-05-gnl/
+c-06-pushswap/
+c-09-philosophers/
+c-13-minishell/
+cpp-00-classes/
+cpp-01-allocation/
+cpp-02-canonique/
+cpp-03-heritage/
+cpp-04-polymorphisme/
+cpp-06-exceptions/
+cpp-07-casts/
+cpp-08-templates/
+cpp-09-conteneurs/
+cpp-10-stl/
+sh-01-b2br/
+sh-02-netpractice/
+t42-*/
+
+# Loose scratch and third-party data, kept local. The notebooks are Zero to Hero
+# working copies and the dataset is Karpathy's, not this repository's work.
+/bigram.ipynb
+/micrograd2.ipynb
+py-01-basics/ex00/Untitled.ipynb
+py-01-basics/ex00/names.txt
