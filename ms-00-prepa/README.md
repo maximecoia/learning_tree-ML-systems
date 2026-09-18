@@ -19,14 +19,14 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `maths-01-algebre` | added | Implement 2D vector and matrix transformations in Python | not started · 8 exercises |
 | `mth-03-probas` | added | Simulate a distribution, hold it against its closed form, and know how many measurements it takes to tell two values apart | not started · 6 exercises |
 | `mth-04-statistiques` | added | Judge whether two series of measurements really differ, knowing how often you will be wrong | not started · 6 exercises |
-| `rte-01-puzzles` | added | Write in a single line, by broadcasting and indexing alone, the functions NumPy hands you ready-made, and know why each one holds without a loop | [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles), answers kept out · 1 exercise |
+| `rte-01-puzzles` | added | Write in a single line, by broadcasting and indexing alone, the functions NumPy hands you ready-made, and know why each one holds without a loop | [rte-01-puzzles](rte-01-puzzles), from [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles) · 1 exercise |
 | `rte-02-cs336` | added | Write the building blocks of a language model, its loss, its optimiser, its checkpoints and its BPE tokenizer, and make them pass the public suite of a course that knows nothing of your architecture | [stanford-cs336/assignment1-basics](https://github.com/stanford-cs336/assignment1-basics), answers kept out · 5 exercises |
 | `c-02-moteur` | added | Write an inference engine in C that loads a model, generates text, measures its throughput and places itself on a roofline | not started · 7 exercises |
 | `l1-01-gpt-corpus` | proof | Publish a language model trained end to end, and defend every part of how it works without the code in front of you | not started · 3 exercises |
 
 ## The route to the deliverable
 
-These six steps are not curriculum sub-modules and are not graded by it. They are borrowed assignments, each arriving with its own checker, and they are the live work of this phase. They run in their own repositories, so nothing of them lands here until the model does.
+These six steps are not curriculum sub-modules and are not graded by it. They are borrowed assignments, each arriving with its own checker, and they are the live work of this phase. They run in their own repositories, and only what is published on purpose lands here: `rte-01-puzzles`.
 
 | | Step | What grades it |
 |---|---|---|

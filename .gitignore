@@ -62,3 +62,16 @@ py-01-basics/ex00/names.txt
 # Les devoirs empruntes: leurs reponses ne se publient pas, par respect du
 # meme principe que les sujets 42. Elles sont versionnees dans ml-systems.
 rte-*/
+
+# Exception, 2026-09-18: the Tensor Puzzles answers are published after all.
+# Decided case by case, not as a new rule: srush's set is a public MIT exercise
+# book, not a school subject under a charter. Only the finished notebook and the
+# README that frames it go out. The upstream clone, its virtualenv and its test
+# caches stay local, so nothing of srush's repository is republished here.
+# `!rte-01-puzzles/` carries no slash, so it lifts the refusal at any depth, the
+# way `rte-*/` imposed it. The lines below DO carry a slash, which anchors them
+# to the repository root, so they have to name the phase as well.
+!rte-01-puzzles/
+ms-00-prepa/rte-01-puzzles/*
+!ms-00-prepa/rte-01-puzzles/README.md
+!ms-00-prepa/rte-01-puzzles/Tensor Puzzlers.ipynb
