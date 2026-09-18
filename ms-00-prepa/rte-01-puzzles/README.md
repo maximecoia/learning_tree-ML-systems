@@ -36,14 +36,22 @@ the hypothesis cache stay out of this repository: re-running the notebook fetche
 `lib.py` from upstream, and republishing Sasha Rush's files here would serve no
 one.
 
-One post-processing pass is applied to the notebook before it lands here. chalk
-writes every diagram label as `<text style="...;font-size:0.75px;...">`, and that
-declaration block is dropped by GitHub's notebook renderer while the `style` on
-the surrounding `<g>` survives. The label then falls back to 16px inside a group
-scaled by about 79, which puts a word roughly 1460px tall over a 300px-tall
-diagram. Carrying the same declarations as SVG presentation attributes survives
-the renderer and measures identically in a browser, so that is what the published
-notebook holds.
+One post-processing pass is applied to the notebook before it lands here, and it
+is worth naming because the bug it fixes is invisible locally. chalk writes some
+labels with a `style` attribute that spans several lines. The newline is a real
+one in the file and CSS treats it as whitespace, so Jupyter renders them fine.
+GitHub's notebook viewer re-serializes that attribute and writes the newline as a
+literal backslash-n, which CSS reads as an escape sequence: the declaration behind
+it parses as a property whose name starts with `n` and is dropped. `font-size`
+goes with it, the label falls back to the 13px it inherits from the page, and that
+sits inside a group scaled by about 79.
+
+Only the multi-line labels break, which is why the damage looks random: 52 of the
+159 labels carry a newline, and on GitHub those 52 were exactly the ones that
+covered their diagram, the worst at 713px in a 285px frame. Carrying the same
+declarations as SVG presentation attributes keeps the newline out of the CSS
+parser, and all 159 labels now measure 0.5px or 0.75px on GitHub with none
+overflowing.
 
 ## How the answers were checked
 
