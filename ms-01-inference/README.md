@@ -2,7 +2,7 @@
 
 # Phase 2 — Graded C, measured inference
 
-`ms-01-inference` · weeks 1–8 · 16 sub-modules, 16 written · 58 exercises
+`ms-01-inference` · weeks 1–8 · 14 sub-modules, 14 written · 52 exercises
 
 **What it buys.** produce the saturation curve of an unknown inference server in half a day
 
@@ -19,8 +19,6 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `mes-01-chronometre` | added | Time a function without being fooled by noise or by warm-up | not started · 7 exercises |
 | `mes-02-grandeurs` | added | Estimate an order of magnitude for compute, memory and cost before writing any code | not started · 3 exercises |
 | `mes-03-profiler` | added | Locate the function that costs in a slow program, and prove that fixing it helped | not started · 6 exercises |
-| `pt-01-autograd` | added | Redo in tensors what micrograd wrote by hand, recover the same gradients to within 1e-6, and say of every discrepancy whether it comes from the computation or from the framework | not started · 3 exercises |
-| `pt-02-gpt` | added | Rewrite your transformer in the framework's idiom, nn.Module, Dataset, DataLoader and checkpoints, and recover the same parameter count, the same batches at a fixed seed and the same final loss to within 2% | not started · 3 exercises |
 | `inf-01-servir` | added | Query an inference engine through its API, record its latency under a written protocol, and compare two engines without concluding beyond what the measurement allows | not started · 3 exercises |
 | `inf-02-prefill-decode` | added | Separate a generation's two regimes by measurement, derive a cost model from it, and use that to predict the latency of a request never measured | not started · 3 exercises |
 | `inf-03-cache-kv` | added | Quantify what the key-value cache saves in time and costs in memory, recognise by measurement an engine deprived of it, and say from what context length it is the cache, not the weights, that caps concurrency | not started · 3 exercises |

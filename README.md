@@ -19,7 +19,7 @@ This repository is the public trace of a roadmap toward ML systems: the layer of
 the field where the question is no longer whether a model is correct, but what
 it costs to run, and where the time actually goes.
 
-The plan is eight phases and 96 sub-modules, spread across the 42 curriculum
+The plan is eight phases and 94 sub-modules, spread across the 42 curriculum
 and the years after it. Two layers run in parallel the whole way. The imposed
 layer is the 42 common core, which buys the title and the time. The added layer
 is what produces anything rare. A phase counts as done when both are.
@@ -36,7 +36,7 @@ write it again from a blank file is.
 | Phase | Window | What it buys | Sub-modules |
 |---|---|---|---|
 | **[`ms-00-prepa`](ms-00-prepa)** — the prep, C and Python | Sept–Oct 2026 | enter the school with the libft done, a GPT trained by hand, and a C inference engine whose throughput is measured and placed on a roofline | 11 |
-| [`ms-01-inference`](ms-01-inference) — graded C, measured inference | weeks 1–8 | produce the saturation curve of an unknown inference server in half a day | 16 |
+| [`ms-01-inference`](ms-01-inference) — graded C, measured inference | weeks 1–8 | produce the saturation curve of an unknown inference server in half a day | 14 |
 | [`ms-02-cpp-concurrence`](ms-02-cpp-concurrence) — C++ and concurrency | weeks 9–20 | concurrent code whose freedom from starvation is shown by measurement, and an unknown execution timeline read in ten minutes | 18 |
 | [`ms-03-parallelisme`](ms-03-parallelisme) — parallelism, first kernel, entering vLLM | weeks 21–34 | say before writing a kernel whether it will be compute- or memory-bound, and a PR in vLLM or SGLang on the scheduler or the cache, review taken up by a maintainer | 21 |
 | [`ms-04-cuda`](ms-04-cuda) — CUDA properly | weeks 35–46 | a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation, and where it loses too | 16 |
