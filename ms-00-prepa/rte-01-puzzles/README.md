@@ -36,6 +36,15 @@ the hypothesis cache stay out of this repository: re-running the notebook fetche
 `lib.py` from upstream, and republishing Sasha Rush's files here would serve no
 one.
 
+One post-processing pass is applied to the notebook before it lands here. chalk
+writes every diagram label as `<text style="...;font-size:0.75px;...">`, and that
+declaration block is dropped by GitHub's notebook renderer while the `style` on
+the surrounding `<g>` survives. The label then falls back to 16px inside a group
+scaled by about 79, which puts a word roughly 1460px tall over a 300px-tall
+diagram. Carrying the same declarations as SVG presentation attributes survives
+the renderer and measures identically in a browser, so that is what the published
+notebook holds.
+
 ## How the answers were checked
 
 The notebook carries the checker's verdict cell by cell. The same twenty-one
