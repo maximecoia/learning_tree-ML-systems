@@ -8,20 +8,20 @@
 
 **How it ends.** Not on a feeling, on one binary test: *L5 existe. Et on te décrit un kernel : tu estimes avant de coder s'il sera compute- ou memory-bound, et tu justifies par un ordre de grandeur.*
 
-Descriptions below are the curriculum's own `competence` field, quoted verbatim and left in French; everything else on this page is not.
+Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it.
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
 | `t42-03-codexion` | imposed | — | 42 subject, not published |
 | `t42-04-flyin` | imposed | — | 42 subject, not published |
 | `t42-05-callmemaybe` | imposed | — | 42 subject, not published |
-| `c-11-simd` | added | Décomposer un calcul en fils et mesurer le déséquilibre que la décomposition crée, écrire du code vectoriel sous masque et lire l'utilisation des voies, faire vectoriser une boucle par le compilateur et le vérifier, et relier le plafond d'un calcul à la bande passante de la machine | not started · 4 exercises |
-| `c-12-ordonnancement` | added | Écrire un ordonnanceur de tâches en lots sur des fils créés une fois, mesurer le déséquilibre entre fils avant de le corriger, et exécuter des lots dépendants sans qu'aucun ne parte avant ce qu'il attend | not started · 4 exercises |
-| `par-05-philosophes-warps` | added | Relier le code concurrent qu'on a écrit, fils, mutex, famine, au modèle SIMT d'un GPU, en nommant ce qui se transpose, ce qui change de nature, et ce qui n'existe plus | not started · 1 exercise |
-| `cu-01-bases` | added | Écrire des kernels CUDA, du calcul élémentaire au rendu concurrent, qui s'exécutent sur l'émulation hôte du correcteur comme sur un GPU: un fil par élément avec sa borne, un scan en mémoire partagée avec ses barrières, et une décomposition qui garantit l'ordre et l'atomicité | not started · 4 exercises |
-| `cu-02-divergence` | added | Chiffrer ce qu'une divergence de warp coûte, toutes choses égales par ailleurs, en lisant warp par warp lesquels ont pris les deux chemins et en appliquant le modèle SIMT | not started · 1 exercise |
-| `tri-01-vecadd` | added | Écrire un kernel Triton qui ne sort jamais de son tampon, choisir sa taille de bloc en la justifiant par un compte, et fusionner plusieurs passes en une | not started · 5 exercises |
-| `tri-02-softmax` | added | Écrire une softmax par ligne qui ne déborde jamais, et contrôler un kernel sur quatre axes plutôt qu'un | not started · 5 exercises |
+| `c-11-simd` | added | Split a computation across threads and measure the imbalance the split creates, write masked vector code and read lane utilisation, get the compiler to vectorise a loop and check that it did, and tie a computation's ceiling to the machine's bandwidth | not started · 4 exercises |
+| `c-12-ordonnancement` | added | Write a batch task scheduler over threads created once, measure the imbalance between threads before correcting it, and run dependent batches without any starting before what it waits on | not started · 4 exercises |
+| `par-05-philosophes-warps` | added | Tie the concurrent code you wrote, threads, mutexes, starvation, to a GPU's SIMT model, naming what carries over, what changes in nature, and what no longer exists | not started · 1 exercise |
+| `cu-01-bases` | added | Write CUDA kernels, from elementary arithmetic to concurrent rendering, that run on the grader's host emulation as on a GPU: one thread per element with its bound, a shared-memory scan with its barriers, and a decomposition that guarantees ordering and atomicity | not started · 4 exercises |
+| `cu-02-divergence` | added | Quantify what a warp divergence costs, all else being equal, by reading warp by warp which ones took both paths and applying the SIMT model | not started · 1 exercise |
+| `tri-01-vecadd` | added | Write a Triton kernel that never steps outside its buffer, choose its block size and justify it by a count, and fuse several passes into one | not started · 5 exercises |
+| `tri-02-softmax` | added | Write a row-wise softmax that never overflows, and check a kernel on four axes rather than one | not started · 5 exercises |
 | `tri-03-matmul` | added | — | planned, not written yet |
 | `tri-04-classement` | added | — | planned, not written yet |
 | `tri-05-note` | added | — | planned, not written yet |

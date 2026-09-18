@@ -6,7 +6,7 @@
 
 **What it buys.** numerical precision, multi-GPU, operations and evaluation, then a page of deliverables that reads without explanation
 
-Descriptions below are the curriculum's own `competence` field, quoted verbatim and left in French; everything else on this page is not.
+Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it.
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
@@ -15,7 +15,7 @@ Descriptions below are the curriculum's own `competence` field, quoted verbatim 
 | `num-01-precision` | added | — | planned, not written yet |
 | `dist-01-multigpu` | added | — | planned, not written yet |
 | `qua-01-evaluation` | added | — | planned, not written yet |
-| `cpp-11-moderne` | added | Lire ce que le compilateur fait d'un programme C++ moderne, déplacement, instanciation, constexpr, dans l'assembleur et dans le compte des allocations, écrire du code concurrent avec le modèle mémoire de std::atomic, et repérer une allocation cachée dans une boucle chaude | not started · 8 exercises |
+| `cpp-11-moderne` | added | Read what the compiler makes of a modern C++ program, moves, instantiation, constexpr, in the assembly and in the allocation count, write concurrent code against std::atomic's memory model, and spot a hidden allocation in a hot loop | not started · 8 exercises |
 | `ops-01-exploitation` | added | — | planned, not written yet |
 | `dist-02-cs336` | added | — | planned, not written yet |
 | `pro-01-stage-1` | proof | — | planned, not written yet |
