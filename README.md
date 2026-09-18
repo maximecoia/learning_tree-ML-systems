@@ -35,14 +35,14 @@ write it again from a blank file is.
 
 | Phase | Window | What it buys | Sub-modules |
 |---|---|---|---|
-| **`ms-00-prepa`** — the prep, C and Python | Sept–Oct 2026 | enter the school with the libft done, a GPT trained by hand, and a C inference engine whose throughput is measured and placed on a roofline | 15 |
-| `ms-01-inference` — graded C, measured inference | weeks 1–8 | produce the saturation curve of an unknown inference server in half a day | 18 |
-| `ms-02-cpp-concurrence` — C++ and concurrency | weeks 9–20 | concurrent code whose freedom from starvation is shown by measurement, and an unknown execution timeline read in ten minutes | 20 |
-| `ms-03-parallelisme` — parallelism, first kernel, entering vLLM | weeks 21–34 | say before writing a kernel whether it will be compute- or memory-bound, and a PR in vLLM or SGLang on the scheduler or the cache, review taken up by a maintainer | 21 |
-| `ms-04-cuda` — CUDA properly | weeks 35–46 | a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation, and where it loses too | 16 |
-| `ms-05-fin-tronc-commun` — the end of the common core | weeks 47–57 | the four remaining imposed projects, crossed fast and with nothing added for pleasure | 4 |
-| `ms-06-specialisation` — specialisation, first internship | 2028 onward | numerical precision, multi-GPU, operations and evaluation, then a page of deliverables that reads without explanation | 9 |
-| `ms-07-stage-2` — second internship | after the first | the European arm of an American company in the field | 1 |
+| **[`ms-00-prepa`](ms-00-prepa)** — the prep, C and Python | Sept–Oct 2026 | enter the school with the libft done, a GPT trained by hand, and a C inference engine whose throughput is measured and placed on a roofline | 15 |
+| [`ms-01-inference`](ms-01-inference) — graded C, measured inference | weeks 1–8 | produce the saturation curve of an unknown inference server in half a day | 18 |
+| [`ms-02-cpp-concurrence`](ms-02-cpp-concurrence) — C++ and concurrency | weeks 9–20 | concurrent code whose freedom from starvation is shown by measurement, and an unknown execution timeline read in ten minutes | 20 |
+| [`ms-03-parallelisme`](ms-03-parallelisme) — parallelism, first kernel, entering vLLM | weeks 21–34 | say before writing a kernel whether it will be compute- or memory-bound, and a PR in vLLM or SGLang on the scheduler or the cache, review taken up by a maintainer | 21 |
+| [`ms-04-cuda`](ms-04-cuda) — CUDA properly | weeks 35–46 | a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation, and where it loses too | 16 |
+| [`ms-05-fin-tronc-commun`](ms-05-fin-tronc-commun) — the end of the common core | weeks 47–57 | the four remaining imposed projects, crossed fast and with nothing added for pleasure | 4 |
+| [`ms-06-specialisation`](ms-06-specialisation) — specialisation, first internship | 2028 onward | numerical precision, multi-GPU, operations and evaluation, then a page of deliverables that reads without explanation | 9 |
+| [`ms-07-stage-2`](ms-07-stage-2) — second internship | after the first | the European arm of an American company in the field | 1 |
 
 The windows are the plan's own, not a commitment. A phase opens on its
 prerequisites rather than on a date, so the order is fixed and the pace is not.
@@ -63,7 +63,7 @@ the path, with 43 days before it closes.
 | **The route to the trained GPT** | 0 of 6 steps — the live track | [below](#the-route-to-the-trained-gpt) |
 | **Linear algebra** | 0 of 8 exercises, half an hour a day | |
 | The C tracks | kept out of this repository | [below](#why-the-c-tracks-are-not-here) |
-| Zero to Hero | 3 units shipped, then taken off the path | [`z2h-karpathy/`](z2h-karpathy) |
+| Zero to Hero | taken off the path, and out of this repository | [below](#zero-to-hero-and-why-it-left) |
 
 The denominator excludes the eight Zero to Hero units, taken off the path, and
 the C engine, which cannot begin before the trained model exists. Counting an
@@ -136,9 +136,9 @@ from a blank file.
 
 | Module | Question | |
 |---|---|---|
-| [`py-01-basics`](py-01-basics) | Can you get a correct answer out of input you do not control? | 9 of 9 |
-| [`py-02-advanced`](py-02-advanced) | Can you build a type that makes the wrong answer unrepresentable? | 9 of 9 |
-| [`py-03-livrer`](py-03-livrer) | Can someone else install it and run it without asking you how? | 8 of 8 |
+| [`py-01-basics`](ms-00-prepa/py-01-basics) | Can you get a correct answer out of input you do not control? | 9 of 9 |
+| [`py-02-advanced`](ms-00-prepa/py-02-advanced) | Can you build a type that makes the wrong answer unrepresentable? | 9 of 9 |
+| [`py-03-livrer`](ms-00-prepa/py-03-livrer) | Can someone else install it and run it without asking you how? | 8 of 8 |
 
 It ends in a command, installed and on the PATH:
 
@@ -151,35 +151,24 @@ latence n=3 moy=17.67 p95=31.00 ms
 The full write-up, exercise by exercise, with the decisions that were worth
 naming, is in [`PYTHON.md`](PYTHON.md).
 
-## Zero to Hero — three units, kept as an archive
+## Zero to Hero, and why it left
 
-Karpathy's first three lectures, rebuilt by hand: a scalar autograd engine, a
-bigram model built twice by two unrelated routes, then the Bengio MLP. They
-still run, and they stay here. What changed is their place in the plan.
+Three of Karpathy's lectures were rebuilt here by hand — a scalar autograd
+engine, a bigram model built twice by two unrelated routes, and the Bengio MLP.
+They ran, and their checks passed.
 
-| | Unit | Builds | Code |
-|---|---|---|---|
-| 1 | [`z2h-01-micrograd`](z2h-karpathy/z2h-01-micrograd) | reverse-mode autograd, by hand | **Shipped**, no dependencies |
-| 2 | [`z2h-02-bigrammes`](z2h-karpathy/z2h-02-bigrammes) | the same model by counting and by gradient descent | **Shipped** |
-| 3 | [`z2h-03-mlp`](z2h-karpathy/z2h-03-mlp) | the Bengio et al. 2003 MLP | **Shipped** |
-
-```bash
-cd z2h-karpathy/z2h-01-micrograd && python3 verifier.py
-```
-
-```
-1. reference neuron, bit for bit     OK     all five exact
-2. a + a gives a.grad == 2           OK     expected 2.0                   got 2
-3. loss < 0.01 and 4 signs right     OK     expected < 0.01                got 0.005104
-ALL OK
-```
-
-Why they stopped being the road to the deliverable, in one measurement: across
+They are no longer in this repository, and the reason is one measurement: across
 the fifteen sub-modules of the prep, the word `torch` appears twice and `numpy`
 never, while the acceptance test imports `torch` on its first line. The units
-build on a scalar engine the exam never loads, so the layer meant to prepare for
-it was not teaching the object it is graded on. The module page is
-[`z2h-karpathy/README.md`](z2h-karpathy).
+build on a scalar engine the exam never loads. **The layer meant to prepare for
+the deliverable was not teaching the object the deliverable is graded on**, so
+it was replaced rather than finished, and the page stopped being organised
+around it.
+
+The work is not deleted — it is in this repository's history, and its checks
+still run wherever it is kept. It is simply not the road any more, and a
+showcase that keeps its abandoned road in the middle of the page is describing
+the past.
 
 ## How this is verified
 
@@ -188,9 +177,9 @@ before being trusted. A check that cannot fail is worse than no check.
 
 Where a result is deterministic, the check is exact to the digit. Where it is
 not, the check compares against a **range** set by the measured noise floor:
-three runs of the unit 3 MLP differing only in the minibatch draw give 2.1595,
-2.1870 and 2.1899, so the floor is 0.03, and demanding an exact value would fail
-a correct model one time in two.
+three runs of an MLP differing only in the minibatch draw gave 2.1595, 2.1870
+and 2.1899, so the floor is 0.03, and demanding an exact value would fail a
+correct model one time in two.
 
 The same rule decides which sources are used at all. A source is taken when it
 arrives with a grader that is not its own reader — a checker in the notebook, a
@@ -203,21 +192,29 @@ the noise floor, and the one the lecture calls most promising costs (+0.165).
 
 ## Layout
 
+**One folder per phase, and inside it one folder per sub-module.** Each phase
+carries a page listing every sub-module it declares, what grades it, and where
+its work is — including the ones that are deliberately not here.
+
 ```
-README.md              this page: the roadmap, and where it stands
-PYTHON.md              the Python socle, exercise by exercise
-py-01-basics/          correct answers out of input you do not control
-py-02-advanced/        types that make the wrong answer unrepresentable
-py-03-livrer/          the result, installable and on the PATH
-z2h-karpathy/          Zero to Hero, the three units that were built
-    z2h-01-micrograd/  reverse-mode autograd
-    z2h-02-bigrammes/  the bigram model, both roads
-    z2h-03-mlp/        the Bengio MLP
+README.md                  this page: the roadmap, and where it stands
+PYTHON.md                  the Python socle, exercise by exercise
+ms-00-prepa/               the prep — Sept–Oct 2026
+    README.md              its 15 sub-modules and their state
+    py-01-basics/          correct answers out of input you do not control
+    py-02-advanced/        types that make the wrong answer unrepresentable
+    py-03-livrer/          the result, installable and on the PATH
+ms-01-inference/ … ms-07-stage-2/
+    README.md              the same page, for a phase not yet opened
 ```
 
+The phase pages are generated from the curriculum and from the table above, not
+written by hand. Three README drifts on this project were all hand-copied
+figures going stale, and a page that reads its sources cannot drift without them.
+
 The 42 subjects are absent by policy, not by accident, and the route's
-assignments are the work of other people and stay in their own repositories.
-Phase 1 lands here when the trained model does.
+assignments are other people's work and stay in their own repositories. Phase 1
+lands here when the trained model does.
 
 ## Sources and licence
 
@@ -227,11 +224,11 @@ Stanford CS336, *Language Modeling from Scratch*
 ([`stanford-cs336`](https://github.com/stanford-cs336)) · Sasha Rush,
 [Tensor Puzzles](https://github.com/srush/Tensor-Puzzles).
 
-The archive: the Zero to Hero lectures, notebooks and datasets are Andrej
-Karpathy's, MIT licensed —
+The road that was taken off: the Zero to Hero lectures, notebooks and datasets
+are Andrej Karpathy's, MIT licensed —
 [karpathy/nn-zero-to-hero](https://github.com/karpathy/nn-zero-to-hero),
 [karpathy/micrograd](https://github.com/karpathy/micrograd),
-[karpathy/makemore](https://github.com/karpathy/makemore). The code here was
-typed, not copied.
+[karpathy/makemore](https://github.com/karpathy/makemore). What was built from
+them here was typed, not copied, and it remains in this repository's history.
 
 Everything else is original work.
