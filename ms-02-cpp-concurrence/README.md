@@ -2,7 +2,7 @@
 
 # Phase 3 — C++ and concurrency
 
-`ms-02-cpp-concurrence` · weeks 9–20 · 20 sub-modules, 20 written · 60 exercises
+`ms-02-cpp-concurrence` · weeks 9–20 · 18 sub-modules, 18 written · 48 exercises
 
 **What it buys.** concurrent code whose freedom from starvation is shown by measurement, and an unknown execution timeline read in ten minutes
 
@@ -15,8 +15,6 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `t42-01-piscine-python` | imposed | Clear the curriculum's Python pool as fast as possible, the content being already known: the exact output, the exact error, the exact docstring, on the patterns the grader checks | 42 subject, not published · 3 exercises |
 | `t42-02-amazeing` | imposed | Ship a project scoped to its subject and nothing more: a configuration read and refused by naming the cause, a maze perfect or not with coherent walls, a shortest path, a seed that reproduces | 42 subject, not published · 3 exercises |
 | `sh-01-b2br` | imposed | Administer a hardened machine, from encrypted partitioning to password policy, and be able to defend every choice: the subject's configuration files handed in and read, and the monitoring script run against command doubles | 42 subject, not published · 5 exercises |
-| `mth-03-probas` | added | Simulate a distribution, hold it against its closed form, and know how many measurements it takes to tell two values apart | not started · 6 exercises |
-| `mth-04-statistiques` | added | Judge whether two series of measurements really differ, knowing how often you will be wrong | not started · 6 exercises |
 | `cpp-00-classes` | added | Write a class with what it hides and what it shows, hold shared state in static members, and read and write through the language's streams up to an interactive program that never falls over | 42 subject, not published · 3 exercises |
 | `cpp-01-allocation` | added | Choose between the stack and the heap and say so in the code, tell a reference from a pointer by what each one promises, and aim at a method through a pointer to member | 42 subject, not published · 3 exercises |
 | `cpp-02-canonique` | added | Lay down the four members the language calls without you writing them, overload operators without surprising the caller, and represent a fixed-point number with no float in memory | 42 subject, not published · 3 exercises |

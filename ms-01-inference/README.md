@@ -2,7 +2,7 @@
 
 # Phase 2 — Graded C, measured inference
 
-`ms-01-inference` · weeks 1–8 · 18 sub-modules, 18 written · 70 exercises
+`ms-01-inference` · weeks 1–8 · 16 sub-modules, 16 written · 58 exercises
 
 **What it buys.** produce the saturation curve of an unknown inference server in half a day
 
@@ -16,8 +16,6 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `c-04-printf` | imposed | Write a variadic formatter whose output matches the libc's, conversion by conversion | 42 subject, not published · 3 exercises |
 | `c-05-gnl` | imposed | Read a stream line by line with state that survives between calls, across several descriptors and without leaking | 42 subject, not published · 3 exercises |
 | `c-06-pushswap` | imposed | Sort under a constrained set of operations, and defend the algorithm's real cost by measurement | 42 subject, not published · 5 exercises |
-| `mth-02-derivees` | added | Compute a gradient by hand, and prove it right by comparing it against measurement | not started · 6 exercises |
-| `mth-05-optimisation` | added | Tune a gradient descent knowing what each setting costs, and recognise a stopping point that is not a minimum | not started · 6 exercises |
 | `mes-01-chronometre` | added | Time a function without being fooled by noise or by warm-up | not started · 7 exercises |
 | `mes-02-grandeurs` | added | Estimate an order of magnitude for compute, memory and cost before writing any code | not started · 3 exercises |
 | `mes-03-profiler` | added | Locate the function that costs in a slow program, and prove that fixing it helped | not started · 6 exercises |
