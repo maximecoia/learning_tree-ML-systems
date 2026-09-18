@@ -8,19 +8,19 @@
 
 **How it ends.** Not on a feeling, on one binary test: *Tu dessines de mémoire le flux d'un token d'entrée jusqu'aux logits, avec les shapes annotées à chaque étape.*
 
-Descriptions below are the curriculum's own `competence` field, quoted verbatim and left in French; everything else on this page is not.
+Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it.
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
-| `py-01-basics` | added | Écrire des fonctions Python avec les variables, opérateurs arithmétiques, chaînes, conditions, boucles, listes, dictionnaires et fonctions du langage | [py-01-basics](py-01-basics) · 9 exercises |
-| `py-02-advanced` | added | Modéliser une donnée par une classe Python avec ses méthodes, ses opérateurs, ses propriétés et son héritage | [py-02-advanced](py-02-advanced) · 9 exercises |
-| `py-03-livrer` | added | Livrer un outil Python en ligne de commande, empaqueté, testé et installable par un autre | [py-03-livrer](py-03-livrer) · 8 exercises |
-| `c-01-libft` | added | Écrire une bibliothèque C statique dont chaque fonction respecte le contrat exact de la libc | 42 subject, not published · 6 exercises |
-| `maths-01-algebre` | added | Implémenter les transformations vectorielles et matricielles 2D en Python | not started · 8 exercises |
-| `rte-01-puzzles` | added | Écrire en une ligne, par diffusion et indexation seules, les fonctions que NumPy fournit toutes faites, et savoir pourquoi chacune tient sans boucle | [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles), answers kept out · 1 exercise |
-| `rte-02-cs336` | added | Écrire les briques d'un modèle de langage, sa perte, son optimiseur, ses points de reprise et son tokenizer BPE, et les faire passer la suite publique d'un cours qui ne connaît pas votre architecture | [stanford-cs336/assignment1-basics](https://github.com/stanford-cs336/assignment1-basics), answers kept out · 5 exercises |
-| `c-02-moteur` | added | Écrire en C un moteur d'inférence qui charge un modèle, génère du texte, mesure son débit et se situe sur un roofline | not started · 7 exercises |
-| `l1-01-gpt-corpus` | proof | Livrer publiquement un modèle de langage entraîné de bout en bout, et défendre chaque partie de son fonctionnement sans le code sous les yeux | not started · 3 exercises |
+| `py-01-basics` | added | Write Python functions using the language's variables, arithmetic operators, strings, conditionals, loops, lists, dictionaries and functions | [py-01-basics](py-01-basics) · 9 exercises |
+| `py-02-advanced` | added | Model a piece of data as a Python class, with its methods, its operators, its properties and its inheritance | [py-02-advanced](py-02-advanced) · 9 exercises |
+| `py-03-livrer` | added | Ship a Python command-line tool, packaged, tested and installable by someone else | [py-03-livrer](py-03-livrer) · 8 exercises |
+| `c-01-libft` | added | Write a static C library whose every function honours the exact contract of the libc | 42 subject, not published · 6 exercises |
+| `maths-01-algebre` | added | Implement 2D vector and matrix transformations in Python | not started · 8 exercises |
+| `rte-01-puzzles` | added | Write in a single line, by broadcasting and indexing alone, the functions NumPy hands you ready-made, and know why each one holds without a loop | [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles), answers kept out · 1 exercise |
+| `rte-02-cs336` | added | Write the building blocks of a language model, its loss, its optimiser, its checkpoints and its BPE tokenizer, and make them pass the public suite of a course that knows nothing of your architecture | [stanford-cs336/assignment1-basics](https://github.com/stanford-cs336/assignment1-basics), answers kept out · 5 exercises |
+| `c-02-moteur` | added | Write an inference engine in C that loads a model, generates text, measures its throughput and places itself on a roofline | not started · 7 exercises |
+| `l1-01-gpt-corpus` | proof | Publish a language model trained end to end, and defend every part of how it works without the code in front of you | not started · 3 exercises |
 
 ## The route to the deliverable
 

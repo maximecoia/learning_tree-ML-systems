@@ -6,7 +6,7 @@
 
 **What it buys.** the European arm of an American company in the field
 
-Descriptions below are the curriculum's own `competence` field, quoted verbatim and left in French; everything else on this page is not.
+Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it.
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
