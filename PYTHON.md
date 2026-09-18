@@ -47,7 +47,7 @@ cd py-03-livrer/ex07 && python3 -m releve resume mesures.txt
 
 | Exercise | Focus | Status |
 |---|---|---|
-| [`ex00/mes_types.py`](py-01-basics/ex00/mes_types.py) | conversion, `isinstance`, why `14.0` is not an `int` | **Complete** |
+| [`ex00/types.py`](py-01-basics/ex00/types.py) | conversion, `isinstance`, why `14.0` is not an `int` | **Complete** |
 | [`ex01/operateurs.py`](py-01-basics/ex01/operateurs.py) | `//` and `%` on negatives, rounding, fractional exponents | **Complete** |
 | [`ex02/chaines.py`](py-01-basics/ex02/chaines.py) | `strip`, `lower`, `split`, the limits of `isdigit` | **Complete** |
 | [`ex03/conditions.py`](py-01-basics/ex03/conditions.py) | threshold ladders, truthiness, one reusable validity guard | **Complete** |
@@ -80,8 +80,8 @@ Turning the tree into something installable. One exercise per delivery concern.
 | Exercise | Focus | Status |
 |---|---|---|
 | [`ex00/executable.py`](py-03-livrer/ex00/executable.py) | the executable module: importable and runnable, `__main__` guard | **Complete** |
-| [`ex01/releve.py`](py-03-livrer/ex01/releve.py) | the command line, `argparse` and its subcommands | **Complete** |
-| [`ex02/releve.py`](py-03-livrer/ex02/releve.py) | `-` for standard input, exit codes, `--strict` | **Complete** |
+| [`ex01/commande.py`](py-03-livrer/ex01/commande.py) | the command line, `argparse` and its subcommands | **Complete** |
+| [`ex02/flux.py`](py-03-livrer/ex02/flux.py) | `-` for standard input, exit codes, `--strict` | **Complete** |
 | [`ex03/releve/`](py-03-livrer/ex03/releve) | the package: `cli` and `mesures` split apart, `__main__` | **Complete** |
 | [`ex04/test_releve.py`](py-03-livrer/ex04/test_releve.py) | tests on the rendered output | **Complete** |
 | [`ex05/requirements.txt`](py-03-livrer/ex05/requirements.txt) | dependencies, runtime and development kept apart | **Complete** |
