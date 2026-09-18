@@ -2,7 +2,7 @@
 
 # Phase 1 — The prep, C and Python
 
-`ms-00-prepa` · Sept–Oct 2026 · 9 sub-modules, 9 written · 56 exercises
+`ms-00-prepa` · Sept–Oct 2026 · 11 sub-modules, 11 written · 68 exercises
 
 **What it buys.** enter the school with the libft done, a GPT trained by hand, and a C inference engine whose throughput is measured and placed on a roofline
 
@@ -17,6 +17,8 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `py-03-livrer` | added | Ship a Python command-line tool, packaged, tested and installable by someone else | [py-03-livrer](py-03-livrer) · 8 exercises |
 | `c-01-libft` | added | Write a static C library whose every function honours the exact contract of the libc | 42 subject, not published · 6 exercises |
 | `maths-01-algebre` | added | Implement 2D vector and matrix transformations in Python | not started · 8 exercises |
+| `mth-03-probas` | added | Simulate a distribution, hold it against its closed form, and know how many measurements it takes to tell two values apart | not started · 6 exercises |
+| `mth-04-statistiques` | added | Judge whether two series of measurements really differ, knowing how often you will be wrong | not started · 6 exercises |
 | `rte-01-puzzles` | added | Write in a single line, by broadcasting and indexing alone, the functions NumPy hands you ready-made, and know why each one holds without a loop | [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles), answers kept out · 1 exercise |
 | `rte-02-cs336` | added | Write the building blocks of a language model, its loss, its optimiser, its checkpoints and its BPE tokenizer, and make them pass the public suite of a course that knows nothing of your architecture | [stanford-cs336/assignment1-basics](https://github.com/stanford-cs336/assignment1-basics), answers kept out · 5 exercises |
 | `c-02-moteur` | added | Write an inference engine in C that loads a model, generates text, measures its throughput and places itself on a roofline | not started · 7 exercises |
