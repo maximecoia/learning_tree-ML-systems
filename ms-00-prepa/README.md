@@ -2,7 +2,7 @@
 
 # Phase 1 — The prep, C and Python
 
-`ms-00-prepa` · Sept–Oct 2026 · 7 sub-modules
+`ms-00-prepa` · Sept–Oct 2026 · 9 sub-modules
 
 **What it buys.** enter the school with the libft done, a GPT trained by hand, and a C inference engine whose throughput is measured and placed on a roofline
 
@@ -13,6 +13,8 @@
 | `py-03-livrer` | a grader | [in this repository](py-03-livrer) |
 | `c-01-libft` | a grader | 42 subject, not published |
 | `maths-01-algebre` | a grader | not started |
+| `rte-01-puzzles` | a grader | borrowed assignment, answers kept out |
+| `rte-02-cs336` | a grader | borrowed assignment, answers kept out |
 | `c-02-moteur` | a grader | waits for the trained model |
 | `l1-01-gpt-corpus` | a quiz | not started |
 
