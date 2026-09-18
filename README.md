@@ -61,7 +61,30 @@ Phase 1, `ms-00-prepa`, is the one in progress.
 | **The Python socle** | 26 of 26 exercises, complete | [`PYTHON.md`](PYTHON.md) |
 | **Neural Networks: Zero to Hero** | 8 units written, 3 shipped — now off the path, see below | [`z2h-karpathy/`](z2h-karpathy) |
 | **The route to the trained GPT** | tensors, attention, the model, training — graded by the sources themselves | in progress |
-| The libft | done, and deliberately not published here | |
+| The C tracks | kept out of this repository — see below | |
+
+Counted on what is still on the path: **32 of 40 graded exercises**. The
+denominator excludes the eight Zero to Hero units, taken off the path, and the C
+engine, which cannot start before the trained model exists. Counting an
+abandoned track in a ratio makes a decision look like a delay.
+
+What is left before the phase closes, on **43 days**:
+
+| | Left | Graded by |
+|---|---|---|
+| Linear algebra | 8 exercises | the curriculum's own grader, half an hour a day |
+| The route to the GPT | 6 steps | the sources: a puzzle checker, a book's solutions, a public `pytest` suite |
+| The acceptance test | 6 gates | `verifier.py`, black-box, on a file written from blank |
+| The deliverable | corpus, run, repository, write-up | a third party replaying it without asking a question |
+
+### Why the C tracks are not here
+
+The libft and the projects that follow it are 42 subjects. Publishing a solution
+to one is against the school's charter, and this repository is also the tree the
+grader reads, so finishing one here would publish it by accident. The
+`.gitignore` refuses them by name, and the list was built from the curriculum's
+own `source` field rather than by eye. What stays publishable is what is built
+*on top* of those subjects, which is the part worth showing.
 
 ### The Python socle — complete
 
