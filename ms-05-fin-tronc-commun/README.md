@@ -2,15 +2,21 @@
 
 # Phase 6 — The end of the common core
 
-`ms-05-fin-tronc-commun` · weeks 47–57 · 4 sub-modules
+`ms-05-fin-tronc-commun` · weeks 47–57 · 4 sub-modules, 0 written · 0 exercises
 
 **What it buys.** the four remaining imposed projects, crossed fast and with nothing added for pleasure
 
-| Sub-module | Graded by | Where the work is |
-|---|---|---|
-| `t42-08-inception` | not written yet | 42 subject, not published |
-| `t42-09-answer-protocol` | not written yet | 42 subject, not published |
-| `t42-10-agent-smith` | not written yet | 42 subject, not published |
-| `t42-11-transcendence` | not written yet | 42 subject, not published |
+**How it ends.** Not on a feeling, on one binary test: *Les quatre projets sont validés, et les heures réelles de `transcendance` sont restées sous cent vingt.*
 
-The roadmap, the rule that decides what lands here and what does not, and where the phase stands are on the [main page](../README.md).
+Descriptions below are the curriculum's own `competence` field, quoted verbatim and left in French; everything else on this page is not.
+
+| Sub-module | Layer | What it covers | Where the work is |
+|---|---|---|---|
+| `t42-08-inception` | imposed | — | 42 subject, not published |
+| `t42-09-answer-protocol` | imposed | — | 42 subject, not published |
+| `t42-10-agent-smith` | imposed | — | 42 subject, not published |
+| `t42-11-transcendence` | imposed | — | 42 subject, not published |
+
+---
+
+← [ms-04-cuda](../ms-04-cuda) · [the roadmap](../README.md) · [ms-06-specialisation](../ms-06-specialisation) →
