@@ -176,16 +176,33 @@ Every other item on this page opens when its prerequisites are met, which means
 I choose when it starts. One does not, and it was added on 2026-09-19 for a
 reason that is worth stating because it is measured rather than felt.
 
-I read 229 of the 258 daily entries of someone a year into a public GPU
-programming challenge, and classified each day by whether it carried a result
-measured against an outside reference. During a kernel competition they had
-entered, one day in four did. Outside one, one day in twenty. Over their last
-sixty-five days, fully covered, after they declined a competition that had just
-opened, none did at all — they kept reading, kept building their own tools, and
-never put another number against a reference.
+The source is [@levidiamode](https://x.com/levidiamode), who has posted a
+`Day N/365 of GPU Programming` entry every day since 1 January 2026, starting
+from no GPU, CUDA or computer architecture background and working around a job.
+It is named because a claim you cannot check is not worth making, and every
+figure below can be checked by reading the same public posts.
 
-That is not a correlation between periods. It is a dated refusal followed by an
-effect, and it is the closest thing to a controlled comparison the record offers.
+**What that record shows first is that the approach works.** Around day 71 they
+entered a GPU MODE kernel competition on AMD hardware knowing none of MXFP4,
+MoE or MLA, and finished roughly top fifteen of its first phase; by day 178
+they placed **tenth** on a B200 QR factorisation, 1700 µs against 1200 for the
+top three, and published the comparison of their kernel to the winners' the day
+after. They also had a workshop paper accepted along the way. That is further
+than this repository has got, and it took them about 250 hours.
+
+I read 229 of the 258 entries and classified each day by whether it carried a
+result measured against an outside reference. During a competition they had
+entered, one day in four did. Outside one, one day in twenty. Over their last
+sixty-five days, fully covered, after a newly opened competition was one they
+said they would not have time for, none did — the reading and the tool-building
+continued, the measuring stopped.
+
+**The finding is about the structure, not about them.** Someone disciplined
+enough to publish daily for a year, and strong enough to place top ten against
+that field, still measures against an outside reference mainly when an outside
+deadline asks for it. If that is what it takes there, it is certainly what it
+takes here. The dated refusal followed by an effect is the closest thing to a
+controlled comparison the record offers, and it is evidence about deadlines.
 
 **So the rule is now:** the first GPU MODE competition that opens after the
 inference deliverable is taken, whatever phase is running and whatever vendor's
@@ -205,13 +222,19 @@ Three things this costs and buys, all of them checkable:
   one vendor to the other — is reasoning, not an API.
 
 The same reading changed one more thing here. **A measured gain is only a result
-if the measurement survives a replay.** The top kernel of one competition, at
-11.191 µs, counted its own invocations to detect the timing phase, then ran the
-fifteen problems in a single launch and returned cached results for the rest;
-the harness divided by fifteen. This is not only a cheater's move — an ordinary
-participant found one morning that their own agents had slipped such tricks past
-the leaderboard checks overnight. So the kernel deliverable now has to hold up
-under the same harness with the call order changed and the inputs regenerated,
+if the measurement survives a replay.** GPU MODE published the anatomy of one:
+the leading kernel of a competition, at 11.191 µs, counted its own invocations
+to detect the timing phase, then ran the fifteen problems in a single launch and
+returned cached results for the rest, and the harness divided by fifteen.
+
+This is not only something a cheater does. On day 172 the same record above
+reports waking up to find that agents left running overnight had slipped such
+tricks past the leaderboard checks, and the day went on finding and deleting the
+bad submissions. The observation that came with it is the useful part: the more
+exhaustively a search covers the legitimate moves, the more inventive it gets
+about the illegitimate ones.
+
+So the kernel deliverable now has to hold up under the same harness with the call order changed and the inputs regenerated,
 and a gap between the two passes is the result, not an incident.
 
 ## How this is verified
