@@ -19,7 +19,7 @@ This repository is the public trace of a roadmap toward ML systems: the layer of
 the field where the question is no longer whether a model is correct, but what
 it costs to run, and where the time actually goes.
 
-The plan is eight phases and 94 sub-modules, spread across the 42 curriculum
+The plan is eight phases and 95 sub-modules, spread across the 42 curriculum
 and the years after it. Two layers run in parallel the whole way. The imposed
 layer is the 42 common core, which buys the title and the time. The added layer
 is what produces anything rare. A phase counts as done when both are.
@@ -37,9 +37,9 @@ write it again from a blank file is.
 |---|---|---|---|
 | **[`ms-00-prepa`](ms-00-prepa)** — the prep, C and Python | Sept–Oct 2026 | enter the school with the libft done, a GPT trained by hand, and a C inference engine whose throughput is measured and placed on a roofline | 11 |
 | [`ms-01-inference`](ms-01-inference) — graded C, measured inference | weeks 1–8 | produce the saturation curve of an unknown inference server in half a day | 14 |
-| [`ms-02-cpp-concurrence`](ms-02-cpp-concurrence) — C++ and concurrency | weeks 9–20 | concurrent code whose freedom from starvation is shown by measurement, and an unknown execution timeline read in ten minutes | 18 |
-| [`ms-03-parallelisme`](ms-03-parallelisme) — parallelism, first kernel, entering vLLM | weeks 21–34 | say before writing a kernel whether it will be compute- or memory-bound, and a PR in vLLM or SGLang on the scheduler or the cache, review taken up by a maintainer | 21 |
-| [`ms-04-cuda`](ms-04-cuda) — CUDA properly | weeks 35–46 | a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation, and where it loses too | 16 |
+| [`ms-02-cpp-concurrence`](ms-02-cpp-concurrence) — C++ and concurrency | weeks 9–20 | concurrent code whose freedom from starvation is shown by measurement, and an unknown execution timeline read in ten minutes | 19 |
+| [`ms-03-parallelisme`](ms-03-parallelisme) — parallelism, first kernel, entering vLLM | weeks 21–34 | say before writing a kernel whether it will be compute- or memory-bound, and a PR in vLLM or SGLang on the scheduler or the cache, review taken up by a maintainer | 20 |
+| [`ms-04-cuda`](ms-04-cuda) — CUDA properly | weeks 35–46 | a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation, and where it loses too | 17 |
 | [`ms-05-fin-tronc-commun`](ms-05-fin-tronc-commun) — the end of the common core | weeks 47–57 | the four remaining imposed projects, crossed fast and with nothing added for pleasure | 4 |
 | [`ms-06-specialisation`](ms-06-specialisation) — specialisation, first internship | 2028 onward | numerical precision, multi-GPU, operations and evaluation, then a page of deliverables that reads without explanation | 9 |
 | [`ms-07-stage-2`](ms-07-stage-2) — second internship | after the first | the European arm of an American company in the field | 1 |
@@ -169,6 +169,50 @@ The work is not deleted — it is in this repository's history, and its checks
 still run wherever it is kept. It is simply not the road any more, and a
 showcase that keeps its abandoned road in the middle of the page is describing
 the past.
+
+## The one date I do not set
+
+Every other item on this page opens when its prerequisites are met, which means
+I choose when it starts. One does not, and it was added on 2026-09-19 for a
+reason that is worth stating because it is measured rather than felt.
+
+I read 229 of the 258 daily entries of someone a year into a public GPU
+programming challenge, and classified each day by whether it carried a result
+measured against an outside reference. During a kernel competition they had
+entered, one day in four did. Outside one, one day in twenty. Over their last
+sixty-five days, fully covered, after they declined a competition that had just
+opened, none did at all — they kept reading, kept building their own tools, and
+never put another number against a reference.
+
+That is not a correlation between periods. It is a dated refusal followed by an
+effect, and it is the closest thing to a controlled comparison the record offers.
+
+**So the rule is now:** the first GPU MODE competition that opens after the
+inference deliverable is taken, whatever phase is running and whatever vendor's
+hardware it targets. Its place in `ms-02-cpp-concurrence` is a floor, not a
+date — that is simply the first phase entirely after the deliverable it waits
+on. A competition that opens two phases later is taken two phases later.
+
+Three things this costs and buys, all of them checkable:
+
+- it costs two to four weeks pulled out of whatever phase is running, which is
+  why the floor exists;
+- entering opens thirty dollars a month of GPU time, which pays part of the
+  compute line the later phases carry anyway;
+- the vendor does not matter. The most instructive competition in that record
+  ran on AMD hardware in HIP, and what came back from it — chiplet-aware cache
+  scheduling, register pinning, why wave specialisation does not transfer from
+  one vendor to the other — is reasoning, not an API.
+
+The same reading changed one more thing here. **A measured gain is only a result
+if the measurement survives a replay.** The top kernel of one competition, at
+11.191 µs, counted its own invocations to detect the timing phase, then ran the
+fifteen problems in a single launch and returned cached results for the rest;
+the harness divided by fifteen. This is not only a cheater's move — an ordinary
+participant found one morning that their own agents had slipped such tricks past
+the leaderboard checks overnight. So the kernel deliverable now has to hold up
+under the same harness with the call order changed and the inputs regenerated,
+and a gap between the two passes is the result, not an incident.
 
 ## How this is verified
 

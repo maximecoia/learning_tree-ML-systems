@@ -2,7 +2,7 @@
 
 # Phase 5 — CUDA properly
 
-`ms-04-cuda` · weeks 35–46 · 16 sub-modules, 5 written · 15 exercises
+`ms-04-cuda` · weeks 35–46 · 17 sub-modules, 5 written · 15 exercises
 
 **What it buys.** a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation, and where it loses too
 
@@ -22,6 +22,7 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `cu-07-occupancy` | added | — | planned, not written yet |
 | `cu-08-nsight-compute` | added | — | planned, not written yet |
 | `cu-09-roofline` | added | — | planned, not written yet |
+| `cu-11-assembleur` | added | — | planned, not written yet |
 | `cu-10-battre` | proof | — | planned, not written yet |
 | `cpp-06-exceptions` | added | Refuse by exception that an invalid object exist, translate an exception into a sentence where it is caught, and guarantee that a non-local exit leaves nothing alive | 42 subject, not published · 3 exercises |
 | `cpp-07-casts` | added | Choose between static_cast, reinterpret_cast and dynamic_cast by what each one promises, read a literal and write it into four types saying when the conversion makes no sense, and recognise the real type behind a base | 42 subject, not published · 3 exercises |

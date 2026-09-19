@@ -2,7 +2,7 @@
 
 # Phase 4 — Parallelism, first kernel, entering vLLM
 
-`ms-03-parallelisme` · weeks 21–34 · 21 sub-modules, 7 written · 24 exercises
+`ms-03-parallelisme` · weeks 21–34 · 20 sub-modules, 7 written · 24 exercises
 
 **What it buys.** say before writing a kernel whether it will be compute- or memory-bound, and a PR in vLLM or SGLang on the scheduler or the cache, review taken up by a maintainer
 
@@ -23,7 +23,6 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `tri-01-vecadd` | added | Write a Triton kernel that never steps outside its buffer, choose its block size and justify it by a count, and fuse several passes into one | not started · 5 exercises |
 | `tri-02-softmax` | added | Write a row-wise softmax that never overflows, and check a kernel on four axes rather than one | not started · 5 exercises |
 | `tri-03-matmul` | added | — | planned, not written yet |
-| `tri-04-classement` | added | — | planned, not written yet |
 | `tri-05-note` | added | — | planned, not written yet |
 | `inf-07-pagedattention` | added | — | planned, not written yet |
 | `inf-08-fragmentation` | added | — | planned, not written yet |
