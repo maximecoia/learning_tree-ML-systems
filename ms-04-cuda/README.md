@@ -4,11 +4,11 @@
 
 `ms-04-cuda` · weeks 35–46 · 17 sub-modules, 5 written · 15 exercises
 
-**What it buys.** a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation, and where it loses too
+**What it buys.** a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation and where it loses too, then the harness that proves it, run against an agent and shown rejecting a bad submission
 
 **How it ends.** Not on a feeling, on one binary test: *Tu produis une frise d'exécution et tu nommes le trou. Tu estimes avant de coder si un kernel sera compute- ou memory-bound.*
 
-Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it.
+Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
