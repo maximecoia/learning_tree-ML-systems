@@ -8,7 +8,32 @@
 
 **How it ends.** Not on a feeling, on one binary test: *Tu dessines de mémoire le flux d'un token d'entrée jusqu'aux logits, avec les shapes annotées à chaque étape.*
 
-Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it.
+
+## What to do, in order
+
+One table, from what is done to what waits. Every state is read from a grader, never from the presence of a file: `./exo` runs the curriculum's checkers, each borrowed assignment brings its own, and `verifier.py` holds the 6 gates of the acceptance test. The first row without a tick is the work of today, marked →. The route closes on 18 October 2026 and the phase on 31 October 2026; `./exo` prints the pace those dates imply.
+
+| | Step | State | What grades it | Where |
+|---|---|---|---|---|
+| ✓ | `py-01-basics` | ✓ 9 of 9 | its grader, through `./exo` | [py-01-basics](py-01-basics) |
+| ✓ | `py-02-advanced` | ✓ 9 of 9 | its grader, through `./exo` | [py-02-advanced](py-02-advanced) |
+| ✓ | `py-03-livrer` | ✓ 8 of 8 | its grader, through `./exo` | [py-03-livrer](py-03-livrer) |
+| ✓ | `c-01-libft` | ✓ 6 of 6 | its grader, through `./exo` | 42 subject, not published |
+| ✓ | Tensor Puzzles — 21 puzzles, one line each — `rte-01-puzzles` | ✓ 1 of 1 | the checker inside the notebook | [rte-01-puzzles](rte-01-puzzles), from [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles) |
+| → | Text data: tokenizer, sliding window, embeddings (Raschka ch. 2) | `ex00`, 8 tests: red · `ex04`, 28 tests: red | the book's exercise solutions and chapter quiz | its own repository |
+|  | Causal attention: scores, mask, multiple heads (Raschka ch. 3) | `ex00`, 8 tests: red · gate 3: gpt.py is still the blank file | same, plus gate 3 | its own repository |
+|  | The GPT: blocks, normalisation, residuals, logits (Raschka ch. 4) | gates 1, 2, 4 and 6: gpt.py is still the blank file | gates 1, 2, 4 and 6 | its own repository |
+|  | Pretraining: the loop, train and validation loss, sampling (Raschka ch. 5) | `ex01`, 3 tests: red · `ex02`, 2 tests: red · `ex03`, 1 test: red · gate 5: gpt.py is still the blank file | gate 5 | its own repository |
+|  | CS336 assignment 1 — the 15 architecture-agnostic adapters — `rte-02-cs336` | 0 of 5 · 5 handed in, red | its public `pytest` suite | [stanford-cs336/assignment1-basics](https://github.com/stanford-cs336/assignment1-basics), answers kept out |
+|  | `gpt.py` from a blank file, the acceptance test | 0 of 6 gates · gpt.py is still the blank file | `verifier.py`, [the gates](../README.md#the-acceptance-test) | lands here with the model |
+|  | `l1-01-gpt-corpus` | 3 steps, a quiz · not counted here | the quiz, then the public repository | lands here with the model |
+|  | `c-02-moteur` | 0 of 7 · out of the window, it needs the weights L1 produces | its grader, through `./exo` | lands here |
+
+**Alongside, in the background.** The curriculum files these under a `fil` named « Maths en fond »: work that runs beside the sequence rather than as a step of it. `maths-01-algebre` 0 of 8 · `mth-03-probas` 0 of 6 · `mth-04-statistiques` 0 of 6.
+
+## What each sub-module covers
+
+Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
@@ -16,26 +41,13 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `py-02-advanced` | added | Model a piece of data as a Python class, with its methods, its operators, its properties and its inheritance | [py-02-advanced](py-02-advanced) · 9 exercises |
 | `py-03-livrer` | added | Ship a Python command-line tool, packaged, tested and installable by someone else | [py-03-livrer](py-03-livrer) · 8 exercises |
 | `c-01-libft` | added | Write a static C library whose every function honours the exact contract of the libc | 42 subject, not published · 6 exercises |
+| `rte-01-puzzles` | added | Write in a single line, by broadcasting and indexing alone, the functions NumPy hands you ready-made, and know why each one holds without a loop | [rte-01-puzzles](rte-01-puzzles), from [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles) · 1 exercise |
+| `rte-02-cs336` | added | Write the building blocks of a language model, its loss, its optimiser, its checkpoints and its BPE tokenizer, and make them pass the public suite of a course that knows nothing of your architecture | [stanford-cs336/assignment1-basics](https://github.com/stanford-cs336/assignment1-basics), answers kept out · 5 exercises |
+| `l1-01-gpt-corpus` | proof | Publish a language model trained end to end, and defend every part of how it works without the code in front of you | not started · 3 exercises |
+| `c-02-moteur` | added | Write an inference engine in C that loads a model, generates text, measures its throughput and places itself on a roofline | not started · 7 exercises |
 | `maths-01-algebre` | added | Implement 2D vector and matrix transformations in Python | not started · 8 exercises |
 | `mth-03-probas` | added | Simulate a distribution, hold it against its closed form, and know how many measurements it takes to tell two values apart | not started · 6 exercises |
 | `mth-04-statistiques` | added | Judge whether two series of measurements really differ, knowing how often you will be wrong | not started · 6 exercises |
-| `rte-01-puzzles` | added | Write in a single line, by broadcasting and indexing alone, the functions NumPy hands you ready-made, and know why each one holds without a loop | [rte-01-puzzles](rte-01-puzzles), from [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles) · 1 exercise |
-| `rte-02-cs336` | added | Write the building blocks of a language model, its loss, its optimiser, its checkpoints and its BPE tokenizer, and make them pass the public suite of a course that knows nothing of your architecture | [stanford-cs336/assignment1-basics](https://github.com/stanford-cs336/assignment1-basics), answers kept out · 5 exercises |
-| `c-02-moteur` | added | Write an inference engine in C that loads a model, generates text, measures its throughput and places itself on a roofline | not started · 7 exercises |
-| `l1-01-gpt-corpus` | proof | Publish a language model trained end to end, and defend every part of how it works without the code in front of you | not started · 3 exercises |
-
-## The route to the deliverable
-
-These six steps are not curriculum sub-modules and are not graded by it. They are borrowed assignments, each arriving with its own checker, and they are the live work of this phase. They run in their own repositories, and only what is published on purpose lands here: `rte-01-puzzles`.
-
-| | Step | What grades it |
-|---|---|---|
-| 1 | Tensor Puzzles — 21 puzzles, one line each | the checker inside the notebook |
-| 2 | Text data: tokenizer, sliding window, embeddings | the book's exercise solutions and chapter quiz |
-| 3 | Causal attention: scores, mask, multiple heads | same, plus gate 3 below |
-| 4 | The GPT: blocks, normalisation, residuals, logits | gates 1, 2, 4 and 6 below |
-| 5 | Pretraining: the loop, train and validation loss, sampling | gate 5 below |
-| 6 | CS336 assignment 1 — the 15 architecture-agnostic adapters | its public `pytest` suite |
 
 ---
 

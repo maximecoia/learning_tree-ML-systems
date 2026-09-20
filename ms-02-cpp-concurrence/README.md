@@ -8,7 +8,7 @@
 
 **How it ends.** Not on a feeling, on one binary test: *Tu lis une frise Nsight inconnue et tu nommes le trou en dix minutes.*
 
-Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it.
+Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|

@@ -6,7 +6,7 @@
 
 **What it buys.** numerical precision, multi-GPU, operations and evaluation, then a page of deliverables that reads without explanation
 
-Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it.
+Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
