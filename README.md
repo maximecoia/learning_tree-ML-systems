@@ -54,20 +54,21 @@ through to the logits, with the shapes annotated at every step.**
 
 ## Where the work stands
 
-Phase 1, `ms-00-prepa`, is the one in progress. **32 of 40 graded exercises** on
-the path, with 43 days before it closes.
+<!-- compteurs: written by carte_phases.py from the graders. Do not edit by hand. -->
+Phase 1, [`ms-00-prepa`](ms-00-prepa), is the one in progress: **33 of 58 graded exercises** pass. It closes on 31 October 2026, its route on 18 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-00-prepa/README.md#what-to-do-in-order) lists the work in order with the next step marked.
 
 | Track | State | |
 |---|---|---|
-| **The Python socle** | 26 of 26 exercises, complete | [`PYTHON.md`](PYTHON.md) |
-| **The route to the trained GPT** | 0 of 6 steps — the live track | [below](#the-route-to-the-trained-gpt) |
-| **Linear algebra** | 0 of 8 exercises, half an hour a day | |
-| The C tracks | kept out of this repository | [below](#why-the-c-tracks-are-not-here) |
+| The Python socle | ✓ 26 of 26 exercises, complete | [`PYTHON.md`](PYTHON.md) |
+| The libft, ahead of the school | ✓ 6 of 6 exercises, complete, kept out of this repository | [below](#why-the-c-tracks-are-not-here) |
+| **The route to the trained GPT** | 1 of 6 steps · now: step 2, Text data: tokenizer, sliding window, embeddings (Raschka ch. 2) | [the phase page](ms-00-prepa/README.md#what-to-do-in-order) |
+| L1, the trained model | 0 of 6 gates · gpt.py is still the blank file, then a quiz | [the acceptance test](#the-acceptance-test) |
+| The C inference engine | 0 of 7 · out of the window, it needs the weights L1 produces | [below](#why-the-c-tracks-are-not-here) |
+| Maths, in the background | 0 of 20 exercises, alongside the route |  |
 | Zero to Hero | taken off the path, and out of this repository | [below](#zero-to-hero-and-why-it-left) |
 
-The denominator excludes the eight Zero to Hero units, taken off the path, and
-the C engine, which cannot begin before the trained model exists. Counting an
-abandoned track in a ratio makes a decision look like a delay.
+The denominator leaves out `l1-01-gpt-corpus` (a quiz no terminal grades) and `c-02-moteur` (out of the window, it needs the weights L1 produces). Zero to Hero is not in it either: the curriculum stopped declaring it, and counting an abandoned track in a ratio makes a decision look like a delay.
+<!-- /compteurs -->
 
 ## The route to the trained GPT
 
@@ -327,7 +328,7 @@ its work is — including the ones that are deliberately not here.
 README.md                  this page: the roadmap, and where it stands
 PYTHON.md                  the Python socle, exercise by exercise
 ms-00-prepa/               the prep — Sept–Oct 2026
-    README.md              its 15 sub-modules and their state
+    README.md              its sub-modules in the order of the work, and their state
     py-01-basics/          correct answers out of input you do not control
     py-02-advanced/        types that make the wrong answer unrepresentable
     py-03-livrer/          the result, installable and on the PATH
