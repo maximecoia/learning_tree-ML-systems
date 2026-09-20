@@ -39,7 +39,7 @@ write it again from a blank file is.
 | [`ms-01-inference`](ms-01-inference) — graded C, measured inference | weeks 1–8 | produce the saturation curve of an unknown inference server in half a day | 14 |
 | [`ms-02-cpp-concurrence`](ms-02-cpp-concurrence) — C++ and concurrency | weeks 9–20 | concurrent code whose freedom from starvation is shown by measurement, and an unknown execution timeline read in ten minutes | 19 |
 | [`ms-03-parallelisme`](ms-03-parallelisme) — parallelism, first kernel, entering vLLM | weeks 21–34 | say before writing a kernel whether it will be compute- or memory-bound, and a PR in vLLM or SGLang on the scheduler or the cache, review taken up by a maintainer | 20 |
-| [`ms-04-cuda`](ms-04-cuda) — CUDA properly | weeks 35–46 | a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation, and where it loses too | 17 |
+| [`ms-04-cuda`](ms-04-cuda) — CUDA properly | weeks 35–46 | a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation and where it loses too, then the harness that proves it, run against an agent and shown rejecting a bad submission | 17 |
 | [`ms-05-fin-tronc-commun`](ms-05-fin-tronc-commun) — the end of the common core | weeks 47–57 | the four remaining imposed projects, crossed fast and with nothing added for pleasure | 4 |
 | [`ms-06-specialisation`](ms-06-specialisation) — specialisation, first internship | 2028 onward | numerical precision, multi-GPU, operations and evaluation, then a page of deliverables that reads without explanation | 9 |
 | [`ms-07-stage-2`](ms-07-stage-2) — second internship | after the first | the European arm of an American company in the field | 1 |
@@ -234,8 +234,68 @@ bad submissions. The observation that came with it is the useful part: the more
 exhaustively a search covers the legitimate moves, the more inventive it gets
 about the illegitimate ones.
 
-So the kernel deliverable now has to hold up under the same harness with the call order changed and the inputs regenerated,
-and a gap between the two passes is the result, not an incident.
+So the kernel deliverable now has to hold up under the same harness with the
+call order changed and the inputs regenerated, and a gap between the two passes
+is the result, not an incident.
+
+## What the agents changed, and what they did not
+
+Measured on 2026-09-20, because the answer moved twice inside one year and both
+directions are published.
+
+Read one way, the automation is not close.
+[KernelBench-Verified](https://arxiv.org/abs/2607.16241) re-ran the benchmark
+with the baseline repaired and put the best frontier model at a **0.88x**
+geometric-mean speedup against PyTorch — slower, not faster. The 1.43x reported
+before it came from two artefacts the paper names: TF32 left off, which
+understates PyTorch on the hardware anyone actually runs, and models hardcoding
+the test's values instead of computing them. Twenty-eight percent of the best
+model's kernels also raised peak memory.
+
+Read the other way, it is already here. At the
+[MLSys 2026 FlashInfer kernel contest](https://mlsys26.flashinfer.ai/), closed
+on 12 May, the [winning entry](https://github.com/Dogacel/auto-gpu-kernel) in
+the **no-human-in-the-loop** category averaged a **34.93x** speedup over the
+FlashInfer baselines for DeepSeek Sparse Attention on a B200. One limit on that
+number, stated here rather than left for someone else to find: sparse attention
+is a recent operator, so the baseline it beat is most likely a reference
+implementation and not a tuned kernel. 34.93x over a reference is not 34.93x
+over an expert, and nobody publishes the second number.
+
+Both are true, and the reconciliation is the part worth keeping. The contest
+winner wrote down why their harness won, and it was not the kernel:
+
+> Other harnesses usually fail on setting a good verification pipeline, the
+> agents either hack it over-time, or they get stuck at local-minimums.
+
+The first trap they name is *believing noisy results to be improvements*. That
+is the same failure as the 11.191 µs kernel above, and the same failure as the
+overnight agents on day 172: three instances now, arriving from three
+directions, of a measurement that did not defend itself.
+
+**So the scarce thing moved one step back — from writing the kernel to
+guaranteeing the measurement — and this plan follows it.** The hand-written
+kernel deliverable does not change. The harness that won was built by someone
+who already knew how to write the kernel, and the traps they list are not
+visible from outside the craft. You do not get to validate what you cannot
+produce.
+
+What is added is a second deliverable, published, immediately after it: **the
+harness itself**, run against an agent on the same bounded case the hand-written
+kernel targets. It passes on two conditions, not one.
+
+- The gap between my kernel and the agent's is published, whichever way it
+  goes. The agent winning is a publishable result, and the more useful of the
+  two.
+- **At least one rejected submission is shown, with the reason it was
+  rejected.** A pipeline that has never rejected anything is not a pipeline, it
+  is an intention. That is the rule of the next section, applied to a
+  deliverable instead of to a check.
+
+The contest is also why the dated rule above now has a second family to watch:
+its categories keep the agent alone and the agent seeded by a human on separate
+boards, so both halves of this can be measured on the same hardware on the same
+day.
 
 ## How this is verified
 
