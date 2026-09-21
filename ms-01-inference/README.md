@@ -2,7 +2,7 @@
 
 # Phase 2 — Graded C, measured inference
 
-`ms-01-inference` · weeks 1–8 · 14 sub-modules, 14 written · 52 exercises
+`ms-01-inference` · weeks 1–8 · 14 sub-modules, 14 written · 53 exercises
 
 **What it buys.** produce the saturation curve of an unknown inference server in half a day
 
@@ -23,7 +23,7 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `inf-02-prefill-decode` | added | Separate a generation's two regimes by measurement, derive a cost model from it, and use that to predict the latency of a request never measured | not started · 3 exercises |
 | `inf-03-cache-kv` | added | Quantify what the key-value cache saves in time and costs in memory, recognise by measurement an engine deprived of it, say from what context length it is the cache, not the weights, that caps concurrency, and name the attention variants by what each does to the shape of the cache | not started · 3 exercises |
 | `inf-04-quantifier` | added | Measure a model's quality by its perplexity on a fixed corpus, measure what reduced precision gains in decoding while gaining nothing in prefill, settle between the two against a budget set in advance, and be able to say what a perplexity on short text does not see | not started · 4 exercises |
-| `inf-05-harnais` | added | Hold N requests in flight against an inference server, record throughput, percentiles and refusal rate without any of the three traps skewing the figure, and produce a CSV the graph regenerates from | not started · 3 exercises |
+| `inf-05-harnais` | added | Hold N requests in flight against an inference server, record throughput, percentiles and refusal rate without any of the three traps skewing the figure, and produce a CSV the graph regenerates from | not started · 4 exercises |
 | `inf-06-saturation` | added | Sweep an inference server's concurrency to its breaking point, locate that point by a rule stated in advance, and name the physical limit that sets it with the numbers that prove it | not started · 3 exercises |
 | `l2-01-courbe` | proof | Publish an inference server's throughput and latency curve, with its protocol, its breaking point and the physical limit that sets it, and defend it without the code in front of you | not started · 3 exercises |
 
