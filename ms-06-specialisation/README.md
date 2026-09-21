@@ -10,15 +10,15 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
-| `t42-12-specialisation` | imposed | — | 42 subject, not published |
-| `c-13-minishell` | added | — | 42 subject, not published |
-| `num-01-precision` | added | — | planned, not written yet |
-| `dist-01-multigpu` | added | — | planned, not written yet |
-| `qua-01-evaluation` | added | — | planned, not written yet |
+| `t42-12-specialisation` | imposed | Choose the common core's specialisation between systems, graphics and kernel, and never web | 42 subject, not published |
+| `c-13-minishell` | added | Write a shell that chains fork, exec, pipes and redirections without leaking a descriptor, and whose every error exits with the expected code | 42 subject, not published |
+| `num-01-precision` | added | Say in five minutes whether a bf16 regression comes from the dynamic range, from the accumulation or from the order of operations, and show it on a reproduced case | planned, not written yet |
+| `dist-01-multigpu` | added | Predict, before launching, whether a multi-GPU training run will be bound by memory, by bandwidth or by the bubble, then hold the prediction against the measurement | planned, not written yet |
+| `qua-01-evaluation` | added | Require the quality measurement that goes with an optimisation before accepting it, and hold a long task alongside perplexity | planned, not written yet |
 | `cpp-11-moderne` | added | Read what the compiler makes of a modern C++ program, moves, instantiation, constexpr, in the assembly and in the allocation count, write concurrent code against std::atomic's memory model, and spot a hidden allocation in a hot loop | not started · 8 exercises |
-| `ops-01-exploitation` | added | — | planned, not written yet |
-| `dist-02-cs336` | added | — | planned, not written yet |
-| `pro-01-stage-1` | proof | — | planned, not written yet |
+| `ops-01-exploitation` | added | Keep a service running for a month, cause its failures one at a time, and write a one-page post-mortem for each | planned, not written yet |
+| `dist-02-cs336` | added | Hand in CS336's assignment 2 and make its public suite pass, on parallelism and the collectives | planned, not written yet |
+| `pro-01-stage-1` | proof | Land and hold a first internship in a team that does compute infrastructure or inference | planned, not written yet |
 
 ---
 

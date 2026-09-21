@@ -30,7 +30,7 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `par-03-nsight` | added | Read a full generation's execution timeline in the profilers' format, extract from it the quantities the eye cannot see, GPU occupancy, launch latency, median kernel size, and draw it so the eye sees the rest | not started · 1 exercise |
 | `par-04-trou` | added | Find in a timeline the periods where the GPU does nothing, with their bounds, and name each one's cause from what occupies it: a copy, a synchronisation, host-side compute, or nothing, which means outside the trace | not started · 1 exercise |
 | `l3-01-profil` | proof | Publish an inference server's execution profile, scope read from the timeline, annotated timeline, prediction held against it, a diagnosis naming a physical limit by a written rule, and a comparison with your partner, then read an unknown timeline and name its gap in one call | not started · 6 exercises |
-| `tri-04-classement` | added | — | planned, not written yet |
+| `tri-04-classement` | added | Enter a kernel in a GPU MODE competition, record where it places, and publish the comparison with the winning kernel, naming what accounts for the gap | planned, not written yet |
 
 ---
 
