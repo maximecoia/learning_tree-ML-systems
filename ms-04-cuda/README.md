@@ -6,7 +6,7 @@
 
 **What it buys.** a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation and where it loses too, then the harness that proves it, run against an agent and shown rejecting a bad submission
 
-**How it ends.** Not on a feeling, on one binary test: *Tu produis une frise d'exécution et tu nommes le trou. Tu estimes avant de coder si un kernel sera compute- ou memory-bound.*
+**How it ends.** Not on a feeling, on one binary test: *On te donne un kernel et un rapport Nsight Compute. Tu nommes la précision avant de classer le goulot, et ton propre kernel bat la référence nommée sur un cas délimité avec une mesure qui survit au rejeu : même harnais, ordre des appels changé, entrées regénérées.*
 
 Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
 
