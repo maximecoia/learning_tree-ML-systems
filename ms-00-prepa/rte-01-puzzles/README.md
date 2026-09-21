@@ -68,6 +68,16 @@ parser, and none overflowed afterwards. Dropping the starter cells took the
 notebook down to 24 diagrams and 101 labels; every one of them is written as
 presentation attributes, and re-running the pass finds nothing left to rewrite.
 
+A second rewrite goes with it, for the frame rather than the labels. chalk sizes
+each diagram in pixels and gives it no `viewBox`, so a viewer with less room than
+that has nothing to remap the drawing onto: `max-width: 100%` shrinks the box and
+the drawing is cut off instead of scaled down. GitHub's content column measured
+753px and five diagrams were wider, `arange` at 1999px showing as a black corner,
+the top left of a frame four fifths of which was off the column. Every diagram
+now carries `viewBox="0 0 <width> <height>"` alongside
+`max-width:100%; height:auto`, so it scales to whatever room it is given and
+still draws at its pixel size when there is room enough.
+
 ## How the answers were checked
 
 Not by the notebook. A cell keeps whatever output it printed last, so an answer
