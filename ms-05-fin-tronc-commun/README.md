@@ -12,10 +12,10 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
-| `t42-08-inception` | imposed | — | 42 subject, not published |
-| `t42-09-answer-protocol` | imposed | — | 42 subject, not published |
-| `t42-10-agent-smith` | imposed | — | 42 subject, not published |
-| `t42-11-transcendence` | imposed | — | 42 subject, not published |
+| `t42-08-inception` | imposed | Validate `inception` at the perimeter of its subject, adding nothing | 42 subject, not published |
+| `t42-09-answer-protocol` | imposed | Validate `answer protocol` at the perimeter of its subject, adding nothing | 42 subject, not published |
+| `t42-10-agent-smith` | imposed | Validate `agent smith` at the perimeter of its subject, adding nothing | 42 subject, not published |
+| `t42-11-transcendence` | imposed | Cross `transcendance` fast and cleanly, its 120 imposed hours being time taken from the rest rather than time invested | 42 subject, not published |
 
 ---
 

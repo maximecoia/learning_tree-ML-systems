@@ -10,7 +10,7 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
-| `pro-02-stage-2` | proof | — | planned, not written yet |
+| `pro-02-stage-2` | proof | Land and hold a second internship in the European arm of an American company | planned, not written yet |
 
 ---
 
