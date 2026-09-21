@@ -87,3 +87,13 @@ ms-00-prepa/rte-01-puzzles/*
 !rte-route-l1/
 ms-00-prepa/rte-route-l1/*
 !ms-00-prepa/rte-route-l1/ch02.py
+
+# Exception, 2026-09-21: chapters 3 and 4 of the route follow, on the same
+# ground and by the same case-by-case decision. One difference is worth
+# stating: unlike `ch02.py`, these two run as they stand. Chapter 3 works on
+# six toy embeddings written into the file, and chapter 4 needs only those
+# plus the GPT-2 tokenizer, so neither reaches for the book's corpus. They are
+# published together because `ch04.py` imports `MultiHeadAttention` from
+# `ch03.py`: alone, it would not even import.
+!ms-00-prepa/rte-route-l1/ch03.py
+!ms-00-prepa/rte-route-l1/ch04.py
