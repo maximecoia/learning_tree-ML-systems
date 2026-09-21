@@ -75,3 +75,15 @@ rte-*/
 ms-00-prepa/rte-01-puzzles/*
 !ms-00-prepa/rte-01-puzzles/README.md
 !ms-00-prepa/rte-01-puzzles/Tensor Puzzlers.ipynb
+
+# Exception, 2026-09-21: chapter 2 of the route is published too. Decided case
+# by case like the one above, and for the same reason: `rasbt/LLMs-from-scratch`
+# is a public companion repository, not a school subject under a charter. Only
+# my own answer goes out. The book's text, its corpus `the-verdict.txt`, its
+# notebooks and its package stay where they are, so `ch02.py` cannot run from
+# here -- `find_corpus` says so rather than guessing, and the file's docstring
+# says why. Same shape as above: the bare line lifts the refusal at any depth,
+# the anchored ones name the phase.
+!rte-route-l1/
+ms-00-prepa/rte-route-l1/*
+!ms-00-prepa/rte-route-l1/ch02.py
