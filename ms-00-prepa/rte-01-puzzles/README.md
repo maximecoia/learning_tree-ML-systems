@@ -2,10 +2,18 @@
 
 Twenty-one NumPy primitives, reimplemented from first principles in PyTorch.
 
-The exercise set is [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles)
-by Sasha Rush, MIT licensed, © 2022. The statements, the drawings and the
-hypothesis-based checker are his. The twenty-one function bodies in the notebook
-are mine.
+**Puzzles by [Sasha Rush](http://rush-nlp.com) (with Marcos Treviso), from
+[srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles), MIT licensed,
+© 2022. Solutions by Maxime Coia.**
+
+This is my worked copy of that exercise book, which its author publishes for
+readers to copy and solve. A filled-in copy can otherwise read as if it were the
+original, so the split is worth stating outright:
+
+- **His:** the twenty-one statements, the diagrams, and the hypothesis-based
+  checker that grades every answer (`lib.py`, fetched from his repository by the
+  notebook's setup cell).
+- **Mine:** the twenty-one function bodies written under those statements.
 
 ## The rules that make it hard
 
@@ -27,9 +35,14 @@ gesture, declined twenty-one times.
 
 ## What is in this folder
 
-- `Tensor Puzzlers.ipynb` — the finished notebook, all twenty-one solved, with
-  the checker's output kept in the cells. The diagrams are inline SVG, so the
-  notebook renders on its own.
+- `Tensor Puzzlers.ipynb` — the finished notebook, all twenty-one solved. Each
+  puzzle appears once and carries the answer: the starter cell underneath every
+  statement, whose body raises `NotImplementedError`, is not kept, since nothing
+  is left for a reader to fill in. The diagrams are inline SVG, so the notebook
+  renders on its own, and each one shows the spec's `target` row above my `yours`
+  row on three generated examples. The `run_test(...)` call at the head of each
+  cell stays commented out, the way it arrived: on success it displays a random
+  puppy video, and the verdict is established outside the notebook anyway.
 
 Nothing else. The upstream clone, its `lib.py`, its images, the virtualenv and
 the hypothesis cache stay out of this repository: re-running the notebook fetches
@@ -46,24 +59,33 @@ it parses as a property whose name starts with `n` and is dropped. `font-size`
 goes with it, the label falls back to the 13px it inherits from the page, and that
 sits inside a group scaled by about 79.
 
-Only the multi-line labels break, which is why the damage looks random: 52 of the
-159 labels carry a newline, and on GitHub those 52 were exactly the ones that
-covered their diagram, the worst at 713px in a 285px frame. Carrying the same
-declarations as SVG presentation attributes keeps the newline out of the CSS
-parser, and all 159 labels now measure 0.5px or 0.75px on GitHub with none
-overflowing.
+Only the multi-line labels break, which is why the damage looks random. Measured
+on GitHub's viewer when the fix was written, against the notebook as it then
+stood: 52 of its 159 labels carried a newline, and those 52 were exactly the ones
+that covered their diagram, the worst at 713px in a 285px frame. Carrying the
+same declarations as SVG presentation attributes keeps the newline out of the CSS
+parser, and none overflowed afterwards. Dropping the starter cells took the
+notebook down to 24 diagrams and 101 labels; every one of them is written as
+presentation attributes, and re-running the pass finds nothing left to rewrite.
 
 ## How the answers were checked
 
-The notebook carries the checker's verdict cell by cell. The same twenty-one
-solutions were then extracted to a plain module and run again against the
-upstream specs and their hypothesis harness, outside a notebook, where a stale
-cell cannot make a puzzle look solved: twenty-one passed, none failed.
+Not by the notebook. A cell keeps whatever output it printed last, so an answer
+edited after its final run still looks solved, and three of these were in exactly
+that state: `bincount`, `repeat` and `bucketize` were displaying a diagram drawn
+while their body still raised `NotImplementedError`, which shows up as a missing
+`yours` row. They have been redrawn. Even fresh, a diagram shows agreement with
+the spec on three generated examples. That is evidence, not a verdict.
 
-The harness itself was checked against a deliberate break. Making `cumsum`
-return twice its value turned two puzzles red, `cumsum` and the `compress` that
-depends on it, and the run exited non-zero. A suite that stays green under that
-is not measuring anything.
+The verdict comes from outside. The twenty-one answers live in a plain module,
+and a runner pairs each one with the upstream spec and the upstream hypothesis
+harness, both read straight from the notebook, in a fresh process where no stale
+cell can vouch for anything: twenty-one passed, none failed.
+
+The runner was itself checked against a deliberate break. Making `cumsum` return
+twice its value turns two puzzles red, `cumsum` and the `compress` built on it,
+and the run exits non-zero. A suite that stays green under that is not measuring
+anything.
 
 ## Running it
 
