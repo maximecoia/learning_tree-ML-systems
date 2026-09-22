@@ -97,3 +97,14 @@ ms-00-prepa/rte-route-l1/*
 # `ch03.py`: alone, it would not even import.
 !ms-00-prepa/rte-route-l1/ch03.py
 !ms-00-prepa/rte-route-l1/ch04.py
+
+# Exception, 2026-09-22: chapter 5 follows, on the same ground and by the same
+# case-by-case decision. Unlike chapters 3 and 4, this one cannot run from
+# here, and it says so loudly: it imports `ch02.py`, whose `find_corpus`
+# raises `FileNotFoundError: corpus introuvable:
+# ch02/01_main-chapter-code/the-verdict.txt` before the module even finishes
+# loading. The book's corpus is not published, and this file is published to
+# be read, not to be run. Its own `__main__` shrinks the model to two layers
+# so that whoever does have the corpus can watch the loss fall in seconds
+# rather than hours.
+!ms-00-prepa/rte-route-l1/ch05.py
