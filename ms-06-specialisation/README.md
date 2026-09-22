@@ -20,6 +20,19 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `dist-02-cs336` | added | Hand in CS336's assignment 2 and make its public suite pass, on parallelism and the collectives | planned, not written yet |
 | `pro-01-stage-1` | proof | Land and hold a first internship in a team that does compute infrastructure or inference | planned, not written yet |
 
+## Reading
+
+What each sub-module points at, straight from the curriculum. Links only: why a given one is there is written in French, next to the curriculum itself, and translating it would put the same sentence in two places waiting to disagree. A sub-module absent from this table has nothing declared yet.
+
+| Sub-module | Points at |
+|---|---|
+| `num-01-precision` | [MIT 6.5940, TinyML and Efficient AI Computing, Song Han](https://hanlab.mit.edu/courses/2026-fall-65940) · [JINO-ROHIT/ml-systems-notes/quantization/notes.md](https://github.com/JINO-ROHIT/ml-systems-notes/blob/main/quantization/notes.md) · [a-hamdi/GPU](https://github.com/a-hamdi/GPU) |
+| `dist-01-multigpu` | [MIT 6.5940, TinyML and Efficient AI Computing, Song Han](https://hanlab.mit.edu/courses/2026-fall-65940) · [JINO-ROHIT/ml-systems-notes/distributed_techniques](https://github.com/JINO-ROHIT/ml-systems-notes/tree/main/distributed_techniques) · [hkproj/torchfeather](https://github.com/hkproj/torchfeather) · [hkproj/pytorch-transformer-distributed](https://github.com/hkproj/pytorch-transformer-distributed) |
+| `qua-01-evaluation` | [MIT 6.5940, TinyML and Efficient AI Computing, Song Han](https://hanlab.mit.edu/courses/2026-fall-65940) · [JINO-ROHIT/Embedding-Quantization](https://github.com/JINO-ROHIT/Embedding-Quantization) · [hkproj/quantization-notes](https://github.com/hkproj/quantization-notes) |
+| `cpp-11-moderne` | [Meyers, Effective Modern C++](https://www.oreilly.com/library/view/effective-modern-c/9781491908419/) · [Compiler Explorer](https://godbolt.org/) · [cppreference, std::memory_order](https://en.cppreference.com/w/cpp/atomic/memory_order) · [Preshing, An Introduction to Lock-Free Programming](https://preshing.com/20120612/an-introduction-to-lock-free-programming/) · [Preshing, Acquire and Release Semantics](https://preshing.com/20120913/acquire-and-release-semantics/) · [Williams, C++ Concurrency in Action, 2e édition](https://www.manning.com/books/c-plus-plus-concurrency-in-action-second-edition) · [Carruth, CppCon 2015, Tuning C++: Benchmarks, and CPUs, and Compilers! Oh My!](https://www.youtube.com/watch?v=nXaxk27zwlk) · [Clang, -Rpass et l'assembleur avec -S](https://clang.llvm.org/docs/UsersManual.html#options-to-emit-optimization-reports) |
+| `ops-01-exploitation` | [JINO-ROHIT/advanced_ml/12-ml-systems](https://github.com/JINO-ROHIT/advanced_ml/tree/main/12-ml-systems) · [JINO-ROHIT/fastapi_with_celery_redis](https://github.com/JINO-ROHIT/fastapi_with_celery_redis) |
+| `dist-02-cs336` | [JINO-ROHIT/ml-systems-notes/distributed_techniques](https://github.com/JINO-ROHIT/ml-systems-notes/tree/main/distributed_techniques) |
+
 ---
 
 ← [ms-05-fin-tronc-commun](../ms-05-fin-tronc-commun) · [the roadmap](../README.md) · [ms-07-stage-2](../ms-07-stage-2) →
