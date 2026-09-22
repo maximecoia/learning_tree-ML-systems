@@ -33,7 +33,7 @@ def find_corpus(name="the-verdict.txt"):
         candidate = directory / relative
         if candidate.is_file():
             return candidate
-    raise FileNotFoundError(f"corpus introuvable: {relative}")
+    raise FileNotFoundError(f"corpus not found: {relative}")
 
 
 CORPUS = find_corpus()
@@ -54,9 +54,15 @@ class GPTDatasetV1(Dataset):
 
             target_chunk = token_ids[i + 1 : i + max_length + 1]
 
-            self.input_ids.append(torch.tensor(input_chunk))
+            # `dtype=torch.long`: these numbers are indices, not values. An
+            # Embedding layer uses them to pick a row from its table, and it
+            # wants 64-bit integers. PyTorch would infer that from a list of
+            # Python ints anyway; writing it keeps the distinction visible.
+            self.input_ids.append(torch.tensor(input_chunk, dtype=torch.long))
 
-            self.target_ids.append(torch.tensor(target_chunk))
+            self.target_ids.append(
+                torch.tensor(target_chunk, dtype=torch.long)
+            )
 
     def __len__(self):
         return len(self.input_ids)
@@ -89,37 +95,42 @@ def create_dataloader_v1(
     return dataloader
 
 
-with open(CORPUS, "r", encoding="utf-8") as f:
-    raw_text = f.read()
+if __name__ == "__main__":
+    with open(CORPUS, "r", encoding="utf-8") as f:
+        raw_text = f.read()
 
+    vocab_size = 50257
+    output_dim = 256
+    context_length = 1024
 
-vocab_size = 50257
-output_dim = 256
-context_length = 1024
+    token_embedding_layer = torch.nn.Embedding(vocab_size, output_dim)
 
-token_embedding_layer = torch.nn.Embedding(vocab_size, output_dim)
+    pos_embedding_layer = torch.nn.Embedding(context_length, output_dim)
 
-pos_embedding_layer = torch.nn.Embedding(context_length, output_dim)
+    batch_size = 8
+    max_length = 4
 
+    dataloader = create_dataloader_v1(
+        raw_text,
+        batch_size=batch_size,
+        max_length=max_length,
+        stride=max_length,
+    )
 
-batch_size = 8
-max_length = 4
+    for batch in dataloader:
+        x, y = batch
 
-dataloader = create_dataloader_v1(
-    raw_text, batch_size=batch_size, max_length=max_length, stride=max_length
-)
+        token_embeddings = token_embedding_layer(x)
 
+        # `device=x.device`: the positions are born wherever the data lives.
+        # Everything is on the CPU today, so this changes nothing; the day `x`
+        # moves to a GPU, it is what keeps the addition below legal.
+        positions = torch.arange(max_length, device=x.device)
 
-for batch in dataloader:
-    x, y = batch
+        pos_embeddings = pos_embedding_layer(positions)
 
-    token_embeddings = token_embedding_layer(x)
+        input_embeddings = token_embeddings + pos_embeddings
 
-    pos_embeddings = pos_embedding_layer(torch.arange(max_length))
+        break
 
-    input_embeddings = token_embeddings + pos_embeddings
-
-    break
-
-
-print(input_embeddings.shape)
+    print(input_embeddings.shape)

@@ -23,6 +23,7 @@ import tempfile
 
 from pathlib import Path
 
+import numpy as np
 import tiktoken
 import torch
 
@@ -49,7 +50,9 @@ def text_to_token_ids(text, tokenizer):
     encoded = tokenizer.encode(text, allowed_special={"<|endoftext|>"})
 
     # unsqueeze(0) adds the batch axis the model expects.
-    return torch.tensor(encoded).unsqueeze(0)
+    encoded_tensor = torch.tensor(encoded).unsqueeze(0)
+
+    return encoded_tensor
 
 
 def token_ids_to_text(token_ids, tokenizer):
@@ -135,11 +138,13 @@ def generate_and_print_sample(model, tokenizer, device, start_context):
         token_ids = generate_text_simple(
             model=model,
             idx=encoded,
-            max_new_tokens=25,
+            max_new_tokens=50,
             context_size=context_size,
         )
 
-    print("   ", token_ids_to_text(token_ids, tokenizer).replace("\n", " "))
+    decoded_text = token_ids_to_text(token_ids, tokenizer)
+
+    print(decoded_text.replace("\n", " "))
 
     model.train()
 
@@ -194,8 +199,10 @@ def train_model_simple(
                 track_tokens_seen.append(tokens_seen)
 
                 print(
-                    f"    ep {epoch + 1} step {global_step:03d}: "
-                    f"train {train_loss:.3f}, val {val_loss:.3f}"
+                    f"Ep {epoch + 1} "
+                    f"(Step {global_step:06d}): "
+                    f"Train loss {train_loss:.3f}, "
+                    f"Val loss {val_loss:.3f}"
                 )
 
         generate_and_print_sample(model, tokenizer, device, start_context)
@@ -281,15 +288,14 @@ def load_weights_into_gpt(gpt, params):
     GPT-2 keeps Q, K and V in one `c_attn` matrix where we have three layers,
     and it stores its weights transposed with respect to `nn.Linear`.
     """
-    import numpy as np
 
     gpt.pos_emb.weight = assign(gpt.pos_emb.weight, params["wpe"])
     gpt.tok_emb.weight = assign(gpt.tok_emb.weight, params["wte"])
 
     for b in range(len(params["blocks"])):
-        bloc = params["blocks"][b]
-
-        q_w, k_w, v_w = np.split(bloc["attn"]["c_attn"]["w"], 3, axis=-1)
+        q_w, k_w, v_w = np.split(
+            params["blocks"][b]["attn"]["c_attn"]["w"], 3, axis=-1
+        )
 
         gpt.trf_blocks[b].att.W_query.weight = assign(
             gpt.trf_blocks[b].att.W_query.weight, q_w.T
@@ -302,7 +308,9 @@ def load_weights_into_gpt(gpt, params):
         )
 
         # Biases are one-dimensional, so they need no transpose.
-        q_b, k_b, v_b = np.split(bloc["attn"]["c_attn"]["b"], 3, axis=-1)
+        q_b, k_b, v_b = np.split(
+            params["blocks"][b]["attn"]["c_attn"]["b"], 3, axis=-1
+        )
 
         gpt.trf_blocks[b].att.W_query.bias = assign(
             gpt.trf_blocks[b].att.W_query.bias, q_b
@@ -316,38 +324,42 @@ def load_weights_into_gpt(gpt, params):
 
         gpt.trf_blocks[b].att.out_proj.weight = assign(
             gpt.trf_blocks[b].att.out_proj.weight,
-            bloc["attn"]["c_proj"]["w"].T,
+            params["blocks"][b]["attn"]["c_proj"]["w"].T,
         )
         gpt.trf_blocks[b].att.out_proj.bias = assign(
-            gpt.trf_blocks[b].att.out_proj.bias, bloc["attn"]["c_proj"]["b"]
+            gpt.trf_blocks[b].att.out_proj.bias,
+            params["blocks"][b]["attn"]["c_proj"]["b"],
         )
 
         gpt.trf_blocks[b].ff.layers[0].weight = assign(
-            gpt.trf_blocks[b].ff.layers[0].weight, bloc["mlp"]["c_fc"]["w"].T
+            gpt.trf_blocks[b].ff.layers[0].weight,
+            params["blocks"][b]["mlp"]["c_fc"]["w"].T,
         )
         gpt.trf_blocks[b].ff.layers[0].bias = assign(
-            gpt.trf_blocks[b].ff.layers[0].bias, bloc["mlp"]["c_fc"]["b"]
+            gpt.trf_blocks[b].ff.layers[0].bias,
+            params["blocks"][b]["mlp"]["c_fc"]["b"],
         )
 
         gpt.trf_blocks[b].ff.layers[2].weight = assign(
             gpt.trf_blocks[b].ff.layers[2].weight,
-            bloc["mlp"]["c_proj"]["w"].T,
+            params["blocks"][b]["mlp"]["c_proj"]["w"].T,
         )
         gpt.trf_blocks[b].ff.layers[2].bias = assign(
-            gpt.trf_blocks[b].ff.layers[2].bias, bloc["mlp"]["c_proj"]["b"]
+            gpt.trf_blocks[b].ff.layers[2].bias,
+            params["blocks"][b]["mlp"]["c_proj"]["b"],
         )
 
         gpt.trf_blocks[b].norm1.scale = assign(
-            gpt.trf_blocks[b].norm1.scale, bloc["ln_1"]["g"]
+            gpt.trf_blocks[b].norm1.scale, params["blocks"][b]["ln_1"]["g"]
         )
         gpt.trf_blocks[b].norm1.shift = assign(
-            gpt.trf_blocks[b].norm1.shift, bloc["ln_1"]["b"]
+            gpt.trf_blocks[b].norm1.shift, params["blocks"][b]["ln_1"]["b"]
         )
         gpt.trf_blocks[b].norm2.scale = assign(
-            gpt.trf_blocks[b].norm2.scale, bloc["ln_2"]["g"]
+            gpt.trf_blocks[b].norm2.scale, params["blocks"][b]["ln_2"]["g"]
         )
         gpt.trf_blocks[b].norm2.shift = assign(
-            gpt.trf_blocks[b].norm2.shift, bloc["ln_2"]["b"]
+            gpt.trf_blocks[b].norm2.shift, params["blocks"][b]["ln_2"]["b"]
         )
 
     gpt.final_norm.scale = assign(gpt.final_norm.scale, params["g"])
