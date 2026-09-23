@@ -13,9 +13,13 @@ you can reproduce the failure before you trust the success. V = 65, ln(V) =
     1  shapes        a model returning (B, V) instead of (B, T, V) -- the
                      last-position-only mistake -- fails here and nowhere else
     2  loss at init  correct 4.33, ln(V)+0.16
-                     head weights x3  ->  5.59, ln(V)+1.42   CAUGHT
-                     head weights x20 -> 27.46, ln(V)+23.29   CAUGHT
-                     head weights x2  ->  4.82, ln(V)+0.65   NOT caught, see below
+                     scaling the OUTPUT head, the linear that maps the last
+                     hidden state onto the vocabulary, is what moves this
+                     number. Scaling the attention heads does not: it sharpens
+                     where attention looks and leaves the logits' scale alone.
+                     output head x3  ->  5.59, ln(V)+1.42   CAUGHT
+                     output head x20 -> 27.46, ln(V)+23.29   CAUGHT
+                     output head x2  ->  4.82, ln(V)+0.65   NOT caught, see below
     3  causality     correct 0.0 exactly; drop the mask -> 1.42e-01
     4  positions     fit "target = t mod V" on a constant input: with position
                      embeddings 0.0010, without them 3.4658, and it cannot go
