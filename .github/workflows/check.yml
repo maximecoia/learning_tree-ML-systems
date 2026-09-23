@@ -1,0 +1,27 @@
+# Runs the repository's own checks on every push.
+#
+# No dependencies and no setup step: tools/check.py uses the standard library
+# only, and the questions it asks are answered by the checkout itself. That is
+# why it can run here at all, while everything else that validates this
+# showcase needs the private corpus that produces it.
+#
+# External links are deliberately not asked. There are close to four hundred,
+# and a third of the hosts answer 403 to anything without a browser, so a red
+# mark here would usually mean a publisher dislikes scripts rather than that
+# anything is wrong. `python3 tools/check.py --links` asks them on demand.
+
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Does the published work hold together
+        run: python3 tools/check.py
