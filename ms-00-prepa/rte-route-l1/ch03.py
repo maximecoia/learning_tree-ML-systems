@@ -1,6 +1,8 @@
 """Chapter 3, my answer: attention, from one dot product to several heads.
 
-    cd pratique/raschka && ../../.venv/bin/python3 mes-reponses/ch03.py
+    python3 ch03.py     # from this file's own directory
+
+It needs `torch`, and nothing else.
 
 Three modules, each one the previous plus what the chapter adds next:
 SelfAttention learns Q, K and V; CausalAttention forbids looking ahead and

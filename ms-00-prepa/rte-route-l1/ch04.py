@@ -1,6 +1,9 @@
 """Chapter 4, my answer: the blocks of chapters 2 and 3 become a whole GPT.
 
-    cd pratique/raschka && ../../.venv/bin/python3 mes-reponses/ch04.py
+    python3 ch04.py     # from this file's own directory
+
+It needs `torch` and `tiktoken`, and `ch03.py` beside it: the attention
+comes from there rather than being written twice.
 
 LayerNorm, GELU and FeedForward are the three pieces this chapter adds; the
 TransformerBlock wires them around the attention of chapter 3 with two
