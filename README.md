@@ -85,7 +85,7 @@ ships its own grader.
 
 | | Step | What grades it |
 |---|---|---|
-| 1 | Tensor Puzzles — 21 puzzles, one line each | the checker inside the notebook |
+| 1 | Tensor Puzzles — 21 puzzles, one expression each, twenty of them inside eighty columns | the checker inside the notebook |
 | 2 | Text data: tokenizer, sliding window, embeddings | the book's exercise solutions and chapter quiz |
 | 3 | Causal attention: scores, mask, multiple heads | same, plus gate 3 below |
 | 4 | The GPT: blocks, normalisation, residuals, logits | gates 1, 2, 4 and 6 below |
