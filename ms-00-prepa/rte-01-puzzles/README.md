@@ -92,6 +92,21 @@ and a runner pairs each one with the upstream spec and the upstream hypothesis
 harness, both read straight from the notebook, in a fresh process where no stale
 cell can vouch for anything: twenty-one passed, none failed.
 
+## The one that does not fit
+
+Four answers are written as one `return` wrapped over several lines: `compress`,
+`sequence_mask`, `bincount` and `scatter_add`. Each is a single expression with
+no loop and no temporary, so each obeys rule 3, and the notebook's own length
+cell prints `(more than 1 line)` against all four.
+
+Three of them are wrapped for reading and nothing else. Joined up they measure
+79, 70 and 63 columns with their indentation, so `sequence_mask`, `bincount` and
+`scatter_add` meet rule 2 as written.
+
+`compress` does not, and no rewrapping changes that: as one line it is 88
+columns. It is the one answer in the set that the eighty-column rule refuses,
+and it is named here rather than left for a reader to find the cell and measure.
+
 The runner was itself checked against a deliberate break. Making `cumsum` return
 twice its value turns two puzzles red, `cumsum` and the `compress` built on it,
 and the run exits non-zero. A suite that stays green under that is not measuring

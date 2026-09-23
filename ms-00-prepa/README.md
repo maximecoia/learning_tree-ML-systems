@@ -19,7 +19,7 @@ One table, from what is done to what waits. Every state is read from a grader, n
 | ✓ | `py-02-advanced` | ✓ 9 of 9 | its grader, through `./exo` | [py-02-advanced](py-02-advanced) |
 | ✓ | `py-03-livrer` | ✓ 8 of 8 | its grader, through `./exo` | [py-03-livrer](py-03-livrer) |
 | ✓ | `c-01-libft` | ✓ 6 of 6 | its grader, through `./exo` | 42 subject, not published |
-| ✓ | Tensor Puzzles — 21 puzzles, one line each — `rte-01-puzzles` | ✓ 1 of 1 | the checker inside the notebook | [rte-01-puzzles](rte-01-puzzles), from [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles) |
+| ✓ | Tensor Puzzles — 21 puzzles, one expression each, twenty of them inside eighty columns — `rte-01-puzzles` | ✓ 1 of 1 | the checker inside the notebook | [rte-01-puzzles](rte-01-puzzles), from [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles) |
 | → | Text data: tokenizer, sliding window, embeddings (Raschka ch. 2) | `ex00`, 8 tests: red · `ex04`, 28 tests: red | the book's exercise solutions and chapter quiz | [rte-route-l1/ch02.py](rte-route-l1/ch02.py), from [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) |
 |  | Causal attention: scores, mask, multiple heads (Raschka ch. 3) | `ex00`, 8 tests: red · gate 3: gpt.py is still the blank file | same, plus gate 3 | [rte-route-l1/ch03.py](rte-route-l1/ch03.py), from [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) |
 |  | The GPT: blocks, normalisation, residuals, logits (Raschka ch. 4) | gates 1, 2, 4 and 6: gpt.py is still the blank file | gates 1, 2, 4 and 6 | [rte-route-l1/ch04.py](rte-route-l1/ch04.py), from [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) |
