@@ -324,21 +324,33 @@ the noise floor, and the one the lecture calls most promising costs (+0.165).
 carries a page listing every sub-module it declares, what grades it, and where
 its work is — including the ones that are deliberately not here.
 
+<!-- arbre: written by carte_phases.py from what git publishes. Do not edit by hand. -->
 ```
-README.md                  this page: the roadmap, and where it stands
+.github/                   the workflow that runs tools/check.py on every push
+.gitignore                 what stays out, and why: 42 subjects above all
+LICENSE                    MIT, and the credits owed are in Sources and licence above
 PYTHON.md                  the Python socle, exercise by exercise
+README.md                  this page: the roadmap, and where it stands
+tools/                     the checks this repository can run on itself
 ms-00-prepa/               the prep — Sept–Oct 2026
     README.md              its sub-modules in the order of the work, and their state
     py-01-basics/          correct answers out of input you do not control
     py-02-advanced/        types that make the wrong answer unrepresentable
     py-03-livrer/          the result, installable and on the PATH
+    rte-01-puzzles/        Sasha Rush's twenty-one puzzles, solved and credited
+    rte-route-l1/          the route's chapters, answers to Raschka's book
 ms-01-inference/ … ms-07-stage-2/
     README.md              the same page, for a phase not yet opened
 ```
+<!-- /arbre -->
 
-The phase pages are generated from the curriculum and from the table above, not
-written by hand. Three README drifts on this project were all hand-copied
-figures going stale, and a page that reads its sources cannot drift without them.
+The tree above and the phase pages are generated, from what git publishes and
+from the curriculum, not written by hand. Three README drifts on this project
+were all hand-copied figures going stale, and a page that reads its sources
+cannot drift without them. This tree was the fourth: it listed three folders
+under the prep while five were published, for five days, in the paragraph that
+says a generated page cannot drift. A published folder with nothing said about
+it now stops the build.
 
 The 42 subjects are absent by policy, not by accident, and the route's
 assignments are other people's work and stay in their own repositories. Phase 1
