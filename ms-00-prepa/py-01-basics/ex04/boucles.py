@@ -34,11 +34,13 @@ def premiere_vide(lignes):
     return -1
     
 
-print(somme_jusqu_a(4))
-print(somme_jusqu_a(0))
-print(compter_valides(["alice: 14", "", "carol: abc", "bob: 8"]))
-print(compter_valides([]))
-print(plus_grande([3, 9, 9, 1]))
-print(plus_grande([]))
-print(premiere_vide(["a", "", "b", ""]))
-print(premiere_vide(["a", "b"]))
+
+if __name__ == "__main__":
+    print(somme_jusqu_a(4))
+    print(somme_jusqu_a(0))
+    print(compter_valides(["alice: 14", "", "carol: abc", "bob: 8"]))
+    print(compter_valides([]))
+    print(plus_grande([3, 9, 9, 1]))
+    print(plus_grande([]))
+    print(premiere_vide(["a", "", "b", ""]))
+    print(premiere_vide(["a", "b"]))
