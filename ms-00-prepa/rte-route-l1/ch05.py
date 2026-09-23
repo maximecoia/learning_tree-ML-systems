@@ -1,6 +1,10 @@
 """Chapter 5, my answer: the GPT of chapter 4 is finally made to learn.
 
-    cd pratique/raschka && ../../.venv/bin/python3 mes-reponses/ch05.py
+    python3 ch05.py     # from this file's own directory
+
+It needs `torch`, `tiktoken` and `numpy`, plus `ch02.py` and `ch04.py`
+beside it. It also needs the book's corpus, which is not published, so
+this file is published to be read rather than run.
 
 The chapter's own script trains GPT-2 124M for ten epochs and then downloads
 OpenAI's weights. Both are out of reach for a file meant to be run on the spot,

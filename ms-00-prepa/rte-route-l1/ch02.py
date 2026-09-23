@@ -1,6 +1,9 @@
 """Chapter 2, my answer: the sliding window, the dataloader, the two embeddings.
 
-    cd pratique/raschka && ../../.venv/bin/python3 mes-reponses/ch02.py
+    python3 ch02.py     # from this file's own directory
+
+It needs `torch` and `tiktoken`, plus the book's corpus, which is not
+published: the path below says where it is expected.
 
 The corpus belongs to the book and is not versioned here, so it is resolved
 from this file's location rather than from the working directory.
