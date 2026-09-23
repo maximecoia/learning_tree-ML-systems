@@ -303,11 +303,24 @@ day.
 Every track ships checks that can fail, and each one was broken on purpose
 before being trusted. A check that cannot fail is worse than no check.
 
+You can run that claim rather than take it. [`tools/check.py`](tools/check.py)
+asks three questions of this repository using nothing but this repository: does
+the published Python parse, do the links between these pages resolve, and does
+`.gitignore` agree with what git actually tracks. Each was proven able to fail
+before being trusted — a deliberate syntax error, a link to a file that is not
+there, and a `.gitignore` line naming `LICENSE` each turn it red. The third is
+there because it had already gone wrong: a rule added on 2026-09-18 named two
+files git was already tracking, which a rule does not untrack, so they stayed
+published for five days while this repository believed them gone. A workflow
+runs the three on every push.
+
 Where a result is deterministic, the check is exact to the digit. Where it is
 not, the check compares against a **range** set by the measured noise floor:
 three runs of an MLP differing only in the minibatch draw gave 2.1595, 2.1870
 and 2.1899, so the floor is 0.03, and demanding an exact value would fail a
-correct model one time in two.
+correct model one time in two. That run and the one below were made in the
+private corpus that produces this repository, on the Zero to Hero unit that
+left it; the figures are reported here, not reproducible from this tree.
 
 The same rule decides which sources are used at all. A source is taken when it
 arrives with a grader that is not its own reader — a checker in the notebook, a
