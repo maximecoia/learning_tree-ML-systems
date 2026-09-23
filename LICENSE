@@ -19,15 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-The Neural Networks: Zero to Hero lectures, notebooks and datasets this work
-rebuilds are Andrej Karpathy's, also MIT licensed:
-
-  https://github.com/karpathy/nn-zero-to-hero
-  https://github.com/karpathy/micrograd
-  https://github.com/karpathy/makemore
-
-`z2h-karpathy/*/names.txt` is the dataset from karpathy/makemore, redistributed
-under that licence.
