@@ -101,7 +101,10 @@ remaining 6 are the 2026 variants, and they come after the deliverable.
 ### The acceptance test
 
 It is already written, it is black-box, and it states what breaking each check
-costs, measured against a reference implementation rather than asserted.
+costs, measured against a reference implementation rather than asserted. It is
+here: [`ms-00-prepa/l1-01-gpt-corpus/verifier.py`](ms-00-prepa/l1-01-gpt-corpus/verifier.py),
+and it reads without running — the blank file it grades stays out until the
+deliverable lands, so running it says so and stops.
 
 | Gate | What has to land |
 |---|---|
@@ -347,6 +350,7 @@ README.md                  this page: the roadmap, and where it stands
 tools/                     the checks this repository can run on itself
 ms-00-prepa/               the prep — Sept–Oct 2026
     README.md              its sub-modules in the order of the work, and their state
+    l1-01-gpt-corpus/      the acceptance test, written before the work it grades
     py-01-basics/          correct answers out of input you do not control
     py-02-advanced/        types that make the wrong answer unrepresentable
     py-03-livrer/          the result, installable and on the PATH
