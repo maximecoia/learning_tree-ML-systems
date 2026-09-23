@@ -31,7 +31,9 @@ def bilan(lignes, minimum=0):
 
     return moyennes, meilleur, ignorees
 
-print(bilan(["alice: 14", "bob: 9", "alice: 17"]))
-print(bilan([" Bob : 12 ", "", "carol: abc", "bob: 8"], minimum=10))
-print(bilan(["dan: 10", "eve: 10"]))
-print(bilan([]))
+
+if __name__ == "__main__":
+    print(bilan(["alice: 14", "bob: 9", "alice: 17"]))
+    print(bilan([" Bob : 12 ", "", "carol: abc", "bob: 8"], minimum=10))
+    print(bilan(["dan: 10", "eve: 10"]))
+    print(bilan([]))

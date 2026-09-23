@@ -16,10 +16,11 @@ def decroissantes(notes):
     return sorted(notes, reverse=True)
 
 
-print(retenues([14, 9, 17], 10))
-print(retenues([], 10))
-print(moyenne([14, 17]))
-print(moyenne([10, 11, 11]))
-print(moyenne([]))
-print(au_carre([1, 2, 3]))
-print(decroissantes([3, 9, 1]))
+if __name__ == "__main__":
+    print(retenues([14, 9, 17], 10))
+    print(retenues([], 10))
+    print(moyenne([14, 17]))
+    print(moyenne([10, 11, 11]))
+    print(moyenne([]))
+    print(au_carre([1, 2, 3]))
+    print(decroissantes([3, 9, 1]))

@@ -25,10 +25,12 @@ def compter_mots(mots):
 def valeur_ou(d, cle, defaut):
     return d.get(cle, defaut)
 
-print(grouper([("alice", 14), ("bob", 9), ("alice", 17)]))
-print(grouper([]))
-print(moyennes({"alice": [14, 17], "bob": [9]}))
-print(moyennes({"vide": [], "k": [7]}))
-print(compter_mots(["a", "b", "a"]))
-print(valeur_ou({"a": 1}, "a", 0))
-print(valeur_ou({"a": 1}, "b", 0))
+
+if __name__ == "__main__":
+    print(grouper([("alice", 14), ("bob", 9), ("alice", 17)]))
+    print(grouper([]))
+    print(moyennes({"alice": [14, 17], "bob": [9]}))
+    print(moyennes({"vide": [], "k": [7]}))
+    print(compter_mots(["a", "b", "a"]))
+    print(valeur_ou({"a": 1}, "a", 0))
+    print(valeur_ou({"a": 1}, "b", 0))
