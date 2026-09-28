@@ -3,6 +3,9 @@
     python3 verifier.py              # check 7 on the scaffolding corpus
     python3 verifier.py DATA_DIR     # check 7 on a folder prepare.py wrote
 
+./exo passes DATA_DIR itself when data/ beside this file holds exactly one
+folder with a manifest.json, and refuses to count when it holds two.
+
 It imports gpt.py and invents nothing. It does not read your architecture: it
 only feeds tensors in and reads tensors out, so any number of layers, heads or
 norms passes as long as the model is a causal language model.
