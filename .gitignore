@@ -122,3 +122,7 @@ ms-00-prepa/rte-route-l1/*
 !ms-00-prepa/rte-route-l1/test_ch03.py
 !ms-00-prepa/rte-route-l1/test_ch04.py
 !ms-00-prepa/rte-route-l1/test_ch05.py
+
+# 2026-09-28: an answer to inf-03-cache-kv ex00, written ahead of its phase.
+# ms-01 is not open, and the roadmap publishes a phase's work once it runs.
+ms-01-inference/inf-03-cache-kv/ex00/cache.py
