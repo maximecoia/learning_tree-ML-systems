@@ -62,7 +62,7 @@ Phase 1, [`ms-00-prepa`](ms-00-prepa), is the one in progress: **33 of 53 graded
 | The Python socle | ✓ 26 of 26 exercises, complete | [`PYTHON.md`](PYTHON.md) |
 | The libft, ahead of the school | ✓ 6 of 6 exercises, complete, kept out of this repository | [below](#why-the-c-tracks-are-not-here) |
 | The route to the trained GPT | 5 of 6 steps · step 6 out of the window | [the phase page](ms-00-prepa/README.md#what-to-do-in-order) |
-| **L1, the trained model** | 0 of 6 gates · gpt.py is still the blank file, then the public repository | [the acceptance test](#the-acceptance-test) |
+| **L1, the trained model** | 0 of 7 gates · gpt.py is still the blank file, then the public repository | [the acceptance test](#the-acceptance-test) |
 | The C inference engine | 0 of 7 · out of the window, it needs the weights L1 produces | [below](#why-the-c-tracks-are-not-here) |
 | Maths, in the background | 0 of 20 exercises, alongside the route |  |
 | Zero to Hero | taken off the path, and out of this repository | [below](#zero-to-hero-and-why-it-left) |
@@ -96,7 +96,7 @@ The tests of steps 2 to 5 sit beside each answer, in
 [`ms-00-prepa/rte-route-l1`](ms-00-prepa/rte-route-l1). They assert what
 each chapter states in prose, and they run once that directory is copied
 into a clone of the book, which holds the corpus and upstream's own test.
-The six gates below grade `gpt.py`, the deliverable, and no chapter waits
+The seven gates below grade `gpt.py`, the deliverable, and no chapter waits
 on them. Step 6 grades the same material a second way, and it waits until
 31 October: L1 comes first. Of that assignment's 21 adapters, 15 do not
 depend on its architecture
@@ -120,9 +120,13 @@ deliverable lands, so running it says so and stops.
 | 4 | 0.0010 on a task only position can solve — without position embeddings it sits at 3.4658 |
 | 5 | 0.0108 after 400 steps overfitting 32 fixed sequences |
 | 6 | `generate` survives a context longer than the block size |
+| 7 | the trained weights, measured on dev, land 0.10 below a counted bigram on the same split: 2.0856 against a bar of 2.3743, and weights never trained sit at 4.3370 |
 
 It reads tensors in and tensors out, never the architecture, so any number of
 layers, heads or norms passes as long as the model is a causal language model.
+Gates 1 to 6 grade the model, gate 7 grades its training: without it, a
+`gpt.py` that was never trained passes the other six. Passing all seven is
+what closes the phase.
 That is what let the teaching layer be replaced without touching the exam.
 
 **What lands here is not the route.** The assignments live in their own

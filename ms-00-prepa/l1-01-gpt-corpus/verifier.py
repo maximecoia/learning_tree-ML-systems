@@ -1,6 +1,7 @@
-"""Acceptance test for the blank-file GPT. Six checks, one command, no plots.
+"""Acceptance test for the blank-file GPT. Seven checks, one command, no plots.
 
-    python3 verifier.py
+    python3 verifier.py              # check 7 on the scaffolding corpus
+    python3 verifier.py DATA_DIR     # check 7 on a folder prepare.py wrote
 
 It imports gpt.py and invents nothing. It does not read your architecture: it
 only feeds tensors in and reads tensors out, so any number of layers, heads or
@@ -32,6 +33,18 @@ you can reproduce the failure before you trust the success. V = 65, ln(V) =
                      the shape. The sample itself is not judged -- a crash is a
                      real failure, a dull continuation is not this file's
                      business
+    7  the run       loads the gpt.pt train() left beside gpt.py and measures
+                     it on every full window of dev, against a counted
+                     bigram, add-one smoothed, on the same split. It must
+                     land 0.10 below. On the prepared Tiny Shakespeare:
+                     bigram 2.4743, so the bar is 2.3743
+                     correct, 2000 steps          ->  2.0856
+                     weights never trained        ->  4.3370   CAUGHT, and
+                                                  checks 1 to 6 all pass
+                     attention returning zeros    ->  2.4885   CAUGHT, and
+                                                  check 5 catches it too
+                     gpt.pt missing, or from a corpus with another
+                     vocabulary                   ->  CAUGHT, said in words
 
 WHAT IT DOES NOT CATCH, said plainly
 
@@ -41,11 +54,20 @@ WHAT IT DOES NOT CATCH, said plainly
     - generate() sampling wrongly. It checks the shape and that a context
       longer than BLOCK_SIZE does not crash, not the distribution.
     - anything about the corpus: provenance, licence, leakage. That is L1's
-      real work and no unit test replaces it.
+      real work and no unit test replaces it. Leakage matters to check 7 too:
+      a dev split that repeats train makes the bigram easy to beat.
+    - which corpus the run used, beyond its vocabulary. Without DATA_DIR,
+      check 7 reads the scaffolding corpus: the reference weights, trained on
+      the prepared split, pass there at 2.0976 against a bar of 2.3819, on a
+      dev that overlaps their train. Pass the folder of the chosen corpus.
+    - that gpt.pt came from this gpt.py's own train(). It loads what it finds.
 
 A check that cannot fail is worse than no check at all.
 """
+import json
 import math
+import os
+import sys
 
 import torch
 
@@ -163,6 +185,85 @@ out = model.generate(long_context, 10)
 all_ok &= verdict('6. generate survives T > block',
                   tuple(out.shape) == (1, BLOCK_SIZE + 15),
                   'expected (1, %d)   got %s' % (BLOCK_SIZE + 15, tuple(out.shape)))
+
+
+
+# 7. the run. Checks 1 to 6 grade a fresh model, or one fitted for seconds on
+#    a single batch. This one grades the weights train() left in gpt.pt, on
+#    the corpus they were trained on, against what a model with no context
+#    reaches: the counted bigram. A GPT that does not go clearly below it has
+#    bought nothing with its context, whatever its curve looks like.
+MARGIN = 0.10          # nats the run must gain on the bigram
+
+
+def load_corpus(data_dir):
+    """(train, dev, vocab_size, name) as long tensors, the way train() saw them.
+
+    No folder: the scaffolding corpus, through corpus.py. A folder: the one
+    prepare.py writes, train.txt and dev.txt encoded against vocab.json, a
+    JSON list of characters. A character outside that list stops the check
+    rather than being dropped, since a dropped character is a changed corpus.
+    """
+    if data_dir is None:
+        from corpus import dataset
+        train_ids, dev_ids, vocab, _, _ = dataset()
+        return train_ids, dev_ids, len(vocab), 'the scaffolding corpus'
+    with open(os.path.join(data_dir, 'vocab.json'), encoding='utf-8') as f:
+        vocab = json.load(f)
+    to_i = {c: i for i, c in enumerate(vocab)}
+    splits = []
+    for name in ('train', 'dev'):
+        with open(os.path.join(data_dir, name + '.txt'), encoding='utf-8', newline='') as f:
+            text = f.read()
+        outside = sorted(set(text) - set(to_i))
+        if outside:
+            raise SystemExit('%s.txt holds characters outside vocab.json: %r'
+                             % (name, outside[:5]))
+        splits.append(torch.tensor([to_i[c] for c in text], dtype=torch.long))
+    return splits[0], splits[1], len(vocab), data_dir
+
+
+def bigram_dev_loss(train_ids, dev_ids, vocab_size):
+    """Dev loss of a counted bigram, add-one smoothed: the model to beat."""
+    counts = torch.ones(vocab_size, vocab_size)
+    counts.index_put_((train_ids[:-1], train_ids[1:]),
+                      torch.ones(len(train_ids) - 1), accumulate=True)
+    logp = (counts / counts.sum(1, keepdim=True)).log()
+    return -logp[dev_ids[:-1], dev_ids[1:]].mean().item()
+
+
+@torch.no_grad()
+def dev_loss(model, dev_ids):
+    """Mean next-token loss over every full window of dev, none sampled."""
+    n = (len(dev_ids) - 1) // BLOCK_SIZE
+    x = dev_ids[:n * BLOCK_SIZE].view(n, BLOCK_SIZE)
+    y = dev_ids[1:n * BLOCK_SIZE + 1].view(n, BLOCK_SIZE)
+    model.eval()
+    total = 0.0
+    for i in range(0, n, 256):
+        total += model(x[i:i + 256], y[i:i + 256])[1].item() * len(x[i:i + 256])
+    return total / n
+
+
+weights = os.path.join(os.path.dirname(os.path.abspath(
+    sys.modules[GPT.__module__].__file__)), 'gpt.pt')
+train_ids, dev_ids, v_run, name = load_corpus(sys.argv[1] if len(sys.argv) > 1 else None)
+if not os.path.exists(weights):
+    run_ok, detail = False, 'no gpt.pt beside gpt.py: train() has not left its weights'
+else:
+    try:
+        model = GPT(v_run)
+        model.load_state_dict(torch.load(weights, map_location='cpu', weights_only=True))
+    except RuntimeError:
+        run_ok, detail = False, ('gpt.pt does not load into GPT(%d): trained on another '
+                                 'corpus, or by another gpt.py' % v_run)
+    else:
+        base = bigram_dev_loss(train_ids, dev_ids, v_run)
+        got = dev_loss(model, dev_ids)
+        run_ok = got < base - MARGIN
+        detail = ('expected < %.4f, bigram %.4f minus %.2f   got %.4f   on %s'
+                  % (base - MARGIN, base, MARGIN, got, name))
+all_ok &= verdict('7. the run beats the bigram', run_ok, detail)
 
 print()
 print('ALL OK' if all_ok else 'SOMETHING IS OFF')
