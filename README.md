@@ -55,19 +55,19 @@ through to the logits, with the shapes annotated at every step.**
 ## Where the work stands
 
 <!-- compteurs: written by carte_phases.py from the graders. Do not edit by hand. -->
-Phase 1, [`ms-00-prepa`](ms-00-prepa), is the one in progress: **33 of 58 graded exercises** pass. It closes on 31 October 2026, its route on 18 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-00-prepa/README.md#what-to-do-in-order) lists the work in order with the next step marked.
+Phase 1, [`ms-00-prepa`](ms-00-prepa), is the one in progress: **33 of 53 graded exercises** pass. It closes on 31 October 2026, its route on 18 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-00-prepa/README.md#what-to-do-in-order) lists the work in order with the next step marked.
 
 | Track | State | |
 |---|---|---|
 | The Python socle | ✓ 26 of 26 exercises, complete | [`PYTHON.md`](PYTHON.md) |
 | The libft, ahead of the school | ✓ 6 of 6 exercises, complete, kept out of this repository | [below](#why-the-c-tracks-are-not-here) |
-| **The route to the trained GPT** | 2 of 6 steps · now: step 3, Causal attention: scores, mask, multiple heads (Raschka ch. 3) | [the phase page](ms-00-prepa/README.md#what-to-do-in-order) |
-| L1, the trained model | 0 of 6 gates · gpt.py is still the blank file, then a quiz | [the acceptance test](#the-acceptance-test) |
+| The route to the trained GPT | 5 of 6 steps · step 6 out of the window | [the phase page](ms-00-prepa/README.md#what-to-do-in-order) |
+| **L1, the trained model** | 0 of 6 gates · gpt.py is still the blank file, then a quiz | [the acceptance test](#the-acceptance-test) |
 | The C inference engine | 0 of 7 · out of the window, it needs the weights L1 produces | [below](#why-the-c-tracks-are-not-here) |
 | Maths, in the background | 0 of 20 exercises, alongside the route |  |
 | Zero to Hero | taken off the path, and out of this repository | [below](#zero-to-hero-and-why-it-left) |
 
-The denominator leaves out `l1-01-gpt-corpus` (a quiz no terminal grades) and `c-02-moteur` (out of the window, it needs the weights L1 produces). Zero to Hero is not in it either: the curriculum stopped declaring it, and counting an abandoned track in a ratio makes a decision look like a delay.
+The denominator leaves out `rte-02-cs336` (out of the window until 31 October, L1 comes first), `l1-01-gpt-corpus` (a quiz no terminal grades) and `c-02-moteur` (out of the window, it needs the weights L1 produces). Zero to Hero is not in it either: the curriculum stopped declaring it, and counting an abandoned track in a ratio makes a decision look like a delay.
 <!-- /compteurs -->
 
 ## The route to the trained GPT
@@ -87,17 +87,19 @@ ships its own grader.
 |---|---|---|
 | 1 | Tensor Puzzles — 21 puzzles, one expression each, twenty of them inside eighty columns | the checker inside the notebook |
 | 2 | Text data: tokenizer, sliding window, embeddings | `test_ch02.py`: upstream's test and four of mine |
-| 3 | Causal attention: scores, mask, multiple heads | `test_ch03.py`, plus gate 3 below |
-| 4 | The GPT: blocks, normalisation, residuals, logits | `test_ch04.py`, plus gates 1, 2, 4 and 6 below |
-| 5 | Pretraining: the loop, train and validation loss, sampling | `test_ch05.py`, plus gate 5 below |
+| 3 | Causal attention: scores, mask, multiple heads | `test_ch03.py` |
+| 4 | The GPT: blocks, normalisation, residuals, logits | `test_ch04.py` |
+| 5 | Pretraining: the loop, train and validation loss, sampling | `test_ch05.py` |
 | 6 | CS336 assignment 1 — the 15 architecture-agnostic adapters | its public `pytest` suite |
 
 The tests of steps 2 to 5 sit beside each answer, in
 [`ms-00-prepa/rte-route-l1`](ms-00-prepa/rte-route-l1). They assert what
 each chapter states in prose, and they run once that directory is copied
 into a clone of the book, which holds the corpus and upstream's own test.
-Step 6 grades the same material a second way. Of that assignment's 21
-adapters, 15 do not depend on its architecture
+The six gates below grade `gpt.py`, the deliverable, and no chapter waits
+on them. Step 6 grades the same material a second way, and it waits until
+31 October: L1 comes first. Of that assignment's 21 adapters, 15 do not
+depend on its architecture
 — softmax, cross entropy, AdamW, batching, checkpoints, attention without
 positions — and those 15 cover exactly the material of steps 1 to 5. The
 remaining 6 are the 2026 variants, and they come after the deliverable.
