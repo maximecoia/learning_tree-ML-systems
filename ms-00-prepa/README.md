@@ -6,12 +6,12 @@
 
 **What it buys.** enter the school with the libft done, a GPT trained by hand, and a C inference engine whose throughput is measured and placed on a roofline
 
-**How it ends.** Not on a feeling, on one binary test: *Tu dessines de mémoire le flux d'un token d'entrée jusqu'aux logits, avec les shapes annotées à chaque étape.*
+**How it ends.** Not on a feeling, on one binary test: *Ton `gpt.py`, écrit depuis le fichier blanc, passe les sept portes de `verifier.py` : six sur le modèle, la septième sur son entraînement, dont la perte de validation descend 0,10 sous le bigramme compté.*
 
 
 ## What to do, in order
 
-One table, from what is done to what waits. Every state is read from a grader, never from the presence of a file: `./exo` runs the curriculum's checkers, each borrowed assignment brings its own, and `verifier.py` holds the 6 gates of the acceptance test. The first row without a tick is the work of today, marked →. The route closes on 18 October 2026 and the phase on 31 October 2026; `./exo` prints the pace those dates imply.
+One table, from what is done to what waits. Every state is read from a grader, never from the presence of a file: `./exo` runs the curriculum's checkers, each borrowed assignment brings its own, and `verifier.py` holds the 7 gates of the acceptance test. The first row without a tick is the work of today, marked →. The route closes on 18 October 2026 and the phase on 31 October 2026; `./exo` prints the pace those dates imply.
 
 | | Step | State | What grades it | Where |
 |---|---|---|---|---|
@@ -25,7 +25,7 @@ One table, from what is done to what waits. Every state is read from a grader, n
 | ✓ | The GPT: blocks, normalisation, residuals, logits (Raschka ch. 4) | `test_ch04.py`, 14 tests: ✓ | `test_ch04.py` | [rte-route-l1/ch04.py](rte-route-l1/ch04.py), from [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) |
 | ✓ | Pretraining: the loop, train and validation loss, sampling (Raschka ch. 5) | `test_ch05.py`, 17 tests: ✓ | `test_ch05.py` | [rte-route-l1/ch05.py](rte-route-l1/ch05.py), from [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) |
 |  | CS336 assignment 1 — the 15 architecture-agnostic adapters — `rte-02-cs336` | 0 of 5 · out of the window until 31 October, L1 comes first | its public `pytest` suite | [stanford-cs336/assignment1-basics](https://github.com/stanford-cs336/assignment1-basics), answers kept out |
-| → | `gpt.py` from a blank file, the acceptance test | 0 of 6 gates · gpt.py is still the blank file | `verifier.py`, [the gates](../README.md#the-acceptance-test) | lands here with the model |
+| → | `gpt.py` from a blank file, the acceptance test | 0 of 7 gates · gpt.py is still the blank file | `verifier.py`, [the gates](../README.md#the-acceptance-test) | lands here with the model |
 |  | `l1-01-gpt-corpus` | its public repository · not counted here | the public repository, read by someone else | lands here with the model |
 |  | `c-02-moteur` | 0 of 7 · out of the window, it needs the weights L1 produces | its grader, through `./exo` | lands here |
 
