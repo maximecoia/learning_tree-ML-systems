@@ -49,8 +49,11 @@ prerequisites rather than on a date, so the order is fixed and the pace is not.
 The aim is to close them earlier than written.
 
 What does not move is how a phase ends: on a binary test, not on a feeling.
-Phase 1 closes on this one: **draw from memory the path of an input token
-through to the logits, with the shapes annotated at every step.**
+Phase 1 closes on this one: **`gpt.py`, written from a blank file, passes the
+seven gates of [the acceptance test](#the-acceptance-test).** It used to close on
+drawing from memory the path of a token through to the logits. No grader reads
+a drawing, so the drawing moved to the write-up and its defence, and the phase
+now ends on the object it produces.
 
 ## Where the work stands
 
@@ -124,15 +127,20 @@ deliverable lands, so running it says so and stops.
 
 It reads tensors in and tensors out, never the architecture, so any number of
 layers, heads or norms passes as long as the model is a causal language model.
-Gates 1 to 6 grade the model, gate 7 grades its training: without it, a
-`gpt.py` that was never trained passes the other six. Passing all seven is
-what closes the phase.
 That is what let the teaching layer be replaced without touching the exam.
 
-**What lands here is not the route.** The assignments live in their own
-repositories. What lands here is the output: the trained model, the corpus with
-its provenance and its deduplication, the full curves, unsorted samples, and the
-write-up that has to hold up without the code on screen.
+Gates 1 to 6 grade the model, gate 7 grades its training: without it, a
+`gpt.py` that was never trained passes the other six. Gate 7 reads the corpus
+prepared beside `gpt.py`, and says which one it read. Passing all seven is what
+closes the phase.
+
+**What lands here from the route is my answers, not the assignments.** The
+book, its corpus and CS336 stay in their own repositories; the chapters I
+answered and the tests that grade them are in
+[`ms-00-prepa/rte-route-l1`](ms-00-prepa/rte-route-l1). What lands here for L1 is
+the output: the trained model, the corpus with its provenance and its
+deduplication, the full curves, unsorted samples, and the write-up that has to
+hold up without the code on screen.
 
 ## Why the C tracks are not here
 
@@ -340,6 +348,13 @@ arrives with a grader that is not its own reader — a checker in the notebook, 
 public test suite, a black-box acceptance test with published failure values. It
 is the reason the six steps above are borrowed rather than written.
 
+Steps 2 to 5 are the exception, and it is stated rather than left to be found.
+The book ships almost no assertions: its own chapter 2 test ends on an
+expression that is evaluated and thrown away, so it cannot fail. Their tests are
+therefore written here, against what each chapter states in prose, and every
+suite has been broken on purpose to prove it can fail. What keeps them honest is not their author
+but the acceptance test above, which none of them wrote and all of them lead to.
+
 The advice the sources give is measured rather than repeated. Of the three
 improvements Bengio et al. 2003 names, one pays (−0.048), one is ten times below
 the noise floor, and the one the lecture calls most promising costs (+0.165).
@@ -379,9 +394,9 @@ under the prep while five were published, for five days, in the paragraph that
 says a generated page cannot drift. A published folder with nothing said about
 it now stops the build.
 
-The 42 subjects are absent by policy, not by accident, and the route's
-assignments are other people's work and stay in their own repositories. Phase 1
-lands here when the trained model does.
+The 42 subjects are absent by policy, not by accident. The route's assignments
+are other people's work and stay in their own repositories; only my answers to
+them are here, credited. The trained model lands here with L1.
 
 ## Sources and licence
 
