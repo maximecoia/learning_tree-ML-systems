@@ -109,3 +109,16 @@ ms-00-prepa/rte-route-l1/*
 # `__main__` shrinks the model to two layers so that whoever does have the
 # corpus can watch the loss fall in seconds rather than hours.
 !ms-00-prepa/rte-route-l1/ch05.py
+
+# Exception, 2026-09-28: the four graders of the route follow their answers.
+# `test_ch03.py` and `test_ch04.py` run from here as they stand. The other two
+# stop before any test runs: `test_ch02.py` reuses upstream's own test and the
+# corpus, and `test_ch05.py` imports `ch05.py`, which imports `ch02.py`. Both
+# name the missing piece rather than skip, since a skipped grader reads as
+# nothing wrong. All four pass once this directory is copied into a clone of
+# the book. `carte_phases.py` grades the chapter rows exactly that way, on
+# these bytes, and refuses a copy that differs from its original.
+!ms-00-prepa/rte-route-l1/test_ch02.py
+!ms-00-prepa/rte-route-l1/test_ch03.py
+!ms-00-prepa/rte-route-l1/test_ch04.py
+!ms-00-prepa/rte-route-l1/test_ch05.py

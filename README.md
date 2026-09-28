@@ -61,7 +61,7 @@ Phase 1, [`ms-00-prepa`](ms-00-prepa), is the one in progress: **33 of 58 graded
 |---|---|---|
 | The Python socle | ✓ 26 of 26 exercises, complete | [`PYTHON.md`](PYTHON.md) |
 | The libft, ahead of the school | ✓ 6 of 6 exercises, complete, kept out of this repository | [below](#why-the-c-tracks-are-not-here) |
-| **The route to the trained GPT** | 1 of 6 steps · now: step 2, Text data: tokenizer, sliding window, embeddings (Raschka ch. 2) | [the phase page](ms-00-prepa/README.md#what-to-do-in-order) |
+| **The route to the trained GPT** | 2 of 6 steps · now: step 3, Causal attention: scores, mask, multiple heads (Raschka ch. 3) | [the phase page](ms-00-prepa/README.md#what-to-do-in-order) |
 | L1, the trained model | 0 of 6 gates · gpt.py is still the blank file, then a quiz | [the acceptance test](#the-acceptance-test) |
 | The C inference engine | 0 of 7 · out of the window, it needs the weights L1 produces | [below](#why-the-c-tracks-are-not-here) |
 | Maths, in the background | 0 of 20 exercises, alongside the route |  |
@@ -86,14 +86,18 @@ ships its own grader.
 | | Step | What grades it |
 |---|---|---|
 | 1 | Tensor Puzzles — 21 puzzles, one expression each, twenty of them inside eighty columns | the checker inside the notebook |
-| 2 | Text data: tokenizer, sliding window, embeddings | the book's exercise solutions and chapter quiz |
-| 3 | Causal attention: scores, mask, multiple heads | same, plus gate 3 below |
-| 4 | The GPT: blocks, normalisation, residuals, logits | gates 1, 2, 4 and 6 below |
-| 5 | Pretraining: the loop, train and validation loss, sampling | gate 5 below |
+| 2 | Text data: tokenizer, sliding window, embeddings | `test_ch02.py`: upstream's test and four of mine |
+| 3 | Causal attention: scores, mask, multiple heads | `test_ch03.py`, plus gate 3 below |
+| 4 | The GPT: blocks, normalisation, residuals, logits | `test_ch04.py`, plus gates 1, 2, 4 and 6 below |
+| 5 | Pretraining: the loop, train and validation loss, sampling | `test_ch05.py`, plus gate 5 below |
 | 6 | CS336 assignment 1 — the 15 architecture-agnostic adapters | its public `pytest` suite |
 
-Step 6 is the one that makes the rest checkable by something other than a
-reading. Of that assignment's 21 adapters, 15 do not depend on its architecture
+The tests of steps 2 to 5 sit beside each answer, in
+[`ms-00-prepa/rte-route-l1`](ms-00-prepa/rte-route-l1). They assert what
+each chapter states in prose, and they run once that directory is copied
+into a clone of the book, which holds the corpus and upstream's own test.
+Step 6 grades the same material a second way. Of that assignment's 21
+adapters, 15 do not depend on its architecture
 — softmax, cross entropy, AdamW, batching, checkpoints, attention without
 positions — and those 15 cover exactly the material of steps 1 to 5. The
 remaining 6 are the 2026 variants, and they come after the deliverable.
