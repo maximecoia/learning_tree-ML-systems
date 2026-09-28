@@ -2,7 +2,7 @@
 
 # Phase 1 — The prep, C and Python
 
-`ms-00-prepa` · Sept–Oct 2026 · 11 sub-modules, 11 written · 68 exercises
+`ms-00-prepa` · Sept–Oct 2026 · 11 sub-modules, 11 written · 65 exercises
 
 **What it buys.** enter the school with the libft done, a GPT trained by hand, and a C inference engine whose throughput is measured and placed on a roofline
 
@@ -26,7 +26,7 @@ One table, from what is done to what waits. Every state is read from a grader, n
 | ✓ | Pretraining: the loop, train and validation loss, sampling (Raschka ch. 5) | `test_ch05.py`, 17 tests: ✓ | `test_ch05.py` | [rte-route-l1/ch05.py](rte-route-l1/ch05.py), from [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) |
 |  | CS336 assignment 1 — the 15 architecture-agnostic adapters — `rte-02-cs336` | 0 of 5 · out of the window until 31 October, L1 comes first | its public `pytest` suite | [stanford-cs336/assignment1-basics](https://github.com/stanford-cs336/assignment1-basics), answers kept out |
 | → | `gpt.py` from a blank file, the acceptance test | 0 of 6 gates · gpt.py is still the blank file | `verifier.py`, [the gates](../README.md#the-acceptance-test) | lands here with the model |
-|  | `l1-01-gpt-corpus` | 3 steps, a quiz · not counted here | the quiz, then the public repository | lands here with the model |
+|  | `l1-01-gpt-corpus` | its public repository · not counted here | the public repository, read by someone else | lands here with the model |
 |  | `c-02-moteur` | 0 of 7 · out of the window, it needs the weights L1 produces | its grader, through `./exo` | lands here |
 
 **Alongside, in the background.** The curriculum files these under a `fil` named « Maths en fond »: work that runs beside the sequence rather than as a step of it. `maths-01-algebre` 0 of 8 · `mth-03-probas` 0 of 6 · `mth-04-statistiques` 0 of 6.
@@ -43,7 +43,7 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `c-01-libft` | added | Write a static C library whose every function honours the exact contract of the libc | 42 subject, not published · 6 exercises |
 | `rte-01-puzzles` | added | Write in a single line, by broadcasting and indexing alone, the functions NumPy hands you ready-made, and know why each one holds without a loop | [rte-01-puzzles](rte-01-puzzles), from [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles) · 1 exercise |
 | `rte-02-cs336` | added | Write the building blocks of a language model, its loss, its optimiser, its checkpoints and its BPE tokenizer, and make them pass the public suite of a course that knows nothing of your architecture | [stanford-cs336/assignment1-basics](https://github.com/stanford-cs336/assignment1-basics), answers kept out · 5 exercises |
-| `l1-01-gpt-corpus` | proof | Publish a language model trained end to end, and defend every part of how it works without the code in front of you | [l1-01-gpt-corpus](l1-01-gpt-corpus) · 3 exercises |
+| `l1-01-gpt-corpus` | proof | Publish a language model trained end to end, and defend every part of how it works without the code in front of you | [l1-01-gpt-corpus](l1-01-gpt-corpus) |
 | `c-02-moteur` | added | Write an inference engine in C that loads a model, generates text, measures its throughput and places itself on a roofline | not started · 7 exercises |
 | `maths-01-algebre` | added | Implement 2D vector and matrix transformations in Python | not started · 8 exercises |
 | `mth-03-probas` | added | Simulate a distribution, hold it against its closed form, and know how many measurements it takes to tell two values apart | not started · 6 exercises |
