@@ -6,7 +6,6 @@ Allowed:    isinstance iter len list range sum zip
 """
 
 # --- carried over from ex00/vecteurs.py -------------------------------------
-# Paste ErreurDeShape and Vecteur here. The grader checks them again.
 
 
 class ErreurDeShape(ValueError):
