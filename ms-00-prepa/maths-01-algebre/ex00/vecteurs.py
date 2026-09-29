@@ -14,12 +14,12 @@ class ErreurDeShape(ValueError):
 class Vecteur:
 
     def __init__(self, nombres):
-        # Store a copy of the list in self.nombres.
-        # On utilise list() pour s'assurer que l'on stocke une copie indépendante.
+        # list() stores an independent copy: changing the caller's list later
+        # does not change the vector.
         self.nombres = list(nombres)
 
     def __repr__(self):
-        # Retourne une chaîne de caractères sous la forme Vecteur([3, -1])
+        # A string of the form Vecteur([3, -1]).
         return f"Vecteur({self.nombres})"
 
     def __eq__(self, other):
@@ -29,20 +29,21 @@ class Vecteur:
         return self.nombres == other.nombres
 
     def __len__(self):
-        # Retourne la taille du vecteur
+        # The size of the vector.
         return len(self.nombres)
 
     def __getitem__(self, index):
-        # Permet l'accès aux éléments via vecteur[i]
+        # Element access through vecteur[i].
         return self.nombres[index]
 
     def __iter__(self):
-        # Permet l'itération (ex: for x in vecteur)
+        # Iteration, as in: for x in vecteur.
         return iter(self.nombres)
 
     def __add__(self, other):
         # A new Vecteur. ErreurDeShape when the sizes differ.
-        # On vérifie d'abord si other est bien un Vecteur pour éviter une AttributeError
+        # Check the type first: a list has a len() but no .nombres, which
+        # would raise AttributeError instead of TypeError.
         if not isinstance(other, Vecteur):
             return NotImplemented
         
@@ -69,8 +70,8 @@ class Vecteur:
         return Vecteur([x * scalar for x in self.nombres])
 
     def __rmul__(self, scalar):
-        # Gère le cas où le scalaire est à gauche (ex: 3 * Vecteur(...))
-        # On délègue simplement à __mul__ car la multiplication est commutative.
+        # The scalar on the left, as in 3 * Vecteur(...). Scaling commutes,
+        # so this delegates to __mul__.
         return self.__mul__(scalar)
 
     def __matmul__(self, other):
@@ -81,5 +82,5 @@ class Vecteur:
         if len(self) != len(other):
             raise ErreurDeShape
             
-        # Le produit scalaire est la somme des produits deux à deux
+        # The dot product is the sum of the pairwise products.
         return sum(a * b for a, b in zip(self.nombres, other.nombres))
