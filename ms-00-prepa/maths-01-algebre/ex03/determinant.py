@@ -6,7 +6,6 @@ Allowed:    isinstance iter len list range sum zip abs
 """
 
 # --- carried over from ex02/produit.py --------------------------------------
-# Paste ErreurDeShape and Vecteur here.
 class ErreurDeShape(ValueError):
     """Raised whenever two sizes do not fit together."""
     pass
@@ -137,15 +136,15 @@ class Matrice:
     def puis(self, suivante):
         return suivante @ self
 
-    # --- NOUVEAU ex03 --------------------------------------------------------
+    # --- new in ex03 ---------------------------------------------------------
 
     @property
     def det(self):
-        # Vérifie que la matrice est bien de taille 2x2
+        # Only a 2x2 matrix has this determinant.
         if self.shape != (2, 2):
             raise ErreurDeShape
         
-        # Formule du déterminant pour une matrice [[a, b], [c, d]] : a*d - b*c
+        # For [[a, b], [c, d]], the determinant is a*d - b*c.
         a = self.lignes[0][0]
         b = self.lignes[0][1]
         c = self.lignes[1][0]
@@ -155,15 +154,15 @@ class Matrice:
 
     @property
     def facteur_aire(self):
-        # Le facteur d'échelle des aires est la valeur absolue du déterminant
+        # Areas scale by the absolute value of the determinant.
         return abs(self.det)
 
     @property
     def renverse_orientation(self):
-        # La matrice renverse l'orientation si le déterminant est strictement négatif
+        # A strictly negative determinant flips the orientation.
         return self.det < 0
 
     @property
     def est_singuliere(self):
-        # La matrice est singulière si le déterminant est nul
+        # A zero determinant means a dimension is squashed.
         return self.det == 0
