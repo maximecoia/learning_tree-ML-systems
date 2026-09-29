@@ -7,7 +7,6 @@ Allowed:    isinstance iter len list range sum zip abs all float enumerate
 """
 
 # --- carried over from ex04/systemes.py -------------------------------------
-# Paste ErreurDeShape and Vecteur here.
 
 class ErreurDeShape(ValueError):
     """Raised whenever two sizes do not fit together."""
@@ -196,33 +195,25 @@ class Matrice:
     def dim_noyau(self):
         return 2 - self.rang
 
-    # --- NOUVEAU ex05 --------------------------------------------------------
-
     @property
     def trace(self):
-        # Check if the matrix is square
         if self.shape[0] != self.shape[1]:
             raise ErreurDeShape
             
-        # Sum of the diagonal elements
         return sum(self.lignes[i][i] for i in range(self.shape[0]))
 
     def valeur_propre(self, v):
-        # Check if the vector is the zero vector
         if all(x == 0 for x in v):
             raise ValueError
             
-        # Compute A @ v
         av = self @ v
         
-        # Find a non-zero component of v to determine lambda
         lam = None
         for i in range(len(v)):
             if v[i] != 0:
                 lam = av[i] / v[i]
                 break
                 
-        # Verify that A @ v == lambda * v for all components
         for i in range(len(v)):
             if av[i] != lam * v[i]:
                 return None
@@ -230,26 +221,22 @@ class Matrice:
         return float(lam)
 
     def valeurs_propres(self):
-        # Check if the matrix is 2x2
         if self.shape != (2, 2):
             raise ErreurDeShape
             
-        # Characteristic polynomial: lambda^2 - trace*lambda + det = 0
         t = self.trace
         d = self.det
         
-        # Discriminant: trace^2 - 4*det
         delta = t ** 2 - 4 * d
         
-        # No real roots
         if delta < 0:
             return []
             
-        # One double root
         if delta == 0:
-            return [float(t / 2)]
+            # CORRECTION ICI : On retourne la valeur deux fois pour la racine double
+            val = float(t / 2)
+            return [val, val]
             
-        # Two distinct real roots
         racine = delta ** 0.5
         l1 = float((t + racine) / 2)
         l2 = float((t - racine) / 2)
