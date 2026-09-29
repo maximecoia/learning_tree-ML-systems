@@ -58,7 +58,7 @@ now ends on the object it produces.
 ## Where the work stands
 
 <!-- compteurs: written by carte_phases.py from the graders. Do not edit by hand. -->
-Phase 1, [`ms-00-prepa`](ms-00-prepa), is the one in progress: **36 of 53 graded exercises** pass. It closes on 31 October 2026, its route on 18 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-00-prepa/README.md#what-to-do-in-order) lists the work in order with the next step marked.
+Phase 1, [`ms-00-prepa`](ms-00-prepa), is the one in progress: **37 of 53 graded exercises** pass. It closes on 31 October 2026, its route on 18 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-00-prepa/README.md#what-to-do-in-order) lists the work in order with the next step marked.
 
 | Track | State | |
 |---|---|---|
@@ -67,7 +67,7 @@ Phase 1, [`ms-00-prepa`](ms-00-prepa), is the one in progress: **36 of 53 graded
 | The route to the trained GPT | 5 of 6 steps · step 6 out of the window | [the phase page](ms-00-prepa/README.md#what-to-do-in-order) |
 | **L1, the trained model** | 0 of 7 gates · gpt.py is still the blank file, then the public repository | [the acceptance test](#the-acceptance-test) |
 | The C inference engine | 0 of 7 · out of the window, it needs the weights L1 produces | [below](#why-the-c-tracks-are-not-here) |
-| Maths, in the background | 3 of 20 exercises, alongside the route |  |
+| Maths, in the background | 4 of 20 exercises, alongside the route |  |
 | Zero to Hero | taken off the path, and out of this repository | [below](#zero-to-hero-and-why-it-left) |
 
 The denominator leaves out `rte-02-cs336` (out of the window until 31 October, L1 comes first), `l1-01-gpt-corpus` (graded by its public repository, not by a terminal) and `c-02-moteur` (out of the window, it needs the weights L1 produces). Zero to Hero is not in it either: the curriculum stopped declaring it, and counting an abandoned track in a ratio makes a decision look like a delay.

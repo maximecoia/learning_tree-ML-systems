@@ -29,7 +29,7 @@ One table, from what is done to what waits. Every state is read from a grader, n
 |  | `l1-01-gpt-corpus` | its public repository · not counted here | the public repository, read by someone else | lands here with the model |
 |  | `c-02-moteur` | 0 of 7 · out of the window, it needs the weights L1 produces | its grader, through `./exo` | lands here |
 
-**Alongside, in the background.** The curriculum files these under a `fil` named « Maths en fond »: work that runs beside the sequence rather than as a step of it. `maths-01-algebre` 3 of 8 · `mth-03-probas` 0 of 6 · `mth-04-statistiques` 0 of 6.
+**Alongside, in the background.** The curriculum files these under a `fil` named « Maths en fond »: work that runs beside the sequence rather than as a step of it. `maths-01-algebre` 4 of 8 · `mth-03-probas` 0 of 6 · `mth-04-statistiques` 0 of 6.
 
 ## What each sub-module covers
 
