@@ -6,7 +6,6 @@ Allowed:    isinstance iter len list sum zip all float ValueError
 """
 
 # --- carried over from ex00/vecteurs.py -------------------------------------
-# Paste ErreurDeShape here. No Matrice in this step.
 class ErreurDeShape(ValueError):
     """Raised whenever two sizes do not fit together."""
     pass
@@ -63,7 +62,7 @@ class Vecteur:
             raise ErreurDeShape
         return sum(a * b for a, b in zip(self.nombres, other.nombres))
 
-    # --- NEW in ex06 ---------------------------------------------------------
+    # --- new in ex06 ---------------------------------------------------------
 
     @property
     def norme(self):
