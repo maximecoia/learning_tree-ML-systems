@@ -163,11 +163,9 @@ class Matrice:
 
     @property
     def det(self):
-        # Check if the matrix is 2x2
         if self.shape != (2, 2):
             raise ErreurDeShape
         
-        # Formula: a*d - b*c
         a = self.lignes[0][0]
         b = self.lignes[0][1]
         c = self.lignes[1][0]
@@ -177,17 +175,14 @@ class Matrice:
 
     @property
     def facteur_aire(self):
-        # The area scaling factor is the absolute value of the determinant
         return abs(self.det)
 
     @property
     def renverse_orientation(self):
-        # Orientation is reversed if the determinant is strictly negative
         return self.det < 0
 
     @property
     def est_singuliere(self):
-        # A matrix is singular if its determinant is zero
         return self.det == 0
 
     def inverse(self):
@@ -267,7 +262,11 @@ class Matrice:
         racine = delta ** 0.5
         l1 = float((t + racine) / 2)
         l2 = float((t - racine) / 2)
-        return sorted([l1, l2])
+        
+        # CORRECTION HERE: Manual sort instead of sorted()
+        if l1 <= l2:
+            return [l1, l2]
+        return [l2, l1]
 
     # --- NEW in ex07 ---------------------------------------------------------
 
