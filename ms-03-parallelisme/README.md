@@ -2,7 +2,7 @@
 
 # Phase 4 — Parallelism, first kernel, entering vLLM
 
-`ms-03-parallelisme` · weeks 21–34 · 19 sub-modules, 6 written · 23 exercises
+`ms-03-parallelisme` · weeks 21–34 · 20 sub-modules, 6 written · 23 exercises
 
 **What it buys.** say before writing a kernel whether it will be compute- or memory-bound, and a PR in vLLM or SGLang on the scheduler or the cache, review taken up by a maintainer
 
@@ -23,6 +23,7 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `tri-02-softmax` | added | Write a row-wise softmax that never overflows, and check a kernel on four axes rather than one | not started · 5 exercises |
 | `tri-03-matmul` | added | Write a tiled Triton matmul whose tile size is justified by a count, and compare it with the reference on a bounded case | planned, not written yet |
 | `tri-05-note` | added | Write the note that says what was measured, under which protocol, and what the measurement does not allow you to conclude | planned, not written yet |
+| `inf-14-speculatif` | added | Predict the speedup of speculative decoding from the acceptance rate and the draft length, prove it lossless against the target model, and say from what concurrency it stops paying | planned, not written yet |
 | `inf-07-pagedattention` | added | Explain the paging of the KV cache as PagedAttention defines it, and say block by block which waste it removes | planned, not written yet |
 | `inf-08-fragmentation` | added | Put a percentage on the memory lost to fragmentation when the KV cache is not paged, over a trace of requests whose lengths vary | planned, not written yet |
 | `inf-09-compiler-vllm` | added | Build vLLM from source and run its test suite, until you know which change forces which rebuild | planned, not written yet |
@@ -45,6 +46,7 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 | `tri-01-vecadd` | [Tutoriels officiels Triton, vector add](https://triton-lang.org/main/getting-started/tutorials/01-vector-add.html) · docs<br>[Tillet, Kung, Cox, Triton: An Intermediate Language and Compiler](https://dl.acm.org/doi/10.1145/3315508.3329973) · article<br>[JINO-ROHIT/gpt-triton](https://github.com/JINO-ROHIT/gpt-triton) · repo<br>[a-hamdi/GPU](https://github.com/a-hamdi/GPU) · repo |
 | `tri-02-softmax` | [Tutoriels officiels Triton, fused softmax](https://triton-lang.org/main/getting-started/tutorials/02-fused-softmax.html) · docs<br>[Goldberg, What Every Computer Scientist Should Know About Floating-Point](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html) · article<br>[Milakov et Gimelshein, Online normalizer calculation for softmax](https://arxiv.org/abs/1805.02867) · article<br>[JINO-ROHIT/Flash-Attention-Series/01-softmax](https://github.com/JINO-ROHIT/Flash-Attention-Series/tree/main/01-softmax) · repo |
 | `tri-03-matmul` | [Harvard CS249r, Machine Learning Systems at Scale, chapitre Performance Engineering](https://mlsysbook.ai/vol2/performance_engineering/performance_engineering.html) · book<br>[hkproj/triton-flash-attention](https://github.com/hkproj/triton-flash-attention) · repo |
+| `inf-14-speculatif` | [Leviathan, Kalman et Matias, Fast Inference from Transformers via Speculative Decoding](https://arxiv.org/abs/2211.17192) · paper<br>[Chen et al., Accelerating Large Language Model Decoding with Speculative Sampling](https://arxiv.org/abs/2302.01318) · paper<br>[Hugging Face, Assisted Generation](https://huggingface.co/blog/assisted-generation) · article<br>[Cai et al., Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](https://arxiv.org/abs/2401.10774) · paper<br>[Li et al., EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](https://arxiv.org/abs/2401.15077) · paper<br>[DeepSeek-AI, DeepSeek-V3 Technical Report](https://arxiv.org/abs/2412.19437) · paper |
 | `inf-07-pagedattention` | [JINO-ROHIT/nano-paged-attention](https://github.com/JINO-ROHIT/nano-paged-attention) · repo<br>[JINO-ROHIT/ORCA](https://github.com/JINO-ROHIT/ORCA) · repo |
 | `inf-08-fragmentation` | [JINO-ROHIT/nano-paged-attention](https://github.com/JINO-ROHIT/nano-paged-attention) · repo |
 
