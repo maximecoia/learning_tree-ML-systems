@@ -27,9 +27,15 @@ def mesures_pour_detecter(ecart, dispersion, quantile):
     if quantile == 0:
         raise ValueError()
     n = 2 * quantile ** 2 * dispersion ** 2 / ecart ** 2
-    if n == int(n):
-        return int(n)
-    return int(n) + 1
+    entier = int(n)
+    # A float can land a hair above a whole count: for a gap of 0.01, a
+    # dispersion of 0.81 and a quantile of 1, n reads 13122.000000000002,
+    # and a strict ceiling would ask for 13123 measurements.
+    # Only a real fraction moves up. The tolerance is relative, because the
+    # rounding noise grows with the count itself.
+    if n - entier > n * 1e-12:
+        return entier + 1
+    return entier
 
 
 def comparer(a, b, quantile):
