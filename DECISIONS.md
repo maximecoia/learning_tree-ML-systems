@@ -8,9 +8,10 @@ opinion, and this repository tries not to publish those.
 1. [Borrowed graders, not written lessons](#borrowed-graders-not-written-lessons)
 2. [Zero to Hero, and why it left](#zero-to-hero-and-why-it-left)
 3. [CS336, and why it left the prep](#cs336-and-why-it-left-the-prep)
-4. [The one date I do not set](#the-one-date-i-do-not-set)
-5. [What the agents changed, and what they did not](#what-the-agents-changed-and-what-they-did-not)
-6. [How a check is calibrated](#how-a-check-is-calibrated)
+4. [The C engine, and why it moved to phase 2](#the-c-engine-and-why-it-moved-to-phase-2)
+5. [The one date I do not set](#the-one-date-i-do-not-set)
+6. [What the agents changed, and what they did not](#what-the-agents-changed-and-what-they-did-not)
+7. [How a check is calibrated](#how-a-check-is-calibrated)
 
 ## Borrowed graders, not written lessons
 
@@ -85,6 +86,32 @@ SwiGLU instead of a GELU feed-forward, rotary positions instead of learned
 ones. Most open models an inference engine serves are built that way. Those
 three tests now grade a sub-module of `ms-01-inference`, placed before the KV
 cache, because the keys that land in the cache are already rotated.
+
+## The C engine, and why it moved to phase 2
+
+`c-02-moteur`, an inference engine written in C that loads a model, generates,
+measures its throughput and places it on a roofline, was part of the prep's
+promise. Its row said it was out of the window because it needed the weights
+L1 produces. It moved to `ms-01-inference` on 2026-09-30, on three findings.
+
+- **The stated dependency was false.** Its grader never loads L1: it builds its
+  own toy model from a seed, eight dimensions and two heads, and compares the
+  engine against a Python reference of the same arithmetic. Its weight format
+  could not load L1 anyway: one layer, RMSNorm, ReLU and learned positions,
+  where the GPT of the route has several blocks, LayerNorm and GELU.
+- **Its slot did not exist.** It was ordered after L1, and L1 closes on
+  31 October, the day the prep closes.
+- **Its lessons are the ones phase 2 teaches.** Its throughput step asks for a
+  timing that ignores warm-up, which is the competence of `mes-01-chronometre`,
+  now its prerequisite. Its KV cache is what `inf-03-cache-kv` measures, and
+  its roofline is how `inf-02-prefill-decode` reads prefill and decode.
+
+It now sits after the measurement modules and before the served-model ones, so
+the engine is written with a stopwatch in hand, and the cache and the regimes
+are then measured on a server by someone who has built both. Nothing depended
+on it, so no other sub-module moved. What it costs is time in a phase that
+already holds the school's graded C: seven exercises, budgeted at about thirty
+hours, and not measured.
 
 ## The one date I do not set
 

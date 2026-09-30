@@ -2,9 +2,9 @@
 
 # Phase 1 — The prep, C and Python
 
-`ms-00-prepa` · Sept–Oct 2026 · 10 sub-modules, 10 written · 60 exercises
+`ms-00-prepa` · Sept–Oct 2026 · 9 sub-modules, 9 written · 53 exercises
 
-**What it buys.** enter the school with the libft done, a GPT trained by hand, and a C inference engine whose throughput is measured and placed on a roofline
+**What it buys.** enter the school with the libft done and a GPT trained by hand
 
 **How it ends.** Not on a feeling, on one binary test: *Your `gpt.py`, written from a blank file, passes the seven gates of `verifier.py`: six on the model, the seventh on its training, whose validation loss lands 0.10 below the counted bigram.*
 
@@ -26,7 +26,6 @@ One table, from what is done to what waits. Every state is read from a grader, n
 | ✓ | Pretraining: the loop, train and validation loss, sampling (Raschka ch. 5) | `test_ch05.py`, 17 tests: ✓ | `test_ch05.py` | [rte-route-l1/ch05.py](rte-route-l1/ch05.py), from [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) |
 | → | L1, part 1 of 2: `gpt.py`, written from a blank file, passes the acceptance test | 0 of 7 gates · gpt.py is still the blank file | `verifier.py`, [the gates](../README.md#the-acceptance-test) | lands here with the model |
 |  | L1, part 2 of 2: the public write-up, `l1-01-gpt-corpus`. The chosen corpus, the run, both curves, unsorted samples and the report | a person grades it, not a terminal · not counted here | a reader, who replays it without asking a question: [what it holds](../README.md#what-closes-l1) | lands here with the model |
-|  | `c-02-moteur` | 0 of 7 · out of the window, it needs the weights L1 produces | its grader, through `./exo` | lands here |
 
 **Alongside, in the background.** The curriculum files these under a `fil` named « Maths en fond »: work that runs beside the sequence rather than as a step of it. `maths-01-algebre` ✓ 8 of 8 · `mth-03-probas` ✓ 6 of 6 · `mth-04-statistiques` ✓ 6 of 6.
 
@@ -42,7 +41,6 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `c-01-libft` | added | Write a static C library whose every function honours the exact contract of the libc | 42 subject, not published · 6 exercises |
 | `rte-01-puzzles` | added | Write in a single line, by broadcasting and indexing alone, the functions NumPy hands you ready-made, and know why each one holds without a loop | [rte-01-puzzles](rte-01-puzzles), from [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles) · 1 exercise |
 | `l1-01-gpt-corpus` | proof | Publish a language model trained end to end, and defend every part of how it works without the code in front of you | [l1-01-gpt-corpus](l1-01-gpt-corpus) |
-| `c-02-moteur` | added | Write an inference engine in C that loads a model, generates text, measures its throughput and places itself on a roofline | not started · 7 exercises |
 | `maths-01-algebre` | added | Implement 2D vector and matrix transformations in Python | [maths-01-algebre](maths-01-algebre) · 8 exercises |
 | `mth-03-probas` | added | Simulate a distribution, hold it against its closed form, and know how many measurements it takes to tell two values apart | [mth-03-probas](mth-03-probas) · 6 exercises |
 | `mth-04-statistiques` | added | Judge whether two series of measurements really differ, knowing how often you will be wrong | [mth-04-statistiques](mth-04-statistiques) · 6 exercises |
@@ -59,7 +57,6 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 | `c-01-libft` | [42 subject, libft](https://projects.intra.42.fr/projects/libft) · assignment<br>[man 3 string](https://man7.org/linux/man-pages/man3/string.3.html) · docs<br>[man 3 malloc](https://man7.org/linux/man-pages/man3/malloc.3.html) · docs |
 | `rte-01-puzzles` | [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles) · repo<br>[Sasha Rush, the walkthrough video](https://youtu.be/Hafo7hIl8MU) · video |
 | `l1-01-gpt-corpus` | [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles) · repo<br>[Sebastian Raschka, Build a Large Language Model (From Scratch)](https://www.manning.com/books/build-a-large-language-model-from-scratch) · book<br>[rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) · repo<br>[stanford-cs336/assignment1-basics](https://github.com/stanford-cs336/assignment1-basics) · assignment<br>[Let's reproduce GPT-2 (124M)](https://www.youtube.com/watch?v=l8pRSuU81PU) · video<br>[karpathy/nanoGPT](https://github.com/karpathy/nanoGPT) · repo<br>[hkproj/pytorch-transformer](https://github.com/hkproj/pytorch-transformer) · repo<br>[JINO-ROHIT/gpt2-tamil](https://github.com/JINO-ROHIT/gpt2-tamil) · repo |
-| `c-02-moteur` | [karpathy/llama2.c](https://github.com/karpathy/llama2.c) · repo<br>[karpathy/llm.c](https://github.com/karpathy/llm.c) · repo<br>[ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp) · repo<br>[Williams, Waterman, Patterson, Roofline: An Insightful Visual Performance Model](https://dl.acm.org/doi/10.1145/1498765.1498785) · paper<br>[kipply, Transformer Inference Arithmetic](https://kipp.ly/transformer-inference-arithmetic/) · article<br>[JINO-ROHIT/inferGPT](https://github.com/JINO-ROHIT/inferGPT) · repo<br>[JINO-ROHIT/nano-llama.cpp](https://github.com/JINO-ROHIT/nano-llama.cpp) · repo |
 | `maths-01-algebre` | [MIT 18.06SC, Linear Algebra (Gilbert Strang)](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/) · course<br>[3Blue1Brown, Essence of Linear Algebra](https://www.3blue1brown.com/topics/linear-algebra) · video<br>[Deisenroth, Faisal, Ong, Mathematics for Machine Learning](https://mml-book.github.io/) · book<br>[JINO-ROHIT/ml-math-in-depth](https://github.com/JINO-ROHIT/ml-math-in-depth) · repo |
 | `mth-03-probas` | [MIT 18.05, Introduction to Probability and Statistics](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/) · course<br>[Deisenroth, Faisal, Ong, Mathematics for Machine Learning](https://mml-book.github.io/) · book<br>[3Blue1Brown, Bayes' theorem](https://www.3blue1brown.com/lessons/bayes-theorem) · video<br>[Knuth, The Art of Computer Programming, volume 2](https://www-cs-faculty.stanford.edu/~knuth/taocp.html) · book<br>[Higham, Accuracy and Stability of Numerical Algorithms](https://epubs.siam.org/doi/book/10.1137/1.9780898718027) · book |
 | `mth-04-statistiques` | [MIT 18.05, Introduction to Probability and Statistics](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/) · course<br>[Deisenroth, Faisal, Ong, Mathematics for Machine Learning](https://mml-book.github.io/) · book<br>[Efron and Hastie, Computer Age Statistical Inference](https://hastie.su.domains/CASI/) · book<br>[Ioannidis, Why Most Published Research Findings Are False](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0020124) · article<br>[Reinhart, Statistics Done Wrong](https://www.statisticsdonewrong.com/) · book |

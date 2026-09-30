@@ -62,8 +62,8 @@ roadmap, are in [`DECISIONS.md`](DECISIONS.md).
 
 | Phase | Window | What it buys | Sub-modules |
 |---|---|---|---|
-| **[`ms-00-prepa`](ms-00-prepa)** — the prep, C and Python | Sept–Oct 2026 | enter the school with the libft done, a GPT trained by hand, and a C inference engine whose throughput is measured and placed on a roofline | 10 |
-| [`ms-01-inference`](ms-01-inference) — graded C, measured inference | weeks 1–8 | produce the saturation curve of an unknown inference server in half a day | 14 |
+| **[`ms-00-prepa`](ms-00-prepa)** — the prep, C and Python | Sept–Oct 2026 | enter the school with the libft done and a GPT trained by hand | 9 |
+| [`ms-01-inference`](ms-01-inference) — graded C, measured inference | weeks 1–8 | an inference engine written in C and placed on a roofline, then the saturation curve of an unknown inference server produced in half a day | 15 |
 | [`ms-02-cpp-concurrence`](ms-02-cpp-concurrence) — C++ and concurrency | weeks 9–20 | concurrent code whose freedom from starvation is shown by measurement, and an unknown execution timeline read in ten minutes | 18 |
 | [`ms-03-parallelisme`](ms-03-parallelisme) — parallelism, first kernel, entering vLLM | weeks 21–34 | say before writing a kernel whether it will be compute- or memory-bound, and a PR in vLLM or SGLang on the scheduler or the cache, review taken up by a maintainer | 20 |
 | [`ms-04-cuda`](ms-04-cuda) — CUDA properly | weeks 35–46 | a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation and where it loses too, then the harness that proves it, run against an agent and shown rejecting a bad submission | 17 |
@@ -87,10 +87,9 @@ Phase 1, [`ms-00-prepa`](ms-00-prepa), is the one in progress: **53 of 53 graded
 | The libft, ahead of the school | ✓ 6 of 6 exercises, complete, kept out of this repository | [below](#what-is-not-here) |
 | The route to the trained GPT | ✓ 5 of 5 steps | [the phase page](ms-00-prepa/README.md#what-to-do-in-order) |
 | **L1, the trained model and its write-up** | part 1: 0 of 7 gates, gpt.py is still the blank file · then part 2, the public write-up | [what closes it](#what-closes-l1) |
-| The C inference engine | 0 of 7 · out of the window, it needs the weights L1 produces | [below](#what-is-not-here) |
 | Maths, in the background | ✓ 20 of 20 exercises, complete, alongside the route | [`MATHS.md`](MATHS.md) |
 
-The denominator leaves out `l1-01-gpt-corpus` (a public write-up, graded by a reader, not by a terminal) and `c-02-moteur` (out of the window, it needs the weights L1 produces).
+The denominator leaves out `l1-01-gpt-corpus` (a public write-up, graded by a reader, not by a terminal).
 <!-- /compteurs -->
 
 ## What is already here
