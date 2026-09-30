@@ -50,6 +50,8 @@ def independants(p_a, p_b, p_conjointe, tolerance=1e-12):
     lois.verifier_probabilite(p_a)
     lois.verifier_probabilite(p_b)
     lois.verifier_probabilite(p_conjointe)
+    if tolerance <= 0:
+        raise ValueError()
     return abs(p_conjointe - p_a * p_b) <= tolerance
 
 
