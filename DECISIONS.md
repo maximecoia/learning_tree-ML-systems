@@ -7,9 +7,10 @@ opinion, and this repository tries not to publish those.
 
 1. [Borrowed graders, not written lessons](#borrowed-graders-not-written-lessons)
 2. [Zero to Hero, and why it left](#zero-to-hero-and-why-it-left)
-3. [The one date I do not set](#the-one-date-i-do-not-set)
-4. [What the agents changed, and what they did not](#what-the-agents-changed-and-what-they-did-not)
-5. [How a check is calibrated](#how-a-check-is-calibrated)
+3. [CS336, and why it left the prep](#cs336-and-why-it-left-the-prep)
+4. [The one date I do not set](#the-one-date-i-do-not-set)
+5. [What the agents changed, and what they did not](#what-the-agents-changed-and-what-they-did-not)
+6. [How a check is calibrated](#how-a-check-is-calibrated)
 
 ## Borrowed graders, not written lessons
 
@@ -19,10 +20,11 @@ machine learning code, while zero of the thirty-four exercises that already
 existed had been handed in. A lesson written by hand and then marked by its own
 author has no external referent.
 
-So every step of the route to the trained GPT is now handed to an assignment
-that already ships its own grader: the checker inside the Tensor Puzzles
-notebook, the public `pytest` suite of CS336, and a black-box acceptance test
-whose failure values are published.
+So every step of the route to the trained GPT is now handed to something that
+already exists and can grade it: the checker inside the Tensor Puzzles
+notebook, and a black-box acceptance test whose failure values are published.
+The public `pytest` suite of CS336 was a third, until it left the prep for the
+reasons [below](#cs336-and-why-it-left-the-prep).
 
 Steps 2 to 5, the chapters of Raschka's book, are the exception, and it is
 stated rather than left to be found. The book ships almost no assertions: its
@@ -47,6 +49,42 @@ graded on**, so it was replaced rather than finished.
 
 The work is not deleted. It is in this repository's history, and its checks
 still run wherever it is kept. It is simply not the road any more.
+
+## CS336, and why it left the prep
+
+The first assignment of Stanford's CS336 was the route's last step: fifteen of
+its twenty-one adapters, the ones that do not depend on the architecture,
+graded by its public suite. It left the prep on 2026-09-30, on four
+measurements.
+
+- **It graded what was already graded.** The curriculum said so itself: the
+  fifteen adapters cover exactly the material of Raschka's chapters 2 to 5.
+  Those chapters have their own tests, and the seven gates of the acceptance
+  test grade the same model a third time.
+- **Two thirds of its tests were a tokenizer the plan had dropped.** The byte
+  pair encoder carried 28 of its 42 tests, and the acceptance test takes a
+  character vocabulary.
+- **Its window did not exist.** Once the trained model became the only goal of
+  the prep, CS336 was moved out of the window until 31 October, the day the
+  phase closes.
+- **Nothing depended on it.** No sub-module listed it as a prerequisite, and
+  the second assignment, the systems half, ships the course's own
+  implementation of the first.
+
+What it took with it, and this is its real cost: it was the only grader on the
+route written by someone else about the model itself, and it was the only one
+that asked for AdamW, a learning-rate schedule, gradient clipping and a
+resumable checkpoint written by hand. None of those is graded here any more.
+The acceptance test trains with `torch.optim.AdamW`, and nothing in the target
+asks for it to be rewritten.
+
+**What it kept is the part the target uses.** The six adapters the route left
+aside are the ones that depend on the architecture, and three of them are what
+separates a Llama from the GPT-2 of the route: RMSNorm instead of LayerNorm,
+SwiGLU instead of a GELU feed-forward, rotary positions instead of learned
+ones. Most open models an inference engine serves are built that way. Those
+three tests now grade a sub-module of `ms-01-inference`, placed before the KV
+cache, because the keys that land in the cache are already rotated.
 
 ## The one date I do not set
 
