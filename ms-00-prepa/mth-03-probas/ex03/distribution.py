@@ -33,12 +33,12 @@ def frequences(valeurs):
 
 def _verifier_loi(loi):
     if len(loi) == 0:
-        raise ValueError("loi vide")
+        raise ValueError("empty law")
     if any(p < 0 for p in loi.values()):
-        raise ValueError("probabilité négative")
+        raise ValueError("negative probability")
     total = sum(loi.values())
     if abs(total - 1) > 1e-9:
-        raise ValueError("somme != 1")
+        raise ValueError("sum != 1")
 
 
 def esperance(loi):

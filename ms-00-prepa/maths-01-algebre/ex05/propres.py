@@ -233,7 +233,7 @@ class Matrice:
             return []
             
         if delta == 0:
-            # CORRECTION ICI : On retourne la valeur deux fois pour la racine double
+            # CORRECTION HERE: return the value twice for the double root
             val = float(t / 2)
             return [val, val]
             
