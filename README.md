@@ -19,7 +19,7 @@ This repository is the public trace of a roadmap toward ML systems: the layer of
 the field where the question is no longer whether a model is correct, but what
 it costs to run, and where the time actually goes.
 
-The plan is eight phases and 95 sub-modules, spread across the 42 curriculum
+The plan is eight phases and 93 sub-modules, spread across the 42 curriculum
 and the years after it. Two layers run in parallel the whole way. The imposed
 layer is the 42 common core, which buys the title and the time. The added layer
 is what produces anything rare. A phase counts as done when both are.
@@ -67,7 +67,7 @@ Phase 1, [`ms-00-prepa`](ms-00-prepa), is the one in progress: **53 of 53 graded
 | The route to the trained GPT | 5 of 6 steps · step 6 out of the window | [the phase page](ms-00-prepa/README.md#what-to-do-in-order) |
 | **L1, the trained model** | 0 of 7 gates · gpt.py is still the blank file, then the public repository | [the acceptance test](#the-acceptance-test) |
 | The C inference engine | 0 of 7 · out of the window, it needs the weights L1 produces | [below](#why-the-c-tracks-are-not-here) |
-| Maths, in the background | ✓ 20 of 20 exercises, complete, alongside the route |  |
+| Maths, in the background | ✓ 20 of 20 exercises, complete, alongside the route | [below](#the-maths-complete) |
 | Zero to Hero | taken off the path, and out of this repository | [below](#zero-to-hero-and-why-it-left) |
 
 The denominator leaves out `rte-02-cs336` (out of the window until 31 October, L1 comes first), `l1-01-gpt-corpus` (graded by its public repository, not by a terminal) and `c-02-moteur` (out of the window, it needs the weights L1 produces). Zero to Hero is not in it either: the curriculum stopped declaring it, and counting an abandoned track in a ratio makes a decision look like a delay.
@@ -172,6 +172,53 @@ latence n=3 moy=17.67 p95=31.00 ms
 
 The full write-up, exercise by exercise, with the decisions that were worth
 naming, is in [`PYTHON.md`](PYTHON.md).
+
+## The maths, complete
+
+Three modules, 20 exercises, written in plain Python before any library is
+allowed in: no `numpy`, no `random`, no `statistics`. Each one holds a formula
+against something that can contradict it.
+
+| Module | Question | |
+|---|---|---|
+| [`maths-01-algebre`](ms-00-prepa/maths-01-algebre) | Can a matrix be read as the transformation it is, and its determinant as the area it scales? | 8 of 8 |
+| [`mth-03-probas`](ms-00-prepa/mth-03-probas) | Does a simulation land where the closed form says, inside a bound that tightens with the draws? | 6 of 6 |
+| [`mth-04-statistiques`](ms-00-prepa/mth-04-statistiques) | Do two series really differ, and how often is that answer wrong? | 6 of 6 |
+
+What they measured, every figure reproducible from the code published here:
+
+- **Order shows on a single point.** Stretching the x axis by 2 then turning a
+  quarter turn sends `[1, 0]` to `[0, 2]`; turning first sends it to `[0, 1]`.
+  The 2D engine that closes the module checks that every area it transforms
+  is multiplied by the absolute value of the determinant.
+- **The one-pass variance goes negative.** On two latencies in nanoseconds,
+  1.23456789e9 and 1.23456790e9, whose variance is 25, `E[X²] - E[X]²` returns
+  -256.0. The two-pass version returns 25.0.
+- **A false claim passes on small data.** On a geometric law of expectation
+  exactly 5, the claim 5.2 is accepted on 1,000 draws, its gap of 0.017 sitting
+  under a bound of 0.707, and rejected on 100,000, where the gap is 0.208 and
+  the bound 0.071.
+- **"95 %" is a count.** A 95 % interval built on five measurements with the
+  normal quantile contains the true mean in 86.6 % of 20,000 samples. Student's
+  quantile, with the same standard deviation, brings it to 93.4 %.
+- **The textbook sample size is a coin toss.** The formula asks for 65
+  measurements per series to detect a gap of 0.10, and 65 detect it about one
+  time in two. Four times as many detect it almost every time.
+
+One decision worth naming came after the modules were green. Three functions
+rounded up by hand, a percentile rank and two measurement budgets, and moved
+to the next integer as soon as `int()` dropped anything. A float landing a hair
+above a whole number then stepped one too far: `(0.07 / 0.01) ** 2` is
+`49.000000000000014`, and the budget paid for 50 measurements instead of 49.
+No grader poses such a case. The three now move up only for a real fraction,
+checked against the exact ceiling computed in fractions on 128,700 cases: 321
+wrong answers before, none after.
+
+One limit stays, stated here rather than left to be found. `est_orthogonal`
+compares a dot product to zero exactly, so the residual of a projection,
+orthogonal by construction, comes back `False`: its dot product with the line
+is `4.44e-16`. The graders pose integer cases only, where the comparison is
+exact.
 
 ## Zero to Hero, and why it left
 
