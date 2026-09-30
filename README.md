@@ -86,11 +86,11 @@ Phase 1, [`ms-00-prepa`](ms-00-prepa), is the one in progress: **53 of 53 graded
 | The Python socle | ✓ 26 of 26 exercises, complete | [`PYTHON.md`](PYTHON.md) |
 | The libft, ahead of the school | ✓ 6 of 6 exercises, complete, kept out of this repository | [below](#what-is-not-here) |
 | The route to the trained GPT | ✓ 5 of 5 steps | [the phase page](ms-00-prepa/README.md#what-to-do-in-order) |
-| **L1, the trained model** | 0 of 7 gates · gpt.py is still the blank file, then the public repository | [the acceptance test](#the-acceptance-test) |
+| **L1, the trained model and its write-up** | part 1: 0 of 7 gates, gpt.py is still the blank file · then part 2, the public write-up | [what closes it](#what-closes-l1) |
 | The C inference engine | 0 of 7 · out of the window, it needs the weights L1 produces | [below](#what-is-not-here) |
 | Maths, in the background | ✓ 20 of 20 exercises, complete, alongside the route | [`MATHS.md`](MATHS.md) |
 
-The denominator leaves out `l1-01-gpt-corpus` (graded by its public repository, not by a terminal) and `c-02-moteur` (out of the window, it needs the weights L1 produces).
+The denominator leaves out `l1-01-gpt-corpus` (a public write-up, graded by a reader, not by a terminal) and `c-02-moteur` (out of the window, it needs the weights L1 produces).
 <!-- /compteurs -->
 
 ## What is already here
@@ -152,9 +152,31 @@ layers, heads or norms passes as long as the model is a causal language model.
 | 7 | the trained weights, measured on dev, land 0.10 below a counted bigram on the same split: 2.0856 against a bar of 2.3743, and weights never trained sit at 4.3370 |
 
 Gates 1 to 6 grade the model, gate 7 its training: without it, a `gpt.py` that
-was never trained would pass the other six. What lands here with it is the
-trained model, the corpus with its provenance, the full curves, unsorted
-samples, and a write-up that holds up without the code on screen.
+was never trained would pass the other six.
+
+### What closes L1
+
+L1 comes in two parts. The phase closes on the first, and L1 itself needs both.
+
+1. **The model.** `gpt.py`, written from a blank file, passes the seven gates
+   above. A terminal grades it, through `./exo` or `python3 verifier.py`.
+2. **The public write-up**, the curriculum's `l1-01-gpt-corpus`. A person
+   grades it, and its one criterion is that someone else replays it without
+   asking a question. It lands here with the model, and holds:
+   - the chosen corpus, with its source, its licence, and a preparation script
+     that rebuilds the same split;
+   - the training run on that corpus, with the seed, the hyperparameters and
+     the dependency versions committed, and the weights attached to a release
+     rather than kept in the git history;
+   - train and validation loss on one graph, the whole curve, with the step
+     kept and why;
+   - several unsorted samples, with their seed;
+   - every number beside a baseline: validation loss against `ln(V)` and the
+     bigram, the parameter count and how it was counted, the training time and
+     the machine;
+   - what was not tried, the bugs found afterwards, and what they change;
+   - a token's path to the logits drawn from memory with its shapes, in a
+     report that holds up without the code on screen.
 
 ## What is not here
 
