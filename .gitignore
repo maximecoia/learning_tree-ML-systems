@@ -75,6 +75,15 @@ rte-*/
 ms-00-prepa/rte-01-puzzles/*
 !ms-00-prepa/rte-01-puzzles/README.md
 !ms-00-prepa/rte-01-puzzles/Tensor Puzzlers.ipynb
+# Added 2026-09-30: the answers file goes out as well. The intra finds an
+# exercise by its folder, `rte-01-puzzles/ex00`, and the grader wants the
+# handed-in puzzles.py byte for byte equal to the working copy it measures.
+# The notebook above already carries the same answers, so nothing new is
+# disclosed. The folder is lifted first, because git never looks inside a
+# directory it ignores.
+!ms-00-prepa/rte-01-puzzles/ex00/
+ms-00-prepa/rte-01-puzzles/ex00/*
+!ms-00-prepa/rte-01-puzzles/ex00/puzzles.py
 
 # Exception, 2026-09-21: chapter 2 of the route is published too. Decided case
 # by case like the one above, and for the same reason: `rasbt/LLMs-from-scratch`
