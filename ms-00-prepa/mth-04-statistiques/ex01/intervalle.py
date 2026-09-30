@@ -7,6 +7,7 @@ Allowed:    estimation ValueError len sum
 """
 
 # Import from estimation what you need.
+import estimation
 
 # Dictated by the statement, as is.
 QUANTILES_NORMAUX = {
@@ -25,26 +26,38 @@ QUANTILES_STUDENT_95 = {
 
 def erreur_type(echantillon):
     # The standard deviation divided by sqrt(n).
-    ...
+    return estimation.ecart_type(echantillon) / (len(echantillon) ** 0.5)
 
 
 def intervalle(echantillon, quantile):
     # The pair of bounds: the mean plus or minus quantile times the standard
     # error. ValueError for a zero or negative quantile.
-    ...
+    if quantile <= 0:
+        raise ValueError()
+    m = estimation.moyenne(echantillon)
+    e = erreur_type(echantillon)
+    return (m - quantile * e, m + quantile * e)
 
 
 def contient(bornes, valeur):
     # Bounds included. ValueError for a reversed pair.
-    ...
+    inf, sup = bornes
+    if inf > sup:
+        raise ValueError()
+    return inf <= valeur <= sup
 
 
 def largeur(bornes):
     # ValueError for a reversed pair.
-    ...
+    inf, sup = bornes
+    if inf > sup:
+        raise ValueError()
+    return sup - inf
 
 
 def couverture(intervalles, vraie):
     # The PROPORTION of intervals that contain the value. ValueError on an
     # empty list.
-    ...
+    if len(intervalles) == 0:
+        raise ValueError()
+    return sum(1 for b in intervalles if contient(b, vraie)) / len(intervalles)
