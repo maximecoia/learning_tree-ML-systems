@@ -10,6 +10,8 @@ Allowed:    estimation intervalle bootstrap comparaison multiples ValueError
 """
 
 # Import from comparaison and estimation what you need.
+import estimation
+import comparaison
 
 # Dictated by the statement.
 VERDICTS = ("a est plus petit", "b est plus petit", "indécis")
@@ -18,7 +20,16 @@ VERDICTS = ("a est plus petit", "b est plus petit", "indécis")
 def mesures_pour_detecter(ecart, dispersion, quantile):
     # 2 * q**2 * sigma**2 / ecart**2, ROUNDED UP. ValueError for a zero or
     # negative gap, a negative dispersion or a zero quantile.
-    ...
+    if ecart <= 0:
+        raise ValueError()
+    if dispersion < 0:
+        raise ValueError()
+    if quantile == 0:
+        raise ValueError()
+    n = 2 * quantile ** 2 * dispersion ** 2 / ecart ** 2
+    if n == int(n):
+        return int(n)
+    return int(n) + 1
 
 
 def comparer(a, b, quantile):
@@ -28,4 +39,38 @@ def comparer(a, b, quantile):
     # SMALLER series, the question one asks of latencies.
     # mesures_necessaires is None when the difference is zero, and otherwise
     # uses the LARGER of the two dispersions.
-    ...
+    if quantile == 0:
+        raise ValueError()
+
+    moyenne_a = estimation.moyenne(a)
+    moyenne_b = estimation.moyenne(b)
+    diff = comparaison.difference(a, b)
+    bornes = comparaison.intervalle_difference(a, b, quantile)
+    err = comparaison.erreur_type_difference(a, b)
+    sep = comparaison.separees(a, b, quantile)
+    rec = comparaison.separees_par_recouvrement(a, b)
+
+    if not sep:
+        verdict = VERDICTS[2]
+    elif moyenne_a < moyenne_b:
+        verdict = VERDICTS[0]
+    else:
+        verdict = VERDICTS[1]
+
+    if diff == 0:
+        mesures = None
+    else:
+        dispersion = max(estimation.ecart_type(a), estimation.ecart_type(b))
+        mesures = mesures_pour_detecter(abs(diff), dispersion, quantile)
+
+    return {
+        "moyenne_a": moyenne_a,
+        "moyenne_b": moyenne_b,
+        "difference": diff,
+        "intervalle": bornes,
+        "erreur_type": err,
+        "separees": sep,
+        "verdict": verdict,
+        "recouvrement": rec,
+        "mesures_nécessaires": mesures,
+    }
