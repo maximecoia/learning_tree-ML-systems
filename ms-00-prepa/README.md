@@ -6,7 +6,7 @@
 
 **What it buys.** enter the school with the libft done, a GPT trained by hand, and a C inference engine whose throughput is measured and placed on a roofline
 
-**How it ends.** Not on a feeling, on one binary test: *Ton `gpt.py`, écrit depuis le fichier blanc, passe les sept portes de `verifier.py` : six sur le modèle, la septième sur son entraînement, dont la perte de validation descend 0,10 sous le bigramme compté.*
+**How it ends.** Not on a feeling, on one binary test: *Your `gpt.py`, written from a blank file, passes the seven gates of `verifier.py`: six on the model, the seventh on its training, whose validation loss lands 0.10 below the counted bigram.*
 
 
 ## What to do, in order

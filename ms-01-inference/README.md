@@ -6,7 +6,7 @@
 
 **What it buys.** produce the saturation curve of an unknown inference server in half a day
 
-**How it ends.** Not on a feeling, on one binary test: *On te donne un serveur d'inférence inconnu. Tu produis sa courbe de saturation en une demi-journée.*
+**How it ends.** Not on a feeling, on one binary test: *You are given an unknown inference server. You produce its saturation curve in half a day.*
 
 Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
 

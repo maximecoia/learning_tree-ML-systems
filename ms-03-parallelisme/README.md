@@ -6,7 +6,7 @@
 
 **What it buys.** say before writing a kernel whether it will be compute- or memory-bound, and a PR in vLLM or SGLang on the scheduler or the cache, review taken up by a maintainer
 
-**How it ends.** Not on a feeling, on one binary test: *L5 existe. Et on te décrit un kernel : tu estimes avant de coder s'il sera compute- ou memory-bound, et tu justifies par un ordre de grandeur.*
+**How it ends.** Not on a feeling, on one binary test: *L5 exists. And given a kernel described to you, you estimate before coding whether it will be compute- or memory-bound, and justify it by an order of magnitude.*
 
 Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
 
