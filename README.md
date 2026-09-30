@@ -106,6 +106,15 @@ The denominator leaves out `l1-01-gpt-corpus` (a public write-up, graded by a re
 - **[The acceptance test of phase 1](ms-00-prepa/l1-01-gpt-corpus/verifier.py)**,
   black-box, written before the model it grades.
 
+Before the roadmap, and in its own repository:
+**[`unix-toolbox`](https://github.com/maximecoia/unix-toolbox)**, four Unix
+utilities rebuilt in C on the system calls, `mini_echo`, `mini_cat`, `mini_cp`
+and `mini_wc`. The rule that every check is seen to fail holds there too: the
+utilities were broken on purpose fourteen ways in all, and the tests catch
+thirteen. That includes the short writes and failing reads no shell test can
+provoke, reached by rebuilding the utilities with `write()` redirected at
+compile time, and `mini_cp` with `read()` as well.
+
 ## Phase 1: a GPT trained by hand
 
 The prep is graded on one object: a causal GPT written from a blank file, in
