@@ -6,7 +6,7 @@
 
 **What it buys.** the four remaining imposed projects, crossed fast and with nothing added for pleasure
 
-**How it ends.** Not on a feeling, on one binary test: *Les quatre projets sont validés, et les heures réelles de `transcendance` sont restées sous cent vingt.*
+**How it ends.** Not on a feeling, on one binary test: *The four projects are validated, and the real hours of `transcendance` stayed under one hundred and twenty.*
 
 Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
 
