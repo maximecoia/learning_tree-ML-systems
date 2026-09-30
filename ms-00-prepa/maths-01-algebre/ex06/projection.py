@@ -74,8 +74,15 @@ class Vecteur:
         return (self - autre).norme
 
     def est_orthogonal(self, autre):
-        # Two vectors are orthogonal if their dot product is zero
-        return (self @ autre) == 0
+        # Two vectors are orthogonal if their dot product is zero, up to the
+        # rounding of floats: the residual of a projection is orthogonal by
+        # construction, yet its dot product can read 4.44e-16. The tolerance
+        # scales with both lengths, so the test reads the angle and not the
+        # size, and the zero vector, of length 0, stays orthogonal to all.
+        # The dot product comes first: it is what refuses a size mismatch.
+        produit = self @ autre
+        seuil = 1e-9 * self.norme * autre.norme
+        return -seuil <= produit <= seuil
 
     def projeter_sur(self, u):
         # Check if u is the zero vector (cannot project on it)
