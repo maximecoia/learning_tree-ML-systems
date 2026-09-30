@@ -44,9 +44,14 @@ def mesures_pour(ecart_type, precision):
     if ecart_type < 0:
         raise ValueError()
     n = (ecart_type / precision) ** 2
-    if n == int(n):
-        return int(n)
-    return int(n) + 1
+    entier = int(n)
+    # A float can land a hair above a whole count: (0.07 / 0.01) ** 2 is
+    # 49.000000000000014, and a strict ceiling would pay for 50 measurements.
+    # Only a real fraction moves up. The tolerance is relative, because the
+    # rounding noise grows with the count itself.
+    if n - entier > n * 1e-12:
+        return entier + 1
+    return entier
 
 
 def paquets(valeurs, taille):

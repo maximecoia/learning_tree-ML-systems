@@ -7,10 +7,6 @@ Carry:      ./exo mth-04-statistiques ex02 -r    brings estimation.py,
 Allowed:    estimation intervalle ValueError len sum sorted int range max min
 """
 
-# Import from estimation what you need.
-import estimation
-import intervalle
-
 # Dictated by the statement: the generator of mth-03, rewritten here because
 # a module stands on its own.
 FACTEUR = 1103515245
@@ -63,7 +59,10 @@ def percentile(valeurs, p):
     n = len(tries)
     x = p * n / 100
     rang = int(x)
-    if rang < x:
+    # A float can land a hair above a whole rank: (1 - 0.95) / 2 * 100 is
+    # 2.500000000000002, so 2.5 % of 200 values reads 5.000000000000004, and
+    # a strict ceiling would step to rank 6. Only a real fraction moves up.
+    if x - rang > 1e-9:
         rang += 1
     if rang < 1:
         rang = 1
