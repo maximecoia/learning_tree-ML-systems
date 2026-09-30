@@ -38,7 +38,7 @@ write it again from a blank file is.
 | **[`ms-00-prepa`](ms-00-prepa)** — the prep, C and Python | Sept–Oct 2026 | enter the school with the libft done, a GPT trained by hand, and a C inference engine whose throughput is measured and placed on a roofline | 11 |
 | [`ms-01-inference`](ms-01-inference) — graded C, measured inference | weeks 1–8 | produce the saturation curve of an unknown inference server in half a day | 13 |
 | [`ms-02-cpp-concurrence`](ms-02-cpp-concurrence) — C++ and concurrency | weeks 9–20 | concurrent code whose freedom from starvation is shown by measurement, and an unknown execution timeline read in ten minutes | 18 |
-| [`ms-03-parallelisme`](ms-03-parallelisme) — parallelism, first kernel, entering vLLM | weeks 21–34 | say before writing a kernel whether it will be compute- or memory-bound, and a PR in vLLM or SGLang on the scheduler or the cache, review taken up by a maintainer | 19 |
+| [`ms-03-parallelisme`](ms-03-parallelisme) — parallelism, first kernel, entering vLLM | weeks 21–34 | say before writing a kernel whether it will be compute- or memory-bound, and a PR in vLLM or SGLang on the scheduler or the cache, review taken up by a maintainer | 20 |
 | [`ms-04-cuda`](ms-04-cuda) — CUDA properly | weeks 35–46 | a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation and where it loses too, then the harness that proves it, run against an agent and shown rejecting a bad submission | 17 |
 | [`ms-05-fin-tronc-commun`](ms-05-fin-tronc-commun) — the end of the common core | weeks 47–57 | the four remaining imposed projects, crossed fast and with nothing added for pleasure | 4 |
 | [`ms-06-specialisation`](ms-06-specialisation) — specialisation, first internship | 2028 onward | numerical precision, multi-GPU, operations and evaluation, then a page of deliverables that reads without explanation | 9 |
@@ -58,7 +58,7 @@ now ends on the object it produces.
 ## Where the work stands
 
 <!-- compteurs: written by carte_phases.py from the graders. Do not edit by hand. -->
-Phase 1, [`ms-00-prepa`](ms-00-prepa), is the one in progress: **37 of 53 graded exercises** pass. It closes on 31 October 2026, its route on 18 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-00-prepa/README.md#what-to-do-in-order) lists the work in order with the next step marked.
+Phase 1, [`ms-00-prepa`](ms-00-prepa), is the one in progress: **53 of 53 graded exercises** pass. It closes on 31 October 2026, its route on 18 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-00-prepa/README.md#what-to-do-in-order) lists the work in order with the next step marked.
 
 | Track | State | |
 |---|---|---|
@@ -67,7 +67,7 @@ Phase 1, [`ms-00-prepa`](ms-00-prepa), is the one in progress: **37 of 53 graded
 | The route to the trained GPT | 5 of 6 steps · step 6 out of the window | [the phase page](ms-00-prepa/README.md#what-to-do-in-order) |
 | **L1, the trained model** | 0 of 7 gates · gpt.py is still the blank file, then the public repository | [the acceptance test](#the-acceptance-test) |
 | The C inference engine | 0 of 7 · out of the window, it needs the weights L1 produces | [below](#why-the-c-tracks-are-not-here) |
-| Maths, in the background | 4 of 20 exercises, alongside the route |  |
+| Maths, in the background | ✓ 20 of 20 exercises, complete, alongside the route |  |
 | Zero to Hero | taken off the path, and out of this repository | [below](#zero-to-hero-and-why-it-left) |
 
 The denominator leaves out `rte-02-cs336` (out of the window until 31 October, L1 comes first), `l1-01-gpt-corpus` (graded by its public repository, not by a terminal) and `c-02-moteur` (out of the window, it needs the weights L1 produces). Zero to Hero is not in it either: the curriculum stopped declaring it, and counting an abandoned track in a ratio makes a decision look like a delay.
@@ -377,6 +377,8 @@ ms-00-prepa/               the prep — Sept–Oct 2026
     README.md              its sub-modules in the order of the work, and their state
     l1-01-gpt-corpus/      the acceptance test, written before the work it grades
     maths-01-algebre/      vectors and matrices by hand, before any library
+    mth-03-probas/         a simulator held against its closed forms
+    mth-04-statistiques/   whether two series really differ, and how often that is wrong
     py-01-basics/          correct answers out of input you do not control
     py-02-advanced/        types that make the wrong answer unrepresentable
     py-03-livrer/          the result, installable and on the PATH

@@ -29,7 +29,7 @@ One table, from what is done to what waits. Every state is read from a grader, n
 |  | `l1-01-gpt-corpus` | its public repository · not counted here | the public repository, read by someone else | lands here with the model |
 |  | `c-02-moteur` | 0 of 7 · out of the window, it needs the weights L1 produces | its grader, through `./exo` | lands here |
 
-**Alongside, in the background.** The curriculum files these under a `fil` named « Maths en fond »: work that runs beside the sequence rather than as a step of it. `maths-01-algebre` 4 of 8 · `mth-03-probas` 0 of 6 · `mth-04-statistiques` 0 of 6.
+**Alongside, in the background.** The curriculum files these under a `fil` named « Maths en fond »: work that runs beside the sequence rather than as a step of it. `maths-01-algebre` ✓ 8 of 8 · `mth-03-probas` ✓ 6 of 6 · `mth-04-statistiques` ✓ 6 of 6.
 
 ## What each sub-module covers
 
@@ -46,8 +46,8 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `l1-01-gpt-corpus` | proof | Publish a language model trained end to end, and defend every part of how it works without the code in front of you | [l1-01-gpt-corpus](l1-01-gpt-corpus) |
 | `c-02-moteur` | added | Write an inference engine in C that loads a model, generates text, measures its throughput and places itself on a roofline | not started · 7 exercises |
 | `maths-01-algebre` | added | Implement 2D vector and matrix transformations in Python | [maths-01-algebre](maths-01-algebre) · 8 exercises |
-| `mth-03-probas` | added | Simulate a distribution, hold it against its closed form, and know how many measurements it takes to tell two values apart | not started · 6 exercises |
-| `mth-04-statistiques` | added | Judge whether two series of measurements really differ, knowing how often you will be wrong | not started · 6 exercises |
+| `mth-03-probas` | added | Simulate a distribution, hold it against its closed form, and know how many measurements it takes to tell two values apart | [mth-03-probas](mth-03-probas) · 6 exercises |
+| `mth-04-statistiques` | added | Judge whether two series of measurements really differ, knowing how often you will be wrong | [mth-04-statistiques](mth-04-statistiques) · 6 exercises |
 
 ## Reading
 
