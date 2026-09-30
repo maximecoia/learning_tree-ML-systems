@@ -45,9 +45,11 @@ decision cost.
   not on a date: phase 1 closes when `gpt.py`, written from a blank file,
   passes the seven gates of [its acceptance test](#the-acceptance-test).
 - **Nothing is graded by its own author alone.** The route borrows its steps
-  from existing assignments, most of which ship their own grader, and all of
-  them lead to an acceptance test written before the work. A lesson marked by
-  the person who wrote it has no outside referent.
+  from existing work: the first ships its own grader, the chapters after it
+  are graded by tests written against what each chapter states, and all of
+  them lead to an acceptance test written before the work, whose failure
+  values are published. A lesson marked by the person who wrote it has no
+  outside referent.
 - **Running is not the bar.** Being able to write it again from a blank file
   is.
 - **Every check has been seen to fail.** Each one is broken on purpose before
@@ -60,8 +62,8 @@ roadmap, are in [`DECISIONS.md`](DECISIONS.md).
 
 | Phase | Window | What it buys | Sub-modules |
 |---|---|---|---|
-| **[`ms-00-prepa`](ms-00-prepa)** — the prep, C and Python | Sept–Oct 2026 | enter the school with the libft done, a GPT trained by hand, and a C inference engine whose throughput is measured and placed on a roofline | 11 |
-| [`ms-01-inference`](ms-01-inference) — graded C, measured inference | weeks 1–8 | produce the saturation curve of an unknown inference server in half a day | 13 |
+| **[`ms-00-prepa`](ms-00-prepa)** — the prep, C and Python | Sept–Oct 2026 | enter the school with the libft done, a GPT trained by hand, and a C inference engine whose throughput is measured and placed on a roofline | 10 |
+| [`ms-01-inference`](ms-01-inference) — graded C, measured inference | weeks 1–8 | produce the saturation curve of an unknown inference server in half a day | 14 |
 | [`ms-02-cpp-concurrence`](ms-02-cpp-concurrence) — C++ and concurrency | weeks 9–20 | concurrent code whose freedom from starvation is shown by measurement, and an unknown execution timeline read in ten minutes | 18 |
 | [`ms-03-parallelisme`](ms-03-parallelisme) — parallelism, first kernel, entering vLLM | weeks 21–34 | say before writing a kernel whether it will be compute- or memory-bound, and a PR in vLLM or SGLang on the scheduler or the cache, review taken up by a maintainer | 20 |
 | [`ms-04-cuda`](ms-04-cuda) — CUDA properly | weeks 35–46 | a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation and where it loses too, then the harness that proves it, run against an agent and shown rejecting a bad submission | 17 |
@@ -83,12 +85,12 @@ Phase 1, [`ms-00-prepa`](ms-00-prepa), is the one in progress: **53 of 53 graded
 |---|---|---|
 | The Python socle | ✓ 26 of 26 exercises, complete | [`PYTHON.md`](PYTHON.md) |
 | The libft, ahead of the school | ✓ 6 of 6 exercises, complete, kept out of this repository | [below](#what-is-not-here) |
-| The route to the trained GPT | 5 of 6 steps · step 6 out of the window | [the phase page](ms-00-prepa/README.md#what-to-do-in-order) |
+| The route to the trained GPT | ✓ 5 of 5 steps | [the phase page](ms-00-prepa/README.md#what-to-do-in-order) |
 | **L1, the trained model** | 0 of 7 gates · gpt.py is still the blank file, then the public repository | [the acceptance test](#the-acceptance-test) |
 | The C inference engine | 0 of 7 · out of the window, it needs the weights L1 produces | [below](#what-is-not-here) |
 | Maths, in the background | ✓ 20 of 20 exercises, complete, alongside the route | [`MATHS.md`](MATHS.md) |
 
-The denominator leaves out `rte-02-cs336` (out of the window until 31 October, L1 comes first), `l1-01-gpt-corpus` (graded by its public repository, not by a terminal) and `c-02-moteur` (out of the window, it needs the weights L1 produces).
+The denominator leaves out `l1-01-gpt-corpus` (graded by its public repository, not by a terminal) and `c-02-moteur` (out of the window, it needs the weights L1 produces).
 <!-- /compteurs -->
 
 ## What is already here
@@ -109,7 +111,7 @@ The denominator leaves out `rte-02-cs336` (out of the window until 31 October, L
 
 The prep is graded on one object: a causal GPT written from a blank file, in
 `torch`, with the attention written by hand rather than called. The route to it
-borrows each step from an existing assignment:
+borrows each step from existing work:
 
 | | Step | What grades it |
 |---|---|---|
@@ -118,16 +120,18 @@ borrows each step from an existing assignment:
 | 3 | Causal attention: scores, mask, multiple heads | `test_ch03.py` |
 | 4 | The GPT: blocks, normalisation, residuals, logits | `test_ch04.py` |
 | 5 | Pretraining: the loop, train and validation loss, sampling | `test_ch05.py` |
-| 6 | CS336 assignment 1 — the 15 architecture-agnostic adapters | its public `pytest` suite |
 
 Raschka's book ships almost no assertions, so the tests of steps 2 to 5 are
 written here, against what each chapter states, and each suite was broken on
 purpose to prove it can fail ([why](DECISIONS.md#borrowed-graders-not-written-lessons)).
 They sit beside each answer, in
 [`ms-00-prepa/rte-route-l1`](ms-00-prepa/rte-route-l1), and run once that
-directory is copied into a clone of the book. Step 6 grades the same material a
-second way and waits until 31 October: of its 21 adapters, the 15 that do not
-depend on the architecture cover exactly steps 1 to 5.
+directory is copied into a clone of the book. The first assignment of CS336 used
+to be step 6, and it left the route on 2026-09-30: its fifteen
+architecture-agnostic adapters graded steps 2 to 5 a second time
+([why](DECISIONS.md#cs336-and-why-it-left-the-prep)). Its three pieces that
+belong to Llama rather than to GPT-2, RMSNorm, SwiGLU and RoPE, moved to
+[`ms-01-inference`](ms-01-inference/README.md).
 
 ### The acceptance test
 
@@ -216,9 +220,12 @@ ms-01-inference/ … ms-07-stage-2/
 
 The route: Sebastian Raschka, *Build a Large Language Model (From Scratch)*
 ([`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch)) ·
-Stanford CS336, *Language Modeling from Scratch*
-([`stanford-cs336`](https://github.com/stanford-cs336)) · Sasha Rush,
-[Tensor Puzzles](https://github.com/srush/Tensor-Puzzles).
+Sasha Rush, [Tensor Puzzles](https://github.com/srush/Tensor-Puzzles).
+
+Further on: Stanford CS336, *Language Modeling from Scratch*
+([`stanford-cs336`](https://github.com/stanford-cs336)), whose first
+assignment grades three pieces of `ms-01-inference` and whose second is planned
+in `ms-06-specialisation`.
 
 The road that was taken off, [described here](DECISIONS.md#zero-to-hero-and-why-it-left):
 the Zero to Hero lectures, notebooks and datasets are Andrej Karpathy's, MIT
