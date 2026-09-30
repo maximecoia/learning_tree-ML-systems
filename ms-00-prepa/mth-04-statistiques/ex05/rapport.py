@@ -72,5 +72,5 @@ def comparer(a, b, quantile):
         "separees": sep,
         "verdict": verdict,
         "recouvrement": rec,
-        "mesures_nécessaires": mesures,
+        "mesures_necessaires": mesures,
     }
