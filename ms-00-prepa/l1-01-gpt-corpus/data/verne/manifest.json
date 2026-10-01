@@ -1,0 +1,108 @@
+{
+  "source": {
+    "name": "verne",
+    "path": "source/pg5097.txt",
+    "url": "https://www.gutenberg.org/cache/epub/5097/pg5097.txt",
+    "author": "Jules Verne (1828-1905); Project Gutenberg eBook #5097, credits Norm Wolcott, updated 2022-06-07",
+    "licence": "public domain: Verne died in 1905, and Project Gutenberg marks the eBook public domain in the USA. The Gutenberg header and licence are removed by strip_gutenberg below, so the published splits carry no Project Gutenberg trademark",
+    "acquired": "2026-10-01",
+    "encoding": "utf-8",
+    "sha256": "53507b025cd3580f4fbfa546baabb36f25adfb48b581c5b5016d91ad69d36c68",
+    "bytes": 942632,
+    "documents": 1
+  },
+  "decisions": {
+    "split": [
+      0.9,
+      0.05,
+      0.05
+    ],
+    "seed": 1337,
+    "min_dedup_chars": 64,
+    "min_corpus_chars": 100000,
+    "email_token": "<email>",
+    "phone_token": "<phone>"
+  },
+  "cleaning": {
+    "normalize_newlines": {
+      "chars_changed": 18504,
+      "chars_after": 900478,
+      "chars_before": 918982
+    },
+    "strip_gutenberg": {
+      "chars_changed": 19372,
+      "chars_after": 881106,
+      "chars_before": 900478
+    },
+    "normalize_unicode": {
+      "chars_changed": 0,
+      "chars_after": 881106,
+      "chars_before": 881106
+    },
+    "drop_invisible": {
+      "chars_changed": 0,
+      "chars_after": 881106,
+      "chars_before": 881106
+    },
+    "strip_trailing_spaces": {
+      "chars_changed": 0,
+      "chars_after": 881106,
+      "chars_before": 881106
+    },
+    "collapse_blank_lines": {
+      "chars_changed": 10,
+      "chars_after": 881096,
+      "chars_before": 881106
+    },
+    "unwrap_paragraphs": {
+      "chars_changed": 4693,
+      "chars_after": 876403,
+      "chars_before": 881096
+    }
+  },
+  "scrubbing": {
+    "email": {
+      "replaced": 0,
+      "first": []
+    },
+    "phone": {
+      "replaced": 0,
+      "first": []
+    }
+  },
+  "deduplication": {
+    "dropped_paragraphs": 2,
+    "dropped_chars": 196,
+    "short_repeats_kept": 35,
+    "min_chars": 64
+  },
+  "numbers": {
+    "vocab_size": 97,
+    "ln_V": 4.574710978503383,
+    "bigram_dev_loss": 2.3928212994640075,
+    "corpus_chars": 876199
+  },
+  "outputs": {
+    "train.txt": {
+      "chars": 788644,
+      "sha256": "5ee890df28ceba59799d01126c9b63d1b227e1bf1691483b86397de25792c93e"
+    },
+    "dev.txt": {
+      "chars": 44042,
+      "sha256": "33475b3e74d8f06df45508ccdb745b22f1a603f06c8eb5310f5bb2d2043486bd"
+    },
+    "test.txt": {
+      "chars": 43513,
+      "sha256": "91805add6493cd7af60bfa4711d567708850abf041c3f77bc9972a34a5ff0c6f"
+    },
+    "vocab.json": {
+      "symbols": 97,
+      "sha256": "05de927149ee07ca611ad508e9d3e9750f542adefd5e2050ace4266ba860e063"
+    }
+  },
+  "environment": {
+    "python": "3.12.8",
+    "unicode": "15.0.0",
+    "script_sha256": "08103cd4cc41a1b40a21688a04653655d171f9bbaccd0813a265afc5fd577f26"
+  }
+}

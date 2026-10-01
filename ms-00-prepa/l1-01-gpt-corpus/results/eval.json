@@ -1,0 +1,10 @@
+{
+  "dev_loss": 1.7479976748311243,
+  "windows": 1376,
+  "ln_V": 4.574710978503383,
+  "bigram_dev_loss": 2.3928210735321045,
+  "parameters": {
+    "all": 164065,
+    "without_embedding_tables": 155809
+  }
+}

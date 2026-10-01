@@ -1,0 +1,10 @@
+{
+  "name": "final",
+  "data_dir": "data/verne",
+  "steps": 5000,
+  "batch_size": 32,
+  "lr": 0.0003,
+  "eval_every": 250,
+  "eval_batches": 50,
+  "save_weights": true
+}

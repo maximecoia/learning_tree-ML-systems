@@ -1,0 +1,39 @@
+{
+  "config": {
+    "name": "final",
+    "data_dir": "data/verne",
+    "steps": 5000,
+    "batch_size": 32,
+    "lr": 0.0003,
+    "eval_every": 250,
+    "eval_batches": 50,
+    "save_weights": true
+  },
+  "data_dir": "data/verne",
+  "seed": 1337,
+  "architecture": {
+    "block_size": 32,
+    "n_emb": 64,
+    "n_head": 4,
+    "n_layer": 3,
+    "dropout": 0.0,
+    "vocab_size": 97
+  },
+  "parameters": {
+    "all": 164065,
+    "without_embedding_tables": 155809
+  },
+  "ln_V": 4.574710978503383,
+  "bigram_dev_loss": 2.3928210735321045,
+  "seconds": 69.4,
+  "hardware": {
+    "machine": "arm64",
+    "processor": "arm",
+    "system": "Darwin",
+    "device": "cpu"
+  },
+  "versions": {
+    "python": "3.12.8",
+    "torch": "2.14.0"
+  }
+}
