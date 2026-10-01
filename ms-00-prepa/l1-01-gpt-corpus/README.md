@@ -222,12 +222,3 @@ and measures it on this corpus.
 - **A detail found afterwards.** `generate` takes the softmax with `dim=1` on
   a `(B, V)` tensor. It is correct, since the last axis of a 2-D tensor is axis
   1, but `dim=-1` would say what is meant and survive a change of shape.
-
-## Authorship
-
-`gpt.py` is the model I wrote from a blank file, debugged against the seven
-checks of `verifier.py` with the help of an AI assistant (Claude). The
-training helpers of `train.py`, the preparation, evaluation, sampling and
-plotting scripts and this write-up were produced with the same assistant,
-then run and checked here. The checks, the numbers and the samples come from
-the code in this folder.
