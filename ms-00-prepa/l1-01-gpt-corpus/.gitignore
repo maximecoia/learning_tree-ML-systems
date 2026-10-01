@@ -1,0 +1,5 @@
+# The raw Gutenberg file: prepare.py fetches it and checks its SHA-256.
+source/
+
+# The weights live in the GitHub release l1-01-gpt-corpus-v1, never in git.
+*.pt

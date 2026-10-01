@@ -1,0 +1,2 @@
+# Python 3.12. prepare.py and plot.py use the standard library only.
+torch==2.14.0
