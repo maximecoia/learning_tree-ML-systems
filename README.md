@@ -86,7 +86,7 @@ Phase 1, [`ms-00-prepa`](ms-00-prepa), is the one in progress: **53 of 53 graded
 | The Python socle | ✓ 26 of 26 exercises, complete | [`PYTHON.md`](PYTHON.md) |
 | The libft, ahead of the school | ✓ 6 of 6 exercises, complete, kept out of this repository | [below](#what-is-not-here) |
 | The route to the trained GPT | ✓ 5 of 5 steps | [the phase page](ms-00-prepa/README.md#what-to-do-in-order) |
-| L1, the trained model and its write-up | part 1: ✓ 7 of 7 gates · then part 2, the public write-up | [what closes it](#what-closes-l1) |
+| L1, the trained model and its write-up | part 1: ✓ 7 of 7 gates · part 2: ✓ validated on 2 October 2026 | [what closes it](#what-closes-l1) |
 | Maths, in the background | ✓ 20 of 20 exercises, complete, alongside the route | [`MATHS.md`](MATHS.md) |
 
 The denominator leaves out `l1-01-gpt-corpus` (a public write-up, graded by a reader, not by a terminal).
