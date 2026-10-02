@@ -8,6 +8,31 @@
 
 **How it ends.** Not on a feeling, on one binary test: *You are given an unknown inference server. You produce its saturation curve in half a day.*
 
+
+## What to do, in order
+
+One table, from what is done to what waits. Every state is read from a grader, never from the presence of a file: `./exo` runs the curriculum's checkers. The first row without a tick is the work of today, marked →. The school's subjects follow the school's calendar and never take the arrow.
+
+| | Step | State | What grades it | Where |
+|---|---|---|---|---|
+|  | `c-03-libft-norme` | 0 of 3 · 3 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
+|  | `c-04-printf` | 0 of 3 · 3 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
+|  | `c-05-gnl` | 0 of 3 · 3 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
+|  | `c-06-pushswap` | 0 of 5 · 5 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
+| → | `mes-01-chronometre` | 0 of 7 · 7 not handed in | its grader, through `./exo` | lands here |
+|  | `mes-03-profiler` | 0 of 6 · 6 not handed in | its grader, through `./exo` | lands here |
+|  | `c-02-moteur` | 0 of 7 · 7 not handed in | its grader, through `./exo` | lands here |
+|  | `inf-01-servir` | 0 of 3 · 3 not handed in | its grader, through `./exo` | lands here |
+|  | `inf-02-prefill-decode` | 0 of 3 · 3 not handed in | its grader, through `./exo` | lands here |
+|  | `inf-15-llama` | 0 of 3 · 3 not handed in | its grader, through `./exo` | lands here |
+|  | `inf-03-cache-kv` | 0 of 3 · 1 handed in, red · 2 not handed in | its grader, through `./exo` | lands here |
+|  | `inf-04-quantifier` | 0 of 4 · 4 not handed in | its grader, through `./exo` | lands here |
+|  | `inf-05-harnais` | 0 of 4 · 4 not handed in | its grader, through `./exo` | lands here |
+|  | `inf-06-saturation` | 0 of 3 · 3 not handed in | its grader, through `./exo` | lands here |
+|  | L2: the public curve, `l2-01-courbe`. An inference server's throughput and latency, with its protocol, its breaking point and the physical limit that sets it | a person grades it, not a terminal · not counted here | a reader, and a defence without the code in front of you | lands here |
+
+## What each sub-module covers
+
 Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
 
 | Sub-module | Layer | What it covers | Where the work is |

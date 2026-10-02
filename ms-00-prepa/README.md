@@ -11,7 +11,7 @@
 
 ## What to do, in order
 
-One table, from what is done to what waits. Every state is read from a grader, never from the presence of a file: `./exo` runs the curriculum's checkers, each borrowed assignment brings its own, and `verifier.py` holds the 7 gates of the acceptance test. The first row without a tick is the work of today, marked →. The route closes on 18 October 2026 and the phase on 31 October 2026; `./exo` prints the pace those dates imply.
+Closed on 2 October 2026. The table stays as the record of what closed the phase, and every state in it is still read from a grader, never from the presence of a file: `./exo` runs the curriculum's checkers, each borrowed assignment brings its own and `verifier.py` holds the 7 gates of the acceptance test.
 
 | | Step | State | What grades it | Where |
 |---|---|---|---|---|
