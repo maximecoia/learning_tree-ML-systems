@@ -19,8 +19,8 @@ One table, from what is done to what waits. Every state is read from a grader, n
 |  | `c-04-printf` | 0 of 3 · 3 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
 |  | `c-05-gnl` | 0 of 3 · 3 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
 |  | `c-06-pushswap` | 0 of 5 · 5 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
-| → | `mes-01-chronometre` | 0 of 7 · 7 not handed in | its grader, through `./exo` | lands here |
-|  | `mes-03-profiler` | 0 of 6 · 6 not handed in | its grader, through `./exo` | lands here |
+| ✓ | `mes-01-chronometre` | ✓ 7 of 7 | its grader, through `./exo` | [mes-01-chronometre](mes-01-chronometre) |
+| → | `mes-03-profiler` | 0 of 6 · 6 not handed in | its grader, through `./exo` | lands here |
 |  | `c-02-moteur` | 0 of 7 · 7 not handed in | its grader, through `./exo` | lands here |
 |  | `inf-01-servir` | 0 of 3 · 3 not handed in | its grader, through `./exo` | lands here |
 |  | `inf-02-prefill-decode` | 0 of 3 · 3 not handed in | its grader, through `./exo` | lands here |
@@ -41,7 +41,7 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `c-04-printf` | imposed | Write a variadic formatter whose output matches the libc's, conversion by conversion | 42 subject, not published · 3 exercises |
 | `c-05-gnl` | imposed | Read a stream line by line with state that survives between calls, across several descriptors and without leaking | 42 subject, not published · 3 exercises |
 | `c-06-pushswap` | imposed | Sort under a constrained set of operations, and defend the algorithm's real cost by measurement | 42 subject, not published · 5 exercises |
-| `mes-01-chronometre` | added | Time a function without being fooled by noise or by warm-up | not started · 7 exercises |
+| `mes-01-chronometre` | added | Time a function without being fooled by noise or by warm-up | [mes-01-chronometre](mes-01-chronometre) · 7 exercises |
 | `mes-03-profiler` | added | Locate the function that costs in a slow program, and prove that fixing it helped | not started · 6 exercises |
 | `c-02-moteur` | added | Write an inference engine in C that loads a model, generates text, measures its throughput and places itself on a roofline | not started · 7 exercises |
 | `inf-01-servir` | added | Query an inference engine through its API, record its latency under a written protocol, and compare two engines without concluding beyond what the measurement allows | not started · 3 exercises |
