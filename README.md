@@ -22,7 +22,7 @@ server, a scheduler, a cache or a kernel decides whether a model is usable at
 all.
 
 This repository is the public trace of a roadmap toward that field, eight
-phases and 93 sub-modules, from a prep before the 42 school to a second
+phases and 94 sub-modules, from a prep before the 42 school to a second
 internship. It aims at three things a reader can check from outside:
 
 - the saturation curve of an unknown inference server, produced in half a day;
@@ -64,7 +64,7 @@ roadmap, are in [`DECISIONS.md`](DECISIONS.md).
 | Phase | Window | What it buys | Sub-modules |
 |---|---|---|---|
 | [`ms-00-prepa`](ms-00-prepa) — the prep, C and Python | Sept–Oct 2026 | enter the school with the libft done and a GPT trained by hand | 9 |
-| **[`ms-01-inference`](ms-01-inference)** — graded C, measured inference | weeks 1–8 | an inference engine written in C and placed on a roofline, then the saturation curve of an unknown inference server produced in half a day | 15 |
+| **[`ms-01-inference`](ms-01-inference)** — graded C, measured inference | weeks 1–8 | an inference engine written in C and placed on a roofline, then the saturation curve of an unknown inference server produced in half a day | 16 |
 | [`ms-02-cpp-concurrence`](ms-02-cpp-concurrence) — C++ and concurrency | weeks 9–20 | concurrent code whose freedom from starvation is shown by measurement, and an unknown execution timeline read in ten minutes | 18 |
 | [`ms-03-parallelisme`](ms-03-parallelisme) — parallelism, first kernel, entering vLLM | weeks 21–34 | say before writing a kernel whether it will be compute- or memory-bound, and a PR in vLLM or SGLang on the scheduler or the cache, review taken up by a maintainer | 20 |
 | [`ms-04-cuda`](ms-04-cuda) — CUDA properly | weeks 35–46 | a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation and where it loses too, then the harness that proves it, run against an agent and shown rejecting a bad submission | 17 |
@@ -80,12 +80,12 @@ sub-modules in the order of the work and the state of each.
 ## Where the work stands
 
 <!-- compteurs: written by carte_phases.py from the graders. Do not edit by hand. -->
-Phase 2, [`ms-01-inference`](ms-01-inference), is the one in progress: **7 of 57 graded exercises** pass. Its window is weeks 1–8; [`ms-00-prepa`](ms-00-prepa) closed on 2 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-01-inference/README.md#what-to-do-in-order) lists the work in order with the next step marked.
+Phase 2, [`ms-01-inference`](ms-01-inference), is the one in progress: **7 of 60 graded exercises** pass. Its window is weeks 1–8; [`ms-00-prepa`](ms-00-prepa) closed on 2 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-01-inference/README.md#what-to-do-in-order) lists the work in order with the next step marked.
 
 | Track | State | |
 |---|---|---|
 | The C of the common core, milestone 1 | 0 of 14 exercises, kept out of this repository | [below](#what-is-not-here) |
-| Measuring performance | 7 of 13 exercises | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
+| Measuring performance | 7 of 16 exercises | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 | The inference engine in C | 0 of 7 exercises | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 | Measured inference | 0 of 23 exercises | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 | L2, the throughput and latency curve | a person grades it, not a terminal | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
