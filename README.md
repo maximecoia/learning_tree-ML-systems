@@ -7,7 +7,7 @@ trace of the work as it happens.**
 
 `prep` → `inference` → `C++ & concurrency` → `parallelism & contribution` → `CUDA` → `common core` → `specialisation`
 
-Phase 1 of 8 · September 2026
+Phase 2 of 8 · October 2026
 
 </div>
 
@@ -42,8 +42,9 @@ decision cost.
   rare, and it is what this repository holds. A phase counts as done when both
   are.
 - **A phase ends on a binary test, named in advance.** Not on a feeling, and
-  not on a date: phase 1 closes when `gpt.py`, written from a blank file,
-  passes the seven gates of [its acceptance test](#the-acceptance-test).
+  not on a date: phase 1 closed on 2 October 2026, when `gpt.py`, written
+  from a blank file, passed the seven gates of
+  [its acceptance test](#the-acceptance-test).
 - **Nothing is graded by its own author alone.** The route borrows its steps
   from existing work: the first ships its own grader, the chapters after it
   are graded by tests written against what each chapter states, and all of
@@ -62,8 +63,8 @@ roadmap, are in [`DECISIONS.md`](DECISIONS.md).
 
 | Phase | Window | What it buys | Sub-modules |
 |---|---|---|---|
-| **[`ms-00-prepa`](ms-00-prepa)** — the prep, C and Python | Sept–Oct 2026 | enter the school with the libft done and a GPT trained by hand | 9 |
-| [`ms-01-inference`](ms-01-inference) — graded C, measured inference | weeks 1–8 | an inference engine written in C and placed on a roofline, then the saturation curve of an unknown inference server produced in half a day | 15 |
+| [`ms-00-prepa`](ms-00-prepa) — the prep, C and Python | Sept–Oct 2026 | enter the school with the libft done and a GPT trained by hand | 9 |
+| **[`ms-01-inference`](ms-01-inference)** — graded C, measured inference | weeks 1–8 | an inference engine written in C and placed on a roofline, then the saturation curve of an unknown inference server produced in half a day | 15 |
 | [`ms-02-cpp-concurrence`](ms-02-cpp-concurrence) — C++ and concurrency | weeks 9–20 | concurrent code whose freedom from starvation is shown by measurement, and an unknown execution timeline read in ten minutes | 18 |
 | [`ms-03-parallelisme`](ms-03-parallelisme) — parallelism, first kernel, entering vLLM | weeks 21–34 | say before writing a kernel whether it will be compute- or memory-bound, and a PR in vLLM or SGLang on the scheduler or the cache, review taken up by a maintainer | 20 |
 | [`ms-04-cuda`](ms-04-cuda) — CUDA properly | weeks 35–46 | a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation and where it loses too, then the harness that proves it, run against an agent and shown rejecting a bad submission | 17 |
@@ -79,17 +80,17 @@ sub-modules in the order of the work and the state of each.
 ## Where the work stands
 
 <!-- compteurs: written by carte_phases.py from the graders. Do not edit by hand. -->
-Phase 1, [`ms-00-prepa`](ms-00-prepa), is the one in progress: **53 of 53 graded exercises** pass. It closes on 31 October 2026, its route on 18 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-00-prepa/README.md#what-to-do-in-order) lists the work in order with the next step marked.
+Phase 2, [`ms-01-inference`](ms-01-inference), is the one in progress: **0 of 57 graded exercises** pass. Its window is weeks 1–8; [`ms-00-prepa`](ms-00-prepa) closed on 2 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-01-inference/README.md#what-to-do-in-order) lists the work in order with the next step marked.
 
 | Track | State | |
 |---|---|---|
-| The Python socle | ✓ 26 of 26 exercises, complete | [`PYTHON.md`](PYTHON.md) |
-| The libft, ahead of the school | ✓ 6 of 6 exercises, complete, kept out of this repository | [below](#what-is-not-here) |
-| The route to the trained GPT | ✓ 5 of 5 steps | [the phase page](ms-00-prepa/README.md#what-to-do-in-order) |
-| L1, the trained model and its write-up | part 1: ✓ 7 of 7 gates · part 2: ✓ validated on 2 October 2026 | [what closes it](#what-closes-l1) |
-| Maths, in the background | ✓ 20 of 20 exercises, complete, alongside the route | [`MATHS.md`](MATHS.md) |
+| The C of the common core, milestone 1 | 0 of 14 exercises, kept out of this repository | [below](#what-is-not-here) |
+| Measuring performance | 0 of 13 exercises | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
+| The inference engine in C | 0 of 7 exercises | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
+| Measured inference | 0 of 23 exercises | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
+| L2, the throughput and latency curve | a person grades it, not a terminal | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 
-The denominator leaves out `l1-01-gpt-corpus` (a public write-up, graded by a reader, not by a terminal).
+The denominator leaves out `l2-01-courbe` (a public write-up, graded by a reader, not by a terminal).
 <!-- /compteurs -->
 
 ## What is already here
