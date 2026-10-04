@@ -42,10 +42,10 @@ def dominant(seq_len, d_model):
     if seq_len <= 0 or d_model <= 0:
         raise ValueError("zero sequence length or width")
     attention = seq_len * seq_len * d_model
-    lineaire = seq_len * d_model * d_model
-    if attention > lineaire:
+    linear = seq_len * d_model * d_model
+    if attention > linear:
         return "attention"
-    if attention < lineaire:
+    if attention < linear:
         return "linear"
     return "equal"
 

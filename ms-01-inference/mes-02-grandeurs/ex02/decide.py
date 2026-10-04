@@ -17,11 +17,11 @@ def regime(flops, nbytes, flops_per_s, bytes_per_s, launch_s=0.0):
         raise ValueError("zero or negative rate")
     if launch_s < 0:
         raise ValueError("negative launch time")
-    t_calc = compute_floor(flops, flops_per_s)
-    t_octets = transfer_time(nbytes, bytes_per_s)
-    if launch_s >= max(t_calc, t_octets):
+    t_compute = compute_floor(flops, flops_per_s)
+    t_bytes = transfer_time(nbytes, bytes_per_s)
+    if launch_s >= max(t_compute, t_bytes):
         return "overhead"
-    if t_octets > t_calc:
+    if t_bytes > t_compute:
         return "memory"
     return "compute"
 
