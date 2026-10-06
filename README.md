@@ -64,11 +64,11 @@ roadmap, are in [`DECISIONS.md`](DECISIONS.md).
 | Phase | Window | What it buys | Sub-modules |
 |---|---|---|---|
 | [`ms-00-prepa`](ms-00-prepa) — the prep, C and Python | Sept–Oct 2026 | enter the school with the libft done and a GPT trained by hand | 9 |
-| **[`ms-01-inference`](ms-01-inference)** — graded C, measured inference | weeks 1–8 | an inference engine written in C and placed on a roofline, then the saturation curve of an unknown inference server produced in half a day | 16 |
-| [`ms-02-cpp-concurrence`](ms-02-cpp-concurrence) — C++ and concurrency | weeks 9–20 | concurrent code whose freedom from starvation is shown by measurement, and an unknown execution timeline read in ten minutes | 18 |
+| **[`ms-01-inference`](ms-01-inference)** — graded C, measured inference | weeks 1–8 | the saturation curve of an unknown inference server produced in half a day, then an inference engine written in C and placed on a roofline | 16 |
+| [`ms-02-cpp-concurrence`](ms-02-cpp-concurrence) — C++ and concurrency | weeks 9–20 | concurrent code whose freedom from starvation is shown by measurement, and an unknown execution timeline read in ten minutes | 21 |
 | [`ms-03-parallelisme`](ms-03-parallelisme) — parallelism, first kernel, entering vLLM | weeks 21–34 | say before writing a kernel whether it will be compute- or memory-bound, and a PR in vLLM or SGLang on the scheduler or the cache, review taken up by a maintainer | 20 |
 | [`ms-04-cuda`](ms-04-cuda) — CUDA properly | weeks 35–46 | a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation and where it loses too, then the harness that proves it, run against an agent and shown rejecting a bad submission | 17 |
-| [`ms-05-fin-tronc-commun`](ms-05-fin-tronc-commun) — the end of the common core | weeks 47–57 | the four remaining imposed projects, crossed fast and with nothing added for pleasure | 4 |
+| [`ms-05-fin-tronc-commun`](ms-05-fin-tronc-commun) — the end of the common core | weeks 47–57 | the last imposed project, crossed fast and with nothing added for pleasure | 1 |
 | [`ms-06-specialisation`](ms-06-specialisation) — specialisation, first internship | 2028 onward | numerical precision, multi-GPU, operations and evaluation, then a page of deliverables that reads without explanation | 9 |
 | [`ms-07-stage-2`](ms-07-stage-2) — second internship | after the first | the European arm of an American company in the field | 1 |
 
@@ -80,14 +80,14 @@ sub-modules in the order of the work and the state of each.
 ## Where the work stands
 
 <!-- compteurs: written by carte_phases.py from the graders. Do not edit by hand. -->
-Phase 2, [`ms-01-inference`](ms-01-inference), is the one in progress: **16 of 60 graded exercises** pass. Its window is weeks 1–8; [`ms-00-prepa`](ms-00-prepa) closed on 2 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-01-inference/README.md#what-to-do-in-order) lists the work in order with the next step marked.
+Phase 2, [`ms-01-inference`](ms-01-inference), is the one in progress: **16 of 58 graded exercises** pass. Its window is weeks 1–8; [`ms-00-prepa`](ms-00-prepa) closed on 2 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-01-inference/README.md#what-to-do-in-order) lists the work in order with the next step marked.
 
 | Track | State | |
 |---|---|---|
-| The C of the common core, milestone 1 | 0 of 14 exercises, kept out of this repository | [below](#what-is-not-here) |
+| The C of the common core, milestone 1 | 0 of 12 exercises, kept out of this repository | [below](#what-is-not-here) |
 | Measuring performance | ✓ 16 of 16 exercises, complete | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
-| The inference engine in C | 0 of 7 exercises | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 | Measured inference | 0 of 23 exercises | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
+| The inference engine in C | 0 of 7 exercises | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 | L2, the throughput and latency curve | a person grades it, not a terminal | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 
 The denominator leaves out `l2-01-courbe` (a public write-up, graded by a reader, not by a terminal).

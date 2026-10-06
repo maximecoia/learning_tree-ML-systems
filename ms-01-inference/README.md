@@ -2,9 +2,9 @@
 
 # Phase 2 — Graded C, measured inference
 
-`ms-01-inference` · weeks 1–8 · 16 sub-modules, 16 written · 60 exercises
+`ms-01-inference` · weeks 1–8 · 16 sub-modules, 16 written · 58 exercises
 
-**What it buys.** an inference engine written in C and placed on a roofline, then the saturation curve of an unknown inference server produced in half a day
+**What it buys.** the saturation curve of an unknown inference server produced in half a day, then an inference engine written in C and placed on a roofline
 
 **How it ends.** Not on a feeling, on one binary test: *You are given an unknown inference server. You produce its saturation curve in half a day.*
 
@@ -16,8 +16,8 @@ One table, from what is done to what waits. Every state is read from a grader, n
 | | Step | State | What grades it | Where |
 |---|---|---|---|---|
 |  | `c-03-libft-norme` | 0 of 3 · 3 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
-|  | `c-04-printf` | 0 of 3 · 3 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
-|  | `c-05-gnl` | 0 of 3 · 3 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
+|  | `c-04-printf` | 0 of 2 · 2 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
+|  | `c-05-gnl` | 0 of 2 · 2 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
 |  | `c-06-pushswap` | 0 of 5 · 5 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
 | ✓ | `mes-01-chronometre` | ✓ 7 of 7 | its grader, through `./exo` | [mes-01-chronometre](mes-01-chronometre) |
 | ✓ | `mes-02-grandeurs` | ✓ 3 of 3 | its grader, through `./exo` | [mes-02-grandeurs](mes-02-grandeurs) |
@@ -39,8 +39,8 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
 | `c-03-libft-norme` | imposed | Bring a C repository into line with an imposed norm, revisit every null return path and every free, and keep it behind a personal test harness that knows how to fail | 42 subject, not published · 3 exercises |
-| `c-04-printf` | imposed | Write a variadic formatter whose output matches the libc's, conversion by conversion | 42 subject, not published · 3 exercises |
-| `c-05-gnl` | imposed | Read a stream line by line with state that survives between calls, across several descriptors and without leaking | 42 subject, not published · 3 exercises |
+| `c-04-printf` | imposed | Write a variadic formatter whose output matches the libc's, conversion by conversion | 42 subject, not published · 2 exercises |
+| `c-05-gnl` | imposed | Read a stream line by line with state that survives between calls, from a file as from standard input, and without leaking | 42 subject, not published · 2 exercises |
 | `c-06-pushswap` | imposed | Sort under a constrained set of operations, and defend the algorithm's real cost by measurement | 42 subject, not published · 5 exercises |
 | `mes-01-chronometre` | added | Time a function without being fooled by noise or by warm-up | [mes-01-chronometre](mes-01-chronometre) · 7 exercises |
 | `mes-02-grandeurs` | added | Estimate an order of magnitude for compute, memory and cost before writing any code | [mes-02-grandeurs](mes-02-grandeurs) · 3 exercises |

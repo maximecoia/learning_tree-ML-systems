@@ -12,9 +12,9 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
-| `sh-02-netpractice` | imposed | Split a network into subnets that satisfy a subject's constraints, and diagnose a configuration that does not route by naming the cause | 42 subject, not published |
-| `t42-06-pacman` | imposed | Validate `pacman` at the perimeter of its subject, adding nothing | 42 subject, not published |
-| `t42-07-rag-machine` | imposed | Validate `RAG against the machine` at the perimeter of its subject, adding nothing and keeping it out of the showcase | 42 subject, not published |
+| `t42-04-flyin` | imposed | Validate `fly-in` at the perimeter of its subject, the toll's mark being the only objective | 42 subject, not published |
+| `t42-10-agent-smith` | imposed | Validate `agent smith` at the perimeter of its subject, adding nothing | 42 subject, not published |
+| `t42-09-answer-protocol` | imposed | Validate `answer protocol` at the perimeter of its subject, adding nothing | 42 subject, not published |
 | `cu-03-indexation` | added | Work out a thread's global index from its grid and its block, and write a kernel where every thread bounds its access whatever the size of the data | planned, not written yet |
 | `cu-04-coalescence` | added | Put a figure on what an uncoalesced memory access costs, all else being equal, and reorder a kernel's accesses until the measurement moves | planned, not written yet |
 | `cu-05-tiling` | added | Tile a kernel in shared memory, justify the tile size by the memory available per block, and measure the global memory traffic saved | planned, not written yet |
