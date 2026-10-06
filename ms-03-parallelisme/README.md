@@ -12,9 +12,9 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
-| `t42-03-codexion` | imposed | Validate `codexion` at the perimeter of its subject, adding nothing beyond what the defence requires | 42 subject, not published |
-| `t42-04-flyin` | imposed | Validate `fly-in` at the perimeter of its subject, the toll's mark being the only objective | 42 subject, not published |
 | `t42-05-callmemaybe` | imposed | Validate `call me maybe` and leave: the subject is a strict toll, and no hour goes into it beyond the validation | 42 subject, not published |
+| `t42-07-rag-machine` | imposed | Validate `RAG against the machine` at the perimeter of its subject, adding nothing and keeping it out of the showcase | 42 subject, not published |
+| `t42-03-codexion` | imposed | Validate `codexion` at the perimeter of its subject, adding nothing beyond what the defence requires | 42 subject, not published |
 | `c-11-simd` | added | Split a computation across threads and measure the imbalance the split creates, write masked vector code and read lane utilisation, get the compiler to vectorise a loop and check that it did, and tie a computation's ceiling to the machine's bandwidth | not started · 4 exercises |
 | `c-12-ordonnancement` | added | Write a batch task scheduler over threads created once, measure the imbalance between threads before correcting it, and run dependent batches without any starting before what it waits on | not started · 4 exercises |
 | `cu-01-bases` | added | Write CUDA kernels, from elementary arithmetic to concurrent rendering, that run on the grader's host emulation as on a GPU: one thread per element with its bound, a shared-memory scan with its barriers, and a decomposition that guarantees ordering and atomicity | not started · 4 exercises |
