@@ -41,7 +41,7 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `c-03-libft-norme` | imposed | Bring a C repository into line with an imposed norm, revisit every null return path and every free, and keep it behind a personal test harness that knows how to fail | 42 subject, not published · 3 exercises |
 | `c-04-printf` | imposed | Write a variadic formatter whose output matches the libc's, conversion by conversion | 42 subject, not published · 2 exercises |
 | `c-05-gnl` | imposed | Read a stream line by line with state that survives between calls, from a file as from standard input, and without leaking | 42 subject, not published · 2 exercises |
-| `c-06-pushswap` | imposed | Sort under a constrained set of operations, and defend the algorithm's real cost by measurement | 42 subject, not published · 5 exercises |
+| `c-06-pushswap` | imposed | Sort under a constrained set of operations with four strategies of distinct complexity classes, and defend each one's class by measurement | 42 subject, not published · 5 exercises |
 | `mes-01-chronometre` | added | Time a function without being fooled by noise or by warm-up | [mes-01-chronometre](mes-01-chronometre) · 7 exercises |
 | `mes-02-grandeurs` | added | Estimate an order of magnitude for compute, memory and cost before writing any code | [mes-02-grandeurs](mes-02-grandeurs) · 3 exercises |
 | `mes-03-profiler` | added | Locate the function that costs in a slow program, and prove that fixing it helped | [mes-03-profiler](mes-03-profiler) · 6 exercises |
