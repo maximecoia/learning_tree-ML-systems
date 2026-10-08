@@ -80,13 +80,13 @@ sub-modules in the order of the work and the state of each.
 ## Where the work stands
 
 <!-- compteurs: written by carte_phases.py from the graders. Do not edit by hand. -->
-Phase 2, [`ms-01-inference`](ms-01-inference), is the one in progress: **20 of 58 graded exercises** pass. Its window is weeks 1–8; [`ms-00-prepa`](ms-00-prepa) closed on 2 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-01-inference/README.md#what-to-do-in-order) lists the work in order with the next step marked.
+Phase 2, [`ms-01-inference`](ms-01-inference), is the one in progress: **21 of 58 graded exercises** pass. Its window is weeks 1–8; [`ms-00-prepa`](ms-00-prepa) closed on 2 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-01-inference/README.md#what-to-do-in-order) lists the work in order with the next step marked.
 
 | Track | State | |
 |---|---|---|
-| The C of the common core, milestone 1 | 0 of 12 exercises, kept out of this repository | [below](#what-is-not-here) |
+| The C of the common core, milestones 1 to 3 | 0 of 12 exercises, kept out of this repository | [below](#what-is-not-here) |
 | Measuring performance | ✓ 16 of 16 exercises, complete | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
-| Measured inference | 3 of 23 exercises | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
+| Measured inference | 4 of 23 exercises | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 | The inference engine in C | 1 of 7 exercises | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 | L2, the throughput and latency curve | a person grades it, not a terminal | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 
@@ -234,9 +234,9 @@ tools/                     the checks this repository can run on itself
 ms-00-prepa/               the prep — Sept–Oct 2026
     README.md              its sub-modules in the order of the work, and their state
     l1-01-gpt-corpus/      the acceptance test, written before the work it grades
-    maths-01-algebre/      vectors and matrices by hand, before any library
-    mth-03-probas/         a simulator held against its closed forms
-    mth-04-statistiques/   whether two series really differ, and how often that is wrong
+    mth-01-algebre/        vectors and matrices by hand, before any library
+    mth-02-probas/         a simulator held against its closed forms
+    mth-03-statistiques/   whether two series really differ, and how often that is wrong
     py-01-basics/          correct answers out of input you do not control
     py-02-advanced/        types that make the wrong answer unrepresentable
     py-03-livrer/          the result, installable and on the PATH

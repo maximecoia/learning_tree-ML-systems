@@ -12,6 +12,7 @@ opinion, and this repository tries not to publish those.
 5. [The one date I do not set](#the-one-date-i-do-not-set)
 6. [What the agents changed, and what they did not](#what-the-agents-changed-and-what-they-did-not)
 7. [How a check is calibrated](#how-a-check-is-calibrated)
+8. [Why a number follows the order](#why-a-number-follows-the-order)
 
 ## Borrowed graders, not written lessons
 
@@ -89,7 +90,7 @@ cache, because the keys that land in the cache are already rotated.
 
 ## The C engine, and why it moved to phase 2
 
-`c-02-moteur`, an inference engine written in C that loads a model, generates,
+`c-06-moteur`, an inference engine written in C that loads a model, generates,
 measures its throughput and places it on a roofline, was part of the prep's
 promise. Its row said it was out of the window because it needed the weights
 L1 produces. It moved to `ms-01-inference` on 2026-09-30, on three findings.
@@ -103,7 +104,7 @@ L1 produces. It moved to `ms-01-inference` on 2026-09-30, on three findings.
   31 October, the day the prep closes.
 - **Its lessons are the ones phase 2 teaches.** Its throughput step asks for a
   timing that ignores warm-up, which is the competence of `mes-01-chronometre`,
-  now its prerequisite. Its KV cache is what `inf-03-cache-kv` measures, and
+  now its prerequisite. Its KV cache is what `inf-04-cache-kv` measures, and
   its roofline is how `inf-02-prefill-decode` reads prefill and decode.
 
 It now sits after the measurement modules and before the served-model ones, so
@@ -211,3 +212,67 @@ The same measuring applies to advice. Of the three improvements Bengio et al.
 one the lecture calls most promising costs (+0.165). Both runs were made in the
 private corpus that produces this repository, on the Zero to Hero unit that
 left it; the figures are reported here, not reproducible from this tree.
+
+## Why a number follows the order
+
+Until 2026-10-08 an identifier never changed once given. It lives in the
+graders, in the private docs, in this repository and in the translations of
+these pages, so each move kept its old number. The sum was visible here: the
+phase 2 page listed `inf-15-llama` between `inf-02` and `inf-03`, and
+`c-02-moteur` after `c-06-pushswap`; the maths read `maths-01`, `mth-03`,
+`mth-04`; the contribution, L5, fell a phase before the kernel, L4. Read in
+the order of its numbers, the roadmap described a sequence the work does not
+follow.
+
+The rule is now the reverse. **Within a family, a number grows with the place
+of the sub-module in the curriculum, phase after phase, from 01 and without a
+gap**, and a sub-module that moves is renamed. `cpp-` starts at 00, like the
+42 subjects it rebuilds. On 2026-10-08, 34 sub-modules were renamed. The
+contribution became L4 and the kernel that beats the reference became L5, so
+the deliverables now fall in the order of their numbers. The GPU MODE
+competition left the Triton family for its own, `gpu-01`, because it opens on
+its own dates whatever the vendor, and is not a Triton tutorial.
+
+The check reads the curriculum and refuses a number that goes back, a gap, a
+family that starts elsewhere than 01, and deliverables out of order. It found
+23 such faults in the curriculum as it stood, none after, and it catches each
+of the five breakages made on purpose to test it. Git history follows the
+renamed folders; a link to an old path pasted somewhere else does not, so the
+table below is the bridge.
+
+| Before | After |
+|---|---|
+| `c-03-libft-norme` | `c-02-libft-norme` |
+| `c-04-printf` | `c-03-printf` |
+| `c-05-gnl` | `c-04-gnl` |
+| `c-06-pushswap` | `c-05-pushswap` |
+| `c-02-moteur` | `c-06-moteur` |
+| `inf-15-llama` | `inf-03-llama` |
+| `inf-03-cache-kv` | `inf-04-cache-kv` |
+| `inf-04-quantifier` | `inf-05-quantifier` |
+| `inf-05-harnais` | `inf-06-harnais` |
+| `inf-06-saturation` | `inf-07-saturation` |
+| `inf-14-speculatif` | `inf-08-speculatif` |
+| `inf-07-pagedattention` | `inf-09-pagedattention` |
+| `inf-08-fragmentation` | `inf-10-fragmentation` |
+| `inf-09-compiler-vllm` | `inf-11-compiler-vllm` |
+| `inf-10-chemin-requete` | `inf-12-chemin-requete` |
+| `inf-11-reproduire-bug` | `inf-13-reproduire-bug` |
+| `inf-12-premiere-pr` | `inf-14-premiere-pr` |
+| `inf-13-choisir-issue` | `inf-15-choisir-issue` |
+| `t42-06-pacman` | `t42-03-pacman` |
+| `t42-08-inception` | `t42-04-inception` |
+| `t42-07-rag-machine` | `t42-06-rag-machine` |
+| `t42-03-codexion` | `t42-07-codexion` |
+| `t42-04-flyin` | `t42-08-flyin` |
+| `t42-10-agent-smith` | `t42-09-agent-smith` |
+| `t42-09-answer-protocol` | `t42-10-answer-protocol` |
+| `cu-11-assembleur` | `cu-10-assembleur` |
+| `cu-10-battre` | `l5-01-battre` |
+| `tri-04-classement` | `gpu-01-classement` |
+| `tri-05-note` | `tri-04-note` |
+| `maths-01-algebre` | `mth-01-algebre` |
+| `mth-03-probas` | `mth-02-probas` |
+| `mth-04-statistiques` | `mth-03-statistiques` |
+| `mth-02-derivees` | `mth-04-derivees` |
+| `l5-01-contribution` | `l4-01-contribution` |

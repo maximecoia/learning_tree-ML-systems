@@ -26,16 +26,16 @@ dist/
 #
 # Only modules whose curriculum `source` names a 42 subject are listed. The
 # additions built on top of them stay publishable, because they are the point
-# of the showcase: c-02-moteur, c-07, c-08, c-10, c-11, c-12, cpp-05-vector-asm,
+# of the showcase: c-06-moteur, c-07, c-08, c-10, c-11, c-12, cpp-05-vector-asm,
 # cpp-11-moderne, and everything under cu-, tri-, inf-, par-, mes-, mth-, py-,
 # l1- to l5-.
 #
 # To publish one of these after all, add its own `!` line below.
 c-01-libft/
-c-03-libft-norme/
-c-04-printf/
-c-05-gnl/
-c-06-pushswap/
+c-02-libft-norme/
+c-03-printf/
+c-04-gnl/
+c-05-pushswap/
 c-09-philosophers/
 c-13-minishell/
 cpp-00-classes/
@@ -132,6 +132,6 @@ ms-00-prepa/rte-route-l1/*
 !ms-00-prepa/rte-route-l1/test_ch04.py
 !ms-00-prepa/rte-route-l1/test_ch05.py
 
-# 2026-09-28: an answer to inf-03-cache-kv ex00, written ahead of its phase.
+# 2026-09-28: an answer to inf-04-cache-kv ex00, written ahead of its phase.
 # ms-01 is not open, and the roadmap publishes a phase's work once it runs.
-ms-01-inference/inf-03-cache-kv/ex00/cache.py
+ms-01-inference/inf-04-cache-kv/ex00/cache.py

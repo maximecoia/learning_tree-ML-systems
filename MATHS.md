@@ -5,7 +5,7 @@
 **Linear algebra, probability and statistics, written in plain Python and held
 against something that can contradict them.**
 
-`maths-01-algebre` → `mth-03-probas` → `mth-04-statistiques`
+`mth-01-algebre` → `mth-02-probas` → `mth-03-statistiques`
 
 20 of 20 exercises complete
 
@@ -24,17 +24,17 @@ cases whose answer is known.
 
 | Module | Question |
 |---|---|
-| [`maths-01-algebre`](ms-00-prepa/maths-01-algebre) | Can a matrix be read as the transformation it is, and its determinant as the area it scales? |
-| [`mth-03-probas`](ms-00-prepa/mth-03-probas) | Does a simulation land where the closed form says, inside a bound that tightens with the draws? |
-| [`mth-04-statistiques`](ms-00-prepa/mth-04-statistiques) | Do two series really differ, and how often is that answer wrong? |
+| [`mth-01-algebre`](ms-00-prepa/mth-01-algebre) | Can a matrix be read as the transformation it is, and its determinant as the area it scales? |
+| [`mth-02-probas`](ms-00-prepa/mth-02-probas) | Does a simulation land where the closed form says, inside a bound that tightens with the draws? |
+| [`mth-03-statistiques`](ms-00-prepa/mth-03-statistiques) | Do two series really differ, and how often is that answer wrong? |
 
 Each step folder carries the whole module up to that step, so any folder runs
 on its own. Three results, one per module, from the repository root, each in its own subshell:
 
 ```bash
-(cd ms-00-prepa/maths-01-algebre/ex02 && python3 -c "from produit import Matrice, Vecteur; E, R = Matrice([[2, 0], [0, 1]]), Matrice([[0, -1], [1, 0]]); print(E.puis(R) @ Vecteur([1, 0]), R.puis(E) @ Vecteur([1, 0]))")
-(cd ms-00-prepa/mth-03-probas/ex05 && python3 -c "from distribution import variance, variance_naive; L = {1.23456789e9: 0.5, 1.23456790e9: 0.5}; print(variance(L), variance_naive(L))")
-(cd ms-00-prepa/mth-04-statistiques/ex05 && python3 -c "from rapport import mesures_pour_detecter; print(mesures_pour_detecter(0.10, (1 / 12) ** 0.5, 1.96))")
+(cd ms-00-prepa/mth-01-algebre/ex02 && python3 -c "from produit import Matrice, Vecteur; E, R = Matrice([[2, 0], [0, 1]]), Matrice([[0, -1], [1, 0]]); print(E.puis(R) @ Vecteur([1, 0]), R.puis(E) @ Vecteur([1, 0]))")
+(cd ms-00-prepa/mth-02-probas/ex05 && python3 -c "from distribution import variance, variance_naive; L = {1.23456789e9: 0.5, 1.23456790e9: 0.5}; print(variance(L), variance_naive(L))")
+(cd ms-00-prepa/mth-03-statistiques/ex05 && python3 -c "from rapport import mesures_pour_detecter; print(mesures_pour_detecter(0.10, (1 / 12) ** 0.5, 1.96))")
 ```
 
 They print `Vecteur([0, 2]) Vecteur([0, 1])`, then `25.0 -256.0`, then `65`.
@@ -42,7 +42,7 @@ The sections below say what each of those means.
 
 ## Progress
 
-### maths-01-algebre, complete, 8 of 8
+### mth-01-algebre, complete, 8 of 8
 
 Vectors as classes with their operators, matrices read by their columns, the
 product as a composition, the determinant as a signed area, the inverse and
@@ -50,14 +50,14 @@ the rank, eigenvalues from the trace and the determinant, norm and projection,
 and a 2D engine that chains transformations over a polygon and checks that its
 area follows the determinant.
 
-### mth-03-probas, complete, 6 of 6
+### mth-02-probas, complete, 6 of 6
 
 A law and its variance, a congruential generator and the counters hidden in its
 low bits, Bernoulli, binomial and geometric laws against their closed forms,
 Bayes on a screening test, the square-root cost of precision, and a simulator
 that confronts each law with its formula under a bound that tightens.
 
-### mth-04-statistiques, complete, 6 of 6
+### mth-03-statistiques, complete, 6 of 6
 
 The bias of the variance divided by n, the coverage of a confidence interval
 counted rather than assumed, the bootstrap where no formula exists, the
