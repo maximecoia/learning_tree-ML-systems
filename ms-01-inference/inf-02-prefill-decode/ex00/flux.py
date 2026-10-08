@@ -1,106 +1,106 @@
-# flux.py — ex00 d'inf-02-prefill-decode
-# Lire la réponse en flux (SSE) et séparer les deux régimes :
-# le TTFT (prefill) et les écarts entre jetons (decode).
-# Autorisé : client, json, statistics, time, urllib, float, max, min, range, len
-import json                      # dumps le corps, loads chaque évènement
-import time                      # monotonic : la seule horloge fiable
-import statistics                # la médiane des écarts (itl)
-import urllib.request            # Request et urlopen
-import urllib.error              # HTTPError et URLError
+# flux.py, ex00 of inf-02-prefill-decode: read the streamed answer (SSE)
+# and separate the two regimes: the TTFT (prefill) and the gaps between
+# tokens (decode).
+# Allowed: client, json, statistics, time, urllib, float, max, min, range, len
+import json                      # dumps the body, loads each event
+import time                      # monotonic: the only reliable clock
+import statistics                # the median of the gaps (itl)
+import urllib.request            # Request and urlopen
+import urllib.error              # HTTPError and URLError
 from client import ErreurModele, REESSAYABLES
-# ErreurModele : l'unique porte de sortie des échecs.
-# REESSAYABLES : la tuple des codes rattrapables de client.py
-# (le sujet l'appelle RETENTABLES ; même tuple, seul l'import change).
+# ErreurModele: the single exit for every failure.
+# REESSAYABLES: the tuple of retryable codes from client.py
+# (the statement calls it RETENTABLES; same tuple, only the import differs).
 
 def generer(base_url, modele, invite, max_jetons=None, essais=3):
-    # Même contrat qu'interroger, mais la réponse arrive en fragments.
-    if essais < 1:                                   # zéro essai = zéro appel
+    # Same contract as interroger, but the answer arrives in fragments.
+    if essais < 1:                                   # zero attempts = zero calls
         raise ErreurModele("aucun essai autorisé")
-    url = base_url + "/v1/chat/completions"          # le chemin du dialecte
+    url = base_url + "/v1/chat/completions"          # the dialect's path
     corps = {"model": modele,
              "messages": [{"role": "user", "content": invite}],
-             "stream": True}                         # LE drapeau qui ouvre le flux
-    if max_jetons is not None:                       # seulement si demandé :
-        corps["max_tokens"] = max_jetons             # clé absente ≠ clé à None
-    donnees = json.dumps(corps).encode("utf-8")      # dict -> texte JSON -> octets
+             "stream": True}                         # THE flag that opens the stream
+    if max_jetons is not None:                       # only if requested:
+        corps["max_tokens"] = max_jetons             # absent key ≠ key set to None
+    donnees = json.dumps(corps).encode("utf-8")      # dict -> JSON text -> bytes
 
     for essai in range(1, essais + 1):               # essai = 1, 2, ..., essais
-        requete = urllib.request.Request(            # reconstruite à chaque essai
+        requete = urllib.request.Request(            # rebuilt on every attempt
             url,
             data=donnees,
             headers={"Content-Type": "application/json"},
             method="POST")
-        debut = time.monotonic()                     # départ de CET essai
+        debut = time.monotonic()                     # start of THIS attempt
         try:
             reponse = urllib.request.urlopen(requete)
-        except urllib.error.HTTPError as e:          # le serveur a répondu, en erreur
-            if e.code not in REESSAYABLES:           # 400, 404... : jamais réessayé
+        except urllib.error.HTTPError as e:          # the server answered, with an error
+            if e.code not in REESSAYABLES:           # 400, 404...: never retried
                 raise ErreurModele(f"code {e.code} non rattrapable") from e
-            if essai == essais:                      # dernier essai atteint :
-                raise ErreurModele("essais épuisés") from e   # on ne dort pas après
-            attente = e.headers.get("Retry-After")   # le serveur sait mieux
+            if essai == essais:                      # last attempt reached:
+                raise ErreurModele("essais épuisés") from e   # no sleep after it
+            attente = e.headers.get("Retry-After")   # the server knows better
             if attente is not None:
                 delai = float(attente)
             else:
-                delai = 0.1 * 2 ** (essai - 1)       # 0,1 s ; 0,2 s ; 0,4 s...
+                delai = 0.1 * 2 ** (essai - 1)       # 0.1 s; 0.2 s; 0.4 s...
             time.sleep(delai)
-            continue                                 # on repart en haut de boucle
-        except urllib.error.URLError as e:           # APRÈS HTTPError (son enfant)
+            continue                                 # back to the top of the loop
+        except urllib.error.URLError as e:           # AFTER HTTPError (its child)
             raise ErreurModele("moteur injoignable") from e
 
-        # ---- le flux : ligne à ligne, à mesure qu'il arrive ----
-        with reponse:                                # ferme la connexion en sortant
-            texte = ""                               # les fragments recollés
-            jetons_sortie = 0                        # compté sur les fragments PORTANT du texte
-            inter_jetons = []                        # jetons_sortie - 1 valeurs
-            ttft = None                              # figé une seule fois
-            precedent = None                         # instant du fragment texte précédent
-            jetons_entree = 0                        # lu dans usage, une fois, à la fin
-            complet = False                          # ne devient vrai qu'à [DONE]
-            for ligne in reponse:                    # chaque ligne dès qu'elle arrive
-                morceau = ligne.decode("utf-8").strip()   # octets -> texte
-                if not morceau.startswith("data:"):  # ligne vide : séparateur SSE
+        # ---- the stream: line by line, as it arrives ----
+        with reponse:                                # closes the connection on exit
+            texte = ""                               # the fragments stitched together
+            jetons_sortie = 0                        # counted on fragments CARRYING text
+            inter_jetons = []                        # jetons_sortie - 1 values
+            ttft = None                              # set once only
+            precedent = None                         # time of the previous text fragment
+            jetons_entree = 0                        # read from usage, once, at the end
+            complet = False                          # becomes true only at [DONE]
+            for ligne in reponse:                    # each line as soon as it arrives
+                morceau = ligne.decode("utf-8").strip()   # bytes -> text
+                if not morceau.startswith("data:"):  # empty line: SSE separator
                     continue
-                payload = morceau[len("data:"):].strip()  # retire le préfixe "data:"
-                if payload == "[DONE]":              # sentinelle : ce n'est PAS du JSON
-                    complet = True                   # le flux est allé au bout
+                payload = morceau[len("data:"):].strip()  # strips the "data:" prefix
+                if payload == "[DONE]":              # sentinel: this is NOT JSON
+                    complet = True                   # the stream went all the way
                     break
-                evenement = json.loads(payload)      # un évènement, pas toute la réponse
-                usage = evenement.get("usage")       # hors delta : porté par le dernier
+                evenement = json.loads(payload)      # one event, not the whole answer
+                usage = evenement.get("usage")       # outside delta: carried by the last one
                 if usage is not None:
                     jetons_entree = usage.get("prompt_tokens", jetons_entree)
                 choices = evenement.get("choices") or []
                 if not choices:
                     continue
                 delta = choices[0].get("delta") or {}
-                fragment = delta.get("content")      # None au rôle comme à l'arrêt
-                if not fragment:                     # pas de texte : pas un jeton
+                fragment = delta.get("content")      # None on the role and on the stop
+                if not fragment:                     # no text: not a token
                     continue
-                instant = time.monotonic()           # ce fragment arrive MAINTENANT
-                if jetons_sortie == 0:               # premier fragment PORTEUR de texte :
+                instant = time.monotonic()           # this fragment arrives NOW
+                if jetons_sortie == 0:               # first fragment CARRYING text:
                     ttft = instant - debut           #   TTFT = prefill + transport
-                else:                                # les suivants :
-                    inter_jetons.append(instant - precedent)  # l'écart = decode
+                else:                                # the following ones:
+                    inter_jetons.append(instant - precedent)  # the gap = decode
                 precedent = instant
                 texte += fragment
                 jetons_sortie += 1
 
-        # ---- sorti de boucle : le flux est-il allé au bout ? ----
-        if not complet:                              # pas de [DONE] : flux tronqué
+        # ---- out of the loop: did the stream go all the way? ----
+        if not complet:                              # no [DONE]: truncated stream
             if jetons_sortie == 0 and essai < essais:
-                continue                             # panne AVANT le 1er jeton : réessayable
+                continue                             # failure BEFORE the 1st token: retryable
             raise ErreurModele("flux tronqué sans [DONE]")
-            # panne APRÈS le 1er jeton : jamais réessayée (doublerait le texte)
-        break                                        # flux complet : on sort des essais
+            # failure AFTER the 1st token: never retried (it would double the text)
+        break                                        # complete stream: leave the attempts
 
-    # ---- le rendu : les deux régimes, séparés ----
+    # ---- the result: the two regimes, separated ----
     itl = statistics.median(inter_jetons) if inter_jetons else None
-    # médiane des écarts ; None à un seul jeton, car aucun écart n'existe
+    # median of the gaps; None with a single token, since no gap exists
     return {"texte": texte,
-            "jetons_entree": jetons_entree,          # annoncé par le serveur
-            "jetons_sortie": jetons_sortie,          # compté sur les fragments
-            "ttft": ttft,                            # premier fragment porteur de texte
-            "inter_jetons": inter_jetons,            # jetons_sortie - 1 valeurs
-            "itl": itl,                              # la cadence du decode
-            "secondes": time.monotonic() - debut,    # départ -> fin de lecture
-            "essais": essai}                         # le numéro de l'essai gagnant
+            "jetons_entree": jetons_entree,          # announced by the server
+            "jetons_sortie": jetons_sortie,          # counted on the fragments
+            "ttft": ttft,                            # first fragment carrying text
+            "inter_jetons": inter_jetons,            # jetons_sortie - 1 values
+            "itl": itl,                              # the decode's pace
+            "secondes": time.monotonic() - debut,    # start -> end of reading
+            "essais": essai}                         # number of the winning attempt
