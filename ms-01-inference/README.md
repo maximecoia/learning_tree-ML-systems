@@ -23,8 +23,8 @@ One table, from what is done to what waits. Every state is read from a grader, n
 | ✓ | `mes-02-grandeurs` | ✓ 3 of 3 | its grader, through `./exo` | [mes-02-grandeurs](mes-02-grandeurs) |
 | ✓ | `mes-03-profiler` | ✓ 6 of 6 | its grader, through `./exo` | [mes-03-profiler](mes-03-profiler) |
 | ✓ | `inf-01-servir` | ✓ 3 of 3 | its grader, through `./exo` | [inf-01-servir](inf-01-servir) |
-| → | `inf-02-prefill-decode` | 1 of 3 · 2 not handed in | its grader, through `./exo` | [inf-02-prefill-decode](inf-02-prefill-decode) |
-|  | `inf-03-llama` | 0 of 3 · 3 not handed in | its grader, through `./exo` | lands here |
+| ✓ | `inf-02-prefill-decode` | ✓ 3 of 3 | its grader, through `./exo` | [inf-02-prefill-decode](inf-02-prefill-decode) |
+| → | `inf-03-llama` | 0 of 3 · 3 not handed in | its grader, through `./exo` | lands here |
 |  | `inf-04-cache-kv` | 0 of 3 · 1 handed in, red · 2 not handed in | its grader, through `./exo` | lands here |
 |  | `inf-05-quantifier` | 0 of 4 · 4 not handed in | its grader, through `./exo` | lands here |
 |  | `inf-06-harnais` | 0 of 4 · 4 not handed in | its grader, through `./exo` | lands here |
