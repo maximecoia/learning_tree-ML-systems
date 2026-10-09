@@ -25,7 +25,7 @@ One table, from what is done to what waits. Every state is read from a grader, n
 | ✓ | `inf-01-servir` | ✓ 3 of 3 | its grader, through `./exo` | [inf-01-servir](inf-01-servir) |
 | ✓ | `inf-02-prefill-decode` | ✓ 3 of 3 | its grader, through `./exo` | [inf-02-prefill-decode](inf-02-prefill-decode) |
 | ✓ | `inf-03-llama` | ✓ 3 of 3 | its grader, through `./exo` | [inf-03-llama](inf-03-llama) |
-| → | `inf-04-cache-kv` | 0 of 3 · 1 handed in, red · 2 not handed in | its grader, through `./exo` | lands here |
+| → | `inf-04-cache-kv` | 0 of 3 · 3 not handed in | its grader, through `./exo` | lands here |
 |  | `inf-05-quantifier` | 0 of 4 · 4 not handed in | its grader, through `./exo` | lands here |
 |  | `inf-06-harnais` | 0 of 4 · 4 not handed in | its grader, through `./exo` | lands here |
 |  | `inf-07-saturation` | 0 of 3 · 3 not handed in | its grader, through `./exo` | lands here |
