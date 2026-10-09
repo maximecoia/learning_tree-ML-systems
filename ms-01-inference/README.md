@@ -24,8 +24,8 @@ One table, from what is done to what waits. Every state is read from a grader, n
 | ✓ | `mes-03-profiler` | ✓ 6 of 6 | its grader, through `./exo` | [mes-03-profiler](mes-03-profiler) |
 | ✓ | `inf-01-servir` | ✓ 3 of 3 | its grader, through `./exo` | [inf-01-servir](inf-01-servir) |
 | ✓ | `inf-02-prefill-decode` | ✓ 3 of 3 | its grader, through `./exo` | [inf-02-prefill-decode](inf-02-prefill-decode) |
-| → | `inf-03-llama` | 0 of 3 · 3 not handed in | its grader, through `./exo` | lands here |
-|  | `inf-04-cache-kv` | 0 of 3 · 1 handed in, red · 2 not handed in | its grader, through `./exo` | lands here |
+| ✓ | `inf-03-llama` | ✓ 3 of 3 | its grader, through `./exo` | [inf-03-llama](inf-03-llama) |
+| → | `inf-04-cache-kv` | 0 of 3 · 1 handed in, red · 2 not handed in | its grader, through `./exo` | lands here |
 |  | `inf-05-quantifier` | 0 of 4 · 4 not handed in | its grader, through `./exo` | lands here |
 |  | `inf-06-harnais` | 0 of 4 · 4 not handed in | its grader, through `./exo` | lands here |
 |  | `inf-07-saturation` | 0 of 3 · 3 not handed in | its grader, through `./exo` | lands here |
@@ -47,7 +47,7 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `mes-03-profiler` | added | Locate the function that costs in a slow program, and prove that fixing it helped | [mes-03-profiler](mes-03-profiler) · 6 exercises |
 | `inf-01-servir` | added | Query an inference engine through its API, record its latency under a written protocol, and compare two engines without concluding beyond what the measurement allows | [inf-01-servir](inf-01-servir) · 3 exercises |
 | `inf-02-prefill-decode` | added | Separate a generation's two regimes by measurement, derive a cost model from it, and use that to predict the latency of a request never measured | [inf-02-prefill-decode](inf-02-prefill-decode) · 3 exercises |
-| `inf-03-llama` | added | Write the three pieces that separate a Llama from the GPT of L1, RMSNorm, SwiGLU and RoPE, pass them through CS336's public suite, and then read the code of a served model without looking for a GPT-2 in it | not started · 3 exercises |
+| `inf-03-llama` | added | Write the three pieces that separate a Llama from the GPT of L1, RMSNorm, SwiGLU and RoPE, pass them through CS336's public suite, and then read the code of a served model without looking for a GPT-2 in it | [inf-03-llama](inf-03-llama) · 3 exercises |
 | `inf-04-cache-kv` | added | Quantify what the key-value cache saves in time and costs in memory, recognise by measurement an engine deprived of it, say from what context length it is the cache, not the weights, that caps concurrency, and name the attention variants by what each does to the shape of the cache | not started · 3 exercises |
 | `inf-05-quantifier` | added | Measure a model's quality by its perplexity on a fixed corpus, measure what reduced precision gains in decoding while gaining nothing in prefill, settle between the two against a budget set in advance, and be able to say what a perplexity on short text does not see | not started · 4 exercises |
 | `inf-06-harnais` | added | Hold N requests in flight against an inference server, record throughput, percentiles and refusal rate without any of the three traps skewing the figure, and produce a CSV the graph regenerates from | not started · 4 exercises |
