@@ -39,7 +39,7 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 | `inf-13-reproduire-bug` | [vllm-project/vllm/.github/ISSUE_TEMPLATE/400-bug-report.yml](https://github.com/vllm-project/vllm/blob/main/.github/ISSUE_TEMPLATE/400-bug-report.yml) · docs<br>[vLLM, CI Failures](https://docs.vllm.ai/en/latest/contributing/ci/failures/) · docs<br>[vLLM, How to debug the vLLM-torch.compile integration](https://docs.vllm.ai/en/latest/design/debug_vllm_compile/) · docs<br>[vLLM, Python Multiprocessing](https://docs.vllm.ai/en/latest/design/multiprocessing/) · docs<br>[stas00/ml-engineering/debug/pytorch.md#reducing-the-number-of-layers-for-large-models](https://github.com/stas00/ml-engineering/blob/master/debug/pytorch.md#reducing-the-number-of-layers-for-large-models) · book |
 | `inf-14-premiere-pr` | [vLLM, Contributing to vLLM, Pull Requests & Code Reviews](https://docs.vllm.ai/en/latest/contributing/#pull-requests-code-reviews) · docs |
 | `inf-15-choisir-issue` | [vLLM, Labels](https://docs.vllm.ai/en/latest/contributing/labels/) · docs<br>[vLLM, Contributing to vLLM, Job Board](https://docs.vllm.ai/en/latest/contributing/#job-board) · docs |
-| `l3-01-contribution` | [vllm-project/vllm/.github/PULL_REQUEST_TEMPLATE.md](https://github.com/vllm-project/vllm/blob/main/.github/PULL_REQUEST_TEMPLATE.md) · docs |
+| `l3-01-contribution` | [vllm-project/vllm/.github/PULL_REQUEST_TEMPLATE.md](https://github.com/vllm-project/vllm/blob/main/.github/PULL_REQUEST_TEMPLATE.md) · docs<br>[llm-d/llm-d](https://github.com/llm-d/llm-d) · repo |
 
 ---
 
