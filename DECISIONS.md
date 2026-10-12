@@ -13,6 +13,7 @@ opinion, and this repository tries not to publish those.
 6. [What the agents changed, and what they did not](#what-the-agents-changed-and-what-they-did-not)
 7. [How a check is calibrated](#how-a-check-is-calibrated)
 8. [Why a number follows the order](#why-a-number-follows-the-order)
+9. [The school first, the rest grafted onto it](#the-school-first-the-rest-grafted-onto-it)
 
 ## Borrowed graders, not written lessons
 
@@ -113,6 +114,9 @@ are then measured on a server by someone who has built both. Nothing depended
 on it, so no other sub-module moved. What it costs is time in a phase that
 already holds the school's graded C: seven exercises, budgeted at about thirty
 hours, and not measured.
+
+Since 2026-10-12 it waits for the end of the common core, first in the order in
+which deferred work comes back; see [below](#the-school-first-the-rest-grafted-onto-it).
 
 ## The one date I do not set
 
@@ -276,3 +280,68 @@ table below is the bridge.
 | `mth-04-statistiques` | `mth-03-statistiques` |
 | `mth-02-derivees` | `mth-04-derivees` |
 | `l5-01-contribution` | `l4-01-contribution` |
+
+## The school first, the rest grafted onto it
+
+On 2026-10-12 the 27 subjects of the 2026 common core were read for the first
+time, and the roadmap had been written without them. Four projects it listed in
+C are in Python. One it called a quick formality, Agent Smith, is a coding agent
+held to SWE-bench Verified, about a hundred hours alone. The core as a whole
+reads at about 1,000 hours, against the 750 the plan assumed. And three of the
+school's projects turned out to sit inside this field: constrained decoding on
+the logits of a small model, retrieval over the vLLM repository, and a
+philosophers problem with FIFO and EDF schedulers.
+
+The added layer, meanwhile, had been planned on twenty hours a week outside
+school, and the hours actually left are about five and a half for now. At that
+rate the plan's own rule, that a phase counts as done when both layers are,
+could not be met by any phase.
+
+So the rule is now the other way round. **During the common core, an added
+module enters only when it is cheaper done together with a school project, or
+when its delay could not be caught up later.** The first case is a graft: the
+measurement a school subject already asks for in its README, done properly, or
+an extension built on a validated project. The second case is two things only:
+closing L2, and the contribution, whose review takes weeks whatever the hours.
+Everything else, the C engine, C++, CS149, the execution profile, Triton, CUDA
+and the kernel, waits for the end of the core, in a fixed order. The one
+measurement behind the grafts is a year of someone else's practice journal: on
+days inside a competition with an external deadline, a quarter carried a
+measured result; on the other days, one in twenty.
+
+The other change is the way in. A count on 2026-10-07 found 209 European
+openings in GPU infrastructure and SRE and 115 in ML platform work, against 31
+for the job this plan aims at, and the first two filter far less on degrees.
+The original plan called platform work a dead end; that line is withdrawn. The
+inference server of L2 is now ported to Kubernetes after the school's Inception
+project, with its metrics in Prometheus and its curve replayed under load. The
+first step after the core is an internship at a serving or infrastructure
+employer, then two years of work-study toward 42's level 7 title.
+
+The contribution now opens with the school's retrieval project, whose index of
+the vLLM repository is the map a first contributor needs, and its target widens
+to the whole vLLM organisation, Kubernetes deployment included, or llm-d. The
+execution profile moved after the contribution, so the rule above renamed them:
+the contribution is L3, the profile L4, the kernel still L5.
+
+| Before | After |
+|---|---|
+| `ms-02-cpp-concurrence` | `ms-02-infrastructure` |
+| `ms-03-parallelisme` | `ms-03-contribution` |
+| `ms-04-cuda` | `ms-04-agents-reseau` |
+| `ms-06-specialisation` | `ms-06-apres-tronc` |
+| `ms-07-stage-2` | `ms-07-alternance` |
+| `l4-01-contribution` | `l3-01-contribution` |
+| `l3-01-profil` | `l4-01-profil` |
+| `c-11-simd` | `c-09-simd` |
+| `c-12-ordonnancement` | `c-10-ordonnancement` |
+| `c-13-minishell` | `c-11-minishell` |
+| `c-09-philosophers`, off the path | `c-12-philosophers` |
+| `c-10-famine`, off the path | `c-13-famine` |
+| `pro-02-stage-2` | `pro-02-alternance` |
+
+What could be wrong: the graft rule rests on one person's journal; the phase
+windows still assume 750 hours of school; and the contribution has now changed
+its number twice in four days, so a note written before 2026-10-12 calls it L4,
+and one written before 2026-10-08 calls it L5.
+
