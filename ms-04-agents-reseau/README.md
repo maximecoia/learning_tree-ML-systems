@@ -14,7 +14,7 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 |---|---|---|---|
 | `t42-08-flyin` | imposed | Validate `fly-in` at the perimeter of its subject, the toll's mark being the only objective | 42 subject, not published |
 | `t42-09-agent-smith` | imposed | Pass `agent smith` within the scope of its subject, and make its report carry the cost per million tokens of each model compared | 42 subject, not published |
-| `t42-10-answer-protocol` | imposed | Pass `answer protocol` as a group: a TCP server true to the protocol and two clients, in the language chosen together | 42 subject, not published |
+| `t42-10-answer-protocol` | imposed | Pass `answer protocol` as a group, in Go if the group agrees, a TCP server faithful to the protocol and two clients | 42 subject, not published |
 
 ---
 
