@@ -2,7 +2,7 @@
 
 # Phase 3 — Python, administration, the way in
 
-`ms-02-infrastructure` · weeks 9–20 · 8 sub-modules, 4 written · 26 exercises
+`ms-02-infrastructure` · weeks 9–20 · 8 sub-modules, 5 written · 31 exercises
 
 **What it buys.** milestones 4 and 5, then the Inception stack ported to Kubernetes, serving the L2 server with its metrics in Prometheus, and Go
 
@@ -18,7 +18,7 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `t42-02-amazeing` | imposed | Deliver A-Maze-ing within its subject's scope: a configuration read and its errors explained, a perfect maze or a playable board with coherent walls, the shortest path written, a seed that reproduces, and the generator shipped as a reusable package | 42 subject, not published · 4 exercises |
 | `t42-03-pacman` | imposed | Validate `pacman` at the perimeter of its subject, adding nothing | 42 subject, not published |
 | `t42-04-inception` | imposed | Validate `inception` at the perimeter of its subject, adding nothing | 42 subject, not published |
-| `go-01-bases` | added | Write tested Go the way Kubernetes projects do: table tests, interfaces and test doubles, cancellable concurrency without leaks, a line-based TCP server and an idempotent reconcile loop | planned, not written yet |
+| `go-01-bases` | added | Write tested Go the way Kubernetes projects do: table tests, interfaces and test doubles, cancellable concurrency without leaks, a line-based TCP server and an idempotent reconcile loop | not started · 5 exercises |
 | `ops-01-exploitation` | added | Port the Inception stack to a local Kubernetes, serve L2's inference server on it with its metrics in Prometheus, replay its curve under load, route inference through the Gateway API Inference Extension, and rebuild it all with Helm, Terraform and a CI | not started · 6 exercises |
 
 ## Reading
