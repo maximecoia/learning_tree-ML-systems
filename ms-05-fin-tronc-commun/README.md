@@ -14,6 +14,14 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 |---|---|---|---|
 | `t42-11-transcendence` | imposed | Cross `transcendance` fast and cleanly, taking the serving and monitoring part, under a ceiling of 120 hours | 42 subject, not published |
 
+## Reading
+
+What each sub-module points at, straight from the curriculum. Links only: why a given one is there is written in French, next to the curriculum itself, and translating it would put the same sentence in two places waiting to disagree. A sub-module absent from this table has nothing declared yet, and a resource that lives in a repository you cannot open is left out rather than linked to a 404.
+
+| Sub-module | Points at |
+|---|---|
+| `t42-11-transcendence` | [OpenTelemetry, Python, Getting Started](https://opentelemetry.io/docs/languages/python/getting-started/) · docs |
+
 ---
 
 ← [ms-04-agents-reseau](../ms-04-agents-reseau) · [the roadmap](../README.md) · [ms-06-apres-tronc](../ms-06-apres-tronc) →
