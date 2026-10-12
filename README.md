@@ -5,7 +5,7 @@
 **From a blank file to a contribution in an inference engine, and the public
 trace of the work as it happens.**
 
-`prep` → `inference` → `C++ & concurrency` → `parallelism & contribution` → `CUDA` → `common core` → `specialisation`
+`prep` → `inference` → `infrastructure` → `contribution` → `agents & network` → `common core` → `after the core` → `work-study`
 
 Phase 2 of 8 · October 2026
 
@@ -22,14 +22,17 @@ server, a scheduler, a cache or a kernel decides whether a model is usable at
 all.
 
 This repository is the public trace of a roadmap toward that field, eight
-phases and 94 sub-modules, from a prep before the 42 school to a second
-internship. It aims at three things a reader can check from outside:
+phases and 94 sub-modules, from a prep before the 42 school to a work-study
+contract. It aims at three things a reader can check from outside:
 
 - the saturation curve of an unknown inference server, produced in half a day;
-- a pull request in vLLM or SGLang, on the scheduler or the cache, whose review
-  a maintainer takes up;
-- a CUDA kernel that beats the reference on a bounded case, with the harness
-  that proves the gain survives a replay.
+- that same server deployed on Kubernetes, its metrics in Prometheus, and its
+  curve replayed under load;
+- a pull request in the vLLM organisation or in llm-d, whose review a
+  maintainer takes up.
+
+The CUDA kernel that beats a reference comes after the common core, once a GPU
+is in reach.
 
 What lands here is the work in the form that survives being read by someone
 else: code that runs, checks that can fail, and a write-up of what each
@@ -37,10 +40,13 @@ decision cost.
 
 ## How it is built
 
-- **Two layers run in parallel.** The imposed layer is the 42 common core,
-  which buys the title and the time. The added layer is what produces anything
-  rare, and it is what this repository holds. A phase counts as done when both
-  are.
+- **The school comes first, and the rest is grafted onto it.** The imposed
+  layer is the 42 common core, which buys the title and the time. The added
+  layer is what produces anything rare, and it is what this repository holds.
+  During the common core, an added module enters only when it is cheaper done
+  together with a school project, or when its delay could not be caught up
+  later; everything else waits for the end of the core. A phase counts as done
+  on its school milestones and their grafts.
 - **A phase ends on a binary test, named in advance.** Not on a feeling, and
   not on a date: phase 1 closed on 2 October 2026, when `gpt.py`, written
   from a blank file, passed the seven gates of
@@ -64,13 +70,13 @@ roadmap, are in [`DECISIONS.md`](DECISIONS.md).
 | Phase | Window | What it buys | Sub-modules |
 |---|---|---|---|
 | [`ms-00-prepa`](ms-00-prepa) — the prep, C and Python | Sept–Oct 2026 | enter the school with the libft done and a GPT trained by hand | 9 |
-| **[`ms-01-inference`](ms-01-inference)** — graded C, measured inference | weeks 1–8 | the saturation curve of an unknown inference server produced in half a day, then an inference engine written in C and placed on a roofline | 16 |
-| [`ms-02-cpp-concurrence`](ms-02-cpp-concurrence) — C++ and concurrency | weeks 9–20 | concurrent code whose freedom from starvation is shown by measurement, and an unknown execution timeline read in ten minutes | 21 |
-| [`ms-03-parallelisme`](ms-03-parallelisme) — parallelism, first kernel, entering vLLM | weeks 21–34 | say before writing a kernel whether it will be compute- or memory-bound, and a PR in vLLM or SGLang on the scheduler or the cache, review taken up by a maintainer | 20 |
-| [`ms-04-cuda`](ms-04-cuda) — CUDA properly | weeks 35–46 | a kernel that beats the reference on a bounded case, gain reproducible with its standard deviation and where it loses too, then the harness that proves it, run against an agent and shown rejecting a bad submission | 17 |
-| [`ms-05-fin-tronc-commun`](ms-05-fin-tronc-commun) — the end of the common core | weeks 47–57 | the last imposed project, crossed fast and with nothing added for pleasure | 1 |
-| [`ms-06-specialisation`](ms-06-specialisation) — specialisation, first internship | 2028 onward | numerical precision, multi-GPU, operations and evaluation, then a page of deliverables that reads without explanation | 9 |
-| [`ms-07-stage-2`](ms-07-stage-2) — second internship | after the first | the European arm of an American company in the field | 1 |
+| **[`ms-01-inference`](ms-01-inference)** — graded C, measured inference | weeks 1–8 | the graded C of milestones 1 to 3, and the saturation curve of an unknown inference server produced in half a day | 15 |
+| [`ms-02-infrastructure`](ms-02-infrastructure) — Python, administration, the way in | weeks 9–20 | milestones 4 and 5, then the Inception stack ported to Kubernetes, serving the L2 server with its metrics in Prometheus | 7 |
+| [`ms-03-contribution`](ms-03-contribution) — the school's AI projects, entering vLLM | weeks 21–34 | milestone 6, starvation measured in Codexion under FIFO and EDF, and a first pull request in the vLLM organisation or in llm-d | 12 |
+| [`ms-04-agents-reseau`](ms-04-agents-reseau) — agents, network, routing | weeks 35–46 | milestone 7, with the cost per million tokens of every model in Agent Smith's report | 3 |
+| [`ms-05-fin-tronc-commun`](ms-05-fin-tronc-commun) — the end of the common core | weeks 47–57 | the last imposed project, crossed fast, taking its serving and monitoring part | 1 |
+| [`ms-06-apres-tronc`](ms-06-apres-tronc) — first internship, then what waited | after the core | the first internship at a serving or infrastructure employer, then in order the C engine, C++, CS149, the profile, CUDA, Triton and the kernel | 44 |
+| [`ms-07-alternance`](ms-07-alternance) — work-study and the title | after the first internship | two years of work-study toward 42's level 7 title | 1 |
 
 The windows are the plan's own, not a commitment. A phase opens on its
 prerequisites rather than on a date, so the order is fixed and the pace is not.
@@ -80,14 +86,13 @@ sub-modules in the order of the work and the state of each.
 ## Where the work stands
 
 <!-- compteurs: written by carte_phases.py from the graders. Do not edit by hand. -->
-Phase 2, [`ms-01-inference`](ms-01-inference), is the one in progress: **26 of 58 graded exercises** pass. Its window is weeks 1–8; [`ms-00-prepa`](ms-00-prepa) closed on 2 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-01-inference/README.md#what-to-do-in-order) lists the work in order with the next step marked.
+Phase 2, [`ms-01-inference`](ms-01-inference), is the one in progress: **25 of 51 graded exercises** pass. Its window is weeks 1–8; [`ms-00-prepa`](ms-00-prepa) closed on 2 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-01-inference/README.md#what-to-do-in-order) lists the work in order with the next step marked.
 
 | Track | State | |
 |---|---|---|
 | The C of the common core, milestones 1 to 3 | 0 of 12 exercises, kept out of this repository | [below](#what-is-not-here) |
 | Measuring performance | ✓ 16 of 16 exercises, complete | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 | Measured inference | 9 of 23 exercises | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
-| The inference engine in C | 1 of 7 exercises | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 | L2, the throughput and latency curve | a person grades it, not a terminal | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 
 The denominator leaves out `l2-01-courbe` (a public write-up, graded by a reader, not by a terminal).
@@ -242,7 +247,7 @@ ms-00-prepa/               the prep — Sept–Oct 2026
     py-03-livrer/          the result, installable and on the PATH
     rte-01-puzzles/        Sasha Rush's twenty-one puzzles, solved and credited
     rte-route-l1/          the route's chapters, answers to Raschka's book
-ms-01-inference/ … ms-07-stage-2/
+ms-01-inference/ … ms-07-alternance/
     README.md              the same page, for a phase not yet opened
 ```
 <!-- /arbre -->
@@ -256,7 +261,7 @@ Sasha Rush, [Tensor Puzzles](https://github.com/srush/Tensor-Puzzles).
 Further on: Stanford CS336, *Language Modeling from Scratch*
 ([`stanford-cs336`](https://github.com/stanford-cs336)), whose first
 assignment grades three pieces of `ms-01-inference` and whose second is planned
-in `ms-06-specialisation`.
+in `ms-06-apres-tronc`.
 
 The road that was taken off, [described here](DECISIONS.md#zero-to-hero-and-why-it-left):
 the Zero to Hero lectures, notebooks and datasets are Andrej Karpathy's, MIT
