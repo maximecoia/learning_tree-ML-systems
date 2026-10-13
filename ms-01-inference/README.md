@@ -15,8 +15,8 @@ One table, from what is done to what waits. Every state is read from a grader, n
 
 | | Step | State | What grades it | Where |
 |---|---|---|---|---|
-|  | `c-02-libft-norme` | 0 of 3 · 3 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
-|  | `c-03-printf` | 0 of 2 · 2 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
+| ✓ | `c-02-libft-norme` | ✓ 3 of 3 | its grader, through `./exo` | 42 subject, not published |
+| ✓ | `c-03-printf` | ✓ 2 of 2 | its grader, through `./exo` | 42 subject, not published |
 |  | `c-04-gnl` | 0 of 2 · 2 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
 |  | `c-05-pushswap` | 0 of 5 · 5 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
 | ✓ | `mes-01-chronometre` | ✓ 7 of 7 | its grader, through `./exo` | [mes-01-chronometre](mes-01-chronometre) |
@@ -25,8 +25,8 @@ One table, from what is done to what waits. Every state is read from a grader, n
 | ✓ | `inf-01-servir` | ✓ 3 of 3 | its grader, through `./exo` | [inf-01-servir](inf-01-servir) |
 | ✓ | `inf-02-prefill-decode` | ✓ 3 of 3 | its grader, through `./exo` | [inf-02-prefill-decode](inf-02-prefill-decode) |
 | ✓ | `inf-03-llama` | ✓ 3 of 3 | its grader, through `./exo` | [inf-03-llama](inf-03-llama) |
-| → | `inf-04-cache-kv` | 0 of 3 · 3 not handed in | its grader, through `./exo` | lands here |
-|  | `inf-05-quantifier` | 0 of 4 · 4 not handed in | its grader, through `./exo` | lands here |
+| ✓ | `inf-04-cache-kv` | ✓ 3 of 3 | its grader, through `./exo` | lands here |
+| → | `inf-05-quantifier` | 0 of 4 · 4 not handed in | its grader, through `./exo` | lands here |
 |  | `inf-06-harnais` | 0 of 5 · 5 not handed in | its grader, through `./exo` | lands here |
 |  | `inf-07-saturation` | 0 of 3 · 3 not handed in | its grader, through `./exo` | lands here |
 |  | L2: the public curve, `l2-01-courbe`. An inference server's throughput and latency, with its protocol, its breaking point and the physical limit that sets it | a person grades it, not a terminal · not counted here | a reader, and a defence without the code in front of you | lands here |

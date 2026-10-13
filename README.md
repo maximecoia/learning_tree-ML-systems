@@ -86,13 +86,13 @@ sub-modules in the order of the work and the state of each.
 ## Where the work stands
 
 <!-- compteurs: written by carte_phases.py from the graders. Do not edit by hand. -->
-Phase 2, [`ms-01-inference`](ms-01-inference), is the one in progress: **25 of 52 graded exercises** pass. Its window is weeks 1–8; [`ms-00-prepa`](ms-00-prepa) closed on 2 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-01-inference/README.md#what-to-do-in-order) lists the work in order with the next step marked.
+Phase 2, [`ms-01-inference`](ms-01-inference), is the one in progress: **33 of 52 graded exercises** pass. Its window is weeks 1–8; [`ms-00-prepa`](ms-00-prepa) closed on 2 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-01-inference/README.md#what-to-do-in-order) lists the work in order with the next step marked.
 
 | Track | State | |
 |---|---|---|
-| The C of the common core, milestones 1 to 3 | 0 of 12 exercises, kept out of this repository | [below](#what-is-not-here) |
+| The C of the common core, milestones 1 to 3 | 5 of 12 exercises, kept out of this repository | [below](#what-is-not-here) |
 | Measuring performance | ✓ 16 of 16 exercises, complete | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
-| Measured inference | 9 of 24 exercises | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
+| Measured inference | 12 of 24 exercises | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 | L2, the throughput and latency curve | a person grades it, not a terminal | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 
 The denominator leaves out `l2-01-courbe` (a public write-up, graded by a reader, not by a terminal).
