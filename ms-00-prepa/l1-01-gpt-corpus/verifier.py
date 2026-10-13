@@ -10,8 +10,8 @@ It imports gpt.py and invents nothing. It does not read your architecture: it
 only feeds tensors in and reads tensors out, so any number of layers, heads or
 norms passes as long as the model is a causal language model.
 
-WHAT EACH CHECK COSTS TO BREAK -- measured on a reference implementation, so
-you can reproduce the failure before you trust the success. V = 65, ln(V) =
+WHAT EACH CHECK COSTS TO BREAK -- measured on a reference implementation,
+with torch 2.14, so you can reproduce the failure before you trust the success. V = 65, ln(V) =
 4.1744, three layers, four heads, n_embd 64, block 32.
 
     1  shapes        a model returning (B, V) instead of (B, T, V) -- the
@@ -24,7 +24,7 @@ you can reproduce the failure before you trust the success. V = 65, ln(V) =
                      output head x3  ->  5.59, ln(V)+1.42   CAUGHT
                      output head x20 -> 27.46, ln(V)+23.29   CAUGHT
                      output head x2  ->  4.82, ln(V)+0.65   NOT caught, see below
-    3  causality     correct 0.0 exactly; drop the mask -> 1.42e-01
+    3  causality     correct 0.0 exactly; drop the mask -> 1.28e-01
     4  positions     fit "target = t mod V" on a constant input: with position
                      embeddings 0.0010, without them 3.4658, and it cannot go
                      lower because every position sees the same thing
@@ -42,7 +42,7 @@ you can reproduce the failure before you trust the success. V = 65, ln(V) =
                      land 0.10 below. On the prepared Tiny Shakespeare:
                      bigram 2.4743, so the bar is 2.3743
                      correct, 2000 steps          ->  2.0856
-                     weights never trained        ->  4.3370   CAUGHT, and
+                     weights never trained        ->  4.3800   CAUGHT, and
                                                   checks 1 to 6 all pass
                      attention returning zeros    ->  2.4885   CAUGHT, and
                                                   check 5 catches it too
