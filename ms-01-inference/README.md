@@ -27,8 +27,8 @@ One table, from what is done to what waits. Every state is read from a grader, n
 | ✓ | `inf-03-llama` | ✓ 3 of 3 | its grader, through `./exo` | [inf-03-llama](inf-03-llama) |
 | ✓ | `inf-04-cache-kv` | ✓ 3 of 3 | its grader, through `./exo` | [inf-04-cache-kv](inf-04-cache-kv) |
 | ✓ | `inf-05-quantifier` | ✓ 4 of 4 | its grader, through `./exo` | [inf-05-quantifier](inf-05-quantifier) |
-| → | `inf-06-harnais` | 0 of 5 · 5 not handed in | its grader, through `./exo` | lands here |
-|  | `inf-07-saturation` | 0 of 3 · 3 not handed in | its grader, through `./exo` | lands here |
+| ✓ | `inf-06-harnais` | ✓ 5 of 5 | its grader, through `./exo` | [inf-06-harnais](inf-06-harnais) |
+| → | `inf-07-saturation` | 0 of 3 · 3 not handed in | its grader, through `./exo` | lands here |
 |  | L2: the public curve, `l2-01-courbe`. An inference server's throughput and latency, with its protocol, its breaking point and the physical limit that sets it | a person grades it, not a terminal · not counted here | a reader, and a defence without the code in front of you | lands here |
 
 ## What each sub-module covers
@@ -49,7 +49,7 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `inf-03-llama` | added | Write the three pieces that separate a Llama from the GPT of L1, RMSNorm, SwiGLU and RoPE, pass them through CS336's public suite, and then read the code of a served model without looking for a GPT-2 in it | [inf-03-llama](inf-03-llama) · 3 exercises |
 | `inf-04-cache-kv` | added | Quantify what the key-value cache saves in time and costs in memory, recognise by measurement an engine deprived of it, say from what context length it is the cache, not the weights, that caps concurrency, and name the attention variants by what each does to the shape of the cache | [inf-04-cache-kv](inf-04-cache-kv) · 3 exercises |
 | `inf-05-quantifier` | added | Measure a model's quality by its perplexity on a fixed corpus, measure what reduced precision gains in decoding while gaining nothing in prefill, settle between the two against a budget set in advance, and be able to say what a perplexity on short text does not see | [inf-05-quantifier](inf-05-quantifier) · 4 exercises |
-| `inf-06-harnais` | added | Hold N requests in flight against an inference server, record throughput, percentiles and refusal rate without any of the three traps skewing the figure, and produce a CSV the graph regenerates from | not started · 5 exercises |
+| `inf-06-harnais` | added | Hold N requests in flight against an inference server, record throughput, percentiles and refusal rate without any of the three traps skewing the figure, and produce a CSV the graph regenerates from | [inf-06-harnais](inf-06-harnais) · 5 exercises |
 | `inf-07-saturation` | added | Sweep an inference server's concurrency to its breaking point, locate that point by a rule stated in advance, and name the physical limit that sets it with the numbers that prove it | not started · 3 exercises |
 | `l2-01-courbe` | proof | Publish an inference server's throughput and latency curve, with its protocol, its breaking point and the physical limit that sets it, and defend it without the code in front of you | not started |
 
