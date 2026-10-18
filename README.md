@@ -71,9 +71,9 @@ roadmap, are in [`DECISIONS.md`](DECISIONS.md).
 |---|---|---|---|
 | [`ms-00-prepa`](ms-00-prepa) — the prep, C and Python | Sept–Oct 2026 | enter the school with the libft done and a GPT trained by hand | 9 |
 | **[`ms-01-inference`](ms-01-inference)** — graded C, measured inference | weeks 1–8 | the graded C of milestones 1 to 3, and the saturation curve of an unknown inference server produced in half a day | 15 |
-| [`ms-02-infrastructure`](ms-02-infrastructure) — Python, administration, the way in | weeks 9–20 | milestones 4 and 5, then the Inception stack ported to Kubernetes, serving the L2 server with its metrics in Prometheus, and Go | 8 |
+| [`ms-02-infrastructure`](ms-02-infrastructure) — Python, administration, the way in | weeks 9–20 | milestones 4 and 5, then the Inception stack ported to Kubernetes, serving the L2 server with its metrics in Prometheus, Go, and the inference control layer on simulated servers | 9 |
 | [`ms-03-contribution`](ms-03-contribution) — the school's AI projects, entering vLLM | weeks 21–34 | milestone 6, starvation measured in Codexion under FIFO and EDF, a first pull request in AIBrix, the vLLM organisation's Kubernetes control plane, and interview preparation | 13 |
-| [`ms-04-agents-reseau`](ms-04-agents-reseau) — agents, network, routing | weeks 35–46 | milestone 7, with the cost per million tokens of every model in Agent Smith's report | 3 |
+| [`ms-04-agents-reseau`](ms-04-agents-reseau) — agents, network, routing | weeks 35–46 | milestone 7, with the cost per million tokens of every model in Agent Smith's report, then a Kubernetes controller in Go | 4 |
 | [`ms-05-fin-tronc-commun`](ms-05-fin-tronc-commun) — the end of the common core | weeks 47–57 | the last imposed project, crossed fast, taking its serving and monitoring part | 1 |
 | [`ms-06-apres-tronc`](ms-06-apres-tronc) — first internship, then what waited | after the core | the first internship at a serving or infrastructure employer, paid at least the local cost of living, then in order the C engine, C++, CS149, the profile, CUDA, Triton and the kernel | 44 |
 | [`ms-07-alternance`](ms-07-alternance) — work-study and the title | after the first internship | if the internship does not turn into a job, two years of work-study toward 42's level 7 title | 1 |
