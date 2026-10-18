@@ -4,7 +4,7 @@
 
 `ms-07-alternance` · after the first internship · 1 sub-modules, 0 written · 0 exercises
 
-**What it buys.** two years of work-study toward 42's level 7 title
+**What it buys.** if the internship does not turn into a job, two years of work-study toward 42's level 7 title
 
 Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
 

@@ -75,8 +75,8 @@ roadmap, are in [`DECISIONS.md`](DECISIONS.md).
 | [`ms-03-contribution`](ms-03-contribution) — the school's AI projects, entering vLLM | weeks 21–34 | milestone 6, starvation measured in Codexion under FIFO and EDF, a first pull request in AIBrix, the vLLM organisation's Kubernetes control plane, and interview preparation | 13 |
 | [`ms-04-agents-reseau`](ms-04-agents-reseau) — agents, network, routing | weeks 35–46 | milestone 7, with the cost per million tokens of every model in Agent Smith's report | 3 |
 | [`ms-05-fin-tronc-commun`](ms-05-fin-tronc-commun) — the end of the common core | weeks 47–57 | the last imposed project, crossed fast, taking its serving and monitoring part | 1 |
-| [`ms-06-apres-tronc`](ms-06-apres-tronc) — first internship, then what waited | after the core | the first internship at a serving or infrastructure employer, then in order the C engine, C++, CS149, the profile, CUDA, Triton and the kernel | 44 |
-| [`ms-07-alternance`](ms-07-alternance) — work-study and the title | after the first internship | two years of work-study toward 42's level 7 title | 1 |
+| [`ms-06-apres-tronc`](ms-06-apres-tronc) — first internship, then what waited | after the core | the first internship at a serving or infrastructure employer, paid at least the local cost of living, then in order the C engine, C++, CS149, the profile, CUDA, Triton and the kernel | 44 |
+| [`ms-07-alternance`](ms-07-alternance) — work-study and the title | after the first internship | if the internship does not turn into a job, two years of work-study toward 42's level 7 title | 1 |
 
 The windows are the plan's own, not a commitment. A phase opens on its
 prerequisites rather than on a date, so the order is fixed and the pace is not.
