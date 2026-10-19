@@ -4,13 +4,14 @@
 
 `ms-06-apres-tronc` · after the core · 44 sub-modules, 25 written · 83 exercises
 
-**What it buys.** the first internship at a serving or infrastructure employer, paid at least the local cost of living, then in order the C engine, C++, CS149, the profile, CUDA, Triton and the kernel
+**What it buys.** the first internship at a serving or infrastructure employer, paid at least the local cost of living, then the school's specialisation toward level 14, then in order the C engine, C++, CS149, the profile, CUDA, Triton and the kernel
 
 Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
 | `pro-01-stage-1` | proof | Land and hold a first internship in a team that does compute infrastructure or inference | planned, not written yet |
+| `t42-12-specialisation` | imposed | Choose the common core's specialisation between systems, graphics and kernel, and never web | 42 subject, not published |
 | `c-06-moteur` | added | Write an inference engine in C that loads a model, generates text, measures its throughput and places itself on a roofline | [c-06-moteur](c-06-moteur) · 7 exercises |
 | `cpp-00-classes` | added | Write a class with what it hides and what it shows, hold shared state in static members, and read and write through the language's streams up to an interactive program that never falls over | 42 subject, not published · 3 exercises |
 | `cpp-01-allocation` | added | Choose between the stack and the heap and say so in the code, tell a reference from a pointer by what each one promises, and aim at a method through a pointer to member | 42 subject, not published · 3 exercises |
@@ -47,7 +48,6 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `cpp-08-templates` | added | Write generic code that holds for any type carrying the operations it uses, and a templated container that deep-copies and refuses an out-of-bounds index | 42 subject, not published · 3 exercises |
 | `cpp-09-conteneurs` | added | Use the standard library's containers and algorithms instead of rewriting them, pick the structure that answers a question in N log N rather than N², and extend a container by inheritance without breaking what it is | 42 subject, not published · 3 exercises |
 | `cpp-10-stl` | added | Pick the container that answers a question in one lookup, write a complete program that reads, validates and refuses its input, and implement a sorting algorithm described in the literature while counting its comparisons | 42 subject, not published · 3 exercises |
-| `t42-12-specialisation` | imposed | Choose the common core's specialisation between systems, graphics and kernel, and never web | 42 subject, not published |
 | `c-11-minishell` | added | Write a shell that chains fork, exec, pipes and redirections without leaking a descriptor, and whose every error exits with the expected code | 42 subject, not published |
 | `num-01-precision` | added | Say in five minutes whether a bf16 regression comes from the dynamic range, from the accumulation, from the order of operations or from a requantization between two engines, measuring it against a reference more precise than bf16, and show it on a reproduced case | planned, not written yet |
 | `dist-01-multigpu` | added | Predict, before launching, whether a multi-GPU training run will be bound by memory, by bandwidth or by the bubble, then hold the prediction against the measurement | planned, not written yet |
