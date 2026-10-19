@@ -1,10 +1,10 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 2 — Graded C, measured inference
+# Phase 1: Graded C, measured inference
 
-`ms-01-inference` · weeks 1–8 · 15 sub-modules, 15 written · 50 exercises
+`ms-01-inference` · school milestones 1 to 3 · 15 sub-modules, 15 written · 50 exercises
 
-**What it buys.** the graded C of milestones 1 to 3, and the saturation curve of an unknown inference server produced in half a day
+**What it buys.** The graded C of milestones 1 to 3, and the saturation curve of an unknown inference server produced in half a day.
 
 **How it ends.** Not on a feeling, on one binary test: *You are given an unknown inference server. You produce its saturation curve in half a day.*
 

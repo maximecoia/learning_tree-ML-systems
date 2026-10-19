@@ -1,10 +1,10 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 4 — The school's AI projects, entering vLLM
+# Phase 3: The school's AI projects, entering vLLM
 
-`ms-03-contribution` · weeks 21–34 · 13 sub-modules, 0 written · 0 exercises
+`ms-03-contribution` · school milestone 6 · 13 sub-modules, 0 written · 0 exercises
 
-**What it buys.** milestone 6, starvation measured in Codexion under FIFO and EDF, a first pull request in AIBrix, the vLLM organisation's Kubernetes control plane, and interview preparation
+**What it buys.** Milestone 6, starvation measured in Codexion under FIFO and EDF, a first pull request in AIBrix, the vLLM organisation's Kubernetes control plane, and interview preparation.
 
 **How it ends.** Not on a feeling, on one binary test: *Codexion publishes each coder's waiting times under FIFO and under EDF, and starvation reads in the numbers. L3 is open, or its postponement is written in the journal with the condition that triggered it.*
 

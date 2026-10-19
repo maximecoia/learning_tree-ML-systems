@@ -14,8 +14,8 @@
 
 ## About
 
-This is the Python line of a longer plan, and the first track of this
-repository. The destination is ML systems, so the work starts where ML systems
+This is the Python line of the [roadmap](README.md), and the first track of
+this repository. The destination is ML systems, so the work starts where ML systems
 actually break: how data is represented, what happens to the rows that do not
 conform, and whether the numbers coming out still mean anything.
 
@@ -36,14 +36,16 @@ exercise it, including the inputs that are supposed to fail. The
 class in full and adds exactly one capability, so any exercise can be read
 without the previous eight. `py-03-livrer` turns the result into a command.
 
+From the repository root, each in its own subshell:
+
 ```bash
-python3 py-01-basics/ex08/bilan.py
-cd py-03-livrer/ex07 && python3 -m releve resume mesures.txt
+python3 ms-00-prepa/py-01-basics/ex08/bilan.py
+(cd ms-00-prepa/py-03-livrer/ex07 && python3 -m releve resume exemple.txt)
 ```
 
 ## Progress
 
-### py-01-basics — complete, 9 of 9
+### py-01-basics, complete, 9 of 9
 
 | Exercise | Focus | Status |
 |---|---|---|
@@ -57,7 +59,7 @@ cd py-03-livrer/ex07 && python3 -m releve resume mesures.txt
 | [`ex07/fonctions.py`](ms-00-prepa/py-01-basics/ex07/fonctions.py) | default and keyword arguments, bounded filtering | **Complete** |
 | [`ex08/bilan.py`](ms-00-prepa/py-01-basics/ex08/bilan.py) | integration: parse, reject, group, aggregate, report | **Complete** |
 
-### py-02-advanced — complete, 9 of 9
+### py-02-advanced, complete, 9 of 9
 
 One value type, `Montant`, growing one capability per exercise.
 
@@ -73,7 +75,7 @@ One value type, `Montant`, growing one capability per exercise.
 | [`ex07/heritage.py`](ms-00-prepa/py-02-advanced/ex07/heritage.py) | `LigneRemisee(Ligne)`, and exceptions of its own | **Complete** |
 | [`ex08/facture.py`](ms-00-prepa/py-02-advanced/ex08/facture.py) | integration: parse, reject, total, report | **Complete** |
 
-### py-03-livrer — complete, 8 of 8
+### py-03-livrer, complete, 8 of 8
 
 Turning the tree into something installable. One exercise per delivery concern.
 
@@ -244,7 +246,7 @@ The tree is finished. `py-03` ended in `releve`, installed with `pip install .`
 and run from the PATH:
 
 ```console
-$ releve resume mesures.txt
+$ releve resume exemple.txt
 debit n=1 moy=880.00 p95=880.00 req/s
 latence n=3 moy=17.67 p95=31.00 ms
 ```
@@ -254,11 +256,12 @@ A malformed line is skipped and reported on stderr with its line number. Under
 it. Eleven tests hold the rendered output rather than the internals.
 
 The point was never packaging for its own sake. Everything downstream in this
-plan — a measurement bench, a training script, a grader — is handed to someone
-else who installs it and runs it without asking how. `py-03` is where that
-became a skill instead of an intention.
+plan is handed to someone else who installs it and runs it without asking how:
+a measurement bench, a training script, a grader. `py-03` is where that became
+a skill instead of an intention.
 
-What follows is micrograd, the same discipline one layer up: the object that
-carries an invariant becomes a node in an expression graph, and the thing that
-has to be rebuildable from a blank file becomes backpropagation. That track has
-started.
+What followed is the rest of the prep: [the maths](MATHS.md), then the route to
+a GPT written from a blank file and trained on Jules Verne,
+[L1](ms-00-prepa/l1-01-gpt-corpus). The same habits carry over. Bad input is
+counted, the contract survives a rewrite, and the thing that ships is the thing
+someone else can run.
