@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150" role="img" aria-label="TRITON, not yet earned">
+  <defs>
+    <radialGradient id="sky" cx="50%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#2b3a67"/><stop offset="1" stop-color="#0b1026"/>
+    </radialGradient>
+    <clipPath id="in"><polygon points="75.00,13.00 128.69,44.00 128.69,106.00 75.00,137.00 21.31,106.00 21.31,44.00"/></clipPath>
+    <filter id="grey"><feColorMatrix type="saturate" values="0"/></filter>
+  </defs>
+  <g filter="url(#grey)" opacity=".45">
+  <polygon points="75.00,3.00 137.35,39.00 137.35,111.00 75.00,147.00 12.65,111.00 12.65,39.00" fill="#8b9cf7"/>
+  <polygon points="75.00,9.00 132.16,42.00 132.16,108.00 75.00,141.00 17.84,108.00 17.84,42.00" fill="#0d1117"/>
+  <polygon points="75.00,13.00 128.69,44.00 128.69,106.00 75.00,137.00 21.31,106.00 21.31,44.00" fill="url(#sky)"/>
+  <g clip-path="url(#in)" fill="#fff" opacity=".7">
+    <circle cx="40" cy="45" r="1"/><circle cx="112" cy="40" r="1.2"/><circle cx="104" cy="98" r="1"/>
+    <circle cx="35" cy="88" r="1.1"/><circle cx="60" cy="28" r="0.9"/><circle cx="92" cy="26" r="1"/>
+  </g>
+  <g clip-path="url(#in)">
+      <path d="M75 92 V44" stroke="#c9d1d9" stroke-width="5"/>
+      <path d="M55 30 V50 a20 20 0 0 0 40 0 V30" fill="none" stroke="#7ee0e0" stroke-width="5"/>
+      <path d="M75 28 V50" stroke="#7ee0e0" stroke-width="5"/>
+      <g fill="#7ee0e0"><path d="M55 22 l-6 10 h12 z"/><path d="M75 20 l-6 10 h12 z"/><path d="M95 22 l-6 10 h12 z"/></g>
+  </g>
+  <g clip-path="url(#in)"><rect x="0" y="96" width="150" height="19" fill="#0d1117"/></g>
+  <text x="75" y="109.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11"
+        font-weight="700" letter-spacing=".5" fill="#ffffff">TRITON</text>
+  </g>
+</svg>

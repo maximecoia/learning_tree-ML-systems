@@ -59,28 +59,10 @@ The denominator leaves out `l2-01-courbe` (a public write-up, graded by a reader
 ## The roadmap
 
 <!-- avancement: written by carte_phases.py from the graders. Do not edit by hand. -->
-```mermaid
-flowchart TB
-  subgraph avant["Before the school"]
-    direction LR
-    p0["ms-00-prepa<br>closed on 2 October 2026"]
-  end
-  subgraph tronc["The common core, from 9 November 2026"]
-    direction LR
-    p1["ms-01-inference<br>44 of 50 exercises"] --> p2["ms-02-infrastructure<br>milestones 4 and 5"] --> p3["ms-03-contribution<br>milestone 6"] --> p4["ms-04-agents-reseau<br>milestone 7"] --> p5["ms-05-fin-tronc-commun<br>milestone 8"]
-  end
-  subgraph apres["After the core"]
-    direction LR
-    p6["ms-06-apres-tronc<br>first internship, then what waited"] --> p7["ms-07-alternance<br>first job, or work-study and the title"]
-  end
-  avant --> tronc --> apres
-  classDef done fill:#1f883d,stroke:#116329,color:#ffffff
-  classDef now fill:#9a6700,stroke:#7d4e00,color:#ffffff
-  classDef todo fill:#6e7781,stroke:#57606a,color:#ffffff
-  class p0 done
-  class p1 now
-  class p2,p3,p4,p5,p6,p7 todo
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/roadmap-dark.svg">
+  <img src="assets/roadmap-light.svg" width="100%" alt="The roadmap: ms-00-prepa, closed on 2 Oct 2026; ms-01-inference, 44 of 50 exercises; ms-02-infrastructure, milestones 4 and 5; ms-03-contribution, milestone 6; ms-04-agents-reseau, milestone 7; ms-05-fin-tronc-commun, milestone 8; ms-06-apres-tronc, after the core; ms-07-alternance, after the internship.">
+</picture>
 <!-- /avancement -->
 
 | Phase | Paced by | What it buys | Sub-modules |
@@ -128,6 +110,26 @@ The badges come from
 for 42 São Paulo. That collection predates the 2026 common core, so its nine
 new projects have no badge there. Theirs are home-made, in the same shape, by
 [`assets/badges/draw.py`](assets/badges/draw.py).
+
+## The roadmap's own modules
+
+The added layer and its proofs get one badge per module, in the same shape. A
+badge turns to colour when every sub-module of its module passes its graders,
+or when a person has validated it, and it stays grey until then. Violet frames
+the added layer, gold a deliverable or a proof. The libft, C++ and minishell
+modules carry their school badge above instead.
+
+<!-- badges: written by carte_phases.py from the graders. Do not edit by hand. -->
+| Phase | Modules |
+|---|---|
+| [Phase&nbsp;0](ms-00-prepa) | <img src="assets/badges/roadmap/py-socle.svg" width="72" alt="PYTHON SOCLE, earned" title="PYTHON SOCLE, earned"> <img src="assets/badges/roadmap/ms-maths.svg" width="72" alt="MATHS, earned" title="MATHS, earned"> <img src="assets/badges/roadmap/rte-route-l1.svg" width="72" alt="ROUTE TO L1, earned" title="ROUTE TO L1, earned"> <img src="assets/badges/roadmap/l1-livrable.svg" width="72" alt="L1 · A GPT, earned" title="L1 · A GPT, earned"> |
+| [Phase&nbsp;1](ms-01-inference) | <img src="assets/badges/roadmap/mes-performance.svg" width="72" alt="MEASUREMENT, earned" title="MEASUREMENT, earned"> <img src="assets/badges/roadmap/inf-mesure.svg" width="72" alt="INFERENCE, earned" title="INFERENCE, earned"> <img src="assets/badges/roadmap/l2-livrable-locked.svg" width="72" alt="L2 · THE CURVE, not yet" title="L2 · THE CURVE, not yet"> |
+| [Phase&nbsp;2](ms-02-infrastructure) | <img src="assets/badges/roadmap/go-bases-locked.svg" width="72" alt="GO, not yet" title="GO, not yet"> <img src="assets/badges/roadmap/ops-exploitation-locked.svg" width="72" alt="KUBERNETES, not yet" title="KUBERNETES, not yet"> <img src="assets/badges/roadmap/ops-controle-locked.svg" width="72" alt="CONTROL LAYER, not yet" title="CONTROL LAYER, not yet"> |
+| [Phase&nbsp;3](ms-03-contribution) | <img src="assets/badges/roadmap/inf-speculatif-locked.svg" width="72" alt="SPECULATIVE, not yet" title="SPECULATIVE, not yet"> <img src="assets/badges/roadmap/inf-memoire-locked.svg" width="72" alt="MEMORY, not yet" title="MEMORY, not yet"> <img src="assets/badges/roadmap/inf-vllm-locked.svg" width="72" alt="VLLM, not yet" title="VLLM, not yet"> <img src="assets/badges/roadmap/l3-livrable-locked.svg" width="72" alt="L3 · CONTRIB, not yet" title="L3 · CONTRIB, not yet"> <img src="assets/badges/roadmap/pro-entretiens-locked.svg" width="72" alt="INTERVIEWS, not yet" title="INTERVIEWS, not yet"> |
+| [Phase&nbsp;4](ms-04-agents-reseau) | <img src="assets/badges/roadmap/go-controleur-locked.svg" width="72" alt="GO CONTROLLER, not yet" title="GO CONTROLLER, not yet"> |
+| [Phase&nbsp;6](ms-06-apres-tronc) | <img src="assets/badges/roadmap/pro-stage-1-locked.svg" width="72" alt="INTERNSHIP, not yet" title="INTERNSHIP, not yet"> <img src="assets/badges/roadmap/c-moteur-inference-locked.svg" width="72" alt="C ENGINE, not yet" title="C ENGINE, not yet"> <img src="assets/badges/roadmap/c-concurrence-locked.svg" width="72" alt="CONCURRENCY, not yet" title="CONCURRENCY, not yet"> <img src="assets/badges/roadmap/cs149-parallelisme-locked.svg" width="72" alt="CS149, not yet" title="CS149, not yet"> <img src="assets/badges/roadmap/par-profilage-locked.svg" width="72" alt="PROFILING, not yet" title="PROFILING, not yet"> <img src="assets/badges/roadmap/l4-livrable-locked.svg" width="72" alt="L4 · PROFILE, not yet" title="L4 · PROFILE, not yet"> <img src="assets/badges/roadmap/gpu-competition-locked.svg" width="72" alt="GPU MODE, not yet" title="GPU MODE, not yet"> <img src="assets/badges/roadmap/cu-cuda-locked.svg" width="72" alt="CUDA, not yet" title="CUDA, not yet"> <img src="assets/badges/roadmap/tri-triton-locked.svg" width="72" alt="TRITON, not yet" title="TRITON, not yet"> <img src="assets/badges/roadmap/l5-livrable-locked.svg" width="72" alt="L5 · KERNEL, not yet" title="L5 · KERNEL, not yet"> <img src="assets/badges/roadmap/num-precision-locked.svg" width="72" alt="PRECISION, not yet" title="PRECISION, not yet"> <img src="assets/badges/roadmap/dist-multigpu-locked.svg" width="72" alt="MULTI-GPU, not yet" title="MULTI-GPU, not yet"> <img src="assets/badges/roadmap/cpp-moderne-locked.svg" width="72" alt="MODERN C++, not yet" title="MODERN C++, not yet"> <img src="assets/badges/roadmap/qua-evaluation-locked.svg" width="72" alt="EVALUATION, not yet" title="EVALUATION, not yet"> |
+| [Phase&nbsp;7](ms-07-alternance) | <img src="assets/badges/roadmap/pro-alternance-locked.svg" width="72" alt="WORK-STUDY, not yet" title="WORK-STUDY, not yet"> |
+<!-- /badges -->
 
 ## How it is built
 
@@ -282,7 +284,7 @@ with what git actually tracks? Each question was proven able to fail before
 being trusted, and a workflow runs all three on every push.
 
 The pages that describe the work are generated, not written: the phase pages,
-the counters, the progress chart and the tree below. They are read from the
+the counters, the roadmap line, the module badges and the tree below. They are read from the
 curriculum, from the graders and from what git publishes. Each time this page
 drifted in the past, the cause was a figure copied by hand. A page that reads
 its sources cannot drift without them.
@@ -300,7 +302,7 @@ LICENSE                    MIT, and the credits owed are in Sources and licence 
 MATHS.md                   the maths, module by module, and what they measured
 PYTHON.md                  the Python socle, exercise by exercise
 README.md                  this page: what ML Systems is, the roadmap, and where it stands
-assets/                    the badges drawn for the 2026 school projects, and the script that draws them
+assets/                    the roadmap line and the badges: the 2026 school projects', the roadmap's own, and the script that draws them
 tools/                     the checks this repository can run on itself
 ms-00-prepa/               the prep, C and Python, closed on 2 October 2026
     README.md              its sub-modules in the order of the work, and their state
