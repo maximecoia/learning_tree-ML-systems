@@ -8,12 +8,16 @@ opinion, and this repository tries not to publish those.
 1. [Borrowed graders, not written lessons](#borrowed-graders-not-written-lessons)
 2. [Zero to Hero, and why it left](#zero-to-hero-and-why-it-left)
 3. [CS336, and why it left the prep](#cs336-and-why-it-left-the-prep)
-4. [The C engine, and why it moved to phase 2](#the-c-engine-and-why-it-moved-to-phase-2)
+4. [The C engine, and why it left the prep](#the-c-engine-and-why-it-left-the-prep)
 5. [The one date I do not set](#the-one-date-i-do-not-set)
 6. [What the agents changed, and what they did not](#what-the-agents-changed-and-what-they-did-not)
 7. [How a check is calibrated](#how-a-check-is-calibrated)
 8. [Why a number follows the order](#why-a-number-follows-the-order)
 9. [The school first, the rest grafted onto it](#the-school-first-the-rest-grafted-onto-it)
+10. [Why the roadmap has no dates](#why-the-roadmap-has-no-dates)
+
+Each section is dated. Where a plan of that day changed later, the section
+says so.
 
 ## Borrowed graders, not written lessons
 
@@ -69,7 +73,7 @@ measurements.
   character vocabulary.
 - **Its window did not exist.** Once the trained model became the only goal of
   the prep, CS336 was moved out of the window until 31 October, the day the
-  phase closes.
+  phase was then due to close. The prep closed earlier, on 2 October.
 - **Nothing depended on it.** No sub-module listed it as a prerequisite, and
   the second assignment, the systems half, ships the course's own
   implementation of the first.
@@ -89,34 +93,38 @@ ones. Most open models an inference engine serves are built that way. Those
 three tests now grade a sub-module of `ms-01-inference`, placed before the KV
 cache, because the keys that land in the cache are already rotated.
 
-## The C engine, and why it moved to phase 2
+## The C engine, and why it left the prep
 
 `c-06-moteur`, an inference engine written in C that loads a model, generates,
 measures its throughput and places it on a roofline, was part of the prep's
 promise. Its row said it was out of the window because it needed the weights
 L1 produces. It moved to `ms-01-inference` on 2026-09-30, on three findings.
+On 2026-10-12 it moved again, after the common core, for the reason given at
+the end of this section.
 
 - **The stated dependency was false.** Its grader never loads L1: it builds its
   own toy model from a seed, eight dimensions and two heads, and compares the
   engine against a Python reference of the same arithmetic. Its weight format
   could not load L1 anyway: one layer, RMSNorm, ReLU and learned positions,
   where the GPT of the route has several blocks, LayerNorm and GELU.
-- **Its slot did not exist.** It was ordered after L1, and L1 closes on
-  31 October, the day the prep closes.
-- **Its lessons are the ones phase 2 teaches.** Its throughput step asks for a
+- **Its slot did not exist.** It was ordered after L1, and L1 was then due on
+  31 October, the day the prep was due to close.
+- **Its lessons are the ones `ms-01-inference` teaches.** Its throughput step asks for a
   timing that ignores warm-up, which is the competence of `mes-01-chronometre`,
   now its prerequisite. Its KV cache is what `inf-04-cache-kv` measures, and
   its roofline is how `inf-02-prefill-decode` reads prefill and decode.
 
-It now sits after the measurement modules and before the served-model ones, so
-the engine is written with a stopwatch in hand, and the cache and the regimes
-are then measured on a server by someone who has built both. Nothing depended
-on it, so no other sub-module moved. What it costs is time in a phase that
-already holds the school's graded C: seven exercises, budgeted at about thirty
-hours, and not measured.
+It was placed after the measurement modules and before the served-model ones,
+so the engine would be written with a stopwatch in hand, and the cache and the
+regimes then measured on a server by someone who had built both. Nothing
+depended on it, so no other sub-module moved. What it cost was time in a phase
+that already held the school's graded C: seven exercises, budgeted at about
+thirty hours, and not measured.
 
-Since 2026-10-12 it waits for the end of the common core, first in the order in
-which deferred work comes back; see [below](#the-school-first-the-rest-grafted-onto-it).
+That cost is what moved it a second time. Since 2026-10-12 it waits for the
+end of the common core, first in the order in which deferred work comes back.
+It grafts onto no school project, and its delay can be caught up later. See
+[below](#the-school-first-the-rest-grafted-onto-it).
 
 ## The one date I do not set
 
@@ -150,13 +158,21 @@ that field, still measures against an outside reference mainly when an outside
 deadline asks for it. If that is what it takes there, it is certainly what it
 takes here.
 
-**So the rule is:** the first GPU MODE competition that opens after the
+**So the rule was:** the first GPU MODE competition that opens after the
 inference deliverable is taken, whatever phase is running and whatever vendor's
-hardware it targets. Its place in `ms-02-cpp-concurrence` is a floor, not a
-date. It costs two to four weeks pulled out of the running phase; entering
-opens thirty dollars a month of GPU time; and the vendor does not matter, since
-what came back from the most instructive competition in that record, on AMD
-hardware in HIP, is reasoning and not an API.
+hardware it targets. Its place in the roadmap is a floor, not a date. It costs
+two to four weeks pulled out of the running phase; entering opens thirty
+dollars a month of GPU time; and the vendor does not matter, since what came
+back from the most instructive competition in that record, on AMD hardware in
+HIP, is reasoning and not an API.
+
+**What changed on 2026-10-12.** The rule still holds, but no longer during the
+common core. With about five and a half hours a week outside school, no GPU
+work grafts onto a school project, so the competition moved to
+`ms-06-apres-tronc` with the rest of it. Its place there is still a floor and
+not a date: it is taken on remote GPUs as soon as the hours come back. The
+measurement above is also what the grafts of the [school-first
+rule](#the-school-first-the-rest-grafted-onto-it) rest on.
 
 The same reading changed one more thing. **A measured gain is only a result if
 the measurement survives a replay.** GPU MODE published the anatomy of one: the
@@ -222,7 +238,7 @@ left it; the figures are reported here, not reproducible from this tree.
 Until 2026-10-08 an identifier never changed once given. It lives in the
 graders, in the private docs, in this repository and in the translations of
 these pages, so each move kept its old number. The sum was visible here: the
-phase 2 page listed `inf-15-llama` between `inf-02` and `inf-03`, and
+page of `ms-01-inference` listed `inf-15-llama` between `inf-02` and `inf-03`, and
 `c-02-moteur` after `c-06-pushswap`; the maths read `maths-01`, `mth-03`,
 `mth-04`; the contribution, L5, fell a phase before the kernel, L4. Read in
 the order of its numbers, the roadmap described a sequence the work does not
@@ -316,7 +332,11 @@ The original plan called platform work a dead end; that line is withdrawn. The
 inference server of L2 is now ported to Kubernetes after the school's Inception
 project, with its metrics in Prometheus and its curve replayed under load. The
 first step after the core is an internship at a serving or infrastructure
-employer, then two years of work-study toward 42's level 7 title.
+employer. Since 2026-10-19 the roadmap has two ends: the first job, if the
+internship turns into one, and otherwise two years of work-study toward 42's
+level 7 title. The school's specialisation, which leads to the level that
+work-study requires, now comes right after the internship instead of waiting
+behind the deferred modules.
 
 The contribution now opens with the school's retrieval project, whose index of
 the vLLM repository is the map a first contributor needs, and its target widens
@@ -340,8 +360,40 @@ the contribution is L3, the profile L4, the kernel still L5.
 | `c-10-famine`, off the path | `c-13-famine` |
 | `pro-02-stage-2` | `pro-02-alternance` |
 
-What could be wrong: the graft rule rests on one person's journal; the phase
-windows still assume 750 hours of school; and the contribution has now changed
-its number twice in four days, so a note written before 2026-10-12 calls it L4,
-and one written before 2026-10-08 calls it L5.
+What could be wrong: the graft rule rests on one person's journal; and the
+contribution has now changed its number twice in four days, so a note written
+before 2026-10-12 calls it L4, and one written before 2026-10-08 calls it L5.
+The phase windows still assumed 750 hours of school that day; the next section
+says why they are gone.
 
+## Why the roadmap has no dates
+
+Until 2026-10-19 each phase of the common core carried a window in weeks, from
+weeks 1–8 to weeks 47–57. On that day they left the roadmap, for two reasons.
+
+**They contradicted the plan.** Counted from the first day of school,
+9 November 2026, week 57 ends on 12 December 2027. The plan's own horizon,
+written on 2026-10-12 from the 2026 subjects, puts the end of the core in
+September or October 2027. Two dates for one event, two months apart. Recounting
+the windows was tried first: 47 weeks, shared in proportion to the 895 hours
+the curriculum budgets for the school's projects. That made a tidier estimate,
+and still an estimate.
+
+**They measured nothing.** The roadmap has two layers, and neither moves by
+the week. The added layer moves at my pace: the prep closed four weeks inside
+its window, and the 40 measurement and inference exercises of `ms-01-inference`
+were done before week 1. The imposed layer moves at the school's: what that
+phase still lacks, `get_next_line` and `push_swap`, waits for the school to
+grade it. A week of the calendar is the pace of neither.
+
+So a phase now says what paces it: the school milestones it covers, or « after
+the common core ». The program that writes these pages translates that from
+the curriculum and refuses a [roadmap table](README.md#the-roadmap) that says
+otherwise. The only dates on this site are facts: when a phase closed, and when
+the school starts. The progress chart shows where the work stands, read from
+the graders like every other number here.
+
+What could be wrong: a reader looking for when I can start an internship finds
+no date here. The plan still keeps an estimate for the end of the core, because
+money and applications depend on it. It is simply not drawn as a schedule, and
+a recruiter gets it by asking.

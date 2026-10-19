@@ -1,10 +1,10 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 5 — Agents, network, routing
+# Phase 4: Agents, network, routing
 
-`ms-04-agents-reseau` · weeks 35–46 · 4 sub-modules, 0 written · 0 exercises
+`ms-04-agents-reseau` · school milestone 7 · 4 sub-modules, 0 written · 0 exercises
 
-**What it buys.** milestone 7, with the cost per million tokens of every model in Agent Smith's report, then a Kubernetes controller in Go
+**What it buys.** Milestone 7, with the cost per million tokens of every model in Agent Smith's report, then a Kubernetes controller in Go.
 
 **How it ends.** Not on a feeling, on one binary test: *Agent Smith's report gives, per model and per provider, the cost per million tokens and the latency per request, with the source and date of each price.*
 

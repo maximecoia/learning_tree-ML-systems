@@ -1,10 +1,10 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 7 — First internship, then what waited
+# Phase 6: First internship, then what waited
 
-`ms-06-apres-tronc` · after the core · 44 sub-modules, 25 written · 83 exercises
+`ms-06-apres-tronc` · after the common core · 44 sub-modules, 25 written · 83 exercises
 
-**What it buys.** the first internship at a serving or infrastructure employer, paid at least the local cost of living, then the school's specialisation toward level 14, then in order the C engine, C++, CS149, the profile, CUDA, Triton and the kernel
+**What it buys.** The first internship at a serving or infrastructure employer, paid at least the local cost of living, then the school's specialisation toward level 14, then in order the C engine, C++, CS149, the profile, CUDA, Triton and the kernel.
 
 Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
 

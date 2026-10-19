@@ -1,10 +1,10 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 6 — The end of the common core
+# Phase 5: The end of the common core
 
-`ms-05-fin-tronc-commun` · weeks 47–57 · 1 sub-modules, 0 written · 0 exercises
+`ms-05-fin-tronc-commun` · school milestone 8 · 1 sub-module, 0 written · 0 exercises
 
-**What it buys.** the last imposed project, crossed fast, taking its serving and monitoring part
+**What it buys.** The last imposed project, crossed fast, taking its serving and monitoring part.
 
 **How it ends.** Not on a feeling, on one binary test: *`transcendance` is validated, its part serves a model whose metrics land in Prometheus, and its real hours stayed under one hundred and twenty.*
 
