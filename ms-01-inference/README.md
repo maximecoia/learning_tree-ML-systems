@@ -2,7 +2,7 @@
 
 # Phase 1: Graded C, measured inference
 
-`ms-01-inference` · school milestones 1 to 3 · 15 sub-modules, 15 written · 50 exercises
+`ms-01-inference` · school milestones 1 to 3 · 15 sub-modules, 15 written · 46 exercises
 
 **What it buys.** The graded C of milestones 1 to 3, and the saturation curve of an unknown inference server produced in half a day.
 
@@ -18,7 +18,7 @@ One table, from what is done to what waits. Every state is read from a grader, n
 | ✓ | `c-02-libft-norme` | ✓ 3 of 3 | its grader, through `./exo` | 42 subject, not published |
 | ✓ | `c-03-printf` | ✓ 1 of 1 | its grader, through `./exo` | 42 subject, not published |
 |  | `c-04-gnl` | 0 of 1 · 1 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
-|  | `c-05-pushswap` | 0 of 5 · 5 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
+|  | `c-05-pushswap` | 0 of 1 · 1 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
 | ✓ | `mes-01-chronometre` | ✓ 7 of 7 | its grader, through `./exo` | [mes-01-chronometre](mes-01-chronometre) |
 | ✓ | `mes-02-grandeurs` | ✓ 3 of 3 | its grader, through `./exo` | [mes-02-grandeurs](mes-02-grandeurs) |
 | ✓ | `mes-03-profiler` | ✓ 6 of 6 | its grader, through `./exo` | [mes-03-profiler](mes-03-profiler) |
@@ -40,7 +40,7 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `c-02-libft-norme` | imposed | Bring a C repository into line with an imposed norm, revisit every null return path and every free, and keep it behind a personal test harness that knows how to fail | 42 subject, not published · 3 exercises |
 | `c-03-printf` | imposed | Write a variadic formatter whose output matches the libc's, conversion by conversion | 42 subject, not published · 1 exercise |
 | `c-04-gnl` | imposed | Read a stream line by line with state that survives between calls, from a file as from standard input, and without leaking | 42 subject, not published · 1 exercise |
-| `c-05-pushswap` | imposed | Sort under a constrained set of operations with four strategies of distinct complexity classes, and defend each one's class by measurement | 42 subject, not published · 5 exercises |
+| `c-05-pushswap` | imposed | Sort under a constrained set of operations with four strategies of distinct complexity classes, and defend each one's class by measurement | 42 subject, not published · 1 exercise |
 | `mes-01-chronometre` | added | Time a function without being fooled by noise or by warm-up | [mes-01-chronometre](mes-01-chronometre) · 7 exercises |
 | `mes-02-grandeurs` | added | Estimate an order of magnitude for compute, memory and cost before writing any code | [mes-02-grandeurs](mes-02-grandeurs) · 3 exercises |
 | `mes-03-profiler` | added | Locate the function that costs in a slow program, and prove that fixing it helped | [mes-03-profiler](mes-03-profiler) · 6 exercises |
