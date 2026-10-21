@@ -17,7 +17,7 @@ One table, from what is done to what waits. Every state is read from a grader, n
 |---|---|---|---|---|
 | ✓ | `c-02-libft-norme` | ✓ 3 of 3 | its grader, through `./exo` | 42 subject, not published |
 | ✓ | `c-03-printf` | ✓ 1 of 1 | its grader, through `./exo` | 42 subject, not published |
-|  | `c-04-gnl` | 0 of 1 · 1 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
+| ✓ | `c-04-gnl` | ✓ 1 of 1 | its grader, through `./exo` | 42 subject, not published |
 |  | `c-05-pushswap` | 0 of 1 · 1 not handed in · on the school's calendar | its grader, through `./exo` | 42 subject, not published |
 | ✓ | `mes-01-chronometre` | ✓ 7 of 7 | its grader, through `./exo` | [mes-01-chronometre](mes-01-chronometre) |
 | ✓ | `mes-02-grandeurs` | ✓ 3 of 3 | its grader, through `./exo` | [mes-02-grandeurs](mes-02-grandeurs) |

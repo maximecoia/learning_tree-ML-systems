@@ -44,11 +44,11 @@ checks that can fail, and a write-up of what each decision cost.
 ## Where the work stands
 
 <!-- compteurs: written by carte_phases.py from the graders. Do not edit by hand. -->
-Phase 1, [`ms-01-inference`](ms-01-inference), is the one in progress: **44 of 46 graded exercises** pass. It is paced by school milestones 1 to 3; [`ms-00-prepa`](ms-00-prepa) closed on 2 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-01-inference/README.md#what-to-do-in-order) lists the work in order with the next step marked.
+Phase 1, [`ms-01-inference`](ms-01-inference), is the one in progress: **45 of 46 graded exercises** pass. It is paced by school milestones 1 to 3; [`ms-00-prepa`](ms-00-prepa) closed on 2 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-01-inference/README.md#what-to-do-in-order) lists the work in order with the next step marked.
 
 | Track | State | |
 |---|---|---|
-| The C of the common core, milestones 1 to 3 | 4 of 6 exercises, kept out of this repository | [below](#what-is-not-here) |
+| The C of the common core, milestones 1 to 3 | 5 of 6 exercises, kept out of this repository | [below](#what-is-not-here) |
 | Measuring performance | ✓ 16 of 16 exercises, complete | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 | Measured inference | ✓ 24 of 24 exercises, complete | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 | L2, the throughput and latency curve | a person grades it, not a terminal | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
@@ -61,7 +61,7 @@ The denominator leaves out `l2-01-courbe` (a public write-up, graded by a reader
 <!-- avancement: written by carte_phases.py from the graders. Do not edit by hand. -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/roadmap-dark.svg">
-  <img src="assets/roadmap-light.svg" width="100%" alt="The roadmap: ms-00-prepa, closed on 2 Oct 2026; ms-01-inference, 44 of 46 exercises; ms-02-infrastructure, milestones 4 and 5; ms-03-contribution, milestone 6; ms-04-agents-reseau, milestone 7; ms-05-fin-tronc-commun, milestone 8; ms-06-apres-tronc, after the core; ms-07-alternance, after the internship.">
+  <img src="assets/roadmap-light.svg" width="100%" alt="The roadmap: ms-00-prepa, closed on 2 Oct 2026; ms-01-inference, 45 of 46 exercises; ms-02-infrastructure, milestones 4 and 5; ms-03-contribution, milestone 6; ms-04-agents-reseau, milestone 7; ms-05-fin-tronc-commun, milestone 8; ms-06-apres-tronc, after the core; ms-07-alternance, after the internship.">
 </picture>
 <!-- /avancement -->
 
