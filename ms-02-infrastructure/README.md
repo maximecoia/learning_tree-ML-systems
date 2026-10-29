@@ -2,7 +2,7 @@
 
 # Phase 2: Python, administration, the way in
 
-`ms-02-infrastructure` · school milestones 4 and 5 · 9 sub-modules, 5 written · 31 exercises
+`ms-02-infrastructure` · school milestones 4 and 5 · 9 sub-modules, 5 written · 32 exercises
 
 **What it buys.** Milestones 4 and 5, then the Inception stack ported to Kubernetes, serving the L2 server with its metrics in Prometheus, Go, and the inference control layer on simulated servers.
 
@@ -19,7 +19,7 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `t42-03-pacman` | imposed | Validate `pacman` at the perimeter of its subject, adding nothing | 42 subject, not published |
 | `t42-04-inception` | imposed | Validate `inception` at the perimeter of its subject, adding nothing | 42 subject, not published |
 | `go-01-bases` | added | Write tested Go the way Kubernetes projects do: table tests, interfaces and test doubles, cancellable concurrency without leaks, a line-based TCP server and an idempotent reconcile loop | not started · 5 exercises |
-| `ops-01-exploitation` | added | Port the Inception stack to a local Kubernetes, serve L2's inference server on it with its metrics in Prometheus, replay its curve under load, route inference through the Gateway API Inference Extension, and rebuild it all with Helm, Terraform and a CI | not started · 6 exercises |
+| `ops-01-exploitation` | added | Port the Inception stack to a local Kubernetes, serve L2's inference server on it with its metrics in Prometheus, replay its curve under load, route inference through the Gateway API Inference Extension, and rebuild it all with Helm, Terraform and a CI | not started · 7 exercises |
 | `ops-02-controle` | added | Admit then shed by the priority of two clients when the pool saturates, bring the service back from zero on the picker's queue while costing the cold start, and treat the GPU as a cluster resource, allocated through DRA and pulled from a failing node, all on a local Kubernetes with simulated servers | planned, not written yet |
 
 ## Reading
