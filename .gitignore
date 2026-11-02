@@ -12,7 +12,7 @@ venv/
 # Jupyter scratch, written beside any notebook that has been opened.
 .ipynb_checkpoints/
 
-# Packaging artefacts of py-03-livrer/ex07. `pip install .` writes them, and
+# Packaging artefacts of py-03-ship/ex07. `pip install .` writes them, and
 # they are rebuilt from pyproject.toml on demand.
 build/
 dist/
@@ -26,13 +26,13 @@ dist/
 #
 # Only modules whose curriculum `source` names a 42 subject are listed. The
 # additions built on top of them stay publishable, because they are the point
-# of the showcase: c-06-moteur, c-07, c-08, c-09, c-10, c-13, cpp-05-vector-asm,
-# cpp-11-moderne, and everything under cu-, tri-, inf-, par-, mes-, mth-, py-,
+# of the showcase: c-06-engine, c-07, c-08, c-09, c-10, c-13, cpp-05-vector-asm,
+# cpp-11-modern, and everything under cu-, tri-, inf-, par-, mes-, mth-, py-,
 # l1- to l5-.
 #
 # To publish one of these after all, add its own `!` line below.
 c-01-libft/
-c-02-libft-norme/
+c-02-libft-norm/
 c-03-printf/
 c-04-gnl/
 c-05-pushswap/
@@ -40,13 +40,13 @@ c-11-minishell/
 c-12-philosophers/
 cpp-00-classes/
 cpp-01-allocation/
-cpp-02-canonique/
-cpp-03-heritage/
-cpp-04-polymorphisme/
+cpp-02-canonical/
+cpp-03-inheritance/
+cpp-04-polymorphism/
 cpp-06-exceptions/
 cpp-07-casts/
 cpp-08-templates/
-cpp-09-conteneurs/
+cpp-09-containers/
 cpp-10-stl/
 sh-01-b2br/
 sh-02-netpractice/
@@ -72,18 +72,18 @@ rte-*/
 # way `rte-*/` imposed it. The lines below DO carry a slash, which anchors them
 # to the repository root, so they have to name the phase as well.
 !rte-01-puzzles/
-ms-00-bases/rte-01-puzzles/*
-!ms-00-bases/rte-01-puzzles/README.md
-!ms-00-bases/rte-01-puzzles/Tensor Puzzlers.ipynb
+ms-00-foundations/rte-01-puzzles/*
+!ms-00-foundations/rte-01-puzzles/README.md
+!ms-00-foundations/rte-01-puzzles/Tensor Puzzlers.ipynb
 # Added 2026-09-30: the answers file goes out as well. The intra finds an
 # exercise by its folder, `rte-01-puzzles/ex00`, and the grader wants the
 # handed-in puzzles.py byte for byte equal to the working copy it measures.
 # The notebook above already carries the same answers, so nothing new is
 # disclosed. The folder is lifted first, because git never looks inside a
 # directory it ignores.
-!ms-00-bases/rte-01-puzzles/ex00/
-ms-00-bases/rte-01-puzzles/ex00/*
-!ms-00-bases/rte-01-puzzles/ex00/puzzles.py
+!ms-00-foundations/rte-01-puzzles/ex00/
+ms-00-foundations/rte-01-puzzles/ex00/*
+!ms-00-foundations/rte-01-puzzles/ex00/puzzles.py
 
 # Exception, 2026-09-21: chapter 2 of the route is published too. Decided case
 # by case like the one above, and for the same reason: `rasbt/LLMs-from-scratch`
@@ -94,8 +94,8 @@ ms-00-bases/rte-01-puzzles/ex00/*
 # says why. Same shape as above: the bare line lifts the refusal at any depth,
 # the anchored ones name the phase.
 !rte-route-l1/
-ms-00-bases/rte-route-l1/*
-!ms-00-bases/rte-route-l1/ch02.py
+ms-00-foundations/rte-route-l1/*
+!ms-00-foundations/rte-route-l1/ch02.py
 
 # Exception, 2026-09-21: chapters 3 and 4 of the route follow, on the same
 # ground and by the same case-by-case decision. One difference is worth
@@ -104,8 +104,8 @@ ms-00-bases/rte-route-l1/*
 # plus the GPT-2 tokenizer, so neither reaches for the book's corpus. They are
 # published together because `ch04.py` imports `MultiHeadAttention` from
 # `ch03.py`: alone, it would not even import.
-!ms-00-bases/rte-route-l1/ch03.py
-!ms-00-bases/rte-route-l1/ch04.py
+!ms-00-foundations/rte-route-l1/ch03.py
+!ms-00-foundations/rte-route-l1/ch04.py
 
 # Exception, 2026-09-22: chapter 5 follows, on the same ground and by the same
 # case-by-case decision. Unlike chapters 3 and 4, this one cannot run from
@@ -117,7 +117,7 @@ ms-00-bases/rte-route-l1/*
 # published, and this file is published to be read, not to be run. Its own
 # `__main__` shrinks the model to two layers so that whoever does have the
 # corpus can watch the loss fall in seconds rather than hours.
-!ms-00-bases/rte-route-l1/ch05.py
+!ms-00-foundations/rte-route-l1/ch05.py
 
 # Exception, 2026-09-28: the four graders of the route follow their answers.
 # `test_ch03.py` and `test_ch04.py` run from here as they stand. The other two
@@ -127,8 +127,8 @@ ms-00-bases/rte-route-l1/*
 # nothing wrong. All four pass once this directory is copied into a clone of
 # the book. `carte_phases.py` grades the chapter rows exactly that way, on
 # these bytes, and refuses a copy that differs from its original.
-!ms-00-bases/rte-route-l1/test_ch02.py
-!ms-00-bases/rte-route-l1/test_ch03.py
-!ms-00-bases/rte-route-l1/test_ch04.py
-!ms-00-bases/rte-route-l1/test_ch05.py
+!ms-00-foundations/rte-route-l1/test_ch02.py
+!ms-00-foundations/rte-route-l1/test_ch03.py
+!ms-00-foundations/rte-route-l1/test_ch04.py
+!ms-00-foundations/rte-route-l1/test_ch05.py
 

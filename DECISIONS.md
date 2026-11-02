@@ -453,3 +453,24 @@ No sub-module changed name or order. The roadmap has ten phases, numbered 0 to
 What could be wrong: a note written before 2026-11-02 that says `ms-05` to
 `ms-08` means the old split, and four of the five new phases have no test of
 their own yet.
+
+
+## Why the names are in English
+
+Right after, every French name left the roadmap. Three phases, 43
+sub-modules and 22 modules were renamed, so a path on this page reads in
+English: `ms-06-profiling/par-04-gap`, not `ms-06-profilage/par-04-trou`.
+`ms-00-bases` became `ms-00-foundations`. Names that come from 42, libft,
+push_swap, NetPractice or the `t42-*` projects, were already English and stay.
+
+| Phase before | After |
+|---|---|
+| `ms-00-bases` | `ms-00-foundations` |
+| `ms-06-profilage` | `ms-06-profiling` |
+| `ms-09-echelle` | `ms-09-scale` |
+
+The sub-module and module tables live in the private plan, amendment 51.
+Nothing changed order, and the counts hold: ten phases, 96 sub-modules.
+
+What could be wrong: `c-tronc-milestone1-3` keeps its name for now, and the
+entries above keep the names they had when written.
