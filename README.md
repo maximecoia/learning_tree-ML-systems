@@ -41,11 +41,11 @@ checks that can fail, and a write-up of what each decision cost.
 ## Where the work stands
 
 <!-- compteurs: written by carte_phases.py from the graders. Do not edit by hand. -->
-Phase 1, [`ms-01-inference`](ms-01-inference), is the one in progress: **45 of 46 graded exercises** pass. It is paced by school milestones 1 to 3; [`ms-00-prepa`](ms-00-prepa) closed on 2 October 2026. Every number in this section is read from a grader by `carte_phases.py`, and [the phase page](ms-01-inference/README.md#what-to-do-in-order) lists the work in order with the next step marked.
+Phase 1, [`ms-01-inference`](ms-01-inference), is the one in progress: **40 of 46 graded exercises** pass. It is paced by school milestones 1 to 3; [`ms-00-prepa`](ms-00-prepa) closed on 2 October 2026. Every number in this section is read from a grader by `carte_phases.py`, except that an exercise of a school project counts only once the school validates the project, and [the phase page](ms-01-inference/README.md#what-to-do-in-order) lists the work in order with the next step marked.
 
 | Track | State | |
 |---|---|---|
-| The C of the common core, milestones 1 to 3 | 5 of 6 exercises, kept out of this repository | [below](#what-is-not-here) |
+| The C of the common core, milestones 1 to 3 | 0 of 4 projects validated by the school · 5 of 6 exercises done ahead, kept out of this repository | [below](#what-is-not-here) |
 | Measuring performance | ✓ 16 of 16 exercises, complete | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 | Measured inference | ✓ 24 of 24 exercises, complete | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
 | L2, the throughput and latency curve | a person grades it, not a terminal | [the phase page](ms-01-inference/README.md#what-to-do-in-order) |
@@ -131,13 +131,13 @@ L1 was published on 1 October 2026 and validated on 2 October 2026.
 <!-- avancement: written by carte_phases.py from the graders. Do not edit by hand. -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/roadmap-dark.svg">
-  <img src="assets/roadmap-light.svg" width="100%" alt="The roadmap: ms-00-prepa, closed on 2 Oct 2026; ms-01-inference, 45 of 46 exercises; ms-02-infrastructure, milestones 4 and 5; ms-03-contribution, milestone 6; ms-04-agents-reseau, milestone 7; ms-05-fin-tronc-commun, milestone 8; ms-06-apres-tronc, after the core; ms-07-alternance, after the internship.">
+  <img src="assets/roadmap-light.svg" width="100%" alt="The roadmap: ms-00-prepa, closed on 2 Oct 2026; ms-01-inference, 40 of 46 exercises; ms-02-infrastructure, milestones 4 and 5; ms-03-contribution, milestone 6; ms-04-agents-reseau, milestone 7; ms-05-fin-tronc-commun, milestone 8; ms-06-apres-tronc, after the core; ms-07-alternance, after the internship.">
 </picture>
 <!-- /avancement -->
 
 | Phase | Paced by | What it buys | Sub-modules |
 |---|---|---|---|
-| [`ms-00-prepa`](ms-00-prepa)<br>the prep, C and Python | before the school | enter the school with the libft done and a GPT trained by hand | 9 |
+| [`ms-00-prepa`](ms-00-prepa)<br>the prep, C and Python | before the school | enter the school with the libft practised and a GPT trained by hand | 9 |
 | **[`ms-01-inference`](ms-01-inference)**<br>graded C, measured inference | school milestones 1 to 3 | the graded C of milestones 1 to 3, and the saturation curve of an unknown inference server produced in half a day | 15 |
 | [`ms-02-infrastructure`](ms-02-infrastructure)<br>Python, administration, the way in | school milestones 4 and 5 | milestones 4 and 5, then the Inception stack ported to Kubernetes, serving the L2 server with its metrics in Prometheus, Go, and the inference control layer on simulated servers | 9 |
 | [`ms-03-contribution`](ms-03-contribution)<br>the school's AI projects, entering vLLM | school milestone 6 | milestone 6, starvation measured in Codexion under FIFO and EDF, a first pull request in AIBrix, the vLLM organisation's Kubernetes control plane, and interview preparation | 13 |

@@ -4,7 +4,7 @@
 
 `ms-00-prepa` · before the school · 9 sub-modules, 9 written · 53 exercises
 
-**What it buys.** Enter the school with the libft done and a GPT trained by hand.
+**What it buys.** Enter the school with the libft practised and a GPT trained by hand.
 
 **How it ends.** Not on a feeling, on one binary test: *Your `gpt.py`, written from a blank file, passes the seven gates of `verifier.py`: six on the model, the seventh on its training, whose validation loss lands 0.10 below the counted bigram.*
 
