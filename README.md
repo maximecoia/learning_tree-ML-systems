@@ -56,6 +56,79 @@ Phase 1, [`ms-01-inference`](ms-01-inference), is the one in progress: **45 of 4
 The denominator leaves out `l2-01-courbe` (a public write-up, graded by a reader, not by a terminal).
 <!-- /compteurs -->
 
+## Phase 0: a GPT trained by hand
+
+The prep is graded on one object: a causal GPT written from a blank file, in
+`torch`, with the attention written by hand rather than called. The route to
+it borrows each step from existing work.
+
+| | Step | What grades it |
+|---|---|---|
+| 1 | Tensor Puzzles: 21 puzzles, one expression each, twenty of them inside eighty columns | the checker inside the notebook |
+| 2 | Text data: tokenizer, sliding window, embeddings | `test_ch02.py`: upstream's test and four of mine |
+| 3 | Causal attention: scores, mask, multiple heads | `test_ch03.py` |
+| 4 | The GPT: blocks, normalisation, residuals, logits | `test_ch04.py` |
+| 5 | Pretraining: the loop, train and validation loss, sampling | `test_ch05.py` |
+
+Raschka's book ships almost no assertions. So the tests of steps 2 to 5 are
+written here, against what each chapter states, and each suite was broken on
+purpose to prove it can fail ([why](DECISIONS.md#borrowed-graders-not-written-lessons)).
+They sit beside each answer, in [`ms-00-prepa/rte-route-l1`](ms-00-prepa/rte-route-l1),
+and run once that directory is copied into a clone of the book.
+
+The first assignment of CS336 used to be step 6. It left the route on
+30 September 2026: its fifteen architecture-agnostic adapters graded steps 2 to
+5 a second time ([why](DECISIONS.md#cs336-and-why-it-left-the-prep)). Its three
+pieces that belong to Llama rather than to GPT-2, RMSNorm, SwiGLU and RoPE,
+moved to [`ms-01-inference`](ms-01-inference/README.md).
+
+### The acceptance test
+
+It is black-box, already written, and it states what breaking each check costs,
+measured against a reference implementation:
+[`ms-00-prepa/l1-01-gpt-corpus/verifier.py`](ms-00-prepa/l1-01-gpt-corpus/verifier.py).
+It reads tensors in and tensors out, never the architecture. Any number of
+layers, heads or norms passes, as long as the model is a causal language model.
+
+| Gate | What has to land |
+|---|---|
+| 1 | `(B,T) → (B,T,V)`, and no loss when no target is given |
+| 2 | loss at initialisation inside `[4.12, 4.92]`, where `ln(65) = 4.1744` |
+| 3 | drift **exactly 0.0** when tokens after position `t` change; dropping the mask gives 1.42e-01 |
+| 4 | 0.0010 on a task only position can solve; without position embeddings it sits at 3.4658 |
+| 5 | 0.0108 after 400 steps overfitting 32 fixed sequences |
+| 6 | `generate` survives a context longer than the block size |
+| 7 | the trained weights, measured on dev, land 0.10 below a counted bigram on the same split: 2.0856 against a bar of 2.3743, and weights never trained sit at 4.3370 |
+
+Gates 1 to 6 grade the model, gate 7 its training. Without gate 7, a `gpt.py`
+that was never trained would pass the other six.
+
+### What closes L1
+
+L1 comes in two parts. The phase closes on the first, and L1 itself needs both.
+
+1. **The model.** `gpt.py`, written from a blank file, passes the seven gates
+   above. A terminal grades it, through `./exo` or `python3 verifier.py`.
+2. **The public write-up**, the curriculum's `l1-01-gpt-corpus`. A person
+   grades it. Its one criterion is that someone else replays it without asking
+   a question. It holds:
+   - the chosen corpus, with its source, its licence, and a preparation script
+     that rebuilds the same split;
+   - the training run on that corpus, with the seed, the hyperparameters and
+     the dependency versions committed, and the weights attached to a release
+     rather than kept in the git history;
+   - train and validation loss on one graph, the whole curve, with the step
+     kept and why;
+   - several unsorted samples, with their seed;
+   - every number beside a baseline: validation loss against `ln(V)` and the
+     bigram, the parameter count and how it was counted, the training time and
+     the machine;
+   - what was not tried, the bugs found afterwards, and what they change;
+   - a token's path to the logits drawn from memory with its shapes, in a
+     report that holds up without the code on screen.
+
+L1 was published on 1 October 2026 and validated on 2 October 2026.
+
 ## The roadmap
 
 <!-- avancement: written by carte_phases.py from the graders. Do not edit by hand. -->
@@ -186,79 +259,6 @@ utilities were broken on purpose fourteen ways, and the tests catch thirteen.
 That includes short writes and failing reads that no shell test can provoke,
 reached by rebuilding the utilities with `write()` and `read()` redirected at
 compile time.
-
-## Phase 0: a GPT trained by hand
-
-The prep is graded on one object: a causal GPT written from a blank file, in
-`torch`, with the attention written by hand rather than called. The route to
-it borrows each step from existing work.
-
-| | Step | What grades it |
-|---|---|---|
-| 1 | Tensor Puzzles: 21 puzzles, one expression each, twenty of them inside eighty columns | the checker inside the notebook |
-| 2 | Text data: tokenizer, sliding window, embeddings | `test_ch02.py`: upstream's test and four of mine |
-| 3 | Causal attention: scores, mask, multiple heads | `test_ch03.py` |
-| 4 | The GPT: blocks, normalisation, residuals, logits | `test_ch04.py` |
-| 5 | Pretraining: the loop, train and validation loss, sampling | `test_ch05.py` |
-
-Raschka's book ships almost no assertions. So the tests of steps 2 to 5 are
-written here, against what each chapter states, and each suite was broken on
-purpose to prove it can fail ([why](DECISIONS.md#borrowed-graders-not-written-lessons)).
-They sit beside each answer, in [`ms-00-prepa/rte-route-l1`](ms-00-prepa/rte-route-l1),
-and run once that directory is copied into a clone of the book.
-
-The first assignment of CS336 used to be step 6. It left the route on
-30 September 2026: its fifteen architecture-agnostic adapters graded steps 2 to
-5 a second time ([why](DECISIONS.md#cs336-and-why-it-left-the-prep)). Its three
-pieces that belong to Llama rather than to GPT-2, RMSNorm, SwiGLU and RoPE,
-moved to [`ms-01-inference`](ms-01-inference/README.md).
-
-### The acceptance test
-
-It is black-box, already written, and it states what breaking each check costs,
-measured against a reference implementation:
-[`ms-00-prepa/l1-01-gpt-corpus/verifier.py`](ms-00-prepa/l1-01-gpt-corpus/verifier.py).
-It reads tensors in and tensors out, never the architecture. Any number of
-layers, heads or norms passes, as long as the model is a causal language model.
-
-| Gate | What has to land |
-|---|---|
-| 1 | `(B,T) → (B,T,V)`, and no loss when no target is given |
-| 2 | loss at initialisation inside `[4.12, 4.92]`, where `ln(65) = 4.1744` |
-| 3 | drift **exactly 0.0** when tokens after position `t` change; dropping the mask gives 1.42e-01 |
-| 4 | 0.0010 on a task only position can solve; without position embeddings it sits at 3.4658 |
-| 5 | 0.0108 after 400 steps overfitting 32 fixed sequences |
-| 6 | `generate` survives a context longer than the block size |
-| 7 | the trained weights, measured on dev, land 0.10 below a counted bigram on the same split: 2.0856 against a bar of 2.3743, and weights never trained sit at 4.3370 |
-
-Gates 1 to 6 grade the model, gate 7 its training. Without gate 7, a `gpt.py`
-that was never trained would pass the other six.
-
-### What closes L1
-
-L1 comes in two parts. The phase closes on the first, and L1 itself needs both.
-
-1. **The model.** `gpt.py`, written from a blank file, passes the seven gates
-   above. A terminal grades it, through `./exo` or `python3 verifier.py`.
-2. **The public write-up**, the curriculum's `l1-01-gpt-corpus`. A person
-   grades it. Its one criterion is that someone else replays it without asking
-   a question. It holds:
-   - the chosen corpus, with its source, its licence, and a preparation script
-     that rebuilds the same split;
-   - the training run on that corpus, with the seed, the hyperparameters and
-     the dependency versions committed, and the weights attached to a release
-     rather than kept in the git history;
-   - train and validation loss on one graph, the whole curve, with the step
-     kept and why;
-   - several unsorted samples, with their seed;
-   - every number beside a baseline: validation loss against `ln(V)` and the
-     bigram, the parameter count and how it was counted, the training time and
-     the machine;
-   - what was not tried, the bugs found afterwards, and what they change;
-   - a token's path to the logits drawn from memory with its shapes, in a
-     report that holds up without the code on screen.
-
-L1 was published on 1 October 2026 and validated on 2 October 2026.
 
 ## What is not here
 
