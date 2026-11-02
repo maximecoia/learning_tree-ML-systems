@@ -4,9 +4,13 @@
 
 `ms-11-scale` · after the common core · 5 sub-modules, 1 written · 8 exercises
 
-**What it buys.** Numerical precision measured, several GPUs, data and evaluation, modern C++, and CS336's systems assignment.
+What changes when a model leaves a single GPU and a single precision. bf16 brings regressions to trace, several GPUs bring bottlenecks to predict. Evaluation closes the road: no optimization is accepted without the right quality measure.
 
-Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
+**Skills this phase builds**
+
+- The source of a bf16 regression identified
+- The bottleneck of a multi-GPU training run predicted before launch
+- An optimization accepted or refused on a quality measure
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
@@ -15,6 +19,8 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `qua-01-evaluation` | added | Require the quality measurement that goes with an optimisation before accepting it, and hold a long task alongside perplexity | planned, not written yet |
 | `cpp-11-modern` | added | Read what the compiler makes of a modern C++ program, moves, instantiation, constexpr, in the assembly and in the allocation count, write concurrent code against std::atomic's memory model, and spot a hidden allocation in a hot loop | not started · 8 exercises |
 | `dist-02-cs336` | added | Hand in CS336's assignment 2 and make its public suite pass, on parallelism and the collectives, Triton tests included: pytest skips them without a GPU, so a Mac does not validate them | planned, not written yet |
+
+Rows follow the order of the work; work done alongside the sequence comes last. Every English sentence on this page is translated from the curriculum's French and stored with a fingerprint of its source, so a changed source stops the page from being rebuilt.
 
 ## Reading
 

@@ -4,11 +4,15 @@
 
 `ms-04-infrastructure` · school milestone 5 · 6 sub-modules, 3 written · 16 exercises
 
-**What it buys.** Milestone 5, then the Inception stack ported to Kubernetes, serving the L2 server with its metrics in Prometheus, Go, and the inference control layer on simulated servers.
+The school's milestone 5, then the step from container to cluster. The L2 inference server leaves the local machine for Kubernetes, with its metrics and a load test. This is the entry door to infrastructure, where inference is deployed in production.
 
-**How it ends.** Not on a feeling, on one binary test: *Your inference server runs on a local Kubernetes, its metrics land in Prometheus, and a load test replays L2's curve, explaining the gap with the native measurement.*
+**Skills this phase builds**
 
-Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
+- A containerized service stack, from Docker to Kubernetes
+- Go read and written at the level of a Kubernetes project
+- Prometheus metrics that explain a performance gap
+
+**Done when.** The inference server runs on a local Kubernetes, its metrics land in Prometheus, and a load test replays L2's curve, explaining the gap with the native measurement.
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
@@ -18,6 +22,8 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `go-01-basics` | added | Write tested Go the way Kubernetes projects do: table tests, interfaces and test doubles, cancellable concurrency without leaks, a line-based TCP server and an idempotent reconcile loop | not started · 5 exercises |
 | `ops-01-operations` | added | Port the Inception stack to a local Kubernetes, serve L2's inference server on it with its metrics in Prometheus, replay its curve under load, route inference through the Gateway API Inference Extension, and rebuild it all with Helm, Terraform and a CI | not started · 7 exercises |
 | `ops-02-control` | added | Admit then shed by the priority of two clients when the pool saturates, bring the service back from zero on the picker's queue while costing the cold start, and treat the GPU as a cluster resource, allocated through DRA and pulled from a failing node, all on a local Kubernetes with simulated servers | planned, not written yet |
+
+Rows follow the order of the work; work done alongside the sequence comes last. Every English sentence on this page is translated from the curriculum's French and stored with a fingerprint of its source, so a changed source stops the page from being rebuilt.
 
 ## Reading
 

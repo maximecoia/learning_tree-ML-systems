@@ -4,11 +4,15 @@
 
 `ms-06-service` · school milestones 7 and 8 · 5 sub-modules, 0 written · 0 exercises
 
-**What it buys.** Milestones 7 and 8, with the cost per million tokens of every model in Agent Smith's report, a Kubernetes controller in Go, then the last imposed project, crossed fast, taking its serving and monitoring part.
+The school's milestones 7 and 8, which close the common core. The agents and transcendence become service exercises there: cost per million tokens, latency per request, monitoring. It is an operator's view of a model, the one who pays the bill and carries the pager.
 
-**How it ends.** Not on a feeling, on one binary test: *Agent Smith's report gives, per model and per provider, the cost per million tokens and the latency per request, with the source and date of each price. `transcendance` is validated, its part serves a model whose metrics land in Prometheus, and its real hours stayed under one hundred and twenty.*
+**Skills this phase builds**
 
-Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
+- Cost per million tokens compared across models and providers
+- A Kubernetes controller written in Go
+- A model served and monitored, metrics in Prometheus
+
+**Done when.** Agent Smith's report gives, per model and per provider, the cost per million tokens and the latency per request, with the source and date of each price. `transcendance` is validated, its part serves a model whose metrics land in Prometheus, and its real hours stayed under one hundred and twenty.
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
@@ -17,6 +21,8 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `t42-10-answer-protocol` | imposed | Pass `answer protocol` as a group, in Go if the group agrees, a TCP server faithful to the protocol and two clients | 42 subject, not published |
 | `go-02-controller` | added | Write a controller with controller-runtime like AIBrix's: a custom resource the API server validates, an owned Deployment reconciled without needless writes, a status, conditions and a finalizer, a pure scaling rule tested by table, then the loop closed on pod metrics, all graded by envtest under go test -race, without Docker | planned, not written yet |
 | `t42-11-transcendence` | imposed | Cross `transcendance` fast and cleanly, taking the serving and monitoring part, under a ceiling of 120 hours | 42 subject, not published |
+
+Rows follow the order of the work; work done alongside the sequence comes last. Every English sentence on this page is translated from the curriculum's French and stored with a fingerprint of its source, so a changed source stops the page from being rebuilt.
 
 ## Reading
 

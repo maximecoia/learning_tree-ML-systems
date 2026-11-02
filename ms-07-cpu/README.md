@@ -4,9 +4,13 @@
 
 `ms-07-cpu` · after the common core · 11 sub-modules, 10 written · 35 exercises
 
-**What it buys.** The school's specialisation, the inference engine in C, the C++ modules up to vectors, then a thread pool, the cost of a lock, SIMD lanes and a task scheduler, measured.
+The school's specialization, then CPU compute pushed all the way. An inference engine written in C is put in numbers on a roofline, and C++ is rebuilt from classes to vectorization. Parallelism across every core and in SIMD prepares the GPU logic of the later phases.
 
-Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
+**Skills this phase builds**
+
+- An inference engine in C, placed on a roofline
+- A thread pool and its contention measured
+- A loop vectorized in SIMD, its gain verified
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
@@ -21,6 +25,8 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `c-08-contention` | added | Measure what a lock costs as the thread count rises, first on a counter that is correct, then on three strategies whose curves say which one shares what | not started · 2 exercises |
 | `c-09-simd` | added | Split a computation across threads and measure the imbalance the split creates, write masked vector code and read lane utilisation, get the compiler to vectorise a loop and check that it did, and tie a computation's ceiling to the machine's bandwidth | not started · 4 exercises |
 | `c-10-scheduling` | added | Write a batch task scheduler over threads created once, measure the imbalance between threads before correcting it, and run dependent batches without any starting before what it waits on | not started · 4 exercises |
+
+Rows follow the order of the work; work done alongside the sequence comes last. Every English sentence on this page is translated from the curriculum's French and stored with a fingerprint of its source, so a changed source stops the page from being rebuilt.
 
 ## Reading
 

@@ -4,9 +4,13 @@
 
 `ms-10-cuda` · after the common core · 10 sub-modules, 0 written · 0 exercises
 
-**What it buys.** CUDA from indexing and coalescing through tiling, reduction, occupancy and the roofline down to SASS, then the kernel that beats the reference, and minishell.
+CUDA in depth, from indexing to assembly. Each optimization is justified by a micro-benchmark and a measured roofline, then by the SASS that explains the counter. The phase closes on L5, a kernel that beats the reference, and minishell lays the ground for orchestrators.
 
-Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
+**Skills this phase builds**
+
+- A roofline measured with self-written micro-benchmarks
+- A Nsight Compute counter explained by the assembly
+- A kernel that beats the reference, numbers published
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
@@ -20,6 +24,8 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `cu-10-assembly` | added | Read a kernel's SASS to explain a counter of the Nsight Compute report, and stop at reading | planned, not written yet |
 | `l5-01-beat` | proof | Beat the reference, pinned to its version, with a kernel of your own on a precisely bounded case, and ship the bench that verifies it: correct on every shape of the case, cheating and memory regressions caught, gain measured with its standard deviation, replayed and placed on a roofline at the peak of the measured clock, and the cases where it loses said too | planned, not written yet |
 | `c-11-minishell` | added | Write a shell that chains fork, exec, pipes and redirections without leaking a descriptor, and whose every error exits with the expected code | 42 subject, not published |
+
+Rows follow the order of the work; work done alongside the sequence comes last. Every English sentence on this page is translated from the curriculum's French and stored with a fingerprint of its source, so a changed source stops the page from being rebuilt.
 
 ## Reading
 

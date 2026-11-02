@@ -4,9 +4,15 @@
 
 `ms-00-foundations` · before the school · 9 sub-modules, 9 written · 53 exercises
 
-**What it buys.** Enter the school with the libft practised and a GPT trained by hand.
+The base laid before school starts: Python, libft in C, and the maths of learning. The phase closes on L1, a small GPT written from a blank file and then trained. The whole road assumes knowing what a model computes before measuring what it costs.
 
-**How it ends.** Not on a feeling, on one binary test: *Your `gpt.py`, written from a blank file, passes the seven gates of `verifier.py`: six on the model, the seventh on its training, whose validation loss lands 0.10 below the counted bigram.*
+**Skills this phase builds**
+
+- A transformer written and trained without copying a reference
+- The linear algebra and probability a model actually uses
+- Python shipped cleanly, tested and packaged
+
+**Done when.** The `gpt.py` written from a blank file passes the seven gates of `verifier.py`: six on the model, the seventh on its training, whose validation loss lands 0.10 below the counted bigram.
 
 
 ## What to do, in order
@@ -31,8 +37,6 @@ Closed on 2 October 2026. The table stays as the record of what closed the phase
 
 ## What each sub-module covers
 
-Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
-
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
 | `py-01-basics` | added | Write Python functions using the language's variables, arithmetic operators, strings, conditionals, loops, lists, dictionaries and functions | [py-01-basics](py-01-basics) · 9 exercises |
@@ -44,6 +48,8 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `mth-01-algebra` | added | Implement 2D vector and matrix transformations in Python | [mth-01-algebra](mth-01-algebra) · 8 exercises |
 | `mth-02-probability` | added | Simulate a distribution, hold it against its closed form, and know how many measurements it takes to tell two values apart | [mth-02-probability](mth-02-probability) · 6 exercises |
 | `mth-03-statistics` | added | Judge whether two series of measurements really differ, knowing how often you will be wrong | [mth-03-statistics](mth-03-statistics) · 6 exercises |
+
+Rows follow the order of the work; work done alongside the sequence comes last. Every English sentence on this page is translated from the curriculum's French and stored with a fingerprint of its source, so a changed source stops the page from being rebuilt.
 
 ## Reading
 

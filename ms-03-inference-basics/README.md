@@ -4,9 +4,15 @@
 
 `ms-03-inference-basics` · Maxime, after the Python piscine · 11 sub-modules, 11 written · 40 exercises
 
-**What it buys.** The saturation curve of an unknown inference server produced in half a day.
+Language-model inference seen as a system: a server, a load, numbers. The phase teaches measuring before optimizing, from the stopwatch to the load bench, through prefill, decode, the KV cache and quantization. It closes on L2, the published saturation curve of a server.
 
-**How it ends.** Not on a feeling, on one binary test: *You are given an unknown inference server. You produce its saturation curve in half a day.*
+**Skills this phase builds**
+
+- Reliable latency measurement, noise and variance included
+- The cost of prefill, decode and the KV cache put in numbers
+- The saturation curve of an unknown server, in half a day
+
+**Done when.** Given an unknown inference server, its saturation curve is produced in half a day.
 
 
 ## What to do, in order
@@ -29,8 +35,6 @@ One table, from what is done to what waits. Every state is read from a grader, n
 
 ## What each sub-module covers
 
-Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
-
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
 | `mes-01-stopwatch` | added | Time a function without being fooled by noise or by warm-up | [mes-01-stopwatch](mes-01-stopwatch) · 7 exercises |
@@ -44,6 +48,8 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `inf-06-harness` | added | Hold N requests in flight against an inference server, record throughput, percentiles and refusal rate without any of the three traps skewing the figure, and produce a CSV the graph regenerates from | [inf-06-harness](inf-06-harness) · 5 exercises |
 | `inf-07-saturation` | added | Sweep an inference server's concurrency to its breaking point, locate that point by a rule stated in advance, and name the physical limit that sets it with the numbers that prove it | [inf-07-saturation](inf-07-saturation) · 3 exercises |
 | `l2-01-curve` | proof | Publish an inference server's throughput and latency curve, with its protocol, its breaking point and the physical limit that sets it, and defend it without the code in front of you | not started |
+
+Rows follow the order of the work; work done alongside the sequence comes last. Every English sentence on this page is translated from the curriculum's French and stored with a fingerprint of its source, so a changed source stops the page from being rebuilt.
 
 ## Reading
 

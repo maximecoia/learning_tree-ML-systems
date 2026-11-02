@@ -4,11 +4,15 @@
 
 `ms-08-profiling` · after the common core · 11 sub-modules, 10 written · 25 exercises
 
-**What it buys.** The regime of a workload predicted before it is measured, an unknown Nsight timeline read in ten minutes, the L4 profile, a GPU MODE ranking and the rest of the C++ modules.
+Profiling as a method: predict a program's regime, then measure it. The Nsight Systems timeline shows where the GPU waits, and L4 publishes a full execution profile. A GPU MODE competition sets these predictions against others, and C++ is finished in the background.
 
-**How it ends.** Not on a feeling, on one binary test: *You read an unknown Nsight timeline and name the gap in ten minutes.*
+**Skills this phase builds**
 
-Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
+- A program's regime named before it is measured
+- The gap in an unknown Nsight timeline found in ten minutes
+- A public ranking in a GPU MODE competition
+
+**Done when.** An unknown Nsight timeline is read and its gap named in ten minutes.
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
@@ -23,6 +27,8 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `cpp-08-templates` | added | Write generic code that holds for any type carrying the operations it uses, and a templated container that deep-copies and refuses an out-of-bounds index | 42 subject, not published · 3 exercises |
 | `cpp-09-containers` | added | Use the standard library's containers and algorithms instead of rewriting them, pick the structure that answers a question in N log N rather than N², and extend a container by inheritance without breaking what it is | 42 subject, not published · 3 exercises |
 | `cpp-10-stl` | added | Pick the container that answers a question in one lookup, write a complete program that reads, validates and refuses its input, and implement a sorting algorithm described in the literature while counting its comparisons | 42 subject, not published · 3 exercises |
+
+Rows follow the order of the work; work done alongside the sequence comes last. Every English sentence on this page is translated from the curriculum's French and stored with a fingerprint of its source, so a changed source stops the page from being rebuilt.
 
 ## Reading
 

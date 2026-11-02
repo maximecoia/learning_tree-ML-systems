@@ -4,9 +4,13 @@
 
 `ms-09-kernel` · after the common core · 6 sub-modules, 4 written · 15 exercises
 
-**What it buys.** From philosophers to warps, the first CUDA kernels and their divergence, then Triton from vector addition to matmul, with a written measurement note.
+The step from CPU to GPU, through the first kernels. The school's philosophers serve as a bridge to warps, then CUDA puts a number on the cost of divergence. Triton then gives a fused softmax and a tiled matmul, two core building blocks of a transformer.
 
-Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
+**Skills this phase builds**
+
+- A CUDA kernel written, launched and verified
+- The cost of warp divergence put in numbers
+- A fused softmax and a tiled matmul in Triton
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
@@ -16,6 +20,8 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `tri-02-softmax` | added | Write a row-wise softmax that never overflows, and check a kernel on four axes rather than one | not started · 5 exercises |
 | `tri-03-matmul` | added | Write a tiled Triton matmul whose tile size is justified by a count, and compare it with the reference on a bounded case | planned, not written yet |
 | `tri-04-report` | added | Write the note that says what was measured, under which protocol, and what the measurement does not allow you to conclude | planned, not written yet |
+
+Rows follow the order of the work; work done alongside the sequence comes last. Every English sentence on this page is translated from the curriculum's French and stored with a fingerprint of its source, so a changed source stops the page from being rebuilt.
 
 ## Reading
 

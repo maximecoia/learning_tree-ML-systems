@@ -325,6 +325,7 @@ ms-00-foundations/         the bases, C, Python and maths, closed on 2 October 2
     l1-01-gpt-corpus/      L1: the GPT, its training on Jules Verne, and its acceptance test
     rte-route-l1/          the route's chapters, answers to Raschka's book
 ms-01-c-core/              the graded C of the common core, its page only
+ms-02-python-sysadmin/     Python, administration, network, its page only
 ms-03-inference-basics/    measured inference, the basics, in progress
     README.md              its sub-modules in the order of the work, and their state
     mes-01-stopwatch/      a function timed without being fooled by noise or warm-up

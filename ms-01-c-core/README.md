@@ -4,11 +4,15 @@
 
 `ms-01-c-core` · school milestones 1 to 3 · 4 sub-modules, 4 written · 6 exercises
 
-**What it buys.** Libft, ft_printf, get_next_line and push_swap, ticked here once the school's intra validates them.
+The four graded C projects of the school's common core. C sits under everything this road ends on: llama.cpp, the CUDA kernels, the inference engine of phase 7. These projects make memory, pointers and the cost of an algorithm concrete before any of that.
 
-**How it ends.** Not on a feeling, on one binary test: *The campus intra validates libft, ft_printf, get_next_line and push_swap.*
+**Skills this phase builds**
 
-Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
+- Manual memory management, with leaks ruled out by valgrind
+- A reusable library that passes the school's norm
+- Algorithm cost measured rather than guessed
+
+**Done when.** The campus intra validates libft, ft_printf, get_next_line and push_swap.
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
@@ -16,6 +20,8 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `c-03-printf` | imposed | Write a variadic formatter whose output matches the libc's, conversion by conversion | 42 subject, not published · 1 exercise |
 | `c-04-gnl` | imposed | Read a stream line by line with state that survives between calls, from a file as from standard input, and without leaking | 42 subject, not published · 1 exercise |
 | `c-05-pushswap` | imposed | Sort under a constrained set of operations with four strategies of distinct complexity classes, and defend each one's class by measurement | 42 subject, not published · 1 exercise |
+
+Rows follow the order of the work; work done alongside the sequence comes last. Every English sentence on this page is translated from the curriculum's French and stored with a fingerprint of its source, so a changed source stops the page from being rebuilt.
 
 ## Reading
 

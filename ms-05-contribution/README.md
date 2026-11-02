@@ -4,11 +4,15 @@
 
 `ms-05-contribution` · school milestone 6 · 13 sub-modules, 0 written · 0 exercises
 
-**What it buys.** Milestone 6, starvation measured in Codexion under FIFO and EDF, a first pull request in AIBrix, the vLLM organisation's Kubernetes control plane, and interview preparation.
+The school's milestone 6 and the entry into the code of vLLM, a reference open-source inference engine. Speculative decoding, PagedAttention and memory fragmentation are read there in the real code. The phase aims at a first reviewed contribution to AIBrix, the Kubernetes control plane of the vLLM organization.
 
-**How it ends.** Not on a feeling, on one binary test: *Codexion publishes each coder's waiting times under FIFO and under EDF, and starvation reads in the numbers. L3 is open, or its postponement is written in the journal with the condition that triggered it.*
+**Skills this phase builds**
 
-Descriptions below translate the curriculum's own `competence` field, one sentence per sub-module. Each translation is stored with a fingerprint of the French it was made from, so a source that changes stops this page from being rebuilt rather than outrunning it. Rows are in the order the work goes, read from the curriculum's `apres` and `fil` fields; work done alongside the sequence comes last.
+- An inference engine's memory read in its own code
+- Scheduler starvation measured under FIFO and under EDF
+- A pull request opened in a vLLM organization project
+
+**Done when.** Codexion publishes each coder's waiting times under FIFO and under EDF, and starvation reads in the numbers. L3 is open, or its postponement is written in the journal with the condition that triggered it.
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
@@ -25,6 +29,8 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 | `inf-15-pick-issue` | added | Pick an AIBrix defect in routing, autoscaling or caching, find it oneself when labelled issues are taken, and justify the choice by the expected gain and by what is within reach | planned, not written yet |
 | `l3-01-contribution` | proof | Open a pull request in the vLLM organisation's inference stack, AIBrix first, engage its review, and publish the measured gain it brings | planned, not written yet |
 | `pro-00-interviews` | proof | Pass infrastructure and platform interviews: live coding without help, debugging code you did not write, troubleshooting Linux and networks, designing numbers first, and telling your work in English | planned, not written yet |
+
+Rows follow the order of the work; work done alongside the sequence comes last. Every English sentence on this page is translated from the curriculum's French and stored with a fingerprint of its source, so a changed source stops the page from being rebuilt.
 
 ## Reading
 
