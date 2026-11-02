@@ -1,6 +1,6 @@
 <div align="center">
 
-# The Python socle
+# The Python foundation
 
 **A progressive Python tree toward ML systems, one decision at a time.**
 

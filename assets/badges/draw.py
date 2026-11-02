@@ -132,7 +132,7 @@ def big(text, size=40, colour=T, y=80):
 # The roadmap's modules, by curriculum id: (label, frame, glyph). The frame is
 # "added" for the added layer and "proof" for a deliverable or a proof.
 MODULES = {
-    'py-socle': ('PYTHON SOCLE', 'added', f'''
+    'py-socle': ('PYTHON FOUNDATION', 'added', f'''
       <rect x="42" y="36" width="66" height="50" rx="6" fill="{S}"/>
       <rect x="42" y="36" width="66" height="11" rx="6" fill="{M}"/>
       <circle cx="50" cy="41.5" r="2.2" fill="{O}"/><circle cx="57" cy="41.5" r="2.2" fill="{Y}"/>

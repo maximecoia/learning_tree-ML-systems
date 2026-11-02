@@ -192,7 +192,7 @@ modules carry their school badge above instead.
 <!-- badges: written by carte_phases.py from the graders. Do not edit by hand. -->
 | Phase | Modules |
 |---|---|
-| [Phase&nbsp;0](ms-00-prepa) | <img src="assets/badges/roadmap/py-socle.svg" width="72" alt="PYTHON SOCLE, earned" title="PYTHON SOCLE, earned"> <img src="assets/badges/roadmap/ms-maths.svg" width="72" alt="MATHS, earned" title="MATHS, earned"> <img src="assets/badges/roadmap/rte-route-l1.svg" width="72" alt="ROUTE TO L1, earned" title="ROUTE TO L1, earned"> <img src="assets/badges/roadmap/l1-livrable.svg" width="72" alt="L1 · A GPT, earned" title="L1 · A GPT, earned"> |
+| [Phase&nbsp;0](ms-00-prepa) | <img src="assets/badges/roadmap/py-socle.svg" width="72" alt="PYTHON FOUNDATION, earned" title="PYTHON FOUNDATION, earned"> <img src="assets/badges/roadmap/ms-maths.svg" width="72" alt="MATHS, earned" title="MATHS, earned"> <img src="assets/badges/roadmap/rte-route-l1.svg" width="72" alt="ROUTE TO L1, earned" title="ROUTE TO L1, earned"> <img src="assets/badges/roadmap/l1-livrable.svg" width="72" alt="L1 · A GPT, earned" title="L1 · A GPT, earned"> |
 | [Phase&nbsp;1](ms-01-inference) | <img src="assets/badges/roadmap/mes-performance.svg" width="72" alt="MEASUREMENT, earned" title="MEASUREMENT, earned"> <img src="assets/badges/roadmap/inf-mesure.svg" width="72" alt="INFERENCE, earned" title="INFERENCE, earned"> <img src="assets/badges/roadmap/l2-livrable-locked.svg" width="72" alt="L2 · THE CURVE, not yet" title="L2 · THE CURVE, not yet"> |
 | [Phase&nbsp;2](ms-02-infrastructure) | <img src="assets/badges/roadmap/go-bases-locked.svg" width="72" alt="GO, not yet" title="GO, not yet"> <img src="assets/badges/roadmap/ops-exploitation-locked.svg" width="72" alt="KUBERNETES, not yet" title="KUBERNETES, not yet"> <img src="assets/badges/roadmap/ops-controle-locked.svg" width="72" alt="CONTROL LAYER, not yet" title="CONTROL LAYER, not yet"> |
 | [Phase&nbsp;3](ms-03-contribution) | <img src="assets/badges/roadmap/inf-speculatif-locked.svg" width="72" alt="SPECULATIVE, not yet" title="SPECULATIVE, not yet"> <img src="assets/badges/roadmap/inf-memoire-locked.svg" width="72" alt="MEMORY, not yet" title="MEMORY, not yet"> <img src="assets/badges/roadmap/inf-vllm-locked.svg" width="72" alt="VLLM, not yet" title="VLLM, not yet"> <img src="assets/badges/roadmap/l3-livrable-locked.svg" width="72" alt="L3 · CONTRIB, not yet" title="L3 · CONTRIB, not yet"> <img src="assets/badges/roadmap/pro-entretiens-locked.svg" width="72" alt="INTERVIEWS, not yet" title="INTERVIEWS, not yet"> |
@@ -228,7 +228,7 @@ roadmap, are in [`DECISIONS.md`](DECISIONS.md).
 
 ## What is already here
 
-- **[The Python socle](PYTHON.md)**: 26 exercises in three modules, from input
+- **[The Python foundation](PYTHON.md)**: 26 exercises in three modules, from input
   you do not control to a command installed on the PATH.
 - **[The maths](MATHS.md)**: 20 exercises in three modules, in plain Python.
   Linear algebra up to a 2D transformation engine, probability held against
@@ -297,7 +297,7 @@ One folder per phase, and inside it one folder per sub-module.
 DECISIONS.md               the decisions that changed the roadmap, with their evidence
 LICENSE                    MIT, and the credits owed are in Sources and licence below
 MATHS.md                   the maths, module by module, and what they measured
-PYTHON.md                  the Python socle, exercise by exercise
+PYTHON.md                  the Python foundation, exercise by exercise
 README.md                  this page: what ML Systems is, the roadmap, and where it stands
 assets/                    the roadmap line and the badges: the 2026 school projects', the roadmap's own, and the script that draws them
 tools/                     the checks this repository can run on itself
