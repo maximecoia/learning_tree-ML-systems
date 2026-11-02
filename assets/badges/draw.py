@@ -8,7 +8,10 @@ Two sets, one silhouette: 150 by 150, a pointy top, a coloured frame.
   badges collected in ayogun/42-project-badges. That collection predates the
   2026 common core, so nine of its projects have no badge there. They are drawn
   here with the same teal frame, so the school table reads as one set, and the
-  README says they are home-made. They are written next to this file.
+  README says they are home-made. They are written next to this file. The
+  borrowed ones are kept in `42/`, with their MIT licence. Every school badge
+  gets a grey `-locked.svg` twin, and `carte_phases.py` shows it until the school
+  validates the project.
 - **The roadmap's own modules.** One badge per module of the added layer and
   of the proofs, written to `roadmap/`. The frame says the layer: violet for
   the added layer, gold for a deliverable or a proof. Each is drawn twice,
@@ -19,11 +22,13 @@ Each glyph is plain vector, so nothing depends on the viewer's fonts except the
 name band and a few glyphs made of letters. The output is deterministic: a
 second run rewrites the same bytes. Standard library only.
 """
+import base64
 import math
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parent
 ROADMAP = OUT / 'roadmap'
+BORROWED = OUT / '42'
 FRAMES = {'school': '#5ecfd0', 'added': '#8b9cf7', 'proof': '#e3b341'}
 SANS = 'Helvetica, Arial, sans-serif'
 
@@ -65,6 +70,22 @@ def badge(label, frame, glyph, locked=False):
   </defs>{body}
 </svg>
 '''
+
+def greyed_png(path):
+    """A borrowed PNG badge wrapped in SVG and greyed like a locked badge.
+
+    The image is embedded, not linked: GitHub shows an SVG as an image, and an
+    image never loads another file.
+    """
+    data = base64.b64encode(path.read_bytes()).decode('ascii')
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150" role="img" aria-label="{path.stem}, not yet validated">
+  <defs>
+    <filter id="grey"><feColorMatrix type="saturate" values="0"/></filter>
+  </defs>
+  <image width="150" height="150" filter="url(#grey)" opacity=".45" href="data:image/png;base64,{data}"/>
+</svg>
+'''
+
 
 # One glyph per project: what the subject is about, in a few shapes.
 GLYPHS = {
@@ -256,10 +277,15 @@ MODULES = {
 if __name__ == '__main__':
     for name, (label, glyph) in GLYPHS.items():
         (OUT / f'{name}.svg').write_text(badge(label, 'school', glyph), encoding='utf-8')
+        (OUT / f'{name}-locked.svg').write_text(badge(label, 'school', glyph, True),
+                                                encoding='utf-8')
+    borrowed = sorted(BORROWED.glob('*.png'))
+    for png in borrowed:
+        (BORROWED / f'{png.stem}-locked.svg').write_text(greyed_png(png), encoding='utf-8')
     ROADMAP.mkdir(exist_ok=True)
     for name, (label, frame, glyph) in MODULES.items():
         (ROADMAP / f'{name}.svg').write_text(badge(label, frame, glyph), encoding='utf-8')
         (ROADMAP / f'{name}-locked.svg').write_text(badge(label, frame, glyph, True),
                                                     encoding='utf-8')
-    print(f'{len(GLYPHS)} school badges and {len(MODULES)} module badges, '
-          f'each module twice, written to {OUT}')
+    print(f'{len(GLYPHS)} school badges, {len(borrowed)} borrowed ones greyed and '
+          f'{len(MODULES)} module badges, each drawn twice, written to {OUT}')
