@@ -1,8 +1,8 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 2: Python, administration, the way in
+# Phase 3: Python, administration, the way in
 
-`ms-02-infrastructure` · school milestones 4 and 5 · 9 sub-modules, 5 written · 32 exercises
+`ms-03-infrastructure` · school milestones 4 and 5 · 9 sub-modules, 5 written · 32 exercises
 
 **What it buys.** Milestones 4 and 5, then the Inception stack ported to Kubernetes, serving the L2 server with its metrics in Prometheus, Go, and the inference control layer on simulated servers.
 
@@ -39,4 +39,4 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 
 ---
 
-← [ms-01-inference](../ms-01-inference) · [the roadmap](../README.md) · [ms-03-contribution](../ms-03-contribution) →
+← [ms-02-inference-basics](../ms-02-inference-basics) · [the roadmap](../README.md) · [ms-04-contribution](../ms-04-contribution) →

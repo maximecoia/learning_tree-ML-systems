@@ -474,3 +474,29 @@ Nothing changed order, and the counts hold: ten phases, 96 sub-modules.
 
 What could be wrong: `c-tronc-milestone1-3` keeps its name for now, and the
 entries above keep the names they had when written.
+
+
+## Why the graded C is a phase of its own
+
+Phase 1 used to mix two kinds of proof. The school's C projects, libft,
+ft_printf, get_next_line and push_swap, are proven when the campus intra
+validates them. The inference work is proven by its graders. A tick on this
+page needs a proof, so the phase was split in two, and the C comes first.
+
+| Phase before | After |
+|---|---|
+| `ms-01-inference`, the C | `ms-01-c-core` |
+| `ms-01-inference`, the rest | `ms-02-inference-basics` |
+| `ms-02-infrastructure` … `ms-09-scale` | `ms-03-infrastructure` … `ms-10-scale` |
+
+The C phase is ticked only once the intra validates each project. The second
+phase is named `inference-basics` on purpose: inference comes back later, in
+`ms-04-contribution`, `ms-05-service` and the GPU phases, and a name like `ms-02-inference` would
+claim it all. The module group `c-tronc-milestone1-3` became
+`c-core-milestone1-3`. The roadmap now has eleven phases, numbered 0 to 10,
+and the same 96 sub-modules.
+
+What could be wrong: L2 is not validated yet, so `ms-02-inference-basics`
+stays open while `ms-03-infrastructure` starts on 9 November 2026, at the
+start of the school term. Two open phases at once blur the "in progress"
+line.

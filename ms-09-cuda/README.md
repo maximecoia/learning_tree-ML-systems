@@ -1,8 +1,8 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 8: CUDA down to the assembly
+# Phase 9: CUDA down to the assembly
 
-`ms-08-cuda` · after the common core · 10 sub-modules, 0 written · 0 exercises
+`ms-09-cuda` · after the common core · 10 sub-modules, 0 written · 0 exercises
 
 **What it buys.** CUDA from indexing and coalescing through tiling, reduction, occupancy and the roofline down to SASS, then the kernel that beats the reference, and minishell.
 
@@ -40,4 +40,4 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 
 ---
 
-← [ms-07-kernel](../ms-07-kernel) · [the roadmap](../README.md) · [ms-09-scale](../ms-09-scale) →
+← [ms-08-kernel](../ms-08-kernel) · [the roadmap](../README.md) · [ms-10-scale](../ms-10-scale) →

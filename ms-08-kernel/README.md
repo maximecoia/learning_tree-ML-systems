@@ -1,8 +1,8 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 7: The first kernel, in CUDA and Triton
+# Phase 8: The first kernel, in CUDA and Triton
 
-`ms-07-kernel` · after the common core · 6 sub-modules, 4 written · 15 exercises
+`ms-08-kernel` · after the common core · 6 sub-modules, 4 written · 15 exercises
 
 **What it buys.** From philosophers to warps, the first CUDA kernels and their divergence, then Triton from vector addition to matmul, with a written measurement note.
 
@@ -32,4 +32,4 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 
 ---
 
-← [ms-06-profiling](../ms-06-profiling) · [the roadmap](../README.md) · [ms-08-cuda](../ms-08-cuda) →
+← [ms-07-profiling](../ms-07-profiling) · [the roadmap](../README.md) · [ms-09-cuda](../ms-09-cuda) →

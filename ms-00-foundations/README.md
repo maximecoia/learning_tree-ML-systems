@@ -63,4 +63,4 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 
 ---
 
-[the roadmap](../README.md) · [ms-01-inference](../ms-01-inference) →
+[the roadmap](../README.md) · [ms-01-c-core](../ms-01-c-core) →
