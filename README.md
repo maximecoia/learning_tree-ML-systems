@@ -42,13 +42,13 @@ checks that can fail, and a write-up of what each decision cost.
 ## Where the work stands
 
 <!-- compteurs: written by carte_phases.py from the graders. Do not edit by hand. -->
-Phase 2, [`ms-02-inference-basics`](ms-02-inference-basics), is the one in progress: **40 of 40 graded exercises** pass. It is paced by Maxime, alongside school milestones 1 to 3; [`ms-00-foundations`](ms-00-foundations) closed on 2 October 2026. Every number in this section is read from a grader by `carte_phases.py`, except that an exercise of a school project counts only once the school validates the project, and [the phase page](ms-02-inference-basics/README.md#what-to-do-in-order) lists the work in order with the next step marked.
+Phase 3, [`ms-03-inference-basics`](ms-03-inference-basics), is the one in progress: **40 of 40 graded exercises** pass. It is paced by Maxime, after the Python piscine; [`ms-00-foundations`](ms-00-foundations) closed on 2 October 2026. Every number in this section is read from a grader by `carte_phases.py`, except that an exercise of a school project counts only once the school validates the project, and [the phase page](ms-03-inference-basics/README.md#what-to-do-in-order) lists the work in order with the next step marked.
 
 | Track | State | |
 |---|---|---|
-| Measuring performance | ✓ 16 of 16 exercises, complete | [the phase page](ms-02-inference-basics/README.md#what-to-do-in-order) |
-| Measured inference | 22 of 24 exercises | [the phase page](ms-02-inference-basics/README.md#what-to-do-in-order) |
-| L2, the throughput and latency curve | a person grades it, not a terminal | [the phase page](ms-02-inference-basics/README.md#what-to-do-in-order) |
+| Measuring performance | ✓ 16 of 16 exercises, complete | [the phase page](ms-03-inference-basics/README.md#what-to-do-in-order) |
+| Measured inference | ✓ 24 of 24 exercises, complete | [the phase page](ms-03-inference-basics/README.md#what-to-do-in-order) |
+| L2, the throughput and latency curve | a person grades it, not a terminal | [the phase page](ms-03-inference-basics/README.md#what-to-do-in-order) |
 
 The denominator leaves out `l2-01-curve` (a public write-up, graded by a reader, not by a terminal).
 <!-- /compteurs -->
@@ -77,7 +77,7 @@ The first assignment of CS336 used to be step 6. It left the route on
 30 September 2026: its fifteen architecture-agnostic adapters graded steps 2 to
 5 a second time ([why](DECISIONS.md#cs336-and-why-it-left-the-prep)). Its three
 pieces that belong to Llama rather than to GPT-2, RMSNorm, SwiGLU and RoPE,
-moved to [`ms-02-inference-basics`](ms-02-inference-basics/README.md).
+moved to [`ms-03-inference-basics`](ms-03-inference-basics/README.md).
 
 ### The acceptance test
 
@@ -131,7 +131,7 @@ L1 was published on 1 October 2026 and validated on 2 October 2026.
 <!-- avancement: written by carte_phases.py from the graders. Do not edit by hand. -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/roadmap-dark.svg">
-  <img src="assets/roadmap-light.svg" width="100%" alt="The roadmap: ms-00-foundations, closed on 2 Oct 2026; ms-01-c-core, milestones 1 to 3; ms-02-inference-basics, 40 of 40 exercises; ms-03-infrastructure, milestones 4 and 5; ms-04-contribution, milestone 6; ms-05-service, milestones 7 and 8; ms-06-cpu, after the core; ms-07-profiling, after the core; ms-08-kernel, after the core; ms-09-cuda, after the core; ms-10-scale, after the core.">
+  <img src="assets/roadmap-light.svg" width="100%" alt="The roadmap: ms-00-foundations, closed on 2 Oct 2026; ms-01-c-core, milestones 1 to 3; ms-02-python-sysadmin, milestone 4; ms-03-inference-basics, 40 of 40 exercises; ms-04-infrastructure, milestone 5; ms-05-contribution, milestone 6; ms-06-service, milestones 7 and 8; ms-07-cpu, after the core; ms-08-profiling, after the core; ms-09-kernel, after the core; ms-10-cuda, after the core; ms-11-scale, after the core.">
 </picture>
 <!-- /avancement -->
 
@@ -139,15 +139,16 @@ L1 was published on 1 October 2026 and validated on 2 October 2026.
 |---|---|---|---|
 | [`ms-00-foundations`](ms-00-foundations)<br>the bases, C, Python and maths | before the school | enter the school with the libft practised and a GPT trained by hand | 9 |
 | [`ms-01-c-core`](ms-01-c-core)<br>the graded C of the common core | school milestones 1 to 3 | libft, ft_printf, get_next_line and push_swap, ticked here once the school's intra validates them | 4 |
-| **[`ms-02-inference-basics`](ms-02-inference-basics)**<br>measured inference, the basics | Maxime, alongside school milestones 1 to 3 | the saturation curve of an unknown inference server produced in half a day | 11 |
-| [`ms-03-infrastructure`](ms-03-infrastructure)<br>Python, administration, the way in | school milestones 4 and 5 | milestones 4 and 5, then the Inception stack ported to Kubernetes, serving the L2 server with its metrics in Prometheus, Go, and the inference control layer on simulated servers | 9 |
-| [`ms-04-contribution`](ms-04-contribution)<br>the school's AI projects, entering vLLM | school milestone 6 | milestone 6, starvation measured in Codexion under FIFO and EDF, a first pull request in AIBrix, the vLLM organisation's Kubernetes control plane, and interview preparation | 13 |
-| [`ms-05-service`](ms-05-service)<br>agents, network, the service | school milestones 7 and 8 | milestones 7 and 8, with the cost per million tokens of every model in Agent Smith's report, a Kubernetes controller in Go, then the last imposed project, crossed fast, taking its serving and monitoring part | 5 |
-| [`ms-06-cpu`](ms-06-cpu)<br>the C engine, parallelism on CPU | after the common core | the school's specialisation, the inference engine in C, the C++ modules up to vectors, then a thread pool, the cost of a lock, SIMD lanes and a task scheduler, measured | 11 |
-| [`ms-07-profiling`](ms-07-profiling)<br>profiling, predict then measure | after the common core | the regime of a workload predicted before it is measured, an unknown Nsight timeline read in ten minutes, the L4 profile, a GPU MODE ranking and the rest of the C++ modules | 11 |
-| [`ms-08-kernel`](ms-08-kernel)<br>the first kernel, in CUDA and Triton | after the common core | from philosophers to warps, the first CUDA kernels and their divergence, then Triton from vector addition to matmul, with a written measurement note | 6 |
-| [`ms-09-cuda`](ms-09-cuda)<br>CUDA down to the assembly | after the common core | CUDA from indexing and coalescing through tiling, reduction, occupancy and the roofline down to SASS, then the kernel that beats the reference, and minishell | 10 |
-| [`ms-10-scale`](ms-10-scale)<br>precision, several GPUs, evaluation | after the common core | numerical precision measured, several GPUs, data and evaluation, modern C++, and CS336's systems assignment | 5 |
+| [`ms-02-python-sysadmin`](ms-02-python-sysadmin)<br>Python, administration, network | school milestone 4 | the Python piscine, Born2beroot and NetPractice, ticked here once the school's intra validates them | 3 |
+| **[`ms-03-inference-basics`](ms-03-inference-basics)**<br>measured inference, the basics | Maxime, after the Python piscine | the saturation curve of an unknown inference server produced in half a day | 11 |
+| [`ms-04-infrastructure`](ms-04-infrastructure)<br>school and the front door | school milestone 5 | milestone 5, then the Inception stack ported to Kubernetes, serving the L2 server with its metrics in Prometheus, Go, and the inference control layer on simulated servers | 6 |
+| [`ms-05-contribution`](ms-05-contribution)<br>the school's AI projects, entering vLLM | school milestone 6 | milestone 6, starvation measured in Codexion under FIFO and EDF, a first pull request in AIBrix, the vLLM organisation's Kubernetes control plane, and interview preparation | 13 |
+| [`ms-06-service`](ms-06-service)<br>agents, network, the service | school milestones 7 and 8 | milestones 7 and 8, with the cost per million tokens of every model in Agent Smith's report, a Kubernetes controller in Go, then the last imposed project, crossed fast, taking its serving and monitoring part | 5 |
+| [`ms-07-cpu`](ms-07-cpu)<br>the C engine, parallelism on CPU | after the common core | the school's specialisation, the inference engine in C, the C++ modules up to vectors, then a thread pool, the cost of a lock, SIMD lanes and a task scheduler, measured | 11 |
+| [`ms-08-profiling`](ms-08-profiling)<br>profiling, predict then measure | after the common core | the regime of a workload predicted before it is measured, an unknown Nsight timeline read in ten minutes, the L4 profile, a GPU MODE ranking and the rest of the C++ modules | 11 |
+| [`ms-09-kernel`](ms-09-kernel)<br>the first kernel, in CUDA and Triton | after the common core | from philosophers to warps, the first CUDA kernels and their divergence, then Triton from vector addition to matmul, with a written measurement note | 6 |
+| [`ms-10-cuda`](ms-10-cuda)<br>CUDA down to the assembly | after the common core | CUDA from indexing and coalescing through tiling, reduction, occupancy and the roofline down to SASS, then the kernel that beats the reference, and minishell | 10 |
+| [`ms-11-scale`](ms-11-scale)<br>precision, several GPUs, evaluation | after the common core | numerical precision measured, several GPUs, data and evaluation, modern C++, and CS336's systems assignment | 5 |
 
 **No estimated dates.** Two dates on this page are facts: the prep closed on
 2 October 2026, and the school starts on 9 November 2026. The rest is paced,
@@ -171,11 +172,12 @@ is where each one sits.
 | Milestone | Phase | Projects |
 |---|---|---|
 | 1 to 3 | [`ms-01-c-core`](ms-01-c-core) | <img src="assets/badges/42/libfte-locked.svg" width="80" alt="libft, not yet validated" title="libft, not yet validated"> <img src="assets/badges/42/ft_printfe-locked.svg" width="80" alt="ft_printf, not yet validated" title="ft_printf, not yet validated"> <img src="assets/badges/42/get_next_linee-locked.svg" width="80" alt="get_next_line, not yet validated" title="get_next_line, not yet validated"> <img src="assets/badges/42/push_swape-locked.svg" width="80" alt="push_swap, not yet validated" title="push_swap, not yet validated"> |
-| 4 and 5 | [`ms-03-infrastructure`](ms-03-infrastructure) | <img src="assets/badges/python_piscine-locked.svg" width="80" alt="Python piscine, not yet validated" title="Python piscine, not yet validated"> <img src="assets/badges/42/born2beroote-locked.svg" width="80" alt="Born2beroot, not yet validated" title="Born2beroot, not yet validated"> <img src="assets/badges/42/netpracticee-locked.svg" width="80" alt="NetPractice, not yet validated" title="NetPractice, not yet validated"> <img src="assets/badges/a_maze_ing-locked.svg" width="80" alt="A-Maze-ing, not yet validated" title="A-Maze-ing, not yet validated"> <img src="assets/badges/pac_man-locked.svg" width="80" alt="Pac Man, not yet validated" title="Pac Man, not yet validated"> <img src="assets/badges/42/inceptione-locked.svg" width="80" alt="Inception, not yet validated" title="Inception, not yet validated"> |
-| 6 | [`ms-04-contribution`](ms-04-contribution) | <img src="assets/badges/call_me_maybe-locked.svg" width="80" alt="Call Me Maybe, not yet validated" title="Call Me Maybe, not yet validated"> <img src="assets/badges/rag_against_the_machine-locked.svg" width="80" alt="RAG against the machine, not yet validated" title="RAG against the machine, not yet validated"> <img src="assets/badges/codexion-locked.svg" width="80" alt="Codexion, not yet validated" title="Codexion, not yet validated"> |
-| 7 and 8 | [`ms-05-service`](ms-05-service) | <img src="assets/badges/fly_in-locked.svg" width="80" alt="Fly-in, not yet validated" title="Fly-in, not yet validated"> <img src="assets/badges/agent_smith-locked.svg" width="80" alt="Agent Smith, not yet validated" title="Agent Smith, not yet validated"> <img src="assets/badges/the_answer_protocol-locked.svg" width="80" alt="The Answer Protocol, not yet validated" title="The Answer Protocol, not yet validated"> <img src="assets/badges/42/ft_transcendencee-locked.svg" width="80" alt="ft_transcendence, not yet validated" title="ft_transcendence, not yet validated"> |
-| after the core | [`ms-06-cpu`](ms-06-cpu) | <img src="assets/badges/42/cppe-locked.svg" width="80" alt="C++ modules, not yet validated" title="C++ modules, not yet validated"><br>after the school's specialisation |
-| after the core | [`ms-09-cuda`](ms-09-cuda) | <img src="assets/badges/42/minishelle-locked.svg" width="80" alt="minishell, not yet validated" title="minishell, not yet validated"><br>after the school's specialisation |
+| 4 | [`ms-02-python-sysadmin`](ms-02-python-sysadmin) | <img src="assets/badges/python_piscine-locked.svg" width="80" alt="Python piscine, not yet validated" title="Python piscine, not yet validated"> <img src="assets/badges/42/born2beroote-locked.svg" width="80" alt="Born2beroot, not yet validated" title="Born2beroot, not yet validated"> <img src="assets/badges/42/netpracticee-locked.svg" width="80" alt="NetPractice, not yet validated" title="NetPractice, not yet validated"> |
+| 5 | [`ms-04-infrastructure`](ms-04-infrastructure) | <img src="assets/badges/a_maze_ing-locked.svg" width="80" alt="A-Maze-ing, not yet validated" title="A-Maze-ing, not yet validated"> <img src="assets/badges/pac_man-locked.svg" width="80" alt="Pac Man, not yet validated" title="Pac Man, not yet validated"> <img src="assets/badges/42/inceptione-locked.svg" width="80" alt="Inception, not yet validated" title="Inception, not yet validated"> |
+| 6 | [`ms-05-contribution`](ms-05-contribution) | <img src="assets/badges/call_me_maybe-locked.svg" width="80" alt="Call Me Maybe, not yet validated" title="Call Me Maybe, not yet validated"> <img src="assets/badges/rag_against_the_machine-locked.svg" width="80" alt="RAG against the machine, not yet validated" title="RAG against the machine, not yet validated"> <img src="assets/badges/codexion-locked.svg" width="80" alt="Codexion, not yet validated" title="Codexion, not yet validated"> |
+| 7 and 8 | [`ms-06-service`](ms-06-service) | <img src="assets/badges/fly_in-locked.svg" width="80" alt="Fly-in, not yet validated" title="Fly-in, not yet validated"> <img src="assets/badges/agent_smith-locked.svg" width="80" alt="Agent Smith, not yet validated" title="Agent Smith, not yet validated"> <img src="assets/badges/the_answer_protocol-locked.svg" width="80" alt="The Answer Protocol, not yet validated" title="The Answer Protocol, not yet validated"> <img src="assets/badges/42/ft_transcendencee-locked.svg" width="80" alt="ft_transcendence, not yet validated" title="ft_transcendence, not yet validated"> |
+| after the core | [`ms-07-cpu`](ms-07-cpu) | <img src="assets/badges/42/cppe-locked.svg" width="80" alt="C++ modules, not yet validated" title="C++ modules, not yet validated"><br>after the school's specialisation |
+| after the core | [`ms-10-cuda`](ms-10-cuda) | <img src="assets/badges/42/minishelle-locked.svg" width="80" alt="minishell, not yet validated" title="minishell, not yet validated"><br>after the school's specialisation |
 <!-- /ecole -->
 
 A badge turns to colour when the school validates the project, and stays grey
@@ -200,15 +202,15 @@ modules carry their school badge above instead.
 | Phase | Modules |
 |---|---|
 | [Phase&nbsp;0](ms-00-foundations) | <img src="assets/badges/roadmap/py-foundations.svg" width="72" alt="PYTHON FOUNDATION, earned" title="PYTHON FOUNDATION, earned"> <img src="assets/badges/roadmap/ms-maths.svg" width="72" alt="MATHS, earned" title="MATHS, earned"> <img src="assets/badges/roadmap/rte-route-l1.svg" width="72" alt="ROUTE TO L1, earned" title="ROUTE TO L1, earned"> <img src="assets/badges/roadmap/l1-deliverable.svg" width="72" alt="L1 · A GPT, earned" title="L1 · A GPT, earned"> |
-| [Phase&nbsp;2](ms-02-inference-basics) | <img src="assets/badges/roadmap/mes-performance.svg" width="72" alt="MEASUREMENT, earned" title="MEASUREMENT, earned"> <img src="assets/badges/roadmap/inf-measure-locked.svg" width="72" alt="INFERENCE, not yet" title="INFERENCE, not yet"> <img src="assets/badges/roadmap/l2-deliverable-locked.svg" width="72" alt="L2 · THE CURVE, not yet" title="L2 · THE CURVE, not yet"> |
-| [Phase&nbsp;3](ms-03-infrastructure) | <img src="assets/badges/roadmap/go-basics-locked.svg" width="72" alt="GO, not yet" title="GO, not yet"> <img src="assets/badges/roadmap/ops-operations-locked.svg" width="72" alt="KUBERNETES, not yet" title="KUBERNETES, not yet"> <img src="assets/badges/roadmap/ops-control-locked.svg" width="72" alt="CONTROL LAYER, not yet" title="CONTROL LAYER, not yet"> |
-| [Phase&nbsp;4](ms-04-contribution) | <img src="assets/badges/roadmap/inf-speculative-locked.svg" width="72" alt="SPECULATIVE, not yet" title="SPECULATIVE, not yet"> <img src="assets/badges/roadmap/inf-memory-locked.svg" width="72" alt="MEMORY, not yet" title="MEMORY, not yet"> <img src="assets/badges/roadmap/inf-vllm-locked.svg" width="72" alt="VLLM, not yet" title="VLLM, not yet"> <img src="assets/badges/roadmap/l3-deliverable-locked.svg" width="72" alt="L3 · CONTRIB, not yet" title="L3 · CONTRIB, not yet"> <img src="assets/badges/roadmap/pro-interviews-locked.svg" width="72" alt="INTERVIEWS, not yet" title="INTERVIEWS, not yet"> |
-| [Phase&nbsp;5](ms-05-service) | <img src="assets/badges/roadmap/go-controller-locked.svg" width="72" alt="GO CONTROLLER, not yet" title="GO CONTROLLER, not yet"> |
-| [Phase&nbsp;6](ms-06-cpu) | <img src="assets/badges/roadmap/c-inference-engine-locked.svg" width="72" alt="C ENGINE, not yet" title="C ENGINE, not yet"> <img src="assets/badges/roadmap/c-concurrency-locked.svg" width="72" alt="CONCURRENCY, not yet" title="CONCURRENCY, not yet"> <img src="assets/badges/roadmap/cs149-cpu-locked.svg" width="72" alt="CS149 · CPU, not yet" title="CS149 · CPU, not yet"> |
-| [Phase&nbsp;7](ms-07-profiling) | <img src="assets/badges/roadmap/par-profiling-locked.svg" width="72" alt="PROFILING, not yet" title="PROFILING, not yet"> <img src="assets/badges/roadmap/l4-deliverable-locked.svg" width="72" alt="L4 · PROFILE, not yet" title="L4 · PROFILE, not yet"> <img src="assets/badges/roadmap/gpu-competition-locked.svg" width="72" alt="GPU MODE, not yet" title="GPU MODE, not yet"> |
-| [Phase&nbsp;8](ms-08-kernel) | <img src="assets/badges/roadmap/cs149-gpu-locked.svg" width="72" alt="CS149 · GPU, not yet" title="CS149 · GPU, not yet"> <img src="assets/badges/roadmap/tri-triton-locked.svg" width="72" alt="TRITON, not yet" title="TRITON, not yet"> |
-| [Phase&nbsp;9](ms-09-cuda) | <img src="assets/badges/roadmap/cu-cuda-locked.svg" width="72" alt="CUDA, not yet" title="CUDA, not yet"> <img src="assets/badges/roadmap/l5-deliverable-locked.svg" width="72" alt="L5 · KERNEL, not yet" title="L5 · KERNEL, not yet"> |
-| [Phase&nbsp;10](ms-10-scale) | <img src="assets/badges/roadmap/num-precision-locked.svg" width="72" alt="PRECISION, not yet" title="PRECISION, not yet"> <img src="assets/badges/roadmap/dist-multigpu-locked.svg" width="72" alt="MULTI-GPU, not yet" title="MULTI-GPU, not yet"> <img src="assets/badges/roadmap/cpp-modern-locked.svg" width="72" alt="MODERN C++, not yet" title="MODERN C++, not yet"> <img src="assets/badges/roadmap/qua-evaluation-locked.svg" width="72" alt="EVALUATION, not yet" title="EVALUATION, not yet"> |
+| [Phase&nbsp;3](ms-03-inference-basics) | <img src="assets/badges/roadmap/mes-performance.svg" width="72" alt="MEASUREMENT, earned" title="MEASUREMENT, earned"> <img src="assets/badges/roadmap/inf-measure.svg" width="72" alt="INFERENCE, earned" title="INFERENCE, earned"> <img src="assets/badges/roadmap/l2-deliverable-locked.svg" width="72" alt="L2 · THE CURVE, not yet" title="L2 · THE CURVE, not yet"> |
+| [Phase&nbsp;4](ms-04-infrastructure) | <img src="assets/badges/roadmap/go-basics-locked.svg" width="72" alt="GO, not yet" title="GO, not yet"> <img src="assets/badges/roadmap/ops-operations-locked.svg" width="72" alt="KUBERNETES, not yet" title="KUBERNETES, not yet"> <img src="assets/badges/roadmap/ops-control-locked.svg" width="72" alt="CONTROL LAYER, not yet" title="CONTROL LAYER, not yet"> |
+| [Phase&nbsp;5](ms-05-contribution) | <img src="assets/badges/roadmap/inf-speculative-locked.svg" width="72" alt="SPECULATIVE, not yet" title="SPECULATIVE, not yet"> <img src="assets/badges/roadmap/inf-memory-locked.svg" width="72" alt="MEMORY, not yet" title="MEMORY, not yet"> <img src="assets/badges/roadmap/inf-vllm-locked.svg" width="72" alt="VLLM, not yet" title="VLLM, not yet"> <img src="assets/badges/roadmap/l3-deliverable-locked.svg" width="72" alt="L3 · CONTRIB, not yet" title="L3 · CONTRIB, not yet"> <img src="assets/badges/roadmap/pro-interviews-locked.svg" width="72" alt="INTERVIEWS, not yet" title="INTERVIEWS, not yet"> |
+| [Phase&nbsp;6](ms-06-service) | <img src="assets/badges/roadmap/go-controller-locked.svg" width="72" alt="GO CONTROLLER, not yet" title="GO CONTROLLER, not yet"> |
+| [Phase&nbsp;7](ms-07-cpu) | <img src="assets/badges/roadmap/c-inference-engine-locked.svg" width="72" alt="C ENGINE, not yet" title="C ENGINE, not yet"> <img src="assets/badges/roadmap/c-concurrency-locked.svg" width="72" alt="CONCURRENCY, not yet" title="CONCURRENCY, not yet"> <img src="assets/badges/roadmap/cs149-cpu-locked.svg" width="72" alt="CS149 · CPU, not yet" title="CS149 · CPU, not yet"> |
+| [Phase&nbsp;8](ms-08-profiling) | <img src="assets/badges/roadmap/par-profiling-locked.svg" width="72" alt="PROFILING, not yet" title="PROFILING, not yet"> <img src="assets/badges/roadmap/l4-deliverable-locked.svg" width="72" alt="L4 · PROFILE, not yet" title="L4 · PROFILE, not yet"> <img src="assets/badges/roadmap/gpu-competition-locked.svg" width="72" alt="GPU MODE, not yet" title="GPU MODE, not yet"> |
+| [Phase&nbsp;9](ms-09-kernel) | <img src="assets/badges/roadmap/cs149-gpu-locked.svg" width="72" alt="CS149 · GPU, not yet" title="CS149 · GPU, not yet"> <img src="assets/badges/roadmap/tri-triton-locked.svg" width="72" alt="TRITON, not yet" title="TRITON, not yet"> |
+| [Phase&nbsp;10](ms-10-cuda) | <img src="assets/badges/roadmap/cu-cuda-locked.svg" width="72" alt="CUDA, not yet" title="CUDA, not yet"> <img src="assets/badges/roadmap/l5-deliverable-locked.svg" width="72" alt="L5 · KERNEL, not yet" title="L5 · KERNEL, not yet"> |
+| [Phase&nbsp;11](ms-11-scale) | <img src="assets/badges/roadmap/num-precision-locked.svg" width="72" alt="PRECISION, not yet" title="PRECISION, not yet"> <img src="assets/badges/roadmap/dist-multigpu-locked.svg" width="72" alt="MULTI-GPU, not yet" title="MULTI-GPU, not yet"> <img src="assets/badges/roadmap/cpp-modern-locked.svg" width="72" alt="MODERN C++, not yet" title="MODERN C++, not yet"> <img src="assets/badges/roadmap/qua-evaluation-locked.svg" width="72" alt="EVALUATION, not yet" title="EVALUATION, not yet"> |
 <!-- /badges -->
 
 ## How it is built
@@ -254,7 +256,7 @@ roadmap, are in [`DECISIONS.md`](DECISIONS.md).
   [a release](https://github.com/maximecoia/learning_tree-ML-systems/releases/tag/l1-01-gpt-corpus-v1),
   and its [acceptance test](ms-00-foundations/l1-01-gpt-corpus/verifier.py) was
   written before the model.
-- **[Measurement and measured inference](ms-02-inference-basics/README.md#what-to-do-in-order)**:
+- **[Measurement and measured inference](ms-03-inference-basics/README.md#what-to-do-in-order)**:
   40 exercises in ten sub-modules, from a stopwatch that ignores warm-up to the
   point where a served model breaks under load.
 
@@ -322,7 +324,8 @@ ms-00-foundations/         the bases, C, Python and maths, closed on 2 October 2
     rte-01-puzzles/        Sasha Rush's twenty-one puzzles, solved and credited
     l1-01-gpt-corpus/      L1: the GPT, its training on Jules Verne, and its acceptance test
     rte-route-l1/          the route's chapters, answers to Raschka's book
-ms-02-inference-basics/    measured inference, the basics, in progress
+ms-01-c-core/              the graded C of the common core, its page only
+ms-03-inference-basics/    measured inference, the basics, in progress
     README.md              its sub-modules in the order of the work, and their state
     mes-01-stopwatch/      a function timed without being fooled by noise or warm-up
     mes-02-magnitudes/     orders of magnitude, estimated before any code
@@ -334,16 +337,16 @@ ms-02-inference-basics/    measured inference, the basics, in progress
     inf-05-quantize/       reduced precision, its speed against its perplexity
     inf-06-harness/        N requests in flight, and figures no trap can skew
     inf-07-saturation/     the breaking point, and the physical limit that sets it
-ms-03-infrastructure/      Python, administration, the way in, its page only
-ms-04-contribution/        the school's AI projects, entering vLLM, its page only
-ms-05-service/             agents, network, the service, its page only
-ms-06-cpu/                 the C engine, parallelism on CPU, after the common core
+ms-04-infrastructure/      school and the front door, its page only
+ms-05-contribution/        the school's AI projects, entering vLLM, its page only
+ms-06-service/             agents, network, the service, its page only
+ms-07-cpu/                 the C engine, parallelism on CPU, after the common core
     README.md              its sub-modules in the order of the work, and their state
     c-06-engine/           the inference engine in C, its first step written ahead
-ms-07-profiling/           profiling, predict then measure, its page only
-ms-08-kernel/              the first kernel, in CUDA and Triton, its page only
-ms-09-cuda/                CUDA down to the assembly, its page only
-ms-10-scale/               precision, several GPUs, evaluation, its page only
+ms-08-profiling/           profiling, predict then measure, its page only
+ms-09-kernel/              the first kernel, in CUDA and Triton, its page only
+ms-10-cuda/                CUDA down to the assembly, its page only
+ms-11-scale/               precision, several GPUs, evaluation, its page only
 ```
 <!-- /arbre -->
 
@@ -355,8 +358,8 @@ Sasha Rush, [Tensor Puzzles](https://github.com/srush/Tensor-Puzzles).
 
 Further on: Stanford CS336, *Language Modeling from Scratch*
 ([`stanford-cs336`](https://github.com/stanford-cs336)). Its first assignment
-grades three pieces of `ms-02-inference-basics`, and its second is planned in
-`ms-10-scale`.
+grades three pieces of `ms-03-inference-basics`, and its second is planned in
+`ms-11-scale`.
 
 The road that was taken off, [described here](DECISIONS.md#zero-to-hero-and-why-it-left):
 the Zero to Hero lectures, notebooks and datasets are Andrej Karpathy's, under

@@ -1,8 +1,8 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 10: Precision, several GPUs, evaluation
+# Phase 11: Precision, several GPUs, evaluation
 
-`ms-10-scale` · after the common core · 5 sub-modules, 1 written · 8 exercises
+`ms-11-scale` · after the common core · 5 sub-modules, 1 written · 8 exercises
 
 **What it buys.** Numerical precision measured, several GPUs, data and evaluation, modern C++, and CS336's systems assignment.
 
@@ -30,4 +30,4 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 
 ---
 
-← [ms-09-cuda](../ms-09-cuda) · [the roadmap](../README.md)
+← [ms-10-cuda](../ms-10-cuda) · [the roadmap](../README.md)

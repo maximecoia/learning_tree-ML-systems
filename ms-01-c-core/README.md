@@ -30,4 +30,4 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 
 ---
 
-← [ms-00-foundations](../ms-00-foundations) · [the roadmap](../README.md) · [ms-02-inference-basics](../ms-02-inference-basics) →
+← [ms-00-foundations](../ms-00-foundations) · [the roadmap](../README.md) · [ms-02-python-sysadmin](../ms-02-python-sysadmin) →

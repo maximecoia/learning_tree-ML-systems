@@ -1,8 +1,8 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 4: The school's AI projects, entering vLLM
+# Phase 5: The school's AI projects, entering vLLM
 
-`ms-04-contribution` · school milestone 6 · 13 sub-modules, 0 written · 0 exercises
+`ms-05-contribution` · school milestone 6 · 13 sub-modules, 0 written · 0 exercises
 
 **What it buys.** Milestone 6, starvation measured in Codexion under FIFO and EDF, a first pull request in AIBrix, the vLLM organisation's Kubernetes control plane, and interview preparation.
 
@@ -47,4 +47,4 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 
 ---
 
-← [ms-03-infrastructure](../ms-03-infrastructure) · [the roadmap](../README.md) · [ms-05-service](../ms-05-service) →
+← [ms-04-infrastructure](../ms-04-infrastructure) · [the roadmap](../README.md) · [ms-06-service](../ms-06-service) →

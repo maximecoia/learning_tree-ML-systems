@@ -1,8 +1,8 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 5: Agents, network, the service
+# Phase 6: Agents, network, the service
 
-`ms-05-service` · school milestones 7 and 8 · 5 sub-modules, 0 written · 0 exercises
+`ms-06-service` · school milestones 7 and 8 · 5 sub-modules, 0 written · 0 exercises
 
 **What it buys.** Milestones 7 and 8, with the cost per million tokens of every model in Agent Smith's report, a Kubernetes controller in Go, then the last imposed project, crossed fast, taking its serving and monitoring part.
 
@@ -29,4 +29,4 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 
 ---
 
-← [ms-04-contribution](../ms-04-contribution) · [the roadmap](../README.md) · [ms-06-cpu](../ms-06-cpu) →
+← [ms-05-contribution](../ms-05-contribution) · [the roadmap](../README.md) · [ms-07-cpu](../ms-07-cpu) →

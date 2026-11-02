@@ -1,8 +1,8 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 7: Profiling, predict then measure
+# Phase 8: Profiling, predict then measure
 
-`ms-07-profiling` · after the common core · 11 sub-modules, 10 written · 25 exercises
+`ms-08-profiling` · after the common core · 11 sub-modules, 10 written · 25 exercises
 
 **What it buys.** The regime of a workload predicted before it is measured, an unknown Nsight timeline read in ten minutes, the L4 profile, a GPU MODE ranking and the rest of the C++ modules.
 
@@ -44,4 +44,4 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 
 ---
 
-← [ms-06-cpu](../ms-06-cpu) · [the roadmap](../README.md) · [ms-08-kernel](../ms-08-kernel) →
+← [ms-07-cpu](../ms-07-cpu) · [the roadmap](../README.md) · [ms-09-kernel](../ms-09-kernel) →

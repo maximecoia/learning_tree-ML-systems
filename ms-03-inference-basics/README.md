@@ -1,8 +1,8 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 2: Measured inference, the basics
+# Phase 3: Measured inference, the basics
 
-`ms-02-inference-basics` · Maxime, alongside school milestones 1 to 3 · 11 sub-modules, 11 written · 40 exercises
+`ms-03-inference-basics` · Maxime, after the Python piscine · 11 sub-modules, 11 written · 40 exercises
 
 **What it buys.** The saturation curve of an unknown inference server produced in half a day.
 
@@ -65,4 +65,4 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 
 ---
 
-← [ms-01-c-core](../ms-01-c-core) · [the roadmap](../README.md) · [ms-03-infrastructure](../ms-03-infrastructure) →
+← [ms-02-python-sysadmin](../ms-02-python-sysadmin) · [the roadmap](../README.md) · [ms-04-infrastructure](../ms-04-infrastructure) →

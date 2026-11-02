@@ -500,3 +500,28 @@ What could be wrong: L2 is not validated yet, so `ms-02-inference-basics`
 stays open while `ms-03-infrastructure` starts on 9 November 2026, at the
 start of the school term. Two open phases at once blur the "in progress"
 line.
+
+
+## Why Python comes before inference
+
+L2 is written in Python, and the school's Python piscine is where Maxime
+really learns Python. So school milestone 4 became a phase of its own,
+`ms-02-python-sysadmin`: the Python piscine, Born2beroot and NetPractice,
+ticked only once the campus intra validates them. Measured inference and L2
+come after it.
+
+| Phase before | After |
+|---|---|
+| `ms-02-inference-basics` | `ms-03-inference-basics` |
+| `ms-03-infrastructure`, the piscine, Born2beroot, NetPractice | `ms-02-python-sysadmin` |
+| `ms-03-infrastructure`, the rest | `ms-04-infrastructure` |
+| `ms-04-contribution` … `ms-10-scale` | `ms-05-contribution` … `ms-11-scale` |
+
+The ten sub-modules already green stay green: their theory matters more than
+their code. L2 is built with tutoring in levels, redone alone, then defended
+without the code. The roadmap now has twelve phases, numbered 0 to 11, and
+the same 96 sub-modules.
+
+What could be wrong: `ms-03-inference-basics` stays the phase in progress
+while the phase before it waits for the intra. If the piscine runs long, L2
+moves back with it.

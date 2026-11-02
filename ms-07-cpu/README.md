@@ -1,8 +1,8 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 6: The C engine, parallelism on CPU
+# Phase 7: The C engine, parallelism on CPU
 
-`ms-06-cpu` · after the common core · 11 sub-modules, 10 written · 35 exercises
+`ms-07-cpu` · after the common core · 11 sub-modules, 10 written · 35 exercises
 
 **What it buys.** The school's specialisation, the inference engine in C, the C++ modules up to vectors, then a thread pool, the cost of a lock, SIMD lanes and a task scheduler, measured.
 
@@ -41,4 +41,4 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 
 ---
 
-← [ms-05-service](../ms-05-service) · [the roadmap](../README.md) · [ms-07-profiling](../ms-07-profiling) →
+← [ms-06-service](../ms-06-service) · [the roadmap](../README.md) · [ms-08-profiling](../ms-08-profiling) →
