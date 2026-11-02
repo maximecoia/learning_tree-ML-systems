@@ -8,9 +8,6 @@ The public trace of a roadmap toward ML systems, kept as the work happens.
 <img src="https://skillicons.dev/icons?i=py,pytorch,c,git,githubactions" alt="Python, PyTorch, C, Git and GitHub Actions"><br>
 <sub>in use now</sub>
 
-<img src="https://skillicons.dev/icons?i=go,cpp,linux,docker,kubernetes,prometheus,grafana,terraform" alt="Go, C++, Linux, Docker, Kubernetes, Prometheus, Grafana and Terraform"><br>
-<sub>ahead in the roadmap, with CUDA and Triton</sub>
-
 `prep` → `inference` → `infrastructure` → `contribution` → `agents` → `end of core` → `internship` → `first job`
 
 </div>
