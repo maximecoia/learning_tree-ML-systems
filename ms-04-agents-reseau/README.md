@@ -27,4 +27,4 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 
 ---
 
-← [ms-03-contribution](../ms-03-contribution) · [the roadmap](../README.md) · [ms-05-fin-tronc-commun](../ms-05-fin-tronc-commun) →
+← [ms-03-contribution](../ms-03-contribution) · [the roadmap](../README.md) · [ms-05-service](../ms-05-service) →

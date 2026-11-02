@@ -1,8 +1,8 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 7: First job, or work-study and the title
+# Phase 8: First job, or work-study and the title
 
-`ms-07-alternance` · after the first internship · 1 sub-module, 0 written · 0 exercises
+`ms-08-premier-poste` · after the first internship · 1 sub-module, 0 written · 0 exercises
 
 **What it buys.** The first job if the internship turns into one; otherwise two years of work-study in France toward 42's level 7 title.
 
@@ -14,4 +14,4 @@ Descriptions below translate the curriculum's own `competence` field, one senten
 
 ---
 
-← [ms-06-apres-tronc](../ms-06-apres-tronc) · [the roadmap](../README.md)
+← [ms-07-gpu](../ms-07-gpu) · [the roadmap](../README.md)

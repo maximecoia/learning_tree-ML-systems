@@ -1,8 +1,8 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 5: The end of the common core
+# Phase 5: The last imposed project, served and monitored
 
-`ms-05-fin-tronc-commun` · school milestone 8 · 1 sub-module, 0 written · 0 exercises
+`ms-05-service` · school milestone 8 · 1 sub-module, 0 written · 0 exercises
 
 **What it buys.** The last imposed project, crossed fast, taking its serving and monitoring part.
 
@@ -24,4 +24,4 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 
 ---
 
-← [ms-04-agents-reseau](../ms-04-agents-reseau) · [the roadmap](../README.md) · [ms-06-apres-tronc](../ms-06-apres-tronc) →
+← [ms-04-agents-reseau](../ms-04-agents-reseau) · [the roadmap](../README.md) · [ms-06-stage](../ms-06-stage) →

@@ -22,8 +22,8 @@ first? What does a change actually buy? An inference server, a scheduler, a
 cache or a kernel decides whether a model is usable at all.
 
 This repository is the public trace of a roadmap toward that field. The roadmap
-runs alongside the common core of the 42 school. It has eight
-phases, numbered 0 to 7 like their folders, from a prep before the school to a
+runs alongside the common core of the 42 school. It has nine
+phases, numbered 0 to 8 like their folders, from a prep before the school to a
 first job or a work-study contract. It aims at three results a reader can
 check from outside:
 
@@ -131,7 +131,7 @@ L1 was published on 1 October 2026 and validated on 2 October 2026.
 <!-- avancement: written by carte_phases.py from the graders. Do not edit by hand. -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/roadmap-dark.svg">
-  <img src="assets/roadmap-light.svg" width="100%" alt="The roadmap: ms-00-prepa, closed on 2 Oct 2026; ms-01-inference, 40 of 46 exercises; ms-02-infrastructure, milestones 4 and 5; ms-03-contribution, milestone 6; ms-04-agents-reseau, milestone 7; ms-05-fin-tronc-commun, milestone 8; ms-06-apres-tronc, after the core; ms-07-alternance, after the internship.">
+  <img src="assets/roadmap-light.svg" width="100%" alt="The roadmap: ms-00-prepa, closed on 2 Oct 2026; ms-01-inference, 40 of 46 exercises; ms-02-infrastructure, milestones 4 and 5; ms-03-contribution, milestone 6; ms-04-agents-reseau, milestone 7; ms-05-service, milestone 8; ms-06-stage, after the core; ms-07-gpu, after the specialisation; ms-08-premier-poste, after the internship.">
 </picture>
 <!-- /avancement -->
 
@@ -142,9 +142,10 @@ L1 was published on 1 October 2026 and validated on 2 October 2026.
 | [`ms-02-infrastructure`](ms-02-infrastructure)<br>Python, administration, the way in | school milestones 4 and 5 | milestones 4 and 5, then the Inception stack ported to Kubernetes, serving the L2 server with its metrics in Prometheus, Go, and the inference control layer on simulated servers | 9 |
 | [`ms-03-contribution`](ms-03-contribution)<br>the school's AI projects, entering vLLM | school milestone 6 | milestone 6, starvation measured in Codexion under FIFO and EDF, a first pull request in AIBrix, the vLLM organisation's Kubernetes control plane, and interview preparation | 13 |
 | [`ms-04-agents-reseau`](ms-04-agents-reseau)<br>agents, network, routing | school milestone 7 | milestone 7, with the cost per million tokens of every model in Agent Smith's report, then a Kubernetes controller in Go | 4 |
-| [`ms-05-fin-tronc-commun`](ms-05-fin-tronc-commun)<br>the end of the common core | school milestone 8 | the last imposed project, crossed fast, taking its serving and monitoring part | 1 |
-| [`ms-06-apres-tronc`](ms-06-apres-tronc)<br>first internship, then what waited | after the common core | the first internship at a serving or infrastructure employer, paid at least the local cost of living, then the school's specialisation toward level 14, then in order the C engine, C++, CS149, the profile, CUDA, Triton and the kernel | 44 |
-| [`ms-07-alternance`](ms-07-alternance)<br>first job, or work-study and the title | after the first internship | the first job if the internship turns into one; otherwise two years of work-study in France toward 42's level 7 title | 1 |
+| [`ms-05-service`](ms-05-service)<br>the last imposed project, served and monitored | school milestone 8 | the last imposed project, crossed fast, taking its serving and monitoring part | 1 |
+| [`ms-06-stage`](ms-06-stage)<br>first internship, specialisation | after the common core | the first internship at a serving or infrastructure employer, paid at least the local cost of living, then the school's specialisation toward level 14 | 2 |
+| [`ms-07-gpu`](ms-07-gpu)<br>from the C engine to the GPU kernel | after the specialisation | in order, the C engine, C++, CS149, the profile, CUDA, Triton and the kernel that beats the reference | 42 |
+| [`ms-08-premier-poste`](ms-08-premier-poste)<br>first job, or work-study and the title | after the first internship | the first job if the internship turns into one; otherwise two years of work-study in France toward 42's level 7 title | 1 |
 
 **No estimated dates.** Two dates on this page are facts: the prep closed on
 2 October 2026, and the school starts on 9 November 2026. The rest is paced,
@@ -171,8 +172,8 @@ is where each one sits.
 | 4 and 5 | [`ms-02-infrastructure`](ms-02-infrastructure) | <img src="assets/badges/python_piscine-locked.svg" width="80" alt="Python piscine, not yet validated" title="Python piscine, not yet validated"> <img src="assets/badges/42/born2beroote-locked.svg" width="80" alt="Born2beroot, not yet validated" title="Born2beroot, not yet validated"> <img src="assets/badges/42/netpracticee-locked.svg" width="80" alt="NetPractice, not yet validated" title="NetPractice, not yet validated"> <img src="assets/badges/a_maze_ing-locked.svg" width="80" alt="A-Maze-ing, not yet validated" title="A-Maze-ing, not yet validated"> <img src="assets/badges/pac_man-locked.svg" width="80" alt="Pac Man, not yet validated" title="Pac Man, not yet validated"> <img src="assets/badges/42/inceptione-locked.svg" width="80" alt="Inception, not yet validated" title="Inception, not yet validated"> |
 | 6 | [`ms-03-contribution`](ms-03-contribution) | <img src="assets/badges/call_me_maybe-locked.svg" width="80" alt="Call Me Maybe, not yet validated" title="Call Me Maybe, not yet validated"> <img src="assets/badges/rag_against_the_machine-locked.svg" width="80" alt="RAG against the machine, not yet validated" title="RAG against the machine, not yet validated"> <img src="assets/badges/codexion-locked.svg" width="80" alt="Codexion, not yet validated" title="Codexion, not yet validated"> |
 | 7 | [`ms-04-agents-reseau`](ms-04-agents-reseau) | <img src="assets/badges/fly_in-locked.svg" width="80" alt="Fly-in, not yet validated" title="Fly-in, not yet validated"> <img src="assets/badges/agent_smith-locked.svg" width="80" alt="Agent Smith, not yet validated" title="Agent Smith, not yet validated"> <img src="assets/badges/the_answer_protocol-locked.svg" width="80" alt="The Answer Protocol, not yet validated" title="The Answer Protocol, not yet validated"> |
-| 8 | [`ms-05-fin-tronc-commun`](ms-05-fin-tronc-commun) | <img src="assets/badges/42/ft_transcendencee-locked.svg" width="80" alt="ft_transcendence, not yet validated" title="ft_transcendence, not yet validated"> |
-| after the core | [`ms-06-apres-tronc`](ms-06-apres-tronc) | <img src="assets/badges/42/cppe-locked.svg" width="80" alt="C++ modules, not yet validated" title="C++ modules, not yet validated"> <img src="assets/badges/42/minishelle-locked.svg" width="80" alt="minishell, not yet validated" title="minishell, not yet validated"><br>and the school's specialisation |
+| 8 | [`ms-05-service`](ms-05-service) | <img src="assets/badges/42/ft_transcendencee-locked.svg" width="80" alt="ft_transcendence, not yet validated" title="ft_transcendence, not yet validated"> |
+| after the core | [`ms-07-gpu`](ms-07-gpu) | <img src="assets/badges/42/cppe-locked.svg" width="80" alt="C++ modules, not yet validated" title="C++ modules, not yet validated"> <img src="assets/badges/42/minishelle-locked.svg" width="80" alt="minishell, not yet validated" title="minishell, not yet validated"><br>after the school's specialisation |
 <!-- /ecole -->
 
 A badge turns to colour when the school validates the project, and stays grey
@@ -201,8 +202,9 @@ modules carry their school badge above instead.
 | [Phase&nbsp;2](ms-02-infrastructure) | <img src="assets/badges/roadmap/go-bases-locked.svg" width="72" alt="GO, not yet" title="GO, not yet"> <img src="assets/badges/roadmap/ops-exploitation-locked.svg" width="72" alt="KUBERNETES, not yet" title="KUBERNETES, not yet"> <img src="assets/badges/roadmap/ops-controle-locked.svg" width="72" alt="CONTROL LAYER, not yet" title="CONTROL LAYER, not yet"> |
 | [Phase&nbsp;3](ms-03-contribution) | <img src="assets/badges/roadmap/inf-speculatif-locked.svg" width="72" alt="SPECULATIVE, not yet" title="SPECULATIVE, not yet"> <img src="assets/badges/roadmap/inf-memoire-locked.svg" width="72" alt="MEMORY, not yet" title="MEMORY, not yet"> <img src="assets/badges/roadmap/inf-vllm-locked.svg" width="72" alt="VLLM, not yet" title="VLLM, not yet"> <img src="assets/badges/roadmap/l3-livrable-locked.svg" width="72" alt="L3 · CONTRIB, not yet" title="L3 · CONTRIB, not yet"> <img src="assets/badges/roadmap/pro-entretiens-locked.svg" width="72" alt="INTERVIEWS, not yet" title="INTERVIEWS, not yet"> |
 | [Phase&nbsp;4](ms-04-agents-reseau) | <img src="assets/badges/roadmap/go-controleur-locked.svg" width="72" alt="GO CONTROLLER, not yet" title="GO CONTROLLER, not yet"> |
-| [Phase&nbsp;6](ms-06-apres-tronc) | <img src="assets/badges/roadmap/pro-stage-1-locked.svg" width="72" alt="INTERNSHIP, not yet" title="INTERNSHIP, not yet"> <img src="assets/badges/roadmap/c-moteur-inference-locked.svg" width="72" alt="C ENGINE, not yet" title="C ENGINE, not yet"> <img src="assets/badges/roadmap/c-concurrence-locked.svg" width="72" alt="CONCURRENCY, not yet" title="CONCURRENCY, not yet"> <img src="assets/badges/roadmap/cs149-parallelisme-locked.svg" width="72" alt="CS149, not yet" title="CS149, not yet"> <img src="assets/badges/roadmap/par-profilage-locked.svg" width="72" alt="PROFILING, not yet" title="PROFILING, not yet"> <img src="assets/badges/roadmap/l4-livrable-locked.svg" width="72" alt="L4 · PROFILE, not yet" title="L4 · PROFILE, not yet"> <img src="assets/badges/roadmap/gpu-competition-locked.svg" width="72" alt="GPU MODE, not yet" title="GPU MODE, not yet"> <img src="assets/badges/roadmap/cu-cuda-locked.svg" width="72" alt="CUDA, not yet" title="CUDA, not yet"> <img src="assets/badges/roadmap/tri-triton-locked.svg" width="72" alt="TRITON, not yet" title="TRITON, not yet"> <img src="assets/badges/roadmap/l5-livrable-locked.svg" width="72" alt="L5 · KERNEL, not yet" title="L5 · KERNEL, not yet"> <img src="assets/badges/roadmap/num-precision-locked.svg" width="72" alt="PRECISION, not yet" title="PRECISION, not yet"> <img src="assets/badges/roadmap/dist-multigpu-locked.svg" width="72" alt="MULTI-GPU, not yet" title="MULTI-GPU, not yet"> <img src="assets/badges/roadmap/cpp-moderne-locked.svg" width="72" alt="MODERN C++, not yet" title="MODERN C++, not yet"> <img src="assets/badges/roadmap/qua-evaluation-locked.svg" width="72" alt="EVALUATION, not yet" title="EVALUATION, not yet"> |
-| [Phase&nbsp;7](ms-07-alternance) | <img src="assets/badges/roadmap/pro-alternance-locked.svg" width="72" alt="WORK-STUDY, not yet" title="WORK-STUDY, not yet"> |
+| [Phase&nbsp;6](ms-06-stage) | <img src="assets/badges/roadmap/pro-stage-1-locked.svg" width="72" alt="INTERNSHIP, not yet" title="INTERNSHIP, not yet"> |
+| [Phase&nbsp;7](ms-07-gpu) | <img src="assets/badges/roadmap/c-moteur-inference-locked.svg" width="72" alt="C ENGINE, not yet" title="C ENGINE, not yet"> <img src="assets/badges/roadmap/c-concurrence-locked.svg" width="72" alt="CONCURRENCY, not yet" title="CONCURRENCY, not yet"> <img src="assets/badges/roadmap/cs149-parallelisme-locked.svg" width="72" alt="CS149, not yet" title="CS149, not yet"> <img src="assets/badges/roadmap/par-profilage-locked.svg" width="72" alt="PROFILING, not yet" title="PROFILING, not yet"> <img src="assets/badges/roadmap/l4-livrable-locked.svg" width="72" alt="L4 · PROFILE, not yet" title="L4 · PROFILE, not yet"> <img src="assets/badges/roadmap/gpu-competition-locked.svg" width="72" alt="GPU MODE, not yet" title="GPU MODE, not yet"> <img src="assets/badges/roadmap/cu-cuda-locked.svg" width="72" alt="CUDA, not yet" title="CUDA, not yet"> <img src="assets/badges/roadmap/tri-triton-locked.svg" width="72" alt="TRITON, not yet" title="TRITON, not yet"> <img src="assets/badges/roadmap/l5-livrable-locked.svg" width="72" alt="L5 · KERNEL, not yet" title="L5 · KERNEL, not yet"> <img src="assets/badges/roadmap/num-precision-locked.svg" width="72" alt="PRECISION, not yet" title="PRECISION, not yet"> <img src="assets/badges/roadmap/dist-multigpu-locked.svg" width="72" alt="MULTI-GPU, not yet" title="MULTI-GPU, not yet"> <img src="assets/badges/roadmap/cpp-moderne-locked.svg" width="72" alt="MODERN C++, not yet" title="MODERN C++, not yet"> <img src="assets/badges/roadmap/qua-evaluation-locked.svg" width="72" alt="EVALUATION, not yet" title="EVALUATION, not yet"> |
+| [Phase&nbsp;8](ms-08-premier-poste) | <img src="assets/badges/roadmap/pro-alternance-locked.svg" width="72" alt="WORK-STUDY, not yet" title="WORK-STUDY, not yet"> |
 <!-- /badges -->
 
 ## How it is built
@@ -331,11 +333,11 @@ ms-01-inference/           graded C, measured inference, in progress
 ms-02-infrastructure/      Python, administration, the way in, its page only
 ms-03-contribution/        the school's AI projects, entering vLLM, its page only
 ms-04-agents-reseau/       agents, network, routing, its page only
-ms-05-fin-tronc-commun/    the end of the common core, its page only
-ms-06-apres-tronc/         first internship, then what waited, after the common core
+ms-05-service/             the last imposed project, served and monitored, its page only
+ms-07-gpu/                 from the C engine to the GPU kernel, after the specialisation
     README.md              its sub-modules in the order of the work, and their state
     c-06-moteur/           the inference engine in C, its first step written ahead
-ms-07-alternance/          first job, or work-study and the title, its page only
+ms-08-premier-poste/       first job, or work-study and the title, its page only
 ```
 <!-- /arbre -->
 
@@ -348,7 +350,7 @@ Sasha Rush, [Tensor Puzzles](https://github.com/srush/Tensor-Puzzles).
 Further on: Stanford CS336, *Language Modeling from Scratch*
 ([`stanford-cs336`](https://github.com/stanford-cs336)). Its first assignment
 grades three pieces of `ms-01-inference`, and its second is planned in
-`ms-06-apres-tronc`.
+`ms-07-gpu`.
 
 The road that was taken off, [described here](DECISIONS.md#zero-to-hero-and-why-it-left):
 the Zero to Hero lectures, notebooks and datasets are Andrej Karpathy's, under

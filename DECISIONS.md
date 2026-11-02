@@ -15,6 +15,7 @@ opinion, and this repository tries not to publish those.
 8. [Why a number follows the order](#why-a-number-follows-the-order)
 9. [The school first, the rest grafted onto it](#the-school-first-the-rest-grafted-onto-it)
 10. [Why the roadmap has no dates](#why-the-roadmap-has-no-dates)
+11. [Why a phase is named by what it holds](#why-a-phase-is-named-by-what-it-holds)
 
 Each section is dated. Where a plan of that day changed later, the section
 says so.
@@ -169,7 +170,7 @@ HIP, is reasoning and not an API.
 **What changed on 2026-10-12.** The rule still holds, but no longer during the
 common core. With about five and a half hours a week outside school, no GPU
 work grafts onto a school project, so the competition moved to
-`ms-06-apres-tronc` with the rest of it. Its place there is still a floor and
+`ms-06-apres-tronc`, now `ms-07-gpu`, with the rest of it. Its place there is still a floor and
 not a date: it is taken on remote GPUs as soon as the hours come back. The
 measurement above is also what the grafts of the [school-first
 rule](#the-school-first-the-rest-grafted-onto-it) rest on.
@@ -397,3 +398,27 @@ What could be wrong: a reader looking for when I can start an internship finds
 no date here. The plan still keeps an estimate for the end of the core, because
 money and applications depend on it. It is simply not drawn as a schedule, and
 a recruiter gets it by asking.
+
+## Why a phase is named by what it holds
+
+Until 2026-11-02 the phases after the common core were named by when they
+come: « the end of the common core », « after the common core », « work-study ».
+The first five name what they hold, inference, infrastructure, contribution.
+A name that only says when tells a reader nothing about the work, and
+`ms-06-apres-tronc` held two things that have nothing in common: the first
+internship with the school's specialisation, then 42 sub-modules of C, C++ and
+GPU work that wait behind them.
+
+So that phase was split in two, and the names now say what each phase holds.
+The folders moved with them.
+
+| Before | After |
+|---|---|
+| `ms-05-fin-tronc-commun` | `ms-05-service`, the last imposed project, served and monitored |
+| `ms-06-apres-tronc`, first part | `ms-06-stage`, the first internship and the specialisation |
+| `ms-06-apres-tronc`, second part | `ms-07-gpu`, from the C engine to the GPU kernel |
+| `ms-07-alternance` | `ms-08-premier-poste`, the first job, or work-study |
+
+What could be wrong: a note written before 2026-11-02 that says `ms-06` means
+both of today's `ms-06-stage` and `ms-07-gpu`, and one that says `ms-07` means
+`ms-08-premier-poste`.
