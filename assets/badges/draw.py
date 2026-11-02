@@ -216,10 +216,6 @@ MODULES = {
       <path d="M100 52 A26 26 0 1 0 101 74" fill="none" stroke="#00add8" stroke-width="6" stroke-linecap="round"/>
       <path d="M92 44 L103 51 L94 61" fill="none" stroke="#00add8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
       <circle cx="75" cy="62" r="9" fill="{Y}"/>'''),
-    'pro-stage-1': ('INTERNSHIP', 'proof', f'''
-      <rect x="40" y="46" width="70" height="42" rx="6" fill="{O}"/>
-      <path d="M62 46 v-8 a4 4 0 0 1 4 -4 h18 a4 4 0 0 1 4 4 v8" fill="none" stroke="{S}" stroke-width="4"/>
-      <path d="M40 64 H110" stroke="{D}" stroke-width="3"/><rect x="69" y="59" width="12" height="10" rx="2" fill="{Y}"/>'''),
     'c-moteur-inference': ('C ENGINE', 'added', f'''
       <g transform="translate(75 62)">
         <g fill="{S}">{''.join(f'<rect x="-5" y="-31" width="10" height="12" rx="2" transform="rotate({a})"/>' for a in range(0, 360, 45))}</g>
@@ -229,9 +225,9 @@ MODULES = {
       <g fill="none" stroke-width="4" stroke-linecap="round">
         <path d="M40 44 H110" stroke="{T}"/><path d="M40 62 H110" stroke="{Y}"/><path d="M40 80 H110" stroke="{O}"/></g>
       <rect x="66" y="36" width="18" height="52" rx="4" fill="none" stroke="{S}" stroke-width="3" stroke-dasharray="4 3"/>'''),
-    'cs149-parallelisme': ('CS149', 'added', f'''
-      <g fill="{M}">{''.join(f'<rect x="{42 + 17 * (i % 4)}" y="{32 + 15 * (i // 4)}" width="14" height="12" rx="2"/>' for i in range(16))}</g>
-      <g fill="{T}">{''.join(f'<rect x="{42 + 17 * (i % 4)}" y="{32 + 15 * (i // 4)}" width="14" height="12" rx="2"/>' for i in (0, 1, 2, 3, 5, 6, 10))}</g>'''),
+    'cs149-cpu': ('CS149 · CPU', 'added', f'''
+      <g fill="{M}">{''.join(f'<rect x="{42 + 34 * (i % 2)}" y="{32 + 30 * (i // 2)}" width="30" height="26" rx="3"/>' for i in range(4))}</g>
+      <g fill="{T}">{''.join(f'<rect x="{42 + 34 * (i % 2)}" y="{32 + 30 * (i // 2)}" width="30" height="26" rx="3"/>' for i in (0, 3))}</g>'''),
     'par-profilage': ('PROFILING', 'added', f'''
       <rect x="38" y="78" width="74" height="10" rx="2" fill="{O}"/>
       <rect x="38" y="66" width="46" height="10" rx="2" fill="{Y}"/><rect x="86" y="66" width="22" height="10" rx="2" fill="{Y}"/>
@@ -247,6 +243,9 @@ MODULES = {
       <rect x="54" y="47" width="42" height="30" rx="3" fill="{D}"/>
       <g fill="#76b900">{''.join(f'<rect x="{58 + 9 * (i % 4)}" y="{51 + 8 * (i // 4)}" width="6" height="5"/>' for i in range(12))}</g>
       <g stroke="#76b900" stroke-width="3">{''.join(f'<path d="M{52 + 10 * i} 38 v-6 M{52 + 10 * i} 86 v6"/>' for i in range(5))}</g>'''),
+    'cs149-gpu': ('CS149 · GPU', 'added', f'''
+      <g fill="{M}">{''.join(f'<rect x="{42 + 17 * (i % 4)}" y="{32 + 15 * (i // 4)}" width="14" height="12" rx="2"/>' for i in range(16))}</g>
+      <g fill="{T}">{''.join(f'<rect x="{42 + 17 * (i % 4)}" y="{32 + 15 * (i // 4)}" width="14" height="12" rx="2"/>' for i in (0, 1, 2, 3, 5, 6, 10))}</g>'''),
     'tri-triton': ('TRITON', 'added', f'''
       <path d="M75 92 V44" stroke="{S}" stroke-width="5"/>
       <path d="M55 30 V50 a20 20 0 0 0 40 0 V30" fill="none" stroke="{T}" stroke-width="5"/>
@@ -267,10 +266,6 @@ MODULES = {
       <circle cx="75" cy="62" r="28" fill="{S}"/><circle cx="75" cy="62" r="19" fill="{O}"/>
       <circle cx="75" cy="62" r="10" fill="{S}"/><circle cx="75" cy="62" r="4" fill="{O}"/>
       <path d="M75 62 L106 34" stroke="{D}" stroke-width="3"/><path d="M106 34 l-2 8 l8 -2 z" fill="{D}"/>'''),
-    'pro-alternance': ('WORK-STUDY', 'proof', f'''
-      <path d="M75 34 L114 52 L75 70 L36 52 Z" fill="{S}"/>
-      <path d="M54 62 V80 q21 12 42 0 V62 L75 72 Z" fill="{M}"/>
-      <path d="M108 55 V78" stroke="{Y}" stroke-width="3"/><circle cx="108" cy="80" r="4" fill="{Y}"/>'''),
 }
 
 

@@ -24,17 +24,17 @@ cases whose answer is known.
 
 | Module | Question |
 |---|---|
-| [`mth-01-algebre`](ms-00-prepa/mth-01-algebre) | Can a matrix be read as the transformation it is, and its determinant as the area it scales? |
-| [`mth-02-probas`](ms-00-prepa/mth-02-probas) | Does a simulation land where the closed form says, inside a bound that tightens with the draws? |
-| [`mth-03-statistiques`](ms-00-prepa/mth-03-statistiques) | Do two series really differ, and how often is that answer wrong? |
+| [`mth-01-algebre`](ms-00-bases/mth-01-algebre) | Can a matrix be read as the transformation it is, and its determinant as the area it scales? |
+| [`mth-02-probas`](ms-00-bases/mth-02-probas) | Does a simulation land where the closed form says, inside a bound that tightens with the draws? |
+| [`mth-03-statistiques`](ms-00-bases/mth-03-statistiques) | Do two series really differ, and how often is that answer wrong? |
 
 Each step folder carries the whole module up to that step, so any folder runs
 on its own. Three results, one per module, from the repository root, each in its own subshell:
 
 ```bash
-(cd ms-00-prepa/mth-01-algebre/ex02 && python3 -c "from produit import Matrice, Vecteur; E, R = Matrice([[2, 0], [0, 1]]), Matrice([[0, -1], [1, 0]]); print(E.puis(R) @ Vecteur([1, 0]), R.puis(E) @ Vecteur([1, 0]))")
-(cd ms-00-prepa/mth-02-probas/ex05 && python3 -c "from distribution import variance, variance_naive; L = {1.23456789e9: 0.5, 1.23456790e9: 0.5}; print(variance(L), variance_naive(L))")
-(cd ms-00-prepa/mth-03-statistiques/ex05 && python3 -c "from rapport import mesures_pour_detecter; print(mesures_pour_detecter(0.10, (1 / 12) ** 0.5, 1.96))")
+(cd ms-00-bases/mth-01-algebre/ex02 && python3 -c "from produit import Matrice, Vecteur; E, R = Matrice([[2, 0], [0, 1]]), Matrice([[0, -1], [1, 0]]); print(E.puis(R) @ Vecteur([1, 0]), R.puis(E) @ Vecteur([1, 0]))")
+(cd ms-00-bases/mth-02-probas/ex05 && python3 -c "from distribution import variance, variance_naive; L = {1.23456789e9: 0.5, 1.23456790e9: 0.5}; print(variance(L), variance_naive(L))")
+(cd ms-00-bases/mth-03-statistiques/ex05 && python3 -c "from rapport import mesures_pour_detecter; print(mesures_pour_detecter(0.10, (1 / 12) ** 0.5, 1.96))")
 ```
 
 They print `Vecteur([0, 2]) Vecteur([0, 1])`, then `25.0 -256.0`, then `65`.

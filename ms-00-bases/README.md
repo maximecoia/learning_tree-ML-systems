@@ -1,8 +1,8 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 0: The prep, C and Python
+# Phase 0: The bases, C, Python and maths
 
-`ms-00-prepa` · before the school · 9 sub-modules, 9 written · 53 exercises
+`ms-00-bases` · before the school · 9 sub-modules, 9 written · 53 exercises
 
 **What it buys.** Enter the school with the libft practised and a GPT trained by hand.
 

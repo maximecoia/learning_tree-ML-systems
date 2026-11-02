@@ -77,4 +77,4 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 
 ---
 
-← [ms-00-prepa](../ms-00-prepa) · [the roadmap](../README.md) · [ms-02-infrastructure](../ms-02-infrastructure) →
+← [ms-00-bases](../ms-00-bases) · [the roadmap](../README.md) · [ms-02-infrastructure](../ms-02-infrastructure) →

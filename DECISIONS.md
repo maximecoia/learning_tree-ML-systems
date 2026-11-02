@@ -170,7 +170,7 @@ HIP, is reasoning and not an API.
 **What changed on 2026-10-12.** The rule still holds, but no longer during the
 common core. With about five and a half hours a week outside school, no GPU
 work grafts onto a school project, so the competition moved to
-`ms-06-apres-tronc`, now `ms-07-gpu`, with the rest of it. Its place there is still a floor and
+`ms-06-apres-tronc`, now `ms-06-profilage`, with the rest of it. Its place there is still a floor and
 not a date: it is taken on remote GPUs as soon as the hours come back. The
 measurement above is also what the grafts of the [school-first
 rule](#the-school-first-the-rest-grafted-onto-it) rest on.
@@ -422,3 +422,34 @@ The folders moved with them.
 What could be wrong: a note written before 2026-11-02 that says `ms-06` means
 both of today's `ms-06-stage` and `ms-07-gpu`, and one that says `ms-07` means
 `ms-08-premier-poste`.
+
+## Why the roadmap holds competences, not jobs
+
+The same day, the split went further. Two of the nine phases were an
+internship and a first job. Both follow from the roadmap; neither is a
+competence, and neither closes on a test the work alone can pass, since an
+offer depends on someone else. They left the phases. Their rules stay in the
+private plan, and interview preparation stays in `ms-03-contribution`.
+
+`ms-07-gpu` held 44 sub-modules with no step in between, too many to steer.
+It is now five phases, each closing on something that can be checked: the C
+engine and parallelism on CPU, profiling, the first kernel, CUDA down to the
+assembly, then precision, several GPUs and evaluation. CS149 is split the same
+way, its CPU half in `ms-05-cpu` and its GPU half in `ms-07-kernel`. The two
+agent and service phases became one, paced by school milestones 7 and 8, and
+the prep is now called the bases.
+
+| Before | After |
+|---|---|
+| `ms-00-prepa` | `ms-00-bases`, C, Python and maths |
+| `ms-04-agents-reseau` and `ms-05-service` | `ms-04-service`, agents, network, the service |
+| `ms-06-stage` | removed, an outcome and not a phase |
+| `ms-07-gpu` | `ms-05-cpu`, `ms-06-profilage`, `ms-07-kernel`, `ms-08-cuda`, `ms-09-echelle` |
+| `ms-08-premier-poste` | removed, an outcome and not a phase |
+
+No sub-module changed name or order. The roadmap has ten phases, numbered 0 to
+9, and 96 sub-modules, two of them quizzes.
+
+What could be wrong: a note written before 2026-11-02 that says `ms-05` to
+`ms-08` means the old split, and four of the five new phases have no test of
+their own yet.

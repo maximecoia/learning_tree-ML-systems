@@ -39,8 +39,8 @@ without the previous eight. `py-03-livrer` turns the result into a command.
 From the repository root, each in its own subshell:
 
 ```bash
-python3 ms-00-prepa/py-01-basics/ex08/bilan.py
-(cd ms-00-prepa/py-03-livrer/ex07 && python3 -m releve resume exemple.txt)
+python3 ms-00-bases/py-01-basics/ex08/bilan.py
+(cd ms-00-bases/py-03-livrer/ex07 && python3 -m releve resume exemple.txt)
 ```
 
 ## Progress
@@ -49,15 +49,15 @@ python3 ms-00-prepa/py-01-basics/ex08/bilan.py
 
 | Exercise | Focus | Status |
 |---|---|---|
-| [`ex00/types.py`](ms-00-prepa/py-01-basics/ex00/types.py) | conversion, `isinstance`, why `14.0` is not an `int` | **Complete** |
-| [`ex01/operateurs.py`](ms-00-prepa/py-01-basics/ex01/operateurs.py) | `//` and `%` on negatives, rounding, fractional exponents | **Complete** |
-| [`ex02/chaines.py`](ms-00-prepa/py-01-basics/ex02/chaines.py) | `strip`, `lower`, `split`, the limits of `isdigit` | **Complete** |
-| [`ex03/conditions.py`](ms-00-prepa/py-01-basics/ex03/conditions.py) | threshold ladders, truthiness, one reusable validity guard | **Complete** |
-| [`ex04/boucles.py`](ms-00-prepa/py-01-basics/ex04/boucles.py) | accumulation, `enumerate`, argmax and its tie rule, sentinel returns | **Complete** |
-| [`ex05/listes.py`](ms-00-prepa/py-01-basics/ex05/listes.py) | comprehensions, sorting, the empty list as a real case | **Complete** |
-| [`ex06/dictionnaires.py`](ms-00-prepa/py-01-basics/ex06/dictionnaires.py) | grouping, `dict.get` defaults, skipping empty groups | **Complete** |
-| [`ex07/fonctions.py`](ms-00-prepa/py-01-basics/ex07/fonctions.py) | default and keyword arguments, bounded filtering | **Complete** |
-| [`ex08/bilan.py`](ms-00-prepa/py-01-basics/ex08/bilan.py) | integration: parse, reject, group, aggregate, report | **Complete** |
+| [`ex00/types.py`](ms-00-bases/py-01-basics/ex00/types.py) | conversion, `isinstance`, why `14.0` is not an `int` | **Complete** |
+| [`ex01/operateurs.py`](ms-00-bases/py-01-basics/ex01/operateurs.py) | `//` and `%` on negatives, rounding, fractional exponents | **Complete** |
+| [`ex02/chaines.py`](ms-00-bases/py-01-basics/ex02/chaines.py) | `strip`, `lower`, `split`, the limits of `isdigit` | **Complete** |
+| [`ex03/conditions.py`](ms-00-bases/py-01-basics/ex03/conditions.py) | threshold ladders, truthiness, one reusable validity guard | **Complete** |
+| [`ex04/boucles.py`](ms-00-bases/py-01-basics/ex04/boucles.py) | accumulation, `enumerate`, argmax and its tie rule, sentinel returns | **Complete** |
+| [`ex05/listes.py`](ms-00-bases/py-01-basics/ex05/listes.py) | comprehensions, sorting, the empty list as a real case | **Complete** |
+| [`ex06/dictionnaires.py`](ms-00-bases/py-01-basics/ex06/dictionnaires.py) | grouping, `dict.get` defaults, skipping empty groups | **Complete** |
+| [`ex07/fonctions.py`](ms-00-bases/py-01-basics/ex07/fonctions.py) | default and keyword arguments, bounded filtering | **Complete** |
+| [`ex08/bilan.py`](ms-00-bases/py-01-basics/ex08/bilan.py) | integration: parse, reject, group, aggregate, report | **Complete** |
 
 ### py-02-advanced, complete, 9 of 9
 
@@ -65,15 +65,15 @@ One value type, `Montant`, growing one capability per exercise.
 
 | Exercise | Adds | Status |
 |---|---|---|
-| [`ex00/montant.py`](ms-00-prepa/py-02-advanced/ex00/montant.py) | a class that refuses invalid state at construction | **Complete** |
-| [`ex01/representation.py`](ms-00-prepa/py-02-advanced/ex01/representation.py) | `__repr__` for debugging, `texte()` for humans | **Complete** |
-| [`ex02/ordre.py`](ms-00-prepa/py-02-advanced/ex02/ordre.py) | `__eq__` and `__lt__`, so `sorted` and `max` work | **Complete** |
-| [`ex03/operateurs.py`](ms-00-prepa/py-02-advanced/ex03/operateurs.py) | `__add__`, `__sub__`, `__mul__`, `__rmul__`, and `Ligne` | **Complete** |
-| [`ex04/constructeurs.py`](ms-00-prepa/py-02-advanced/ex04/constructeurs.py) | `depuis_euros`, `depuis_texte`: alternative constructors | **Complete** |
-| [`ex05/proprietes.py`](ms-00-prepa/py-02-advanced/ex05/proprietes.py) | `euros` and `est_nul` as properties, not methods | **Complete** |
-| [`ex06/conteneurs.py`](ms-00-prepa/py-02-advanced/ex06/conteneurs.py) | `Facture` implements `__len__`, `__iter__`, `__getitem__`, `__contains__` | **Complete** |
-| [`ex07/heritage.py`](ms-00-prepa/py-02-advanced/ex07/heritage.py) | `LigneRemisee(Ligne)`, and exceptions of its own | **Complete** |
-| [`ex08/facture.py`](ms-00-prepa/py-02-advanced/ex08/facture.py) | integration: parse, reject, total, report | **Complete** |
+| [`ex00/montant.py`](ms-00-bases/py-02-advanced/ex00/montant.py) | a class that refuses invalid state at construction | **Complete** |
+| [`ex01/representation.py`](ms-00-bases/py-02-advanced/ex01/representation.py) | `__repr__` for debugging, `texte()` for humans | **Complete** |
+| [`ex02/ordre.py`](ms-00-bases/py-02-advanced/ex02/ordre.py) | `__eq__` and `__lt__`, so `sorted` and `max` work | **Complete** |
+| [`ex03/operateurs.py`](ms-00-bases/py-02-advanced/ex03/operateurs.py) | `__add__`, `__sub__`, `__mul__`, `__rmul__`, and `Ligne` | **Complete** |
+| [`ex04/constructeurs.py`](ms-00-bases/py-02-advanced/ex04/constructeurs.py) | `depuis_euros`, `depuis_texte`: alternative constructors | **Complete** |
+| [`ex05/proprietes.py`](ms-00-bases/py-02-advanced/ex05/proprietes.py) | `euros` and `est_nul` as properties, not methods | **Complete** |
+| [`ex06/conteneurs.py`](ms-00-bases/py-02-advanced/ex06/conteneurs.py) | `Facture` implements `__len__`, `__iter__`, `__getitem__`, `__contains__` | **Complete** |
+| [`ex07/heritage.py`](ms-00-bases/py-02-advanced/ex07/heritage.py) | `LigneRemisee(Ligne)`, and exceptions of its own | **Complete** |
+| [`ex08/facture.py`](ms-00-bases/py-02-advanced/ex08/facture.py) | integration: parse, reject, total, report | **Complete** |
 
 ### py-03-livrer, complete, 8 of 8
 
@@ -81,14 +81,14 @@ Turning the tree into something installable. One exercise per delivery concern.
 
 | Exercise | Focus | Status |
 |---|---|---|
-| [`ex00/executable.py`](ms-00-prepa/py-03-livrer/ex00/executable.py) | the executable module: importable and runnable, `__main__` guard | **Complete** |
-| [`ex01/commande.py`](ms-00-prepa/py-03-livrer/ex01/commande.py) | the command line, `argparse` and its subcommands | **Complete** |
-| [`ex02/flux.py`](ms-00-prepa/py-03-livrer/ex02/flux.py) | `-` for standard input, exit codes, `--strict` | **Complete** |
-| [`ex03/releve/`](ms-00-prepa/py-03-livrer/ex03/releve) | the package: `cli` and `mesures` split apart, `__main__` | **Complete** |
-| [`ex04/test_releve.py`](ms-00-prepa/py-03-livrer/ex04/test_releve.py) | tests on the rendered output | **Complete** |
-| [`ex05/requirements.txt`](ms-00-prepa/py-03-livrer/ex05/requirements.txt) | dependencies, runtime and development kept apart | **Complete** |
-| [`ex06/pyproject.toml`](ms-00-prepa/py-03-livrer/ex06/pyproject.toml) | the manifest, and one place that holds the version | **Complete** |
-| [`ex07/`](ms-00-prepa/py-03-livrer/ex07) | the tool, delivered: `pip install .`, then `releve` on the PATH | **Complete** |
+| [`ex00/executable.py`](ms-00-bases/py-03-livrer/ex00/executable.py) | the executable module: importable and runnable, `__main__` guard | **Complete** |
+| [`ex01/commande.py`](ms-00-bases/py-03-livrer/ex01/commande.py) | the command line, `argparse` and its subcommands | **Complete** |
+| [`ex02/flux.py`](ms-00-bases/py-03-livrer/ex02/flux.py) | `-` for standard input, exit codes, `--strict` | **Complete** |
+| [`ex03/releve/`](ms-00-bases/py-03-livrer/ex03/releve) | the package: `cli` and `mesures` split apart, `__main__` | **Complete** |
+| [`ex04/test_releve.py`](ms-00-bases/py-03-livrer/ex04/test_releve.py) | tests on the rendered output | **Complete** |
+| [`ex05/requirements.txt`](ms-00-bases/py-03-livrer/ex05/requirements.txt) | dependencies, runtime and development kept apart | **Complete** |
+| [`ex06/pyproject.toml`](ms-00-bases/py-03-livrer/ex06/pyproject.toml) | the manifest, and one place that holds the version | **Complete** |
+| [`ex07/`](ms-00-bases/py-03-livrer/ex07) | the tool, delivered: `pip install .`, then `releve` on the PATH | **Complete** |
 
 ## Progression
 
@@ -262,6 +262,6 @@ a skill instead of an intention.
 
 What followed is the rest of the prep: [the maths](MATHS.md), then the route to
 a GPT written from a blank file and trained on Jules Verne,
-[L1](ms-00-prepa/l1-01-gpt-corpus). The same habits carry over. Bad input is
+[L1](ms-00-bases/l1-01-gpt-corpus). The same habits carry over. Bad input is
 counted, the contract survives a rewrite, and the thing that ships is the thing
 someone else can run.
