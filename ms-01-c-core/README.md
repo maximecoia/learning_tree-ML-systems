@@ -2,7 +2,7 @@
 
 # Phase 1: The graded C of the common core
 
-`ms-01-c-core` · school milestones 1 to 3 · 4 sub-modules, 4 written · 9 exercises
+`ms-01-c-core` · school milestones 1 to 3 · 4 sub-modules, 4 written · 3 exercises · 1 project
 
 The four graded C projects of the school's common core. C sits under everything this road ends on: llama.cpp, the CUDA kernels, the inference engine of phase 7. These projects make memory, pointers and the cost of an algorithm concrete before any of that.
 
