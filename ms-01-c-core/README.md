@@ -16,7 +16,7 @@ The four graded C projects of the school's common core. C sits under everything 
 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
-| `c-01-libft` | imposed | Write a static C library whose every function honours the exact contract of the libc | [c-01-libft](c-01-libft) · 6 exercises |
+| `c-01-libft` | imposed | Write a static C library whose every function honours the exact contract of the libc | [c-01-libft](c-01-libft) · 1 project |
 | `c-02-printf` | imposed | Write a variadic formatter whose output matches the libc's, conversion by conversion | 42 subject, not published · 1 exercise |
 | `c-03-gnl` | imposed | Read a stream line by line with state that survives between calls, from a file as from standard input, and without leaking | 42 subject, not published · 1 exercise |
 | `c-04-pushswap` | imposed | Sort under a constrained set of operations with four strategies of distinct complexity classes, and defend each one's class by measurement | 42 subject, not published · 1 exercise |
