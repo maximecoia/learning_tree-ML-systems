@@ -32,10 +32,9 @@ dist/
 #
 # To publish one of these after all, add its own `!` line below.
 c-01-libft/
-c-02-libft-norm/
-c-03-printf/
-c-04-gnl/
-c-05-pushswap/
+c-02-printf/
+c-03-gnl/
+c-04-pushswap/
 c-11-minishell/
 c-12-philosophers/
 cpp-00-classes/
@@ -140,5 +139,5 @@ ms-00-foundations/rte-route-l1/*
 # out is the handed-in version at the root of the folder, byte for byte. A
 # local backup archive sits next to it and stays out as well.
 !c-01-libft/
-ms-00-foundations/c-01-libft/ex*/
-ms-00-foundations/c-01-libft/.sauvegarde-*
+ms-01-c-core/c-01-libft/ex*/
+ms-01-c-core/c-01-libft/.sauvegarde-*

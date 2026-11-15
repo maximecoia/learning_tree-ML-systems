@@ -1,10 +1,10 @@
 <!-- Généré par carte_phases.py. Ne pas éditer à la main. -->
 
-# Phase 0: The bases, C, Python and maths
+# Phase 0: The bases, Python and maths
 
-`ms-00-foundations` · before the school · 9 sub-modules, 9 written · 53 exercises
+`ms-00-foundations` · before the school · 8 sub-modules, 8 written · 47 exercises
 
-The base laid before school starts: Python, libft in C, and the maths of learning. The phase closes on L1, a small GPT written from a blank file and then trained. The whole road assumes knowing what a model computes before measuring what it costs.
+The base laid before school starts: Python and the maths of learning. The phase closes on L1, a small GPT written from a blank file and then trained. The whole road assumes knowing what a model computes before measuring what it costs.
 
 **Skills this phase builds**
 
@@ -24,7 +24,6 @@ Closed on 2 October 2026. The table stays as the record of what closed the phase
 | ✓ | `py-01-basics` | ✓ 9 of 9 | its grader, through `./exo` | [py-01-basics](py-01-basics) |
 | ✓ | `py-02-advanced` | ✓ 9 of 9 | its grader, through `./exo` | [py-02-advanced](py-02-advanced) |
 | ✓ | `py-03-ship` | ✓ 8 of 8 | its grader, through `./exo` | [py-03-ship](py-03-ship) |
-| ✓ | `c-01-libft` | ✓ 6 of 6 | its grader, through `./exo` | [c-01-libft](c-01-libft) |
 | ✓ | Tensor Puzzles: 21 puzzles, one expression each, twenty of them inside eighty columns, `rte-01-puzzles` | ✓ 1 of 1 | the checker inside the notebook | [rte-01-puzzles](rte-01-puzzles), from [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles) |
 | ✓ | Text data: tokenizer, sliding window, embeddings (Raschka ch. 2) | `test_ch02.py`, 5 tests: ✓ | `test_ch02.py`: upstream's test and four of mine | [rte-route-l1/ch02.py](rte-route-l1/ch02.py), from [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) |
 | ✓ | Causal attention: scores, mask, multiple heads (Raschka ch. 3) | `test_ch03.py`, 8 tests: ✓ | `test_ch03.py` | [rte-route-l1/ch03.py](rte-route-l1/ch03.py), from [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) |
@@ -42,7 +41,6 @@ Closed on 2 October 2026. The table stays as the record of what closed the phase
 | `py-01-basics` | added | Write Python functions using the language's variables, arithmetic operators, strings, conditionals, loops, lists, dictionaries and functions | [py-01-basics](py-01-basics) · 9 exercises |
 | `py-02-advanced` | added | Model a piece of data as a Python class, with its methods, its operators, its properties and its inheritance | [py-02-advanced](py-02-advanced) · 9 exercises |
 | `py-03-ship` | added | Ship a Python command-line tool, packaged, tested and installable by someone else | [py-03-ship](py-03-ship) · 8 exercises |
-| `c-01-libft` | added | Write a static C library whose every function honours the exact contract of the libc | [c-01-libft](c-01-libft) · 6 exercises |
 | `rte-01-puzzles` | added | Write in a single line, by broadcasting and indexing alone, the functions NumPy hands you ready-made, and know why each one holds without a loop | [rte-01-puzzles](rte-01-puzzles), from [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles) · 1 exercise |
 | `l1-01-gpt-corpus` | proof | Publish a language model trained end to end, and defend every part of how it works without the code in front of you | [l1-01-gpt-corpus](l1-01-gpt-corpus) |
 | `mth-01-algebra` | added | Implement 2D vector and matrix transformations in Python | [mth-01-algebra](mth-01-algebra) · 8 exercises |
@@ -60,7 +58,6 @@ What each sub-module points at, straight from the curriculum. Links only: why a 
 | `py-01-basics` | [The official Python tutorial](https://docs.python.org/3/tutorial/) · docs<br>[PEP 8, the style guide for Python code](https://peps.python.org/pep-0008/) · docs |
 | `py-02-advanced` | [The Python data model](https://docs.python.org/3/reference/datamodel.html) · docs<br>[functools, and total_ordering](https://docs.python.org/3/library/functools.html) · docs<br>[The official Python tutorial, classes](https://docs.python.org/3/tutorial/classes.html) · docs |
 | `py-03-ship` | [argparse, the tutorial](https://docs.python.org/3/howto/argparse.html) · docs<br>[unittest](https://docs.python.org/3/library/unittest.html) · docs<br>[Packaging Python Projects](https://packaging.python.org/en/latest/tutorials/packaging-projects/) · course<br>[Writing your pyproject.toml](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/) · docs<br>[Fluent Python, chapter 1](https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/) · book |
-| `c-01-libft` | [42 subject, libft](https://projects.intra.42.fr/projects/libft) · assignment<br>[man 3 string](https://man7.org/linux/man-pages/man3/string.3.html) · docs<br>[man 3 malloc](https://man7.org/linux/man-pages/man3/malloc.3.html) · docs |
 | `rte-01-puzzles` | [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles) · repo<br>[Sasha Rush, the walkthrough video](https://youtu.be/Hafo7hIl8MU) · video |
 | `l1-01-gpt-corpus` | [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles) · repo<br>[Sebastian Raschka, Build a Large Language Model (From Scratch)](https://www.manning.com/books/build-a-large-language-model-from-scratch) · book<br>[rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) · repo<br>[stanford-cs336/assignment1-basics](https://github.com/stanford-cs336/assignment1-basics) · assignment<br>[Let's reproduce GPT-2 (124M)](https://www.youtube.com/watch?v=l8pRSuU81PU) · video<br>[karpathy/nanoGPT](https://github.com/karpathy/nanoGPT) · repo<br>[hkproj/pytorch-transformer](https://github.com/hkproj/pytorch-transformer) · repo<br>[JINO-ROHIT/gpt2-tamil](https://github.com/JINO-ROHIT/gpt2-tamil) · repo |
 | `mth-01-algebra` | [MIT 18.06SC, Linear Algebra (Gilbert Strang)](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/) · course<br>[3Blue1Brown, Essence of Linear Algebra](https://www.3blue1brown.com/topics/linear-algebra) · video<br>[Deisenroth, Faisal, Ong, Mathematics for Machine Learning](https://mml-book.github.io/) · book<br>[JINO-ROHIT/ml-math-in-depth](https://github.com/JINO-ROHIT/ml-math-in-depth) · repo |
