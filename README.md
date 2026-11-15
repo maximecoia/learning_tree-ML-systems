@@ -318,6 +318,7 @@ ms-00-foundations/         the bases, C, Python and maths, closed on 2 October 2
     py-01-basics/          correct answers out of input you do not control
     py-02-advanced/        types that make the wrong answer unrepresentable
     py-03-ship/            the result, installable and on the PATH
+    c-01-libft/            libft, the C library validated at defense, as handed in
     mth-01-algebra/        vectors and matrices by hand, before any library
     mth-02-probability/    a simulator held against its closed forms
     mth-03-statistics/     whether two series really differ, and how often that is wrong

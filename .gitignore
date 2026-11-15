@@ -132,3 +132,13 @@ ms-00-foundations/rte-route-l1/*
 !ms-00-foundations/rte-route-l1/test_ch04.py
 !ms-00-foundations/rte-route-l1/test_ch05.py
 
+
+# Exception, 2026-11-15: libft goes out, its code only. The campus validated it
+# at defense that day, and the author chose to publish his own library. The
+# subject PDF stays out. So do the six step folders `./exo` grades, ex00 to
+# ex05: they are working copies, not the library that was defended. What goes
+# out is the handed-in version at the root of the folder, byte for byte. A
+# local backup archive sits next to it and stays out as well.
+!c-01-libft/
+ms-00-foundations/c-01-libft/ex*/
+ms-00-foundations/c-01-libft/.sauvegarde-*

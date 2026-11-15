@@ -24,7 +24,7 @@ Closed on 2 October 2026. The table stays as the record of what closed the phase
 | ✓ | `py-01-basics` | ✓ 9 of 9 | its grader, through `./exo` | [py-01-basics](py-01-basics) |
 | ✓ | `py-02-advanced` | ✓ 9 of 9 | its grader, through `./exo` | [py-02-advanced](py-02-advanced) |
 | ✓ | `py-03-ship` | ✓ 8 of 8 | its grader, through `./exo` | [py-03-ship](py-03-ship) |
-| ✓ | `c-01-libft` | ✓ 6 of 6 | its grader, through `./exo` | 42 subject, not published |
+| ✓ | `c-01-libft` | ✓ 6 of 6 | its grader, through `./exo` | [c-01-libft](c-01-libft) |
 | ✓ | Tensor Puzzles: 21 puzzles, one expression each, twenty of them inside eighty columns, `rte-01-puzzles` | ✓ 1 of 1 | the checker inside the notebook | [rte-01-puzzles](rte-01-puzzles), from [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles) |
 | ✓ | Text data: tokenizer, sliding window, embeddings (Raschka ch. 2) | `test_ch02.py`, 5 tests: ✓ | `test_ch02.py`: upstream's test and four of mine | [rte-route-l1/ch02.py](rte-route-l1/ch02.py), from [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) |
 | ✓ | Causal attention: scores, mask, multiple heads (Raschka ch. 3) | `test_ch03.py`, 8 tests: ✓ | `test_ch03.py` | [rte-route-l1/ch03.py](rte-route-l1/ch03.py), from [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) |
@@ -42,7 +42,7 @@ Closed on 2 October 2026. The table stays as the record of what closed the phase
 | `py-01-basics` | added | Write Python functions using the language's variables, arithmetic operators, strings, conditionals, loops, lists, dictionaries and functions | [py-01-basics](py-01-basics) · 9 exercises |
 | `py-02-advanced` | added | Model a piece of data as a Python class, with its methods, its operators, its properties and its inheritance | [py-02-advanced](py-02-advanced) · 9 exercises |
 | `py-03-ship` | added | Ship a Python command-line tool, packaged, tested and installable by someone else | [py-03-ship](py-03-ship) · 8 exercises |
-| `c-01-libft` | added | Write a static C library whose every function honours the exact contract of the libc | 42 subject, not published · 6 exercises |
+| `c-01-libft` | added | Write a static C library whose every function honours the exact contract of the libc | [c-01-libft](c-01-libft) · 6 exercises |
 | `rte-01-puzzles` | added | Write in a single line, by broadcasting and indexing alone, the functions NumPy hands you ready-made, and know why each one holds without a loop | [rte-01-puzzles](rte-01-puzzles), from [srush/Tensor-Puzzles](https://github.com/srush/Tensor-Puzzles) · 1 exercise |
 | `l1-01-gpt-corpus` | proof | Publish a language model trained end to end, and defend every part of how it works without the code in front of you | [l1-01-gpt-corpus](l1-01-gpt-corpus) |
 | `mth-01-algebra` | added | Implement 2D vector and matrix transformations in Python | [mth-01-algebra](mth-01-algebra) · 8 exercises |
