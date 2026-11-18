@@ -5,7 +5,7 @@
 # with -Wall -Wextra -Werror; for an archive made with ar, never libtool;
 # and for no relink: a second make, with nothing changed, rebuilds nothing.
 #
-# Grade the hand-in, from pratique/c-03-printf:
+# Grade the hand-in, from pratique/c-02-printf:
 #   ./corriger
 NAME	= libftprintf.a
 CC		= cc
