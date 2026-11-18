@@ -2,7 +2,7 @@
 
 # Phase 1: The graded C of the common core
 
-`ms-01-c-core` · school milestones 1 to 3 · 4 sub-modules, 4 written · 3 exercises · 1 project
+`ms-01-c-core` · school milestones 1 to 3 · 4 sub-modules, 4 written · 1 exercise · 3 projects
 
 The four graded C projects of the school's common core. C sits under everything this road ends on: llama.cpp, the CUDA kernels, the inference engine of phase 7. These projects make memory, pointers and the cost of an algorithm concrete before any of that.
 
@@ -17,8 +17,8 @@ The four graded C projects of the school's common core. C sits under everything 
 | Sub-module | Layer | What it covers | Where the work is |
 |---|---|---|---|
 | `c-01-libft` | imposed | Write a static C library whose every function honours the exact contract of the libc | [c-01-libft](c-01-libft) · 1 project |
-| `c-02-printf` | imposed | Write a variadic formatter whose output matches the libc's, conversion by conversion | 42 subject, not published · 1 exercise |
-| `c-03-gnl` | imposed | Read a stream line by line with state that survives between calls, from a file as from standard input, and without leaking | 42 subject, not published · 1 exercise |
+| `c-02-printf` | imposed | Write a variadic formatter whose output matches the libc's, conversion by conversion | [c-02-printf](c-02-printf) · 1 project |
+| `c-03-gnl` | imposed | Read a stream line by line with state that survives between calls, from a file as from standard input, and without leaking | [c-03-gnl](c-03-gnl) · 1 project |
 | `c-04-pushswap` | imposed | Sort under a constrained set of operations with four strategies of distinct complexity classes, and defend each one's class by measurement | 42 subject, not published · 1 exercise |
 
 Rows follow the order of the work; work done alongside the sequence comes last. Every English sentence on this page is translated from the curriculum's French and stored with a fingerprint of its source, so a changed source stops the page from being rebuilt.

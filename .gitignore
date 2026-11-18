@@ -141,3 +141,14 @@ ms-00-foundations/rte-route-l1/*
 !c-01-libft/
 ms-01-c-core/c-01-libft/ex*/
 ms-01-c-core/c-01-libft/.sauvegarde-*
+
+# Exception, 2026-11-18: ft_printf and get_next_line go out, their code only.
+# The campus validated both at defense that day, and the author chose to
+# publish them like libft. The subject PDFs stay out, and so do the step
+# folders, ex00 and up: they are working copies, not the code that was
+# defended. What goes out is the handed-in version at the root of each folder,
+# byte for byte.
+!c-02-printf/
+ms-01-c-core/c-02-printf/ex*/
+!c-03-gnl/
+ms-01-c-core/c-03-gnl/ex*/

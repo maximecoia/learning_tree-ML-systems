@@ -171,7 +171,7 @@ is where each one sits.
 <!-- ecole: written by carte_phases.py from the school's grades. Do not edit by hand. -->
 | Milestone | Phase | Projects |
 |---|---|---|
-| 1 to 3 | [`ms-01-c-core`](ms-01-c-core) | <img src="assets/badges/42/libfte.png" width="80" alt="libft, validated" title="libft, validated"> <img src="assets/badges/42/ft_printfe-locked.svg" width="80" alt="ft_printf, not yet validated" title="ft_printf, not yet validated"> <img src="assets/badges/42/get_next_linee-locked.svg" width="80" alt="get_next_line, not yet validated" title="get_next_line, not yet validated"> <img src="assets/badges/42/push_swape-locked.svg" width="80" alt="push_swap, not yet validated" title="push_swap, not yet validated"> |
+| 1 to 3 | [`ms-01-c-core`](ms-01-c-core) | <img src="assets/badges/42/libfte.png" width="80" alt="libft, validated" title="libft, validated"> <img src="assets/badges/42/ft_printfe.png" width="80" alt="ft_printf, validated" title="ft_printf, validated"> <img src="assets/badges/42/get_next_linee.png" width="80" alt="get_next_line, validated" title="get_next_line, validated"> <img src="assets/badges/42/push_swape-locked.svg" width="80" alt="push_swap, not yet validated" title="push_swap, not yet validated"> |
 | 4 | [`ms-02-python-sysadmin`](ms-02-python-sysadmin) | <img src="assets/badges/python_piscine-locked.svg" width="80" alt="Python piscine, not yet validated" title="Python piscine, not yet validated"> <img src="assets/badges/42/born2beroote-locked.svg" width="80" alt="Born2beroot, not yet validated" title="Born2beroot, not yet validated"> <img src="assets/badges/42/netpracticee-locked.svg" width="80" alt="NetPractice, not yet validated" title="NetPractice, not yet validated"> |
 | 5 | [`ms-04-infrastructure`](ms-04-infrastructure) | <img src="assets/badges/a_maze_ing-locked.svg" width="80" alt="A-Maze-ing, not yet validated" title="A-Maze-ing, not yet validated"> <img src="assets/badges/pac_man-locked.svg" width="80" alt="Pac Man, not yet validated" title="Pac Man, not yet validated"> <img src="assets/badges/42/inceptione-locked.svg" width="80" alt="Inception, not yet validated" title="Inception, not yet validated"> |
 | 6 | [`ms-05-contribution`](ms-05-contribution) | <img src="assets/badges/call_me_maybe-locked.svg" width="80" alt="Call Me Maybe, not yet validated" title="Call Me Maybe, not yet validated"> <img src="assets/badges/rag_against_the_machine-locked.svg" width="80" alt="RAG against the machine, not yet validated" title="RAG against the machine, not yet validated"> <img src="assets/badges/codexion-locked.svg" width="80" alt="Codexion, not yet validated" title="Codexion, not yet validated"> |
@@ -327,6 +327,8 @@ ms-00-foundations/         the bases, Python and maths, closed on 2 October 2026
 ms-01-c-core/              the graded C of the common core, school milestones 1 to 3
     README.md              its sub-modules in the order of the work, and their state
     c-01-libft/            libft, the C library validated at defense, as handed in
+    c-02-printf/           ft_printf, the formatter validated at defense, as handed in
+    c-03-gnl/              get_next_line, validated at defense, as handed in
 ms-02-python-sysadmin/     Python, administration, network, its page only
 ms-03-inference-basics/    measured inference, the basics, in progress
     README.md              its sub-modules in the order of the work, and their state
